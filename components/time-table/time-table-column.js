@@ -1,7 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
 import { getStyle } from 'react-native-styler';
-import TimeTableHeadCell from './time-table-head-cell';
 import TimeTableCell from './time-table-cell';
 
 /**
@@ -17,9 +16,6 @@ function TimeTableColumn(props) {
         <View
             style={getStyle(props.even ? 'timeTable__column__even' : 'timeTable__column__odd')}
         >
-            <TimeTableHeadCell
-                day={props.day}
-            />
             {slots.map(renderCell)}
         </View>
     );

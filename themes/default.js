@@ -4,6 +4,7 @@ createTheme({
     colors: {
         background: '#253952',
         primary: '#ffffff',
+        secondary: '#5a8197',
         sheet: '#ffffff',
         sheet2: '#f4fdff',
         border: '#cccccc'
