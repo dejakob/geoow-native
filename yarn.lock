@@ -3030,9 +3030,9 @@ react-native-drawer-layout@1.2.0:
   dependencies:
     react-native-dismiss-keyboard "1.0.0"
 
-react-native-styler@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/react-native-styler/-/react-native-styler-0.0.2.tgz#3e7e6c0633e5e21fd9c7399aa05d7ee860cb9201"
+react-native-styler@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/react-native-styler/-/react-native-styler-0.0.4.tgz#7049a0a577aad7ac7cea4769d509e9dc06b5593f"
   dependencies:
     flat "2.0.1"
     react "16.0.0-alpha.6"
