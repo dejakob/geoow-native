@@ -3,6 +3,7 @@ import { createTheme } from 'react-native-styler';
 createTheme({
     colors: {
         background: '#253952',
+        backgroundTransparent: 'rgba(37,57,82,0.8)',
         primary: '#ffffff',
         secondary: '#5a8197',
         sheet: '#ffffff',

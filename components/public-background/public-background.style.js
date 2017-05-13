@@ -16,7 +16,8 @@ createStyle({
             bottom: 0
         },
         content: {
-            flex: 1
+            flex: 1,
+            backgroundColor: 'theme:backgroundTransparent'
         }
     }
 });

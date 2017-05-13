@@ -1,5 +1,7 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Image } from 'react-native';
+import { getStyle } from 'react-native-styler';
+import './logo.style';
 
 /**
  * <Logo />
@@ -7,11 +9,11 @@ import { Text } from 'react-native';
  */
 function Logo() {
     return (
-        <Text
-            style={{ fontSize: 72 }}
-        >
-            G
-        </Text>
+        <Image
+            style={getStyle('logo')}
+            source={require('../../assets/logo.png')}
+            resizeMode="contain"
+        />
     );
 }
 
