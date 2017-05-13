@@ -4,6 +4,7 @@ import Article from '../components/article/article';
 import Footer from '../components/footer/footer';
 import PrimaryButton from '../components/button/primary-button';
 import Avatar from '../components/avatar/avatar';
+import TextInput from '../components/text-input/text-input';
 
 class Register extends Component
 {
@@ -21,8 +22,13 @@ class Register extends Component
         return (
             <AuthBackground>
                 <Article>
-                    <Avatar
-
+                    <Avatar />
+                    <TextInput
+                        placeholder="Email"
+                    />
+                    <TextInput
+                        placeholder="Password"
+                        secureTextEntry={true}
                     />
                 </Article>
                 <Footer>
