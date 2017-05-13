@@ -5,7 +5,8 @@ createTheme({
         background: '#253952',
         primary: '#ffffff',
         sheet: '#ffffff',
-        sheet2: '#f4fdff'
+        sheet2: '#f4fdff',
+        border: '#cccccc'
     },
     fontSizes: {
         h1: '28h4s',

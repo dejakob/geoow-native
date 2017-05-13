@@ -1,23 +1,48 @@
 import { createStyle } from 'react-native-styler';
 
+const touch = {
+    height: '40h4s'
+};
+const container = {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: '20h4s'
+};
+const text = {
+    textAlign: 'center',
+    fontSize: 'theme:button'
+};
+
 createStyle({
     button: {
         primary: {
             touch: {
-                flex: 1,
-                height: '40h4s'
+                ...touch,
+                flex: 1
             },
             container: {
-                flex: 1,
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: 'theme:primary',
-                borderRadius: '20h4s'
+                ...container,
+                backgroundColor: 'theme:primary'
             },
             text: {
+                ...text,
                 color: 'theme:background',
-                textAlign: 'center',
-                fontSize: 'theme:button'
+            }
+        },
+        secondary: {
+            touch,
+            container: {
+                ...container,
+                backgroundColor: 'theme:background',
+                borderColor: 'theme:primary',
+                borderStyle: 'solid',
+                borderWidth: 1,
+                minWidth: '40h4s'
+            },
+            text: {
+                ...text,
+                color: 'theme:primary'
             }
         }
     }

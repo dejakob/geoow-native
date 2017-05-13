@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AuthBackground from '../components/auth-background/auth-background';
 import Footer from '../components/footer/footer';
 import PrimaryButton from '../components/button/primary-button';
+import SecondaryButton from '../components/button/secondary-button';
 import TimeTable from '../components/time-table/time-table';
 
 /**
@@ -17,6 +18,7 @@ class Plan extends Component
         super();
 
         this._save = this._save.bind(this);
+        this._addSlot = this._addSlot.bind(this);
     }
 
     render() {
@@ -29,6 +31,11 @@ class Plan extends Component
                     >
                         SAVE
                     </PrimaryButton>
+                    <SecondaryButton
+                        onPress={this._addSlot}
+                    >
+                        +
+                    </SecondaryButton>
                 </Footer>
             </AuthBackground>
         );
@@ -36,6 +43,10 @@ class Plan extends Component
 
     _save() {
         this.props.navigation.navigate('Preferences');
+    }
+
+    _addSlot() {
+
     }
 }
 

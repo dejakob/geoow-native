@@ -22,6 +22,12 @@ createStyle({
             alignItems: 'center',
             justifyContent: 'center',
             height: '40h4s'
+        },
+        cell: {
+            flex: 1,
+            height: '40h4s',
+            borderTopColor: 'theme:border',
+            borderTopWidth: 1
         }
     }
 });
