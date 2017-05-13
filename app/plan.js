@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import AuthBackground from '../components/auth-background/auth-background';
-import Article from '../components/article/article';
 import Footer from '../components/footer/footer';
 import PrimaryButton from '../components/button/primary-button';
+import TimeTable from '../components/time-table/time-table';
 
 /**
  * <Plan />
  */
 class Plan extends Component
 {
+    static navigationOptions = {
+        header: null
+    };
+
     constructor() {
         super();
 
@@ -18,9 +22,7 @@ class Plan extends Component
     render() {
         return (
             <AuthBackground>
-                <Article>
-
-                </Article>
+                <TimeTable />
                 <Footer>
                     <PrimaryButton
                         onPress={this._save}

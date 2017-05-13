@@ -3,7 +3,9 @@ import { createTheme } from 'react-native-styler';
 createTheme({
     colors: {
         background: '#253952',
-        primary: '#ffffff'
+        primary: '#ffffff',
+        sheet: '#ffffff',
+        sheet2: '#f4fdff'
     },
     fontSizes: {
         h1: '28h4s',
