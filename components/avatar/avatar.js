@@ -7,6 +7,7 @@ function Avatar() {
     return (
         <Image
             style={getStyle('avatar')}
+            source={require('../../assets/female.png')}
         />
     )
 }
