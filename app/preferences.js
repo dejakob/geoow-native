@@ -5,16 +5,10 @@ import Footer from '../components/footer/footer';
 import PrimaryButton from '../components/button/primary-button';
 
 /**
- * <Plan />
+ * <Preferences />
  */
-class Plan extends Component
+class Preferences extends Component
 {
-    constructor() {
-        super();
-
-        this._save = this._save.bind(this);
-    }
-
     render() {
         return (
             <AuthBackground>
@@ -22,19 +16,13 @@ class Plan extends Component
 
                 </Article>
                 <Footer>
-                    <PrimaryButton
-                        onPress={this._save}
-                    >
-                        SAVE
+                    <PrimaryButton>
+                        SELECT AT LEAST 2 TO CONTINUE
                     </PrimaryButton>
                 </Footer>
             </AuthBackground>
         );
     }
-
-    _save() {
-        this.props.navigation.navigate('Preferences');
-    }
 }
 
-export default Plan;
+export default Preferences;
