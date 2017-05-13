@@ -43,7 +43,7 @@ class Register extends Component
     }
 
     _signUp() {
-
+        this.props.navigation.navigate('Plan');
     }
 }
 
