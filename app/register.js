@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import AuthBackground from '../components/auth-background/auth-background';
 import Article from '../components/article/article';
 import Footer from '../components/footer/footer';
+import PrimaryButton from '../components/button/primary-button';
+import Avatar from '../components/avatar/avatar';
 
 class Register extends Component
 {
@@ -9,17 +11,33 @@ class Register extends Component
         header: null
     };
 
+    constructor() {
+        super();
+
+        this._signUp = this._signUp.bind(this);
+    }
+
     render() {
         return (
             <AuthBackground>
                 <Article>
+                    <Avatar
 
+                    />
                 </Article>
                 <Footer>
-
+                    <PrimaryButton
+                        onPress={this._signUp}
+                    >
+                        SIGN UP
+                    </PrimaryButton>
                 </Footer>
             </AuthBackground>
         );
+    }
+
+    _signUp() {
+
     }
 }
 
