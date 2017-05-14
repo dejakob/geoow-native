@@ -4,7 +4,6 @@ import AuthBackground from '../components/auth-background/auth-background';
 import Article from '../components/article/article';
 import Footer from '../components/footer/footer';
 import PrimaryButton from '../components/button/primary-button';
-import TextInput from '../components/text-input/text-input';
 import CategoryList from '../components/category-list/category-list';
 
 /**
@@ -13,7 +12,7 @@ import CategoryList from '../components/category-list/category-list';
 class Preferences extends Component
 {
     static navigationOptions = {
-        headerTitle: <TextInput />,
+        header: null
     };
 
     constructor() {
@@ -21,6 +20,7 @@ class Preferences extends Component
 
         this._selectCategory = this._selectCategory.bind(this);
         this._deselectCategory = this._deselectCategory.bind(this);
+        this._continue = this._continue.bind(this);
 
         // Immutable for consistency reasons
         this.state = {
@@ -44,8 +44,11 @@ class Preferences extends Component
                     />
                 </Article>
                 <Footer>
-                    <PrimaryButton>
-                        SELECT AT LEAST 2 TO CONTINUE
+                    <PrimaryButton
+                        disabled={this.state.selectedCategories.count() < 2}
+                        onPress={this._continue}
+                    >
+                        Select at least 2 to continue
                     </PrimaryButton>
                 </Footer>
             </AuthBackground>
@@ -63,6 +66,10 @@ class Preferences extends Component
             .filter(selectedCategory => selectedCategory !== category);
 
         this.setState({ selectedCategories });
+    }
+
+    _continue() {
+
     }
 }
 
