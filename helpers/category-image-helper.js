@@ -59,6 +59,9 @@ function getImageForCategory(category : string) {
 
         case 'underground':
             return require('../assets/categories/underground.jpg');
+
+        case 'concert':
+            return require('../assets/categories/concert.jpg');
     }
 
     return null;
