@@ -1,8 +1,9 @@
 import { ACTIONS } from '../constants';
 
-function authAccountKit() {
+function authAccountKit(options = {}) {
     return {
-        type: ACTIONS.AUTH_ACCOUNT_KIT
+        type: ACTIONS.AUTH_ACCOUNT_KIT,
+        options
     };
 }
 

@@ -1,4 +1,6 @@
-const API_URL = 'http://127.0.0.1:3000';
+import { API } from '../constants';
+
+const API_URL = API.URL;
 
 function loadCategories() {
     return fetch(`${API_URL}/events/categories`)

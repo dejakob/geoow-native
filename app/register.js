@@ -16,9 +16,12 @@ class Register extends Component
     constructor() {
         super();
 
+        this._email = '';
+
         this._signUp = this._signUp.bind(this);
     }
 
+    // Todo: email validation
     render() {
         return (
             <AuthBackground>
@@ -28,10 +31,7 @@ class Register extends Component
                     <Section>
                         <TextInput
                             placeholder="Email"
-                        />
-                        <TextInput
-                            placeholder="Password"
-                            secureTextEntry={true}
+                            onChangeText={val => this._email = val}
                         />
                     </Section>
                 </Article>
@@ -47,7 +47,7 @@ class Register extends Component
     }
 
     _signUp() {
-        this.props.authAccountKit();
+        this.props.authAccountKit({ email: this._email });
         // this.props.navigation.navigate('Plan');
     }
 }
