@@ -9,7 +9,9 @@ createTheme({
         sheet: '#ffffff',
         sheet2: '#f4fdff',
         border: '#cccccc',
-        ok: '#2fb536'
+        ok: '#2fb536',
+        lighten: 'rgba(255,255,255,0.5)',
+        darken: 'rgba(0,0,0,0.5)'
     },
     fontSizes: {
         h1: '28h4s',

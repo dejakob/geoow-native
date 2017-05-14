@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Image, Text, StyleSheet } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import Card from '../card/card';
 import Touchable from '../button/touchable';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
+import * as CategoryImageHelper from '../../helpers/category-image-helper';
 
 /**
  * <CategoryListItem />
@@ -15,8 +16,21 @@ function CategoryListItem(props) {
             onPress={props.onPress}
         >
             <Card>
-                <Text>{props.category.toUpperCase()}</Text>
-                {renderCheck()}
+                <Image
+                    style={getStyle('categoryListItem__backgroundImage')}
+                    resizeMode='cover'
+                    source={CategoryImageHelper.getImageForCategory(props.category)}
+                />
+                <View
+                    style={getStyle('categoryListItem__overlay')}
+                >
+                    <Text
+                        style={getStyle('categoryListItem__text')}
+                    >
+                        {props.category.toUpperCase()}
+                    </Text>
+                    {renderCheck()}
+                </View>
             </Card>
         </Touchable>
     );

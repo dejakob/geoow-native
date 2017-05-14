@@ -13,6 +13,31 @@ createStyle({
         checkIconStyle: {
             position: 'absolute',
             left: '16w4s'
+        },
+        backgroundImage: {
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            height: '100h4s',
+            width: '120%',
+            borderRadius: '2h4s'
+        },
+        overlay: {
+            backgroundColor: 'theme:darken',
+            position: 'absolute',
+            flex: 1,
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderRadius: '2h4s'
+        },
+        text: {
+            color: 'theme:primary',
+            fontSize: '24h4s',
+            fontWeight: '100'
         }
     }
 });
