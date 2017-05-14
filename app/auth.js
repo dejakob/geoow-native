@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, AsyncStorage } from 'react-native';
 import PublicBackground from '../components/public-background/public-background';
 import Article from '../components/article/article';
 import Footer from '../components/footer/footer';
@@ -19,6 +19,16 @@ class Auth extends Component
         super();
 
         this._signUp = this._signUp.bind(this);
+    }
+
+    componentWillMount() {
+        AsyncStorage
+            .getItem('token')
+            .then(token => {
+                if (typeof token === 'string' && token.length > 0) {
+                    this.props.navigation.navigate('Preferences');
+                }
+            });
     }
 
     render() {

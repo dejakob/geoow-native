@@ -20,6 +20,24 @@ function getImageForCategory(category : string) {
 
         case 'open air':
             return require('../assets/categories/open-air.jpg');
+
+        case 'chic':
+            return require('../assets/categories/chic.jpg');
+
+        case 'cosy':
+            return require('../assets/categories/cosy.jpg');
+
+        case 'design':
+            return require('../assets/categories/design.jpg');
+
+        case 'hipster':
+            return require('../assets/categories/hipster.jpg');
+
+        case 'loud':
+            return require('../assets/categories/loud.jpg');
+
+        case 'urban':
+            return require('../assets/categories/urban.jpg');
     }
 
     return null;
