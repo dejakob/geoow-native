@@ -10,6 +10,7 @@ createStyle({
         padding: '10w4s',
         minHeight: '100h4s',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        overflow: 'hidden'
     }
 });

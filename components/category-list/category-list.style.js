@@ -19,8 +19,7 @@ createStyle({
             top: 0,
             left: 0,
             height: '100h4s',
-            width: '120%',
-            borderRadius: '2h4s'
+            width: '120%'
         },
         overlay: {
             backgroundColor: 'theme:darken',
@@ -31,8 +30,7 @@ createStyle({
             right: 0,
             bottom: 0,
             alignItems: 'center',
-            justifyContent: 'center',
-            borderRadius: '2h4s'
+            justifyContent: 'center'
         },
         text: {
             color: 'theme:primary',

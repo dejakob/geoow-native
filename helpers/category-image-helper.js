@@ -14,6 +14,12 @@ function getImageForCategory(category : string) {
 
         case 'market':
             return require('../assets/categories/market.jpg');
+
+        case 'chill':
+            return require('../assets/categories/chill.jpg');
+
+        case 'open air':
+            return require('../assets/categories/open-air.jpg');
     }
 
     return null;
