@@ -15,6 +15,10 @@ class Preferences extends Component
         headerTitle: <TextInput />,
     };
 
+    componentWillMount() {
+        this.props.loadCategories();
+    }
+
     render() {
         return (
             <AuthBackground>

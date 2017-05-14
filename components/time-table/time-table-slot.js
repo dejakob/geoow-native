@@ -19,8 +19,6 @@ function TimeTableSlot(props) {
     const height = (endInHours - startInHours) * 40;
     const left = Math.round(dayIndex * width / 7);
 
-    console.log('start', startInHours);
-
     const position = {
         top,
         height,
