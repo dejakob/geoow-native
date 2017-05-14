@@ -4,6 +4,7 @@ import { call, put } from 'redux-saga/effects';
 
 function* loadEventsNearby(action) {
     try {
+        throw new Error('To be implemented');
         const result = yield call(apiFunc);
 
         yield put(Actions._loadEventsSuccess(result));

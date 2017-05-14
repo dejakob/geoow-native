@@ -8,8 +8,6 @@ import './public-background.style';
  * @constructor
  */
 function PublicBackground(props) {
-    console.log("getStyle('publicBackground__container')", getStyle('publicBackground__container'));
-
     return (
         <View
             style={getStyle('publicBackground__container')}
