@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 import Card from '../card/card';
+import Touchable from '../button/touchable';
 
 /**
  * <CategoryListItem />
@@ -8,9 +9,13 @@ import Card from '../card/card';
  */
 function CategoryListItem(props) {
     return (
-        <Card>
-            <Text>{props.category.toUpperCase()}</Text>
-        </Card>
+        <Touchable
+            onPress={props.onPress}
+        >
+            <Card>
+                <Text>{props.category.toUpperCase()}</Text>
+            </Card>
+        </Touchable>
     );
 }
 

@@ -25,6 +25,7 @@ class Preferences extends Component
                 <Article>
                     <CategoryList
                         categories={this.props.event.get('categories')}
+                        onItemSelect={this.props.selectCategory}
                     />
                 </Article>
                 <Footer>

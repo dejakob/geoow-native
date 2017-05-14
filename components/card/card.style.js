@@ -3,6 +3,7 @@ import { createStyle } from 'react-native-styler';
 createStyle({
     card: {
         flex: 1,
+        position: 'relative',
         backgroundColor: 'theme:sheet',
         borderRadius: '2h4s',
         marginTop: '20h4s',

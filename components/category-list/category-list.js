@@ -26,10 +26,15 @@ class CategoryList extends Component
     }
 
     _renderItem({ item, index }) {
+        const onPress = () => {
+            this.props.onItemSelect(item);
+        };
+
         return (
             <CategoryListItem
                 key={index}
                 category={item}
+                onPress={onPress}
             />
         )
     }
