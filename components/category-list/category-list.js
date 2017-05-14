@@ -26,8 +26,15 @@ class CategoryList extends Component
     }
 
     _renderItem({ item, index }) {
+        const selected = this.props.selectedCategories.includes(item);
+
         const onPress = () => {
-            this.props.onItemSelect(item);
+            if (selected) {
+                this.props.onItemDeselect(item);
+            }
+            else {
+                this.props.onItemSelect(item);
+            }
         };
 
         return (
@@ -35,6 +42,7 @@ class CategoryList extends Component
                 key={index}
                 category={item}
                 onPress={onPress}
+                selected={selected}
             />
         )
     }

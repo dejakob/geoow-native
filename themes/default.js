@@ -8,7 +8,8 @@ createTheme({
         secondary: '#5a8197',
         sheet: '#ffffff',
         sheet2: '#f4fdff',
-        border: '#cccccc'
+        border: '#cccccc',
+        ok: '#2fb536'
     },
     fontSizes: {
         h1: '28h4s',
