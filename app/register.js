@@ -1,3 +1,4 @@
+import RNAccountKit from 'react-native-facebook-account-kit';
 import React, { Component } from 'react';
 import AuthBackground from '../components/auth-background/auth-background';
 import Article from '../components/article/article';
@@ -47,6 +48,18 @@ class Register extends Component
     }
 
     _signUp() {
+        RNAccountKit
+            .loginWithPhone()
+            .then((token) => {
+                console.log('token', token);
+
+                if (!token) {
+                    console.log('Login cancelled')
+                } else {
+                    console.log(`Logged with phone. Token: ${token}`)
+                }
+            });
+
         this.props.navigation.navigate('Plan');
     }
 }
