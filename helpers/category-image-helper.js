@@ -38,6 +38,27 @@ function getImageForCategory(category : string) {
 
         case 'urban':
             return require('../assets/categories/urban.jpg');
+
+        case 'alternative':
+            return require('../assets/categories/alternative.jpg');
+
+        case 'dance':
+            return require('../assets/categories/dance.jpg');
+
+        case 'family':
+            return require('../assets/categories/family.jpg');
+
+        case 'festival':
+            return require('../assets/categories/festival.jpg');
+
+        case 'techno':
+            return require('../assets/categories/techno.jpg');
+
+        case 'teen':
+            return require('../assets/categories/teen.jpg');
+
+        case 'underground':
+            return require('../assets/categories/underground.jpg');
     }
 
     return null;
