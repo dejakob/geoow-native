@@ -3046,6 +3046,10 @@ react-native-drawer-layout@1.2.0:
   dependencies:
     react-native-dismiss-keyboard "1.0.0"
 
+react-native-facebook-account-kit@^0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/react-native-facebook-account-kit/-/react-native-facebook-account-kit-0.6.2.tgz#493f70673103158f80ea0749c0e45f76cfecd90a"
+
 react-native-styler@^0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/react-native-styler/-/react-native-styler-0.0.4.tgz#7049a0a577aad7ac7cea4769d509e9dc06b5593f"

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/e505b9e6e43b0dc40558fa2545a12270cbbb9d0f/output/res/anim-v21/design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/e505b9e6e43b0dc40558fa2545a12270cbbb9d0f/output/res/anim-v21/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/anim-v21/design_appbar_state_list_animator.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/e505b9e6e43b0dc40558fa2545a12270cbbb9d0f/output/res/anim-v21/design_appbar_state_list_animator.xml"
+    }
+]

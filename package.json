@@ -11,6 +11,7 @@
 		"moment": "^2.18.1",
 		"react": "16.0.0-alpha.6",
 		"react-native": "0.44.0",
+		"react-native-facebook-account-kit": "^0.6.2",
 		"react-native-styler": "^0.0.4",
 		"react-native-vector-icons": "^4.1.1",
 		"react-navigation": "^1.0.0-beta.9",
