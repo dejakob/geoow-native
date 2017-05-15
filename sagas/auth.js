@@ -7,6 +7,11 @@ import { call, put } from 'redux-saga/effects';
 let _token = null;
 const getCurrentToken = () => _token;
 
+// Tooo: change
+AsyncStorage
+    .getItem('token')
+    .then(token => _token = token);
+
 function* authAccountKit(action) {
     try {
         const { options } = action;

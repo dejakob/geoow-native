@@ -1,4 +1,7 @@
-import { getCurrentToken } from '../sagas/user';
+import { getCurrentToken } from '../sagas/auth';
+import { API } from '../constants';
+
+const API_URL = API.URL;
 
 /**
  * Update the categories
@@ -8,7 +11,6 @@ function updateCategories(categories) {
     const params = {
         method: 'PUT',
         headers: {
-            'Accept': 'application/json',
             'Content-Type': 'application/json',
             'authorization': `Bearer ${getCurrentToken()}`
         },
@@ -17,7 +19,7 @@ function updateCategories(categories) {
         })
     };
 
-    return fetch(`${API_URL}/user/categories`, params)
+    return fetch(`${API_URL}/user/me/categories`, params)
         .then(response => response.json())
 }
 
