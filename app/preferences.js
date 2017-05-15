@@ -70,6 +70,7 @@ class Preferences extends Component
 
     _continue() {
         this.props.updateCategories(this.state.selectedCategories.toJS());
+        this.props.navigation.navigate('Dashboard');
     }
 }
 

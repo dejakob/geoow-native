@@ -9,13 +9,15 @@ import Auth from './auth';
 import Register from './register';
 import Plan from './plan';
 import Preferences from './preferences';
+import Dashboard from './dashboard';
 import '../themes';
 
 const App = StackNavigator({
     Auth: { screen: connect(Auth) },
     Register: { screen: connect(Register) },
     Plan: { screen: connect(Plan) },
-    Preferences: { screen: connect(Preferences) }
+    Preferences: { screen: connect(Preferences) },
+    Dashboard: { screen: connect(Dashboard) }
 }, {
     mode: 'modal'
 });
