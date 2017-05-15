@@ -4,6 +4,9 @@ import AccountKit from 'react-native-facebook-account-kit';
 import * as AuthApi from '../api/auth';
 import { call, put } from 'redux-saga/effects';
 
+let _token = null;
+const getCurrentToken = () => _token;
+
 function* authAccountKit(action) {
     try {
         const { options } = action;
@@ -28,6 +31,8 @@ function* authAccountKit(action) {
         const geoowTokenData = yield call(AuthApi.authAccountKit, accountId, token, email);
         const geoowToken = geoowTokenData.token;
 
+        _token = geoowToken;
+
         yield AsyncStorage.setItem('token', geoowToken);
         yield put(Actions._authAccountKitSuccess({}));
     } catch (e) {
@@ -37,5 +42,6 @@ function* authAccountKit(action) {
 }
 
 export {
-    authAccountKit
+    authAccountKit,
+    getCurrentToken
 };

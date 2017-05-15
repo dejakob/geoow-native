@@ -119,6 +119,5 @@
     <orderEntry type="library" exported="" name="okhttp-3.4.1" level="project" />
     <orderEntry type="module" module-name="react-native-facebook-account-kit" exported="" />
     <orderEntry type="module" module-name="react-native-vector-icons" exported="" />
-    <orderEntry type="library" exported="" name="support-annotations-23.0.1" level="project" />
   </component>
 </module>
