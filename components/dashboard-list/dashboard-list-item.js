@@ -16,13 +16,23 @@ function DashboardListItem(props) {
             <View
                 style={getStyle('dashboard__listItem__content')}
             >
-                <Text>{item.get('type')}</Text>
-                <Text>{item.get('score')}</Text>
+                <Text>
+                    {item.get('type')}
+                </Text>
+                <Text
+                    style={getStyle('dashboard__listItem__score')}
+                >
+                    {item.get('score')}
+                </Text>
             </View>
             <View
                 style={getStyle('dashboard__listItem__footer')}
             >
-                <Text>{item.get('createdAt')}</Text>
+                <Text
+                    style={getStyle('dashboard__listItem__date')}
+                >
+                    {item.get('createdAt')}
+                </Text>
             </View>
         </View>
     );
