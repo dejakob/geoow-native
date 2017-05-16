@@ -11,7 +11,7 @@ function* updateCategories(action) {
         const { categories } = action;
 
         yield call(UserApi.updateCategories, categories);
-        yield put(Actions._updateCategoriesSuccess());
+        yield put(Actions._updateCategoriesSuccess(categories));
     }
     catch (ex) {
         yield put(Actions._updateCategoriesFailed());

@@ -12,7 +12,8 @@ function Button(props) {
     return (
         <Touchable
             onPress={props.onPress}
-            style={props.touchStyle}
+            disabled={props.disabled}
+            style={[ props.touchStyle, props.disabled ? { opacity: 0.5 } : {} ]}
         >
             <View
                 style={props.containerStyle}

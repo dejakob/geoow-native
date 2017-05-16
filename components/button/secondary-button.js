@@ -10,6 +10,7 @@ function SecondaryButton(props) {
     return (
         <Button
             onPress={props.onPress}
+            disabled={props.disabled}
             containerStyle={getStyle('button__secondary__container')}
             textStyle={getStyle('button__secondary__text')}
             touchStyle={getStyle('button__secondary__touch')}

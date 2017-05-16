@@ -10,6 +10,7 @@ function PrimaryButton(props) {
     return (
         <Button
             onPress={props.onPress}
+            disabled={props.disabled}
             containerStyle={getStyle('button__primary__container')}
             textStyle={getStyle('button__primary__text')}
             touchStyle={getStyle('button__primary__touch')}

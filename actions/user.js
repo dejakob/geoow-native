@@ -7,9 +7,10 @@ function updateCategories(categories) {
     };
 }
 
-function _updateCategoriesSuccess() {
+function _updateCategoriesSuccess(categories) {
     return {
-        type: ACTIONS.USER_UPDATE_CATEGORIES_SUCCESS
+        type: ACTIONS.USER_UPDATE_CATEGORIES_SUCCESS,
+        categories
     }
 }
 

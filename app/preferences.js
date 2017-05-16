@@ -5,6 +5,7 @@ import Article from '../components/article/article';
 import Footer from '../components/footer/footer';
 import PrimaryButton from '../components/button/primary-button';
 import CategoryList from '../components/category-list/category-list';
+import { MIN_CATEGORIES } from '../constants';
 
 /**
  * <Preferences />
@@ -21,6 +22,7 @@ class Preferences extends Component
         this._selectCategory = this._selectCategory.bind(this);
         this._deselectCategory = this._deselectCategory.bind(this);
         this._continue = this._continue.bind(this);
+        this._renderButtonCopy = this._renderButtonCopy.bind(this);
 
         // Immutable for consistency reasons
         this.state = {
@@ -30,29 +32,6 @@ class Preferences extends Component
 
     componentWillMount() {
         this.props.loadCategories();
-    }
-
-    render() {
-        return (
-            <AuthBackground>
-                <Article>
-                    <CategoryList
-                        categories={this.props.event.get('categories')}
-                        onItemSelect={this._selectCategory}
-                        onItemDeselect={this._deselectCategory}
-                        selectedCategories={this.state.selectedCategories.toArray()}
-                    />
-                </Article>
-                <Footer>
-                    <PrimaryButton
-                        disabled={this.state.selectedCategories.count() < 2}
-                        onPress={this._continue}
-                    >
-                        Select at least 2 to continue
-                    </PrimaryButton>
-                </Footer>
-            </AuthBackground>
-        );
     }
 
     _selectCategory(category : string) {
@@ -71,6 +50,41 @@ class Preferences extends Component
     _continue() {
         this.props.updateCategories(this.state.selectedCategories.toJS());
         this.props.navigation.navigate('Dashboard');
+    }
+
+    render() {
+        return (
+            <AuthBackground>
+                <Article>
+                    <CategoryList
+                        categories={this.props.event.get('categories')}
+                        onItemSelect={this._selectCategory}
+                        onItemDeselect={this._deselectCategory}
+                        selectedCategories={this.state.selectedCategories.toArray()}
+                    />
+                </Article>
+                <Footer>
+                    <PrimaryButton
+                        disabled={this.state.selectedCategories.count() < 2}
+                        onPress={this._continue}
+                    >
+                        {this._renderButtonCopy()}
+                    </PrimaryButton>
+                </Footer>
+            </AuthBackground>
+        );
+    }
+
+    _renderButtonCopy() {
+        if (this.state.selectedCategories.count() === 0) {
+            return `Choose at least ${MIN_CATEGORIES}`;
+        }
+
+        else if (this.state.selectedCategories.count() < MIN_CATEGORIES) {
+            return `Choose ${MIN_CATEGORIES - this.state.selectedCategories.count()} more`;
+        }
+
+        return `Continue`;
     }
 }
 
