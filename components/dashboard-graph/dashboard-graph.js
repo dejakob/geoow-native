@@ -8,6 +8,8 @@ import { Text } from 'react-native';
  * @constructor
  */
 function DashboardGraph(props) {
+
+    // Todo: save score seperately on user
     return (
         <Text>
             {props.score}

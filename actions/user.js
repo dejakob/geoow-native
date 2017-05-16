@@ -28,7 +28,8 @@ function loadStats() {
 
 function _loadStatsSuccess(stats) {
     return {
-        type: ACTIONS.USER_LOAD_STATS_SUCCESS
+        type: ACTIONS.USER_LOAD_STATS_SUCCESS,
+        stats
     }
 }
 

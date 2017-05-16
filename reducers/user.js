@@ -8,7 +8,8 @@ const defaultState = Immutable.fromJS({
         stats: []
     },
 
-    isUpdatingCategories: false
+    isUpdatingCategories: false,
+    isLoadingStats: false
 });
 
 function userReducer(state = defaultState, action) {
@@ -23,6 +24,15 @@ function userReducer(state = defaultState, action) {
 
         case ACTIONS.USER_UPDATE_CATEGORIES_FAILED:
             return updateCategoriesFailed(state, action);
+
+        case ACTIONS.USER_LOAD_STATS:
+            return loadStats(state, action);
+
+        case ACTIONS.USER_LOAD_STATS_SUCCESS:
+            return loadStatsSuccess(state, action);
+
+        case ACTIONS.USER_LOAD_STATS_FAILED:
+            return loadStatsFailed(state, action);
     }
 
     return state;
@@ -40,6 +50,22 @@ function updateCategoriesSuccess(state, action) {
 
 function updateCategoriesFailed(state, action) {
     return state.set('isUpdatingCategories', true);
+}
+
+function loadStats(state, action) {
+    return state.set('isLoadingStats', true);
+}
+
+function loadStatsSuccess(state, action) {
+    return state
+        .set('isLoadingStats', false)
+        .updateIn(['me', 'stats'], stats =>
+            stats.mergeDeep(Immutable.fromJS(action.stats))
+        );
+}
+
+function loadStatsFailed(state, action) {
+    return state.set('isLoadingStats', false);
 }
 
 export default userReducer;
