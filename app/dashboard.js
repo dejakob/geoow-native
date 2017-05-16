@@ -24,10 +24,10 @@ class Dashboard extends Component
                     <DashboardGraph
                         score={this.props.user.getIn(['me', 'score'])}
                     />
-                    <DashboardList
-                        stats={this.props.user.getIn(['me', 'stats']).toArray()}
-                    />
                 </Article>
+                <DashboardList
+                    stats={this.props.user.getIn(['me', 'stats']).toArray()}
+                />
             </MainBackground>
         );
     }
