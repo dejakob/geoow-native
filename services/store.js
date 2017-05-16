@@ -3,6 +3,7 @@ import { compose, combineReducers, createStore as createReduxStore, applyMiddlew
 import createSagaMiddleware from 'redux-saga';
 
 import eventReducer from '../reducers/event';
+import userReducer from '../reducers/user';
 import mainSaga from '../sagas';
 
 const store = createStore();
@@ -19,7 +20,8 @@ const store = createStore();
 function createStore() {
     const sagaMiddleware = createSagaMiddleware();
     const reducers = {
-        event: eventReducer
+        event: eventReducer,
+        user: userReducer
     };
 
     const reduxStore = createReduxStore(

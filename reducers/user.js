@@ -2,8 +2,10 @@ import Immutable from 'immutable';
 import { ACTIONS } from '../constants';
 
 const defaultState = Immutable.fromJS({
-    currentUser: {
-        categories: []
+    me: {
+        categories: [],
+        score: 0,
+        stats: []
     },
 
     isUpdatingCategories: false
@@ -33,7 +35,7 @@ function updateCategories(state, action) {
 function updateCategoriesSuccess(state, action) {
     return state
         .set('isUpdatingCategories', true)
-        .set('categories', Immutable.fromJS(action.categories));
+        .setIn(['me', 'categories'], Immutable.fromJS(action.categories));
 }
 
 function updateCategoriesFailed(state, action) {
