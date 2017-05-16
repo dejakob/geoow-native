@@ -18,6 +18,21 @@ function* updateCategories(action) {
     }
 }
 
+function* loadStats(action) {
+    try {
+        console.log('load stats');
+
+        const stats = yield call(UserApi.fetchStats);
+
+        console.log('stats', stats);
+        yield put(Actions._loadStatsSuccess(stats));
+    }
+    catch (ex) {
+        yield put(Actions._loadStatsFailed());
+    }
+}
+
 export {
-    updateCategories
+    updateCategories,
+    loadStats
 };

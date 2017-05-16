@@ -13,6 +13,10 @@ class Dashboard extends Component
         headerTitle: 'Dashboard'
     };
 
+    componentWillMount() {
+        this.props.loadStats();
+    }
+
     render() {
         return (
             <MainBackground>

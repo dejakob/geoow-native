@@ -19,10 +19,27 @@ function updateCategories(categories) {
         })
     };
 
-    return fetch(`${API_URL}/user/me/categories`, params)
-        .then(response => response.json())
+    return fetch(`${API_URL}/user/me/categories`, params);
+}
+
+/**
+ * Fetch the stats of a user
+ * @returns {Promise.<Array.<Object>>}
+ */
+function fetchStats() {
+    const params = {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'authorization': `Bearer ${getCurrentToken()}`
+        }
+    };
+
+    return fetch(`${API_URL}/user/me/stats`, params)
+        .then(response => response.json());
 }
 
 export {
-    updateCategories
+    updateCategories,
+    fetchStats
 };

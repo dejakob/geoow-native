@@ -20,8 +20,30 @@ function _updateCategoriesFailed() {
     }
 }
 
+function loadStats() {
+    return {
+        type: ACTIONS.USER_LOAD_STATS
+    }
+}
+
+function _loadStatsSuccess(stats) {
+    return {
+        type: ACTIONS.USER_LOAD_STATS_SUCCESS
+    }
+}
+
+function _loadStatsFailed() {
+    return {
+        type: ACTIONS.USER_LOAD_STATS_FAILED
+    }
+}
+
 export {
     updateCategories,
     _updateCategoriesSuccess,
-    _updateCategoriesFailed
+    _updateCategoriesFailed,
+
+    loadStats,
+    _loadStatsSuccess,
+    _loadStatsFailed
 }

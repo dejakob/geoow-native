@@ -26,7 +26,7 @@ class Auth extends Component
             .getItem('token')
             .then(token => {
                 if (typeof token === 'string' && token.length > 0) {
-                    this.props.navigation.navigate('Preferences');
+                    this.props.navigation.navigate('Dashboard');
                 }
             });
     }
