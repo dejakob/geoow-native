@@ -39,7 +39,25 @@ function fetchStats() {
         .then(response => response.json());
 }
 
+/**
+ * Fetch the users profile
+ * @returns {Promise}
+ */
+function fetchMe() {
+    const params = {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'authorization': `Bearer ${getCurrentToken()}`
+        }
+    };
+
+    return fetch(`${API_URL}/user/me`, params)
+        .then(response => response.json());
+}
+
 export {
     updateCategories,
-    fetchStats
+    fetchStats,
+    fetchMe
 };

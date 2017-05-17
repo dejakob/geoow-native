@@ -39,6 +39,25 @@ function _loadStatsFailed() {
     }
 }
 
+function loadMe() {
+    return {
+        type: ACTIONS.USER_LOAD_ME
+    }
+}
+
+function _loadMeSuccess(me) {
+    return {
+        type: ACTIONS.USER_LOAD_ME_SUCCESS,
+        me
+    }
+}
+
+function _loadMeFailed() {
+    return {
+        type: ACTIONS.USER_LOAD_ME_FAILED
+    }
+}
+
 export {
     updateCategories,
     _updateCategoriesSuccess,
@@ -46,5 +65,9 @@ export {
 
     loadStats,
     _loadStatsSuccess,
-    _loadStatsFailed
+    _loadStatsFailed,
+
+    loadMe,
+    _loadMeSuccess,
+    _loadMeFailed
 }

@@ -28,7 +28,18 @@ function* loadStats(action) {
     }
 }
 
+function* loadMe() {
+    try {
+        const me = yield call(UserApi.fetchMe);
+        yield put(Actions._loadMeSuccess(me));
+    }
+    catch (ex) {
+        yield put(Actions._loadMeFailed());
+    }
+}
+
 export {
     updateCategories,
-    loadStats
+    loadStats,
+    loadMe
 };
