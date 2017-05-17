@@ -9,7 +9,8 @@ const defaultState = Immutable.fromJS({
     },
 
     isUpdatingCategories: false,
-    isLoadingStats: false
+    isLoadingStats: false,
+    isLoadingProfile: false
 });
 
 function userReducer(state = defaultState, action) {
@@ -33,6 +34,15 @@ function userReducer(state = defaultState, action) {
 
         case ACTIONS.USER_LOAD_STATS_FAILED:
             return loadStatsFailed(state, action);
+
+        case ACTIONS.USER_LOAD_ME:
+            return loadMe(state, action);
+
+        case ACTIONS.USER_LOAD_ME_SUCCESS:
+            return loadMeSuccess(state, action);
+
+        case ACTIONS.USER_LOAD_ME_FAILED:
+            return loadMeFailed(state, action);
     }
 
     return state;
@@ -67,5 +77,21 @@ function loadStatsSuccess(state, action) {
 function loadStatsFailed(state, action) {
     return state.set('isLoadingStats', false);
 }
+
+function loadMe(state, action) {
+    return state
+        .set('isLoadingProfile', true);
+}
+
+function loadMeSuccess(state, action) {
+    return state
+        .set('isLoadingProfile', false)
+        .update('me', me => me.mergeDeep(Immutable.fromJS(action.me)));
+}
+
+function loadMeFailed(state, action) {
+    return state.set('isLoadingProfile', false);
+}
+
 
 export default userReducer;

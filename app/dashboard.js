@@ -15,6 +15,7 @@ class Dashboard extends Component
 
     componentWillMount() {
         this.props.loadStats();
+        this.props.loadMe();
     }
 
     render() {
