@@ -17,6 +17,12 @@ createStyle({
                 fontWeight: '600',
                 margin: '10h4s'
             },
+            badScore: {
+                color: 'theme:notok',
+                fontSize: '18h4s',
+                fontWeight: '600',
+                margin: '10h4s'
+            },
             date: {
                 fontSize: '10h4s',
                 fontStyle: 'italic',
@@ -24,6 +30,9 @@ createStyle({
             },
             footer: {
                 flexDirection: 'row'
+            },
+            description: {
+                flex: 1
             }
         }
     }

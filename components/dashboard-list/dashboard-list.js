@@ -10,7 +10,7 @@ import './dashboard-list.style';
 function DashboardList(props) {
     return (
         <FlatList
-            data={props.stats}
+            data={props.stats.filter(stat => stat.get('score') !== 0)}
             renderItem={renderListItem}
         />
     );

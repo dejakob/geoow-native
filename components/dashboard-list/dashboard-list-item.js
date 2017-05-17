@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { getStyle } from 'react-native-styler';
+import { getDescription } from '../../helpers/user-stats-helper';
 
 /**
  * <DashboardList />
@@ -16,11 +17,13 @@ function DashboardListItem(props) {
             <View
                 style={getStyle('dashboard__listItem__content')}
             >
-                <Text>
-                    {item.get('type')}
+                <Text
+                    style={getStyle('dashboard__listItem__description')}
+                >
+                    {getDescription(item.get('type'), item.get('data').toJS())}
                 </Text>
                 <Text
-                    style={getStyle('dashboard__listItem__score')}
+                    style={item.get('score') > 0 ? getStyle('dashboard__listItem__score') : getStyle('dashboard__listItem__badScore')}
                 >
                     {item.get('score')}
                 </Text>
