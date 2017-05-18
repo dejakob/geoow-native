@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { View, Image, Text, StyleSheet } from 'react-native';
 import MainBackground from '../components/main-background/main-background';
-import Article from '../components/article/article';
-import DashboardGraph from '../components/dashboard-graph/dashboard-graph';
 import DashboardList from '../components/dashboard-list/dashboard-list';
+import DashboardMe from '../components/dashboard-me/dashboard-me';
+import { getStyle } from 'react-native-styler';
+import '../components/header/header.style.js'
 
 /**
  * <Dashboard />
@@ -10,7 +12,7 @@ import DashboardList from '../components/dashboard-list/dashboard-list';
 class Dashboard extends Component
 {
     static navigationOptions = {
-        headerTitle: 'Dashboard'
+        header: null
     };
 
     componentWillMount() {
@@ -21,11 +23,9 @@ class Dashboard extends Component
     render() {
         return (
             <MainBackground>
-                <Article>
-                    <DashboardGraph
-                        score={this.props.user.getIn(['me', 'score'])}
-                    />
-                </Article>
+                <DashboardMe
+                    me={this.props.user}
+                />
                 <DashboardList
                     stats={this.props.user.getIn(['me', 'stats']).toArray()}
                 />
