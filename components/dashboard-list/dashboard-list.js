@@ -1,5 +1,6 @@
 import React from 'react';
 import { FlatList } from 'react-native';
+import { getStyle } from 'react-native-styler';
 import DashboardListItem from './dashboard-list-item';
 import './dashboard-list.style';
 

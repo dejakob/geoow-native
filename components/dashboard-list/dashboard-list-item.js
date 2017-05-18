@@ -1,3 +1,4 @@
+import moment from 'moment';
 import React from 'react';
 import { View, Text } from 'react-native';
 import { getStyle } from 'react-native-styler';
@@ -15,26 +16,30 @@ function DashboardListItem(props) {
             style={getStyle('dashboard__listItem')}
         >
             <View
-                style={getStyle('dashboard__listItem__content')}
+                style={getStyle('dashboard__listItem__descriptionContainer')}
             >
                 <Text
                     style={getStyle('dashboard__listItem__description')}
                 >
                     {getDescription(item.get('type'), item.get('data').toJS())}
                 </Text>
-                <Text
-                    style={item.get('score') > 0 ? getStyle('dashboard__listItem__score') : getStyle('dashboard__listItem__badScore')}
-                >
-                    {item.get('score')}
-                </Text>
             </View>
             <View
-                style={getStyle('dashboard__listItem__footer')}
+                style={getStyle('dashboard__listItem__dateContainer')}
             >
                 <Text
                     style={getStyle('dashboard__listItem__date')}
                 >
-                    {item.get('createdAt')}
+                    {moment(item.get('createdAt')).format('DD MMM')}
+                </Text>
+            </View>
+            <View
+                style={item.get('score') > 0 ? getStyle('dashboard__listItem__scoreContainer') : getStyle('dashboard__listItem__badScoreContainer')}
+            >
+                <Text
+                    style={item.get('score') > 0 ? getStyle('dashboard__listItem__score') : getStyle('dashboard__listItem__badScore')}
+                >
+                    {item.get('score')}
                 </Text>
             </View>
         </View>

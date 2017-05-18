@@ -3,36 +3,51 @@ import { createStyle } from 'react-native-styler';
 createStyle({
     dashboard: {
         listItem: {
+            flex: 1,
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between',
             backgroundColor: 'theme:sheet',
             padding: '10h4s',
 
-            content: {
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'space-between'
+            scoreContainer: {
+                borderRadius: '2h4s',
+                backgroundColor: 'theme:okSoft',
+                padding: '4h4s',
+                width: '30h4s'
             },
             score: {
                 color: 'theme:ok',
-                fontSize: '18h4s',
+                fontSize: 'theme:p',
                 fontWeight: '600',
-                margin: '10h4s'
+                textAlign: 'center'
+            },
+            badScoreContainer: {
+                borderRadius: '2h4s',
+                backgroundColor: 'theme:notokSoft',
+                padding: '3h4s',
+                width: '30h4s'
             },
             badScore: {
                 color: 'theme:notok',
-                fontSize: '18h4s',
+                fontSize: 'theme:p',
                 fontWeight: '600',
-                margin: '10h4s'
+                textAlign: 'center'
+            },
+            dateContainer: {
+                width: '100h4s'
             },
             date: {
-                fontSize: '10h4s',
-                fontStyle: 'italic',
-                color: 'theme:subtext'
+                fontSize: 'theme:p',
+                fontWeight: '600',
+                color: 'theme:subtext',
+                textAlign: 'center'
             },
-            footer: {
-                flexDirection: 'row'
+            descriptionContainer: {
+                flex: 1
             },
             description: {
-                flex: 1
+                fontSize: 'theme:small'
             }
         }
     }

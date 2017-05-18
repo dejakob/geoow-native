@@ -11,7 +11,9 @@ createTheme({
         sheet2: '#f4fdff',
         border: '#cccccc',
         ok: '#2fb536',
+        okSoft: '#d7ffd9',
         notok: '#9a2300',
+        notokSoft: '#ffdbc3',
         lighten: 'rgba(255,255,255,0.5)',
         darken: 'rgba(0,0,0,0.5)'
     },
