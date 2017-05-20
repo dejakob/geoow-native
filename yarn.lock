@@ -3024,6 +3024,10 @@ react-native-tab-view@^0.0.61:
   dependencies:
     prop-types "^15.5.8"
 
+react-native-timeline-listview@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/react-native-timeline-listview/-/react-native-timeline-listview-0.2.1.tgz#e65de6ebb0630accbe4eea96b9ab0f83a0517d16"
+
 react-native-vector-icons@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-4.1.1.tgz#9ac75bde77d9243346668c51dca7756775428087"

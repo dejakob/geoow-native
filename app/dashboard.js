@@ -27,7 +27,7 @@ class Dashboard extends Component
                     me={this.props.user}
                 />
                 <DashboardList
-                    stats={this.props.user.getIn(['me', 'stats']).toArray()}
+                    stats={this.props.user.getIn(['me', 'stats'])}
                 />
             </MainBackground>
         );

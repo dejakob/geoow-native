@@ -1,7 +1,11 @@
 import React from 'react';
-import { FlatList } from 'react-native';
+import moment from 'moment';
+import { FlatList, StyleSheet, View } from 'react-native';
+import Timeline from 'react-native-timeline-listview';
+import { getDescription } from '../../helpers/user-stats-helper';
 import { getStyle } from 'react-native-styler';
 import DashboardListItem from './dashboard-list-item';
+import ScoreBadge from '../score-badge/score-badge';
 import './dashboard-list.style';
 
 /**
@@ -9,19 +13,50 @@ import './dashboard-list.style';
  * @constructor
  */
 function DashboardList(props) {
+    const data = props.stats
+        .toJS()
+        .map(item => ({
+            time: '',
+            title: item.score,
+            description: getDescription(item.type, item.data),
+            icon: require('../../assets/happy.jpg'),
+            ...item
+        }));
+
     return (
-        <FlatList
-            data={props.stats.filter(stat => stat.get('score') !== 0)}
-            renderItem={renderListItem}
+        <Timeline
+            data={data}
+            columnFormat='two-column'
+            renderDetail={renderListItem}
+            circleColor={StyleSheet.flatten(getStyle('dashboard__listItem__line')).color}
+            lineColor={StyleSheet.flatten(getStyle('dashboard__listItem__line')).color}
+            lineWidth={1}
+            detailContainerStyle={getStyle('dashboard__listItem')}
+            timeStyle={getStyle('dashboard__listItem__date')}
+            renderCircle={renderBadge}
+            separator={false}
+            style={getStyle('dashboard__list')}
+            innerCircle='icon'
         />
     );
 
-    function renderListItem({ item, index }) {
+    function renderListItem(item) {
         return (
             <DashboardListItem
-                key={index}
                 item={item}
             />
+        )
+    }
+
+    function renderBadge(item) {
+        return (
+            <View
+                style={getStyle('dashboard__listItem__badge')}
+            >
+                <ScoreBadge
+                    score={item.score}
+                />
+            </View>
         )
     }
 }
