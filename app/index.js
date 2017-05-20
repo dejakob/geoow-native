@@ -10,6 +10,7 @@ import Register from './register';
 import Plan from './plan';
 import Preferences from './preferences';
 import Dashboard from './dashboard';
+import Discover from './discover';
 import '../themes';
 
 const App = StackNavigator({
@@ -17,7 +18,8 @@ const App = StackNavigator({
     Register: { screen: connect(Register) },
     Plan: { screen: connect(Plan) },
     Preferences: { screen: connect(Preferences) },
-    Dashboard: { screen: connect(Dashboard) }
+    Dashboard: { screen: connect(Dashboard) },
+    Discover: { screen: connect(Discover) }
 }, {
     mode: 'modal'
 });
