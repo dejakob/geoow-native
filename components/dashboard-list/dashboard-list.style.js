@@ -3,6 +3,12 @@ import { createStyle } from 'react-native-styler';
 
 createStyle({
     dashboard: {
+        list: {
+            header: {
+                paddingTop: '40h4s'
+            }
+        },
+
         listItem: {
             paddingTop: 0,
             paddingBottom: 0,

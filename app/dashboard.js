@@ -3,7 +3,7 @@ import { View, Image, Text, StyleSheet } from 'react-native';
 import PublicBackground from '../components/public-background/public-background';
 import DashboardList from '../components/dashboard-list/dashboard-list';
 import DashboardMe from '../components/dashboard-me/dashboard-me';
-import { getStyle } from 'react-native-styler';
+import DashboardPrimaryAction from '../components/dashboard-primary-action/dashboard-primary-action';
 import '../components/header/header.style.js'
 
 /**
@@ -28,6 +28,9 @@ class Dashboard extends Component
                 />
                 <DashboardList
                     stats={this.props.user.getIn(['me', 'stats'])}
+                />
+                <DashboardPrimaryAction
+                    onPress={() => this.props.navigation.navigate('Discover')}
                 />
             </PublicBackground>
         );

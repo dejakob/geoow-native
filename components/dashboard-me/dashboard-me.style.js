@@ -5,6 +5,8 @@ createStyle({
         alignItems: 'center',
         justifyContent: 'center',
         height: '200h4s',
+        paddingBottom: '20h4s',
+        backgroundColor: 'theme:darken3',
 
         firstName: {
             fontSize: 'theme:h2',

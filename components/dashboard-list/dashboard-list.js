@@ -33,9 +33,9 @@ function DashboardList(props) {
             detailContainerStyle={getStyle('dashboard__listItem')}
             descriptionStyle={{ margin: 0, padding: 0 }}
             timeStyle={getStyle('dashboard__listItem__date')}
+            options={{ renderHeader: () => <View style={getStyle('dashboard__list__header')} /> }}
             renderCircle={renderBadge}
             separator={false}
-            style={getStyle('dashboard__list')}
             innerCircle='icon'
         />
     );
