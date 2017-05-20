@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Image, Text, StyleSheet } from 'react-native';
-import MainBackground from '../components/main-background/main-background';
+import PublicBackground from '../components/public-background/public-background';
 import DashboardList from '../components/dashboard-list/dashboard-list';
 import DashboardMe from '../components/dashboard-me/dashboard-me';
 import { getStyle } from 'react-native-styler';
@@ -22,14 +22,14 @@ class Dashboard extends Component
 
     render() {
         return (
-            <MainBackground>
+            <PublicBackground>
                 <DashboardMe
                     me={this.props.user}
                 />
                 <DashboardList
                     stats={this.props.user.getIn(['me', 'stats'])}
                 />
-            </MainBackground>
+            </PublicBackground>
         );
     }
 }

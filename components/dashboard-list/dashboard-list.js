@@ -19,7 +19,6 @@ function DashboardList(props) {
             time: '',
             title: item.score,
             description: getDescription(item.type, item.data),
-            icon: require('../../assets/happy.jpg'),
             ...item
         }));
 
@@ -30,8 +29,9 @@ function DashboardList(props) {
             renderDetail={renderListItem}
             circleColor={StyleSheet.flatten(getStyle('dashboard__listItem__line')).color}
             lineColor={StyleSheet.flatten(getStyle('dashboard__listItem__line')).color}
-            lineWidth={1}
+            lineWidth={StyleSheet.hairlineWidth}
             detailContainerStyle={getStyle('dashboard__listItem')}
+            descriptionStyle={{ margin: 0, padding: 0 }}
             timeStyle={getStyle('dashboard__listItem__date')}
             renderCircle={renderBadge}
             separator={false}

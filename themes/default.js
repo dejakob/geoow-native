@@ -15,6 +15,7 @@ createTheme({
         notok: '#9a2300',
         notokSoft: '#ffdbc3',
         lighten: 'rgba(255,255,255,0.5)',
+        lighten8: 'rgba(255,255,255,0.8)',
         darken: 'rgba(0,0,0,0.5)'
     },
     fontSizes: {

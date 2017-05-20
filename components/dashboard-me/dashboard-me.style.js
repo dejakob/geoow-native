@@ -2,7 +2,6 @@ import { createStyle } from 'react-native-styler';
 
 createStyle({
     dashboardMe: {
-        backgroundColor: 'theme:secondary',
         alignItems: 'center',
         justifyContent: 'center',
         height: '200h4s',
