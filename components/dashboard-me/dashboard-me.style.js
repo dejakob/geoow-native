@@ -6,7 +6,7 @@ createStyle({
         justifyContent: 'center',
         height: '200h4s',
         paddingBottom: '20h4s',
-        backgroundColor: 'theme:darken3',
+        backgroundColor: 'theme:background',
 
         firstName: {
             fontSize: 'theme:h2',
