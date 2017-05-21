@@ -8,7 +8,8 @@ import DiscoverMap from '../components/discover-map/discover-map';
 class Discover extends Component
 {
     static navigationOptions = {
-        header: null
+        header: null,
+        gesturesEnabled: false
     };
 
     componentWillMount() {
@@ -16,10 +17,13 @@ class Discover extends Component
     }
 
     render() {
+        console.log('lat', this.props.location.get('latitude'));
+
         return (
             <PublicBackground>
                 <DiscoverMap
-
+                    latitude={this.props.location.get('latitude')}
+                    longitude={this.props.location.get('longitude')}
                 />
             </PublicBackground>
         );

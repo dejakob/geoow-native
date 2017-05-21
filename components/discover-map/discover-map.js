@@ -7,15 +7,15 @@ import './discover-map.style';
  * <DiscoverMap />
  * @constructor
  */
-function DiscoverMap() {
+function DiscoverMap(props) {
     return (
         <MapView
             style={getStyle('discoverMap')}
-            initialRegion={{
-              latitude: 37.78825,
-              longitude: -122.4324,
-              latitudeDelta: 0.0922,
-              longitudeDelta: 0.0421,
+            region={{
+              latitude: props.latitude,
+              longitude: props.longitude,
+              latitudeDelta: 0.0018,
+              longitudeDelta: 0.0321,
             }}
         />
     )
