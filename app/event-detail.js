@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Platform, Linking } from 'react-native';
 import PublicBackground from '../components/public-background/public-background';
 import EventDetailHeader from '../components/event-detail-header/event-detail-header';
 import EventDetailDetails from '../components/event-detail-details/event-detail-details';
@@ -15,12 +16,33 @@ class EventDetail extends Component
         header: null
     };
 
+    constructor() {
+        super();
+        this._acceptQuest = this._acceptQuest.bind(this);
+    }
+
     get eventId() {
         return this.props.navigation.state.params.eventId;
     }
 
     get event() {
         return this.props.event.getIn(['events', this.eventId])
+    }
+
+    _acceptQuest() {
+        const latitude = this.event.getIn(['location', 'geocoords', 0]);
+        const longitude = this.event.getIn(['location', 'geocoords', 1]);
+
+        console.log('lat', latitude);
+
+        Platform.select({
+            ios: () => {
+                Linking.openURL('http://maps.apple.com/maps?daddr=' + latitude + ',' + longitude);
+            },
+            android: () => {
+                Linking.openURL('http://maps.google.com/maps?daddr=' + latitude + ',' + longitude);
+            }
+        })();
     }
 
     render() {
@@ -37,7 +59,9 @@ class EventDetail extends Component
                     />
                 </Article>
                 <Footer>
-                    <PrimaryButton>
+                    <PrimaryButton
+                        onPress={this._acceptQuest}
+                    >
                         Accept the quest
                     </PrimaryButton>
                 </Footer>
