@@ -8,12 +8,14 @@ import './event-detail-header.style';
  * @constructor
  */
 function EventDetailHeader(props) {
+    console.log('event', props.event.toJS());
+
     return (
         <View
             style={getStyle('eventDetailHeader')}
         >
             <Image
-                source={{ uri: props.event.getIn(['venue', 'cover', 'source']) }}
+                source={{ uri: props.event.getIn([ 'cover', 'source']) }}
                 style={getStyle('eventDetailHeader__background')}
             />
             <View
