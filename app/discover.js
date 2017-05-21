@@ -11,6 +11,10 @@ class Discover extends Component
         header: null
     };
 
+    componentWillMount() {
+        this.props.loadGeolocation();
+    }
+
     render() {
         return (
             <PublicBackground>
