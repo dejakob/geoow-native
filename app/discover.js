@@ -16,8 +16,8 @@ class Discover extends Component
     get eventsNearby() {
         return this.props.discover.get('eventsNearby').map(eventId =>
             this.props.event.getIn(['events', eventId])
-        ).sort(event =>
-            event.get('startTime') - event.get('endTime')
+        ).sort((eventA, eventB) =>
+            new Date(eventA.get('startTime')).getTime() - new Date(eventB.get('endTime')).getTime()
         );
     }
 
