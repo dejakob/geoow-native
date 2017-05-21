@@ -11,6 +11,7 @@ import Plan from './plan';
 import Preferences from './preferences';
 import Dashboard from './dashboard';
 import Discover from './discover';
+import EventDetail from './event-detail';
 import '../themes';
 
 const App = StackNavigator({
@@ -19,7 +20,8 @@ const App = StackNavigator({
     Plan: { screen: connect(Plan) },
     Preferences: { screen: connect(Preferences) },
     Dashboard: { screen: connect(Dashboard) },
-    Discover: { screen: connect(Discover) }
+    Discover: { screen: connect(Discover) },
+    EventDetail: { screen: connect(EventDetail) }
 }, {
     mode: 'modal'
 });

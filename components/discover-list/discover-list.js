@@ -21,6 +21,7 @@ function DiscoverList(props) {
             <DiscoverListItem
                 key={index}
                 event={item}
+                onPress={() => props.onItemPress(item)}
             />
         )
     }
