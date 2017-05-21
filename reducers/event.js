@@ -20,6 +20,9 @@ function eventReducer(state = defaultState, action) {
 
         case ACTIONS.EVENTS_CATEGORIES_LOAD_FAILED:
             return loadCategoriesFailed(state, action);
+
+        case ACTIONS.DISCOVER_LOAD_EVENTS_NEARBY_SUCCESS:
+            return loadEventsSuccess(state, action);
     }
 
     return state;
@@ -39,6 +42,13 @@ function loadCategoriesSuccess(state, action) {
 function loadCategoriesFailed(state, action) {
     return state
         .set('isLoadingCategories', false);
+}
+
+function loadEventsSuccess(state, action) {
+    return state
+        .update('events', events =>
+            events.mergeDeep(Immutable.fromJS(action.events))
+        );
 }
 
 export default eventReducer;
