@@ -13,8 +13,16 @@ function DiscoverListItem(props) {
         <View
             style={getStyle('discoverListItem')}
         >
-            <Text>{event.get('name')}</Text>
-            <Text>{event.getIn(['location', 'street'])}</Text>
+            <Text
+                style={getStyle('discoverListItem__title')}
+            >
+                {event.get('name')}
+            </Text>
+            <Text
+                style={getStyle('discoverListItem__address')}
+            >
+                {event.getIn(['location', 'street'])}
+            </Text>
             <Text>{event.get('startTime')}</Text>
         </View>
     );
