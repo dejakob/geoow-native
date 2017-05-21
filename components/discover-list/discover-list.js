@@ -1,6 +1,8 @@
 import React from 'react';
 import { FlatList } from 'react-native';
 import DiscoverListItem from './discover-list-item';
+import { getStyle } from 'react-native-styler';
+import './discover-list.style';
 
 /**
  * <DiscoverList />

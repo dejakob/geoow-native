@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PublicBackground from '../components/public-background/public-background';
+import MainBackground from '../components/main-background/main-background';
 import DiscoverMap from '../components/discover-map/discover-map';
 import DiscoverList from '../components/discover-list/discover-list';
 
@@ -16,6 +16,8 @@ class Discover extends Component
     get eventsNearby() {
         return this.props.discover.get('eventsNearby').map(eventId =>
             this.props.event.getIn(['events', eventId])
+        ).sort(event =>
+            event.get('startTime') - event.get('endTime')
         );
     }
 
@@ -37,7 +39,7 @@ class Discover extends Component
         const { eventsNearby } = this;
 
         return (
-            <PublicBackground>
+            <MainBackground>
                 <DiscoverMap
                     latitude={this.props.location.get('latitude')}
                     longitude={this.props.location.get('longitude')}
@@ -46,7 +48,7 @@ class Discover extends Component
                 <DiscoverList
                     events={eventsNearby}
                 />
-            </PublicBackground>
+            </MainBackground>
         );
     }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
+import { getStyle } from 'react-native-styler';
 
 /**
  * <DiscoverListItem />
@@ -9,8 +10,12 @@ function DiscoverListItem(props) {
     const { event } = props;
 
     return (
-        <View>
-
+        <View
+            style={getStyle('discoverListItem')}
+        >
+            <Text>{event.get('name')}</Text>
+            <Text>{event.getIn(['location', 'street'])}</Text>
+            <Text>{event.get('startTime')}</Text>
         </View>
     );
 }
