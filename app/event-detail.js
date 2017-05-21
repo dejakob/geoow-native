@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PublicBackground from '../components/public-background/public-background';
+import EventDetailHeader from '../components/event-detail-header/event-detail-header';
 
 /**
  * <EventDetail />
@@ -23,7 +24,9 @@ class EventDetail extends Component
 
         return (
             <PublicBackground>
-
+                <EventDetailHeader
+                    event={this.event}
+                />
             </PublicBackground>
         );
     }
