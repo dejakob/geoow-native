@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PublicBackground from '../components/public-background/public-background';
 import DiscoverMap from '../components/discover-map/discover-map';
+import DiscoverList from '../components/discover-list/discover-list';
 
 /**
  * <Discover />
@@ -33,15 +34,17 @@ class Discover extends Component
     }
 
     render() {
-        console.log('event', this.props.event.toJS());
-        console.log('discover', this.props.discover.toJS());
+        const { eventsNearby } = this;
 
         return (
             <PublicBackground>
                 <DiscoverMap
                     latitude={this.props.location.get('latitude')}
                     longitude={this.props.location.get('longitude')}
-                    events={this.eventsNearby}
+                    events={eventsNearby}
+                />
+                <DiscoverList
+                    events={eventsNearby}
                 />
             </PublicBackground>
         );

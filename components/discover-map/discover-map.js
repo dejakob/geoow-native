@@ -8,7 +8,7 @@ import './discover-map.style';
  * @constructor
  */
 function DiscoverMap(props) {
-    props.events.map(event => console.log({ latitude: event.getIn(['location', 'geocoords', 1]), longitude: event.getIn(['location', 'geocoords', 0]) }));
+    // Todo: coords should be opposite? No?
 
     return (
         <MapView
