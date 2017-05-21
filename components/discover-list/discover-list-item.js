@@ -15,7 +15,7 @@ function DiscoverListItem(props) {
             style={getStyle('discoverListItem')}
         >
             <View>
-                <Text>{moment(event.get('startTime')).format('ddd HH:mm')}</Text>
+                <Text>{moment(event.get('startTime')).format('ddd HH:mm')} - {moment(event.get('endTime')).format('HH:mm')}</Text>
             </View>
             <View>
                 <Text
