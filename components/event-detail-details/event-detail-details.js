@@ -1,5 +1,6 @@
 import moment from 'moment';
 import React from 'react';
+import ScoreBadge from '../score-badge/score-badge';
 import { FlatList, Text, View } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import './event-detail-details.style';
@@ -32,12 +33,26 @@ function EventDetailDetails(props) {
                 >
                     {item.type}
                 </Text>
-                <Text
-                    style={getStyle('eventDetailDetails__listItem__value')}
-                >
-                    {item.value}
-                </Text>
+                {renderValue(item.type, item.value)}
             </View>
+        )
+    }
+
+    function renderValue(type, value) {
+        if (type === 'reward') {
+            return (
+                <ScoreBadge
+                    score={value}
+                />
+            )
+        }
+
+        return (
+            <Text
+                style={getStyle('eventDetailDetails__listItem__value')}
+            >
+                {value}
+            </Text>
         )
     }
 }
