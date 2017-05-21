@@ -20,6 +20,7 @@ createStyle({
             left: 0,
             right: 0,
             backgroundColor: 'theme:lighten8',
+            alignItems: 'center',
 
             logo: {
                 height: '50h4s',
@@ -27,6 +28,13 @@ createStyle({
                 borderRadius: '25h4s',
                 margin: '8h4s'
             }
+        },
+        title: {
+            fontWeight: '600',
+            fontSize: 'theme:p'
+        },
+        venueTitle: {
+            fontSize: 'theme:small'
         }
     }
 });
