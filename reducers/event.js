@@ -47,7 +47,13 @@ function loadCategoriesFailed(state, action) {
 function loadEventsSuccess(state, action) {
     return state
         .update('events', events =>
-            events.mergeDeep(Immutable.fromJS(action.events))
+            events.mergeDeep(
+                Immutable.Map(
+                    Immutable.fromJS(action.events).map(event =>
+                        [event.get('_id'), event]
+                    )
+                )
+            )
         );
 }
 

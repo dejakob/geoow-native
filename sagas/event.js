@@ -1,15 +1,20 @@
 import Actions from '../actions';
 import * as EventApi from '../api/event';
+import store from '../services/store';
 import { call, put } from 'redux-saga/effects';
 
 function* loadEventsNearby(action) {
     try {
-        throw new Error('To be implemented');
-        const result = yield call(apiFunc);
+        const location = store.getState().location;
+        const result = yield call(
+            EventApi.loadEventsNearby,
+            location.get('latitude'),
+            location.get('longitude')
+        );
 
-        yield put(Actions._loadEventsSuccess(result));
+        yield put(Actions._loadEventsNearbySuccess(result));
     } catch (e) {
-        yield put(Actions._loadEventsFailed());
+        yield put(Actions._loadEventsNearbyFailed());
     }
 }
 

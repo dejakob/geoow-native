@@ -6,7 +6,7 @@ import * as userSaga from './user';
 import * as locationSaga from './location';
 
 function* mainSaga() {
-    yield takeEvery(ACTIONS.EVENTS_NEARBY_LOAD, eventSaga.loadEventsNearby);
+    yield takeEvery(ACTIONS.DISCOVER_LOAD_EVENTS_NEARBY, eventSaga.loadEventsNearby);
     yield takeEvery(ACTIONS.EVENTS_CATEGORIES_LOAD, eventSaga.loadCategories);
 
     yield takeEvery(ACTIONS.AUTH_ACCOUNT_KIT, authSaga.authAccountKit);
