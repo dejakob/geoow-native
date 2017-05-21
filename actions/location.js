@@ -6,6 +6,23 @@ function loadGeolocation() {
     }
 }
 
+function _loadGeolocationSuccess(latitude, longitude) {
+    return {
+        type: ACTIONS.LOCATION_LOAD_GEOLOCATION_SUCCESS,
+        latitude,
+        longitude
+    }
+}
+
+function _loadGeolocationFailed() {
+    return {
+        type: ACTIONS.LOCATION_LOAD_GEOLOCATION_FAILED
+    }
+}
+
+
 export {
-    loadGeolocation
+    loadGeolocation,
+    _loadGeolocationSuccess,
+    _loadGeolocationFailed
 };
