@@ -2,6 +2,7 @@ import Immutable from 'immutable';
 import ACTIONS from '../constants/actions';
 
 const defaultState = Immutable.fromJS({
+    events: {},
     categories: [],
 
     isLoadingCategories: false
