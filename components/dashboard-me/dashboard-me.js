@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { getStyle } from 'react-native-styler';
-import Avatar from '../avatar/avatar';
 import './dashboard-me.style';
 
 /**
@@ -9,8 +8,6 @@ import './dashboard-me.style';
  * @constructor
  */
 function DashboardMe(props) {
-    console.log('props.me', props.me.toJS());
-
     return (
         <View
             style={getStyle('dashboardMe')}
