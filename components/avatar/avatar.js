@@ -1,14 +1,18 @@
 import React from 'react';
-import { Image } from 'react-native';
+import { Image, View } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import './avatar.style';
 
-function Avatar() {
+function Avatar(props) {
     return (
-        <Image
-            style={getStyle('avatar')}
-            source={require('../../assets/female.png')}
-        />
+        <View
+            style={[getStyle('avatar__wrapper'), props.style]}
+        >
+            <Image
+                style={[getStyle('avatar'), props.style]}
+                source={require('../../assets/female.png')}
+            />
+        </View>
     )
 }
 

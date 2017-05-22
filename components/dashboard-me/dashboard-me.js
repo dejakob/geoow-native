@@ -9,16 +9,21 @@ import './dashboard-me.style';
  * @constructor
  */
 function DashboardMe(props) {
+    console.log('props.me', props.me.toJS());
+
     return (
         <View
             style={getStyle('dashboardMe')}
         >
-            <Avatar />
-            <Text
-                style={getStyle('dashboardMe__firstName')}
+            <View
+                style={getStyle('dashboardMe__score')}
             >
-                {props.me.get('firstName') || "What's your name?"}
-            </Text>
+                <Text
+                    style={getStyle('dashboardMe__score__text')}
+                >
+                    {props.me.getIn(['me', 'score'])}
+                </Text>
+            </View>
         </View>
     );
 }
