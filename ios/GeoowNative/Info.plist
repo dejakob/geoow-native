@@ -19,7 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
@@ -42,19 +42,19 @@
 	<false/>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We need location to discover events around you and to know if you actually went there</string>
-  <key>FacebookAppID</key>
-  <string>1610970229164585</string>
-  <key>AccountKitClientToken</key>
-  <string>1675181fadd29b8d7e2be77db84d2e1b</string>
-  <key>CFBundleURLTypes</key>
-  <array>
-    <dict>
-      <key>CFBundleURLSchemes</key>
-      <array>
-        <string>ak1610970229164585</string>
-      </array>
-    </dict>
-  </array>
+	<key>FacebookAppID</key>
+	<string>1610970229164585</string>
+	<key>AccountKitClientToken</key>
+	<string>1675181fadd29b8d7e2be77db84d2e1b</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>ak1610970229164585</string>
+			</array>
+		</dict>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>

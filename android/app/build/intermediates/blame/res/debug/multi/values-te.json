@@ -6,10 +6,10 @@
                 "to": {
                     "startLine": 2,
                     "startColumn": 4,
-                    "startOffset": 55,
+                    "startOffset": 105,
                     "endLine": 238,
                     "endColumn": 19,
-                    "endOffset": 9267
+                    "endOffset": 9317
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -27,9 +27,9 @@
                 "to": {
                     "startLine": 239,
                     "startColumn": 4,
-                    "startOffset": 9272,
+                    "startOffset": 9322,
                     "endColumn": 81,
-                    "endOffset": 9349
+                    "endOffset": 9399
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -46,9 +46,9 @@
                 "to": {
                     "startLine": 240,
                     "startColumn": 4,
-                    "startOffset": 9354,
+                    "startOffset": 9404,
                     "endColumn": 67,
-                    "endOffset": 9417
+                    "endOffset": 9467
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -65,9 +65,9 @@
                 "to": {
                     "startLine": 241,
                     "startColumn": 4,
-                    "startOffset": 9422,
+                    "startOffset": 9472,
                     "endColumn": 67,
-                    "endOffset": 9485
+                    "endOffset": 9535
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -84,9 +84,9 @@
                 "to": {
                     "startLine": 242,
                     "startColumn": 4,
-                    "startOffset": 9490,
+                    "startOffset": 9540,
                     "endColumn": 69,
-                    "endOffset": 9555
+                    "endOffset": 9605
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -103,9 +103,9 @@
                 "to": {
                     "startLine": 243,
                     "startColumn": 4,
-                    "startOffset": 9560,
+                    "startOffset": 9610,
                     "endColumn": 69,
-                    "endOffset": 9625
+                    "endOffset": 9675
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -122,9 +122,9 @@
                 "to": {
                     "startLine": 244,
                     "startColumn": 4,
-                    "startOffset": 9630,
+                    "startOffset": 9680,
                     "endColumn": 64,
-                    "endOffset": 9690
+                    "endOffset": 9740
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -141,9 +141,9 @@
                 "to": {
                     "startLine": 245,
                     "startColumn": 4,
-                    "startOffset": 9695,
+                    "startOffset": 9745,
                     "endColumn": 68,
-                    "endOffset": 9759
+                    "endOffset": 9809
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -160,9 +160,9 @@
                 "to": {
                     "startLine": 246,
                     "startColumn": 4,
-                    "startOffset": 9764,
+                    "startOffset": 9814,
                     "endColumn": 61,
-                    "endOffset": 9821
+                    "endOffset": 9871
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -179,9 +179,9 @@
                 "to": {
                     "startLine": 247,
                     "startColumn": 4,
-                    "startOffset": 9826,
+                    "startOffset": 9876,
                     "endColumn": 56,
-                    "endOffset": 9878
+                    "endOffset": 9928
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -198,9 +198,9 @@
                 "to": {
                     "startLine": 248,
                     "startColumn": 4,
-                    "startOffset": 9883,
+                    "startOffset": 9933,
                     "endColumn": 93,
-                    "endOffset": 9972
+                    "endOffset": 10022
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -217,9 +217,9 @@
                 "to": {
                     "startLine": 249,
                     "startColumn": 4,
-                    "startOffset": 9977,
+                    "startOffset": 10027,
                     "endColumn": 77,
-                    "endOffset": 10050
+                    "endOffset": 10100
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -236,9 +236,9 @@
                 "to": {
                     "startLine": 250,
                     "startColumn": 4,
-                    "startOffset": 10055,
+                    "startOffset": 10105,
                     "endColumn": 59,
-                    "endOffset": 10110
+                    "endOffset": 10160
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -255,9 +255,9 @@
                 "to": {
                     "startLine": 251,
                     "startColumn": 4,
-                    "startOffset": 10115,
+                    "startOffset": 10165,
                     "endColumn": 80,
-                    "endOffset": 10191
+                    "endOffset": 10241
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -274,9 +274,9 @@
                 "to": {
                     "startLine": 252,
                     "startColumn": 4,
-                    "startOffset": 10196,
+                    "startOffset": 10246,
                     "endColumn": 113,
-                    "endOffset": 10305
+                    "endOffset": 10355
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -293,9 +293,9 @@
                 "to": {
                     "startLine": 253,
                     "startColumn": 4,
-                    "startOffset": 10310,
+                    "startOffset": 10360,
                     "endColumn": 142,
-                    "endOffset": 10448
+                    "endOffset": 10498
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -312,9 +312,9 @@
                 "to": {
                     "startLine": 254,
                     "startColumn": 4,
-                    "startOffset": 10453,
+                    "startOffset": 10503,
                     "endColumn": 92,
-                    "endOffset": 10541
+                    "endOffset": 10591
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -331,9 +331,9 @@
                 "to": {
                     "startLine": 255,
                     "startColumn": 4,
-                    "startOffset": 10546,
+                    "startOffset": 10596,
                     "endColumn": 116,
-                    "endOffset": 10658
+                    "endOffset": 10708
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -350,9 +350,9 @@
                 "to": {
                     "startLine": 256,
                     "startColumn": 4,
-                    "startOffset": 10663,
+                    "startOffset": 10713,
                     "endColumn": 177,
-                    "endOffset": 10836
+                    "endOffset": 10886
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -369,9 +369,9 @@
                 "to": {
                     "startLine": 257,
                     "startColumn": 4,
-                    "startOffset": 10841,
+                    "startOffset": 10891,
                     "endColumn": 67,
-                    "endOffset": 10904
+                    "endOffset": 10954
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -388,9 +388,9 @@
                 "to": {
                     "startLine": 258,
                     "startColumn": 4,
-                    "startOffset": 10909,
+                    "startOffset": 10959,
                     "endColumn": 80,
-                    "endOffset": 10985
+                    "endOffset": 11035
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -407,9 +407,9 @@
                 "to": {
                     "startLine": 259,
                     "startColumn": 4,
-                    "startOffset": 10990,
+                    "startOffset": 11040,
                     "endColumn": 66,
-                    "endOffset": 11052
+                    "endOffset": 11102
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -426,9 +426,9 @@
                 "to": {
                     "startLine": 260,
                     "startColumn": 4,
-                    "startOffset": 11057,
+                    "startOffset": 11107,
                     "endColumn": 76,
-                    "endOffset": 11129
+                    "endOffset": 11179
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -445,9 +445,9 @@
                 "to": {
                     "startLine": 261,
                     "startColumn": 4,
-                    "startOffset": 11134,
+                    "startOffset": 11184,
                     "endColumn": 92,
-                    "endOffset": 11222
+                    "endOffset": 11272
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -464,10 +464,10 @@
                 "to": {
                     "startLine": 262,
                     "startColumn": 4,
-                    "startOffset": 11227,
+                    "startOffset": 11277,
                     "endLine": 264,
                     "endColumn": 13,
-                    "endOffset": 11464
+                    "endOffset": 11514
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -485,10 +485,10 @@
                 "to": {
                     "startLine": 265,
                     "startColumn": 4,
-                    "startOffset": 11469,
+                    "startOffset": 11519,
                     "endLine": 267,
                     "endColumn": 13,
-                    "endOffset": 11771
+                    "endOffset": 11821
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -506,10 +506,10 @@
                 "to": {
                     "startLine": 268,
                     "startColumn": 4,
-                    "startOffset": 11776,
+                    "startOffset": 11826,
                     "endLine": 270,
                     "endColumn": 13,
-                    "endOffset": 12134
+                    "endOffset": 12184
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -527,10 +527,10 @@
                 "to": {
                     "startLine": 271,
                     "startColumn": 4,
-                    "startOffset": 12139,
+                    "startOffset": 12189,
                     "endLine": 273,
                     "endColumn": 13,
-                    "endOffset": 12612
+                    "endOffset": 12662
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -548,10 +548,10 @@
                 "to": {
                     "startLine": 274,
                     "startColumn": 4,
-                    "startOffset": 12617,
+                    "startOffset": 12667,
                     "endLine": 276,
                     "endColumn": 13,
-                    "endOffset": 13038
+                    "endOffset": 13088
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -569,10 +569,10 @@
                 "to": {
                     "startLine": 277,
                     "startColumn": 4,
-                    "startOffset": 13043,
+                    "startOffset": 13093,
                     "endLine": 279,
                     "endColumn": 13,
-                    "endOffset": 13393
+                    "endOffset": 13443
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -590,9 +590,9 @@
                 "to": {
                     "startLine": 280,
                     "startColumn": 4,
-                    "startOffset": 13398,
+                    "startOffset": 13448,
                     "endColumn": 83,
-                    "endOffset": 13477
+                    "endOffset": 13527
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -609,9 +609,9 @@
                 "to": {
                     "startLine": 281,
                     "startColumn": 4,
-                    "startOffset": 13482,
+                    "startOffset": 13532,
                     "endColumn": 90,
-                    "endOffset": 13568
+                    "endOffset": 13618
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -628,9 +628,9 @@
                 "to": {
                     "startLine": 282,
                     "startColumn": 4,
-                    "startOffset": 13573,
+                    "startOffset": 13623,
                     "endColumn": 101,
-                    "endOffset": 13670
+                    "endOffset": 13720
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -647,9 +647,9 @@
                 "to": {
                     "startLine": 283,
                     "startColumn": 4,
-                    "startOffset": 13675,
+                    "startOffset": 13725,
                     "endColumn": 81,
-                    "endOffset": 13752
+                    "endOffset": 13802
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -666,9 +666,9 @@
                 "to": {
                     "startLine": 284,
                     "startColumn": 4,
-                    "startOffset": 13757,
+                    "startOffset": 13807,
                     "endColumn": 94,
-                    "endOffset": 13847
+                    "endOffset": 13897
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -685,10 +685,10 @@
                 "to": {
                     "startLine": 285,
                     "startColumn": 4,
-                    "startOffset": 13852,
+                    "startOffset": 13902,
                     "endLine": 287,
                     "endColumn": 13,
-                    "endOffset": 14184
+                    "endOffset": 14234
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -706,9 +706,9 @@
                 "to": {
                     "startLine": 288,
                     "startColumn": 4,
-                    "startOffset": 14189,
+                    "startOffset": 14239,
                     "endColumn": 95,
-                    "endOffset": 14280
+                    "endOffset": 14330
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -725,9 +725,9 @@
                 "to": {
                     "startLine": 289,
                     "startColumn": 4,
-                    "startOffset": 14285,
+                    "startOffset": 14335,
                     "endColumn": 83,
-                    "endOffset": 14364
+                    "endOffset": 14414
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -744,9 +744,9 @@
                 "to": {
                     "startLine": 290,
                     "startColumn": 4,
-                    "startOffset": 14369,
+                    "startOffset": 14419,
                     "endColumn": 116,
-                    "endOffset": 14481
+                    "endOffset": 14531
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -763,9 +763,9 @@
                 "to": {
                     "startLine": 291,
                     "startColumn": 4,
-                    "startOffset": 14486,
+                    "startOffset": 14536,
                     "endColumn": 95,
-                    "endOffset": 14577
+                    "endOffset": 14627
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -782,9 +782,9 @@
                 "to": {
                     "startLine": 292,
                     "startColumn": 4,
-                    "startOffset": 14582,
+                    "startOffset": 14632,
                     "endColumn": 116,
-                    "endOffset": 14694
+                    "endOffset": 14744
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -801,9 +801,9 @@
                 "to": {
                     "startLine": 293,
                     "startColumn": 4,
-                    "startOffset": 14699,
+                    "startOffset": 14749,
                     "endColumn": 107,
-                    "endOffset": 14802
+                    "endOffset": 14852
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -820,9 +820,9 @@
                 "to": {
                     "startLine": 294,
                     "startColumn": 4,
-                    "startOffset": 14807,
+                    "startOffset": 14857,
                     "endColumn": 71,
-                    "endOffset": 14874
+                    "endOffset": 14924
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -839,9 +839,9 @@
                 "to": {
                     "startLine": 295,
                     "startColumn": 4,
-                    "startOffset": 14879,
+                    "startOffset": 14929,
                     "endColumn": 101,
-                    "endOffset": 14976
+                    "endOffset": 15026
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -858,9 +858,9 @@
                 "to": {
                     "startLine": 296,
                     "startColumn": 4,
-                    "startOffset": 14981,
+                    "startOffset": 15031,
                     "endColumn": 114,
-                    "endOffset": 15091
+                    "endOffset": 15141
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -877,9 +877,9 @@
                 "to": {
                     "startLine": 297,
                     "startColumn": 4,
-                    "startOffset": 15096,
+                    "startOffset": 15146,
                     "endColumn": 84,
-                    "endOffset": 15176
+                    "endOffset": 15226
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -896,9 +896,9 @@
                 "to": {
                     "startLine": 298,
                     "startColumn": 4,
-                    "startOffset": 15181,
+                    "startOffset": 15231,
                     "endColumn": 99,
-                    "endOffset": 15276
+                    "endOffset": 15326
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -915,10 +915,10 @@
                 "to": {
                     "startLine": 299,
                     "startColumn": 4,
-                    "startOffset": 15281,
+                    "startOffset": 15331,
                     "endLine": 301,
                     "endColumn": 13,
-                    "endOffset": 15655
+                    "endOffset": 15705
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -936,9 +936,9 @@
                 "to": {
                     "startLine": 302,
                     "startColumn": 4,
-                    "startOffset": 15660,
+                    "startOffset": 15710,
                     "endColumn": 92,
-                    "endOffset": 15748
+                    "endOffset": 15798
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -955,9 +955,9 @@
                 "to": {
                     "startLine": 303,
                     "startColumn": 4,
-                    "startOffset": 15753,
+                    "startOffset": 15803,
                     "endColumn": 89,
-                    "endOffset": 15838
+                    "endOffset": 15888
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -974,9 +974,9 @@
                 "to": {
                     "startLine": 304,
                     "startColumn": 4,
-                    "startOffset": 15843,
+                    "startOffset": 15893,
                     "endColumn": 79,
-                    "endOffset": 15918
+                    "endOffset": 15968
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -993,9 +993,9 @@
                 "to": {
                     "startLine": 305,
                     "startColumn": 4,
-                    "startOffset": 15923,
+                    "startOffset": 15973,
                     "endColumn": 86,
-                    "endOffset": 16005
+                    "endOffset": 16055
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -1012,9 +1012,9 @@
                 "to": {
                     "startLine": 306,
                     "startColumn": 4,
-                    "startOffset": 16010,
+                    "startOffset": 16060,
                     "endColumn": 93,
-                    "endOffset": 16099
+                    "endOffset": 16149
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -1031,9 +1031,9 @@
                 "to": {
                     "startLine": 307,
                     "startColumn": 4,
-                    "startOffset": 16104,
+                    "startOffset": 16154,
                     "endColumn": 64,
-                    "endOffset": 16164
+                    "endOffset": 16214
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -1050,9 +1050,9 @@
                 "to": {
                     "startLine": 308,
                     "startColumn": 4,
-                    "startOffset": 16169,
+                    "startOffset": 16219,
                     "endColumn": 68,
-                    "endOffset": 16233
+                    "endOffset": 16283
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -1069,9 +1069,9 @@
                 "to": {
                     "startLine": 309,
                     "startColumn": 4,
-                    "startOffset": 16238,
+                    "startOffset": 16288,
                     "endColumn": 77,
-                    "endOffset": 16311
+                    "endOffset": 16361
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -1088,10 +1088,10 @@
                 "to": {
                     "startLine": 310,
                     "startColumn": 4,
-                    "startOffset": 16316,
+                    "startOffset": 16366,
                     "endLine": 312,
                     "endColumn": 13,
-                    "endOffset": 16463
+                    "endOffset": 16513
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -1109,9 +1109,9 @@
                 "to": {
                     "startLine": 313,
                     "startColumn": 4,
-                    "startOffset": 16468,
+                    "startOffset": 16518,
                     "endColumn": 82,
-                    "endOffset": 16546
+                    "endOffset": 16596
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -1128,9 +1128,9 @@
                 "to": {
                     "startLine": 314,
                     "startColumn": 4,
-                    "startOffset": 16551,
+                    "startOffset": 16601,
                     "endColumn": 113,
-                    "endOffset": 16660
+                    "endOffset": 16710
                 },
                 "from": {
                     "file": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/values-te/values-te.xml",
@@ -1140,6 +1140,329 @@
                         "startOffset": 16551,
                         "endColumn": 113,
                         "endOffset": 16660
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 315,
+                    "startColumn": 4,
+                    "startOffset": 16715,
+                    "endColumn": 111,
+                    "endOffset": 16822
+                },
+                "from": {
+                    "file": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/values-te/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 283,
+                        "endColumn": 107,
+                        "endOffset": 390
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 316,
+                    "startColumn": 4,
+                    "startOffset": 16827,
+                    "endColumn": 185,
+                    "endOffset": 17008
+                },
+                "from": {
+                    "file": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/values-te/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 0,
+                        "startOffset": 391,
+                        "endColumn": 185,
+                        "endOffset": 576
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 317,
+                    "startColumn": 4,
+                    "startOffset": 17013,
+                    "endColumn": 131,
+                    "endOffset": 17140
+                },
+                "from": {
+                    "file": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/values-te/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 0,
+                        "startOffset": 577,
+                        "endColumn": 127,
+                        "endOffset": 704
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 318,
+                    "startColumn": 4,
+                    "startOffset": 17145,
+                    "endColumn": 116,
+                    "endOffset": 17257
+                },
+                "from": {
+                    "file": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/values-te/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 0,
+                        "startOffset": 705,
+                        "endColumn": 112,
+                        "endOffset": 817
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 319,
+                    "startColumn": 4,
+                    "startOffset": 17262,
+                    "endColumn": 195,
+                    "endOffset": 17453
+                },
+                "from": {
+                    "file": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/values-te/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 0,
+                        "startOffset": 818,
+                        "endColumn": 195,
+                        "endOffset": 1013
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 320,
+                    "startColumn": 4,
+                    "startOffset": 17458,
+                    "endColumn": 126,
+                    "endOffset": 17580
+                },
+                "from": {
+                    "file": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/values-te/values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 0,
+                        "startOffset": 1014,
+                        "endColumn": 122,
+                        "endOffset": 1136
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 321,
+                    "startColumn": 4,
+                    "startOffset": 17585,
+                    "endColumn": 126,
+                    "endOffset": 17707
+                },
+                "from": {
+                    "file": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/values-te/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 0,
+                        "startOffset": 1137,
+                        "endColumn": 122,
+                        "endOffset": 1259
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 322,
+                    "startColumn": 4,
+                    "startOffset": 17712,
+                    "endColumn": 198,
+                    "endOffset": 17906
+                },
+                "from": {
+                    "file": "/Users/jakobkerkhove/.android/build-cache/c7297593e5ed7bb294632f4d445786fe1b10848e/output/res/values-te/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 285,
+                        "endColumn": 198,
+                        "endOffset": 483
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 323,
+                    "startColumn": 4,
+                    "startOffset": 17911,
+                    "endColumn": 207,
+                    "endOffset": 18114
+                },
+                "from": {
+                    "file": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/values-te/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 0,
+                        "startOffset": 1260,
+                        "endColumn": 207,
+                        "endOffset": 1467
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 324,
+                    "startColumn": 4,
+                    "startOffset": 18119,
+                    "endColumn": 109,
+                    "endOffset": 18224
+                },
+                "from": {
+                    "file": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/values-te/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 0,
+                        "startOffset": 1468,
+                        "endColumn": 105,
+                        "endOffset": 1573
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 325,
+                    "startColumn": 4,
+                    "startOffset": 18229,
+                    "endColumn": 183,
+                    "endOffset": 18408
+                },
+                "from": {
+                    "file": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/values-te/values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 0,
+                        "startOffset": 1574,
+                        "endColumn": 183,
+                        "endOffset": 1757
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 326,
+                    "startColumn": 4,
+                    "startOffset": 18413,
+                    "endColumn": 129,
+                    "endOffset": 18538
+                },
+                "from": {
+                    "file": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/values-te/values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 0,
+                        "startOffset": 1758,
+                        "endColumn": 125,
+                        "endOffset": 1883
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 327,
+                    "startColumn": 4,
+                    "startOffset": 18543,
+                    "endColumn": 209,
+                    "endOffset": 18748
+                },
+                "from": {
+                    "file": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/values-te/values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 0,
+                        "startOffset": 1884,
+                        "endColumn": 209,
+                        "endOffset": 2093
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 328,
+                    "startColumn": 4,
+                    "startOffset": 18753,
+                    "endColumn": 188,
+                    "endOffset": 18937
+                },
+                "from": {
+                    "file": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/values-te/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 0,
+                        "startOffset": 2094,
+                        "endColumn": 184,
+                        "endOffset": 2278
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 329,
+                    "startColumn": 4,
+                    "startOffset": 18942,
+                    "endColumn": 93,
+                    "endOffset": 19031
+                },
+                "from": {
+                    "file": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/values-te/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 0,
+                        "startOffset": 2279,
+                        "endColumn": 89,
+                        "endOffset": 2368
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 330,
+                    "startColumn": 4,
+                    "startOffset": 19036,
+                    "endColumn": 97,
+                    "endOffset": 19129
+                },
+                "from": {
+                    "file": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/values-te/values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 0,
+                        "startOffset": 2369,
+                        "endColumn": 93,
+                        "endOffset": 2462
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 331,
+                    "startColumn": 4,
+                    "startOffset": 19134,
+                    "endColumn": 110,
+                    "endOffset": 19240
+                },
+                "from": {
+                    "file": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/values-te/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 0,
+                        "startOffset": 2463,
+                        "endColumn": 106,
+                        "endOffset": 2569
                     }
                 }
             }

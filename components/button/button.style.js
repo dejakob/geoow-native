@@ -7,7 +7,8 @@ const container = {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: '20h4s'
+    borderRadius: '20h4s',
+    height: '40h4s'
 };
 const text = {
     textAlign: 'center',

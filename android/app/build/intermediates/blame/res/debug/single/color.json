@@ -12,6 +12,10 @@
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/color/abc_primary_text_material_light.xml"
     },
     {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/color/common_google_signin_btn_text_dark.xml"
+    },
+    {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/color/abc_tint_edittext.xml",
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/color/abc_tint_edittext.xml"
     },
@@ -64,8 +68,16 @@
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/color/abc_tint_default.xml"
     },
     {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_tint.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/color/common_google_signin_btn_tint.xml"
+    },
+    {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/color/common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",

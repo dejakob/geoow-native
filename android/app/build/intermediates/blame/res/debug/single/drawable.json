@@ -12,10 +12,6 @@
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_tick_mark_material.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_seekbar_tick_mark_material.xml"
-    },
-    {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/navigation_empty_icon.xml",
         "source": "/Users/jakobkerkhove/.android/build-cache/e505b9e6e43b0dc40558fa2545a12270cbbb9d0f/output/res/drawable/navigation_empty_icon.xml"
     },
@@ -24,16 +20,128 @@
         "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/drawable/com_accountkit_progress_complete.xml"
     },
     {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_normal.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/drawable/common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/com_accountkit_error.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/drawable/com_accountkit_error.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_disabled.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/drawable/common_google_signin_btn_icon_disabled.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/com_accountkit_pencil.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/drawable/com_accountkit_pencil.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_normal.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/drawable/common_google_signin_btn_icon_dark_normal.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_ic_voice_search_api_material.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_material.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/ic_arrow_back_white.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/drawable/ic_arrow_back_white.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_disabled.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/drawable/common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_focused.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/drawable/common_google_signin_btn_text_light_focused.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_ic_clear_material.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_vector_test.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_vector_test.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_normal.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/drawable/common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/e505b9e6e43b0dc40558fa2545a12270cbbb9d0f/output/res/drawable/design_snackbar_background.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_focused.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/drawable/common_google_signin_btn_text_dark_focused.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/com_accountkit_error_exclamation.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/drawable/com_accountkit_error_exclamation.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/drawable/common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_tick_mark_material.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_seekbar_tick_mark_material.xml"
+    },
+    {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_ic_go_search_api_material.xml",
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_ic_go_search_api_material.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_dialog_material_background.xml"
-    },
-    {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_btn_colored_material.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/design_ic_visibility.xml",
@@ -56,60 +164,40 @@
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_list_selector_background_transition_holo_light.xml"
     },
     {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_normal.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/drawable/common_google_signin_btn_icon_light_normal.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_focused.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
+    },
+    {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_textfield_search_material.xml"
-    },
-    {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/com_accountkit_error.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/drawable/com_accountkit_error.xml"
-    },
-    {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
-    },
-    {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_seekbar_track_material.xml"
-    },
-    {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/com_accountkit_pencil.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/drawable/com_accountkit_pencil.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_item_background_holo_light.xml"
     },
     {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_btn_radio_material.xml"
-    },
-    {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/com_accountkit_email.xml",
         "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/drawable/com_accountkit_email.xml"
     },
     {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_ratingbar_indicator_material.xml"
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_focused.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/drawable/common_google_signin_btn_icon_light_focused.xml"
     },
     {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_ic_voice_search_api_material.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_ic_voice_search_api_material.xml"
-    },
-    {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_material.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_ratingbar_material.xml"
-    },
-    {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/ic_arrow_back_white.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/drawable/ic_arrow_back_white.xml"
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/drawable/common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_edit_text_material.xml"
     },
     {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_item_background_holo_dark.xml"
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/drawable/common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
@@ -120,20 +208,12 @@
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_btn_check_material.xml"
     },
     {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_ratingbar_small_material.xml"
-    },
-    {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/drawable/common_google_signin_btn_icon_dark.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_list_selector_holo_dark.xml"
-    },
-    {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_tab_indicator_material.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
@@ -152,31 +232,7 @@
         "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/drawable/com_accountkit_progress_ring.xml"
     },
     {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_ic_clear_material.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_ic_clear_material.xml"
-    },
-    {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_btn_borderless_material.xml"
-    },
-    {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_ic_search_api_material.xml"
-    },
-    {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_vector_test.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_vector_test.xml"
-    },
-    {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/e505b9e6e43b0dc40558fa2545a12270cbbb9d0f/output/res/drawable/design_snackbar_background.xml"
-    },
-    {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/com_accountkit_error_exclamation.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/drawable/com_accountkit_error_exclamation.xml"
-    },
-    {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable/abc_cab_background_top_material.xml"
     }
 ]

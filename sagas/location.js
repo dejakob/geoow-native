@@ -1,8 +1,13 @@
+import { Platform, PermissionsAndroid } from 'react-native';
 import Actions from '../actions';
 import { call, put } from 'redux-saga/effects';
 
 function* loadGeolocation(action) {
     try {
+        if (Platform.OS === 'android') {
+            yield PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION);
+        }
+
         const location = yield new Promise((resolve, reject) => navigator.geolocation.getCurrentPosition(
             resolve,
             reject,
