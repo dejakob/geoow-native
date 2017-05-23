@@ -30,19 +30,19 @@ class EventDetail extends Component
     }
 
     _acceptQuest() {
+        this.props.createQuest(this.eventId);
 
-
-        const latitude = this.event.getIn(['location', 'geocoords', 0]);
-        const longitude = this.event.getIn(['location', 'geocoords', 1]);
-
-        Platform.select({
-            ios: () => {
-                Linking.openURL('http://maps.apple.com/maps?daddr=' + latitude + ',' + longitude);
-            },
-            android: () => {
-                Linking.openURL('http://maps.google.com/maps?daddr=' + latitude + ',' + longitude);
-            }
-        })();
+        // const latitude = this.event.getIn(['location', 'geocoords', 0]);
+        // const longitude = this.event.getIn(['location', 'geocoords', 1]);
+//
+        // Platform.select({
+        //     ios: () => {
+        //         Linking.openURL('http://maps.apple.com/maps?daddr=' + latitude + ',' + longitude);
+        //     },
+        //     android: () => {
+        //         Linking.openURL('http://maps.google.com/maps?daddr=' + latitude + ',' + longitude);
+        //     }
+        // })();
     }
 
     render() {

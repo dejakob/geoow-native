@@ -4,6 +4,7 @@ import * as authSaga from './auth';
 import * as eventSaga from './event';
 import * as userSaga from './user';
 import * as locationSaga from './location';
+import * as questSaga from './quest';
 
 function* mainSaga() {
     yield takeEvery(ACTIONS.DISCOVER_LOAD_EVENTS_NEARBY, eventSaga.loadEventsNearby);
@@ -16,6 +17,8 @@ function* mainSaga() {
     yield takeEvery(ACTIONS.USER_LOAD_ME, userSaga.loadMe);
 
     yield takeEvery(ACTIONS.LOCATION_LOAD_GEOLOCATION, locationSaga.loadGeolocation);
+
+    yield takeEvery(ACTIONS.QUEST_CREATE_QUEST, questSaga.createQuest);
 }
 
 export default mainSaga;

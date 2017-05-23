@@ -23,7 +23,7 @@ function DiscoverMap(props) {
             {props.events.map(event => (
                 <MapView.Marker
                     key={event.get('_id')}
-                    coordinate={{ latitude: event.getIn(['location', 'geocoords', 0]), longitude: event.getIn(['location', 'geocoords', 1]) }}
+                    coordinate={{ latitude: event.getIn(['location', 'geocoords', 1]), longitude: event.getIn(['location', 'geocoords', 0]) }}
                     title={event.get('name')}
                     description={event.get('description')}
                 />
