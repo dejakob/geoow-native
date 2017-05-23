@@ -14,7 +14,7 @@ function PublicBackground(props) {
         >
             <Image
                 resizeMode="cover"
-                source={require('../../assets/brown-background.jpg')}
+                source={require('../../assets/sunset.jpg')}
                 style={getStyle('publicBackground__image')}
             >
 
