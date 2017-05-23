@@ -30,10 +30,10 @@ class EventDetail extends Component
     }
 
     _acceptQuest() {
+
+
         const latitude = this.event.getIn(['location', 'geocoords', 0]);
         const longitude = this.event.getIn(['location', 'geocoords', 1]);
-
-        console.log('lat', latitude);
 
         Platform.select({
             ios: () => {
