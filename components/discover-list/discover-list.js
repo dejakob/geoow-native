@@ -1,7 +1,7 @@
 import React from 'react';
 import { FlatList } from 'react-native';
 import DiscoverListItem from './discover-list-item';
-import { getStyle } from 'react-native-styler';
+import ListSeparator from '../list-separator/list-separator';
 import './discover-list.style';
 
 /**
@@ -13,6 +13,8 @@ function DiscoverList(props) {
         <FlatList
             data={props.events.toArray()}
             renderItem={renderItem}
+            ItemSeparatorComponent={ListSeparator}
+            bounces={false}
         />
     );
 
