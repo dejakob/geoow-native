@@ -11,6 +11,7 @@
 		"moment": "^2.18.1",
 		"react": "16.0.0-alpha.6",
 		"react-native": "0.44.0",
+		"react-native-background-geolocation": "^2.8.1",
 		"react-native-facebook-account-kit": "^0.6.2",
 		"react-native-maps": "^0.15.2",
 		"react-native-styler": "^0.0.9",

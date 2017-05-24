@@ -6,6 +6,7 @@ import EventDetailDetails from '../components/event-detail-details/event-detail-
 import Article from '../components/article/article';
 import Footer from '../components/footer/footer';
 import PrimaryButton from '../components/button/primary-button';
+import * as BackgroundLocation from '../services/background-location';
 
 /**
  * <EventDetail />
@@ -31,6 +32,10 @@ class EventDetail extends Component
 
     _acceptQuest() {
         this.props.createQuest(this.eventId);
+
+        BackgroundLocation
+            .questTillLocation()
+            .then(() => console.log('congratulations, you got there...'));
 
         // const latitude = this.event.getIn(['location', 'geocoords', 0]);
         // const longitude = this.event.getIn(['location', 'geocoords', 1]);
