@@ -38,7 +38,7 @@ class EventDetail extends Component
 
         BackgroundLocation
             .questTillLocation(latitude, longitude)
-            .then(() => console.log('congratulations, you got there...'));
+            .then(() => alert('congratulations, you got there...'));
 
         //
         // Platform.select({
