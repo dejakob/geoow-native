@@ -1,9 +1,7 @@
 import BackgroundGeolocation from "react-native-background-geolocation";
 import { getDistanceInMeter } from '../helpers/distance-helper';
-import store from '../services/store';
-
 // In meter
-const MAX_DISTANCE_TO_BE_VALID = 50;
+const MAX_DISTANCE_TO_BE_VALID = 150;
 const QUEST_TIMEOUT = 43200000;
 
 let _isInitialized = false;
@@ -17,7 +15,7 @@ function initTracking() {
         // Activity Recognition
         stopTimeout: 1,
         // Application config
-        debug: false, // <-- enable this hear sounds for background-geolocation life-cycle.
+        debug: true, // <-- enable this hear sounds for background-geolocation life-cycle.
         logLevel: BackgroundGeolocation.LOG_LEVEL_VERBOSE,
         stopOnTerminate: false,   // <-- Allow the background-service to continue tracking when user closes the app.
         startOnBoot: false,        // <-- Auto start tracking when device is powered-up.
@@ -34,18 +32,29 @@ function initTracking() {
 
 function questTillLocation(latitude, longitude) {
     return new Promise((resolve, reject) => {
-        const distance = getDistanceInMeter(
-            latitude,
-            longitude,
-            store.location.get('latitude'),
-            store.location.get('longitude')
-        );
+        const checkLocation = ({ coords }) => {
+            const distance = getDistanceInMeter(
+                latitude,
+                longitude,
+                coords.latitude,
+                coords.longitude
+            );
 
-        if (distance <= MAX_DISTANCE_TO_BE_VALID) {
-            resolve();
-        }
+            if (distance <= MAX_DISTANCE_TO_BE_VALID) {
+                resolve();
+                stop();
+                BackgroundGeolocation.un('location', checkLocation);
+            }
+        };
 
-        setTimeout(reject, QUEST_TIMEOUT);
+        BackgroundGeolocation.on('location', checkLocation);
+        start();
+
+        setTimeout(() => {
+            reject();
+            stop();
+            BackgroundGeolocation.un('location', checkLocation);
+        }, QUEST_TIMEOUT);
     });
 }
 

@@ -33,13 +33,14 @@ class EventDetail extends Component
     _acceptQuest() {
         this.props.createQuest(this.eventId);
 
+        const latitude = this.event.getIn(['location', 'geocoords', 1]);
+        const longitude = this.event.getIn(['location', 'geocoords', 0]);
+
         BackgroundLocation
-            .questTillLocation()
+            .questTillLocation(latitude, longitude)
             .then(() => console.log('congratulations, you got there...'));
 
-        // const latitude = this.event.getIn(['location', 'geocoords', 0]);
-        // const longitude = this.event.getIn(['location', 'geocoords', 1]);
-//
+        //
         // Platform.select({
         //     ios: () => {
         //         Linking.openURL('http://maps.apple.com/maps?daddr=' + latitude + ',' + longitude);
