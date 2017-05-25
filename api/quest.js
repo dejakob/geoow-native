@@ -26,6 +26,24 @@ function createQuest(event) {
         .then(response => response.json());
 }
 
+function accomplishQuest(questId, verificationKey) {
+    const params = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'authorization': `Bearer ${getCurrentToken()}`
+        },
+        body: JSON.stringify({
+            questId,
+            verificationKey
+        })
+    };
+
+    return fetch(`${API_URL}/quest/accomplish`, params)
+        .then(response => response.json());
+}
+
 export {
-    createQuest
+    createQuest,
+    accomplishQuest
 }

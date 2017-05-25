@@ -17,6 +17,22 @@ function* createQuest(action) {
     }
 }
 
+function* accomplishQuest(action) {
+    try {
+        const { questId, verificationCode } = action;
+
+        const accomplishedData = yield call(QuestApi.accomplishQuest, questId, verificationCode);
+
+        console.log('accomplishedData', accomplishedData);
+
+        yield put(Actions._accomplishQuestSuccess());
+    }
+    catch (ex) {
+        yield put(Actions._accomplishQuestFailed());
+    }
+}
+
 export {
-    createQuest
+    createQuest,
+    accomplishQuest
 }

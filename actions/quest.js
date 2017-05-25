@@ -20,9 +20,11 @@ function _createQuestFailed() {
     }
 }
 
-function accomplishQuest() {
+function accomplishQuest(questId, verificationCode) {
     return {
-        type: ACTIONS.QUEST_ACCOMPLISH_QUEST
+        type: ACTIONS.QUEST_ACCOMPLISH_QUEST,
+        questId,
+        verificationCode
     }
 }
 
