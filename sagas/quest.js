@@ -6,8 +6,10 @@ function* createQuest(action) {
     try {
         const { eventId } = action;
 
-        yield call(QuestApi.createQuest, eventId);
-        yield put(Actions._createQuestSuccess());
+        const createdQuest = yield call(QuestApi.createQuest, eventId);
+        console.log('created quest', createdQuest);
+
+        yield put(Actions._createQuestSuccess(createdQuest));
     }
     catch (ex) {
         console.log('ex', ex);

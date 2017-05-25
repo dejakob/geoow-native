@@ -7,9 +7,10 @@ function createQuest(eventId) {
     }
 }
 
-function _createQuestSuccess() {
+function _createQuestSuccess(quest) {
     return {
-        type: ACTIONS.QUEST_CREATE_QUEST_SUCCESS
+        type: ACTIONS.QUEST_CREATE_QUEST_SUCCESS,
+        quest
     }
 }
 

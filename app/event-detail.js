@@ -13,9 +13,12 @@ import * as BackgroundLocation from '../services/background-location';
  */
 class EventDetail extends Component
 {
-    static navigationOptions = {
-        header: null
-    };
+    static navigationOptions = () => ({
+        header: null,
+
+        // Todo: android back button
+        gesturesEnabled: !EventDetail.isRunning
+    });
 
     constructor() {
         super();
@@ -30,11 +33,17 @@ class EventDetail extends Component
         return this.props.event.getIn(['events', this.eventId])
     }
 
+    componentWillMount() {
+        EventDetail.isRunning = false;
+    }
+
     _acceptQuest() {
         this.props.createQuest(this.eventId);
 
         const latitude = this.event.getIn(['location', 'geocoords', 1]);
         const longitude = this.event.getIn(['location', 'geocoords', 0]);
+
+        EventDetail.isRunning = true;
 
         BackgroundLocation
             .questTillLocation(latitude, longitude)

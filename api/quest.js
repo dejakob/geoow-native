@@ -22,7 +22,8 @@ function createQuest(event) {
 
     console.log('params', params)
 
-    return fetch(`${API_URL}/quest`, params);
+    return fetch(`${API_URL}/quest`, params)
+        .then(response => response.json());
 }
 
 export {
