@@ -23,6 +23,8 @@ function questReducer(state = defaultState, action) {
         case ACTIONS.QUEST_CREATE_QUEST_FAILED:
             return createQuestFailed(state, action);
     }
+
+    return state;
 }
 
 function createQuest(state, action) {

@@ -23,6 +23,7 @@ class EventDetail extends Component
     constructor() {
         super();
         this._acceptQuest = this._acceptQuest.bind(this);
+        this._questSucceeded = this._questSucceeded.bind(this);
     }
 
     get eventId() {
@@ -37,27 +38,43 @@ class EventDetail extends Component
         EventDetail.isRunning = false;
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.quest.get('currentQuest')) {
+            const latitude = this.event.getIn(['location', 'geocoords', 1]);
+            const longitude = this.event.getIn(['location', 'geocoords', 0]);
+
+            BackgroundLocation
+                .questTillLocation(latitude, longitude)
+                .then(() => this._questSucceeded(nextProps.quest.get('currentQuest')));
+
+        }
+    }
+
     _acceptQuest() {
         this.props.createQuest(this.eventId);
+        EventDetail.isRunning = true;
 
         const latitude = this.event.getIn(['location', 'geocoords', 1]);
         const longitude = this.event.getIn(['location', 'geocoords', 0]);
 
-        EventDetail.isRunning = true;
+        Platform.select({
+            ios: () => {
+                Linking.openURL('http://maps.apple.com/maps?daddr=' + latitude + ',' + longitude);
+            },
+            android: () => {
+                Linking.openURL('http://maps.google.com/maps?daddr=' + latitude + ',' + longitude);
+            }
+        })();
+    }
 
-        BackgroundLocation
-            .questTillLocation(latitude, longitude)
-            .then(() => alert('congratulations, you got there...'));
+    _questSucceeded(quest) {
+        console.log('quest succeeded');
 
-        //
-        // Platform.select({
-        //     ios: () => {
-        //         Linking.openURL('http://maps.apple.com/maps?daddr=' + latitude + ',' + longitude);
-        //     },
-        //     android: () => {
-        //         Linking.openURL('http://maps.google.com/maps?daddr=' + latitude + ',' + longitude);
-        //     }
-        // })();
+        const questAccomplished = quest.toJS();
+
+        console.log('q a', questAccomplished);
+        EventDetail.isRunning = false;
+
     }
 
     render() {
