@@ -4,7 +4,7 @@ import PublicBackground from '../components/public-background/public-background'
 import DashboardList from '../components/dashboard-list/dashboard-list';
 import DashboardMe from '../components/dashboard-me/dashboard-me';
 import DashboardPrimaryAction from '../components/dashboard-primary-action/dashboard-primary-action';
-import '../components/header/header.style.js'
+import '../components/header/header.style.js';
 
 /**
  * <Dashboard />
@@ -12,7 +12,8 @@ import '../components/header/header.style.js'
 class Dashboard extends Component
 {
     static navigationOptions = {
-        header: null
+        header: null,
+        gesturesEnabled: false
     };
 
     componentWillMount() {

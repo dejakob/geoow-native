@@ -25,10 +25,22 @@ class Auth extends Component
         AsyncStorage
             .getItem('token')
             .then(token => {
-                if (typeof token === 'string' && token.length > 0) {
-                    this.props.navigation.navigate('Dashboard');
-                }
+                this.props.loadMe();
             });
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (
+            !this.props.user.getIn(['me', 'email']) &&
+            nextProps.user.getIn(['me', 'email'])
+        ) {
+            if (this.props.user.getIn(['me', 'categories']).count() === 0) {
+                this.props.navigation.navigate('Preferences');
+            }
+            else {
+                this.props.navigation.navigate('Dashboard');
+            }
+        }
     }
 
     render() {
@@ -49,7 +61,7 @@ class Auth extends Component
     }
 
     _signUp() {
-        this.props.navigation.navigate('Register');
+        this.props.authAccountKit();
     }
 }
 

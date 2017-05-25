@@ -40,6 +40,7 @@ function* authAccountKit(action) {
 
         yield AsyncStorage.setItem('token', geoowToken);
         yield put(Actions._authAccountKitSuccess({}));
+        yield put(Actions.loadMe());
     } catch (e) {
         console.log('ex', e);
         yield put(Actions._authAccountKitFailed());
