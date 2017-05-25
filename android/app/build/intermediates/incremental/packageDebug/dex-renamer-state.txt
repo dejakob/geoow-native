@@ -1,7 +1,0 @@
-#Mon May 22 20:32:33 CEST 2017
-base.0=/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_4d2cace69412e469b5f8d603d4ce77e6b3e03ba9
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_2aeec0d97ddf636b82e02f31d544a2aed3dd3460/classes.dex
-base.1=/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_2aeec0d97ddf636b82e02f31d544a2aed3dd3460
-file.0=/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_4d2cace69412e469b5f8d603d4ce77e6b3e03ba9/classes.dex

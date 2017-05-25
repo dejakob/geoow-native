@@ -1,4 +1,0 @@
-#Mon May 22 20:20:12 CEST 2017
-base.0=/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7
-renamed.0=classes.dex
-file.0=/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex

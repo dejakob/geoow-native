@@ -20,12 +20,22 @@
         android:glEsVersion="0x00020000"
         android:required="true" />
 
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name="com.geoownative.MainApplication"
+        android:name="com.6e00wn451v3.MainApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -43,9 +53,12 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCoeEeA_pWmLxABy9dKfM5KbksJ_yNwvmQ" />
+        <meta-data
+            android:name="com.transistorsoft.locationmanager.license"
+            android:value="YOUR_LICENCE_KEY_HERE" />
 
         <activity
-            android:name="com.geoownative.MainActivity"
+            android:name="com.6e00wn451v3.MainActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustResize" >
@@ -88,6 +101,21 @@
             android:name="com.facebook.accountkit.internal.AccountKitInitProvider"
             android:authorities="com.geoownative.AccountKitInitialization"
             android:exported="false" />
+
+        <service android:name="com.transistorsoft.locationmanager.BackgroundGeolocationService" />
+        <service android:name="com.transistorsoft.locationmanager.LocationService" />
+        <service android:name="com.transistorsoft.locationmanager.ActivityRecognitionService" />
+        <service android:name="com.transistorsoft.locationmanager.geofence.GeofenceService" />
+        <service android:name="com.transistorsoft.locationmanager.scheduler.ScheduleAlarmService" />
+
+        <receiver android:name="com.transistorsoft.locationmanager.BootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

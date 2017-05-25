@@ -115,7 +115,7 @@ android {
         variant.outputs.each { output ->
             // For each separate APK per architecture, set a unique version code as described here:
             // http://tools.android.com/tech-docs/new-build-system/user-guide/apk-splits
-            def versionCodes = ["armeabi-v7a":1, "x86":2]
+            def versionCodes = ["armeabi-v7a": 1, "x86": 2]
             def abi = output.getFilter(OutputFile.ABI)
             if (abi != null) {  // null for the universal-debug, universal-release variants
                 output.versionCodeOverride =
@@ -125,12 +125,19 @@ android {
     }
 }
 
+repositories {
+    flatDir {
+        dirs "../../node_modules/react-native-background-geolocation/android/libs"
+    }
+}
+
 dependencies {
     compile project(':react-native-background-geolocation')
     compile project(':react-native-maps')
     compile project(':react-native-facebook-account-kit')
     compile project(':react-native-vector-icons')
     compile fileTree(dir: "libs", include: ["*.jar"])
+    compile(name: 'tslocationmanager', ext: 'aar')
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules
 }
