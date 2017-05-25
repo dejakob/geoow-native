@@ -35,7 +35,7 @@ function fetchStats() {
         }
     };
 
-    return fetch(`${API_URL}/user/me/stats`, params)
+    return fetch(`${API_URL}/user/me/stats?limit=20`, params)
         .then(response => response.json());
 }
 

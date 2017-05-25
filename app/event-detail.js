@@ -55,7 +55,9 @@ class EventDetail extends Component
             !nextProps.quest.get('isAccomplishingQuest')
             && this.props.quest.get('isAccomplishingQuest')
         ) {
-            this.props.navigation.navigate('Dashboard')
+            this.props.navigation.navigate('Dashboard');
+            this.props.loadStats();
+            this.props.loadMe();
         }
     }
 
