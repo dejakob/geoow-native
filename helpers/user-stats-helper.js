@@ -7,6 +7,9 @@ function getDescription(statType, additionalData = {}) {
 
         case USER_STATS.CATEGORY_REMOVED:
             return `You lost points because you removed ${additionalData.amount} categories`;
+
+        case USER_STATS.QUEST_WENT:
+            return `Mission accomplished! You successfully completed a quest`;
     }
 }
 

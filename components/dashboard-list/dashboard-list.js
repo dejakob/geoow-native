@@ -15,6 +15,7 @@ import './dashboard-list.style';
 function DashboardList(props) {
     const data = props.stats
         .toJS()
+        .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
         .map(item => ({
             time: '',
             title: item.score,
