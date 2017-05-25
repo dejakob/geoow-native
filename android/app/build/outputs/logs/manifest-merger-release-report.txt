@@ -144,9 +144,9 @@ ADDED from /Users/jakobkerkhove/geoow-native/android/app/src/main/AndroidManifes
 	android:name
 		ADDED from /Users/jakobkerkhove/geoow-native/android/app/src/main/AndroidManifest.xml:31:13-58
 meta-data#com.transistorsoft.locationmanager.license
-ADDED from /Users/jakobkerkhove/geoow-native/android/app/src/main/AndroidManifest.xml:33:9-35:53
+ADDED from /Users/jakobkerkhove/geoow-native/android/app/src/main/AndroidManifest.xml:33:9-35:96
 	android:value
-		ADDED from /Users/jakobkerkhove/geoow-native/android/app/src/main/AndroidManifest.xml:35:13-50
+		ADDED from /Users/jakobkerkhove/geoow-native/android/app/src/main/AndroidManifest.xml:35:13-93
 	android:name
 		ADDED from /Users/jakobkerkhove/geoow-native/android/app/src/main/AndroidManifest.xml:34:13-70
 activity#com.geoownative.MainActivity

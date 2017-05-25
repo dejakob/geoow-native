@@ -1,34 +1,35 @@
 {
-	"name": "GeoowNative",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"start": "node node_modules/react-native/local-cli/cli.js start",
-		"test": "jest"
-	},
-	"dependencies": {
-		"immutable": "^3.8.1",
-		"moment": "^2.18.1",
-		"react": "16.0.0-alpha.6",
-		"react-native": "0.44.0",
-		"react-native-background-geolocation": "^2.8.1",
-		"react-native-facebook-account-kit": "^0.6.2",
-		"react-native-maps": "^0.15.2",
-		"react-native-styler": "^0.0.9",
-		"react-native-timeline-listview": "^0.2.1",
-		"react-native-vector-icons": "^4.1.1",
-		"react-navigation": "^1.0.0-beta.9",
-		"react-redux": "^5.0.4",
-		"redux": "^3.6.0",
-		"redux-saga": "^0.15.3"
-	},
-	"devDependencies": {
-		"babel-jest": "20.0.1",
-		"babel-preset-react-native": "1.9.2",
-		"jest": "20.0.1",
-		"react-test-renderer": "16.0.0-alpha.6"
-	},
-	"jest": {
-		"preset": "react-native"
-	}
+  "name": "GeoowNative",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "moment": "^2.18.1",
+    "react": "16.0.0-alpha.6",
+    "react-native": "0.44.0",
+    "react-native-background-geolocation": "^2.8.1",
+    "react-native-background-geolocation-android": "git+ssh://git@github.com/transistorsoft/react-native-background-geolocation-android.git",
+    "react-native-facebook-account-kit": "^0.6.2",
+    "react-native-maps": "^0.15.2",
+    "react-native-styler": "^0.0.9",
+    "react-native-timeline-listview": "^0.2.1",
+    "react-native-vector-icons": "^4.1.1",
+    "react-navigation": "^1.0.0-beta.9",
+    "react-redux": "^5.0.4",
+    "redux": "^3.6.0",
+    "redux-saga": "^0.15.3"
+  },
+  "devDependencies": {
+    "babel-jest": "20.0.1",
+    "babel-preset-react-native": "1.9.2",
+    "jest": "20.0.1",
+    "react-test-renderer": "16.0.0-alpha.6"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
 }
