@@ -32,7 +32,7 @@
             android:value="AIzaSyCoeEeA_pWmLxABy9dKfM5KbksJ_yNwvmQ" />
         <meta-data
             android:name="com.transistorsoft.locationmanager.license"
-            android:value="YOUR_LICENCE_KEY_HERE" />
+            android:value="dde7a9d84b0a224d62793fb6410a39161bdd2840a874902ca7c4526af09c67ff" />
 
         <activity
             android:name=".MainActivity"
