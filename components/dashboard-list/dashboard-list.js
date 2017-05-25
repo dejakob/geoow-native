@@ -37,6 +37,7 @@ function DashboardList(props) {
             renderCircle={renderBadge}
             separator={false}
             innerCircle='icon'
+            style={getStyle('dashboard__list')}
         />
     );
 

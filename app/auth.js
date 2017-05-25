@@ -34,7 +34,7 @@ class Auth extends Component
             !this.props.user.getIn(['me', 'email']) &&
             nextProps.user.getIn(['me', 'email'])
         ) {
-            if (this.props.user.getIn(['me', 'categories']).count() === 0) {
+            if (nextProps.user.getIn(['me', 'categories']).count() === 0) {
                 this.props.navigation.navigate('Preferences');
             }
             else {
