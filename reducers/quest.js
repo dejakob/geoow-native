@@ -29,6 +29,9 @@ function questReducer(state = defaultState, action) {
 
         case ACTIONS.QUEST_ACCOMPLISH_QUEST_SUCCESS:
             return accomplishQuestSuccess(state, action);
+
+        case ACTIONS.QUEST_ACCOMPLISH_QUEST_FAILED:
+            return accomplishQuestFailed(state, action);
     }
 
     return state;
