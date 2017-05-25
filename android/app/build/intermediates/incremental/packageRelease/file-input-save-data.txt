@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu May 25 20:31:57 CEST 2017
+#Thu May 25 21:45:41 CEST 2017
 20.base=/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/resources-release.ap_
 143.base=/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/resources-release.ap_
 493.base=/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/resources-release.ap_

@@ -81,8 +81,6 @@ class EventDetail extends Component
     _questSucceeded(quest) {
         EventDetail.isRunning = false;
         this.props.accomplishQuest(quest.get('_id'), quest.get('verificationKey'));
-
-        console.log('quest succeeeeedeeeddd ::))))');
     }
 
     render() {
