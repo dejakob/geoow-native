@@ -137,14 +137,5 @@
     <orderEntry type="module" module-name="react-native-maps" exported="" />
     <orderEntry type="module" module-name="react-native-vector-icons" exported="" />
     <orderEntry type="module" module-name="react-native-background-geolocation" exported="" />
-    <orderEntry type="library" exported="" name="support-v4-24.0.0" level="project" />
-    <orderEntry type="library" exported="" name="appcompat-v7-23.0.1" level="project" />
-    <orderEntry type="library" exported="" name="support-annotations-24.0.0" level="project" />
-    <orderEntry type="library" exported="" name="support-annotations-23.0.1" level="project" />
-    <orderEntry type="library" exported="" name="logback-android-core-1.1.1-6" level="project" />
-    <orderEntry type="library" exported="" name="slf4j-api-1.7.21" level="project" />
-    <orderEntry type="library" exported="" name="eventbus-3.0.0" level="project" />
-    <orderEntry type="library" exported="" name="apktool-lib-1.4.4-3" level="project" />
-    <orderEntry type="library" exported="" name="logback-android-classic-1.1.1-6" level="project" />
   </component>
 </module>

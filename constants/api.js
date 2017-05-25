@@ -1,3 +1,3 @@
 export default {
-    URL: 'https://rabbit.geoow.com'
+    URL: 'http://localhost:3000'
 }

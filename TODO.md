@@ -10,3 +10,4 @@ Todo
 * https://github.com/airbnb/react-native-maps/issues/929
 * put _hidden on venue-event in db (for manual verification)
 * Quest reject/timeout/deny etc
+* android preferences select
