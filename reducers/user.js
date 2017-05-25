@@ -43,6 +43,10 @@ function userReducer(state = defaultState, action) {
 
         case ACTIONS.USER_LOAD_ME_FAILED:
             return loadMeFailed(state, action);
+
+
+        case ACTIONS.QUEST_ACCOMPLISH_QUEST_SUCCESS:
+            return addScore(state, action);
     }
 
     return state;
@@ -93,5 +97,8 @@ function loadMeFailed(state, action) {
     return state.set('isLoadingProfile', false);
 }
 
+function addScore(state, action) {
+    return state.updateIn(['me', 'score'], oldScore => oldScore + action.score);
+}
 
 export default userReducer;

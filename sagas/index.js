@@ -19,6 +19,7 @@ function* mainSaga() {
     yield takeEvery(ACTIONS.LOCATION_LOAD_GEOLOCATION, locationSaga.loadGeolocation);
 
     yield takeEvery(ACTIONS.QUEST_CREATE_QUEST, questSaga.createQuest);
+    yield takeEvery(ACTIONS.QUEST_ACCOMPLISH_QUEST, questSaga.accomplishQuest);
 }
 
 export default mainSaga;

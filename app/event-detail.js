@@ -35,11 +35,12 @@ class EventDetail extends Component
     }
 
     componentWillMount() {
+        this._loadedQuest = false;
         EventDetail.isRunning = false;
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.quest.get('currentQuest')) {
+        if (nextProps.quest.get('currentQuest') && !this._loadedQuest) {
             const latitude = this.event.getIn(['location', 'geocoords', 1]);
             const longitude = this.event.getIn(['location', 'geocoords', 0]);
 
@@ -47,6 +48,14 @@ class EventDetail extends Component
                 .questTillLocation(latitude, longitude)
                 .then(() => this._questSucceeded(nextProps.quest.get('currentQuest')));
 
+            this._loadedQuest = true;
+        }
+
+        if (
+            !nextProps.quest.get('isAccomplishingQuest')
+            && this.props.quest.get('isAccomplishingQuest')
+        ) {
+            this.props.navigation.navigate('Dashboard')
         }
     }
 
@@ -68,13 +77,10 @@ class EventDetail extends Component
     }
 
     _questSucceeded(quest) {
-        console.log('quest succeeded');
-
-        const questAccomplished = quest.toJS();
-
-        console.log('q a', questAccomplished);
         EventDetail.isRunning = false;
+        this.props.accomplishQuest(quest.get('_id'), quest.get('verificationKey'));
 
+        console.log('quest succeeeeedeeeddd ::))))');
     }
 
     render() {

@@ -20,12 +20,9 @@ function* createQuest(action) {
 function* accomplishQuest(action) {
     try {
         const { questId, verificationCode } = action;
-
         const accomplishedData = yield call(QuestApi.accomplishQuest, questId, verificationCode);
 
-        console.log('accomplishedData', accomplishedData);
-
-        yield put(Actions._accomplishQuestSuccess());
+        yield put(Actions._accomplishQuestSuccess(accomplishedData.score));
     }
     catch (ex) {
         yield put(Actions._accomplishQuestFailed());
