@@ -6,8 +6,8 @@ Todo
 * push notifications
 * calendar
 * Profile fields
-* ...or replace account kit by regular sign up
 * https://github.com/airbnb/react-native-maps/issues/929
 * put _hidden on venue-event in db (for manual verification)
 * Quest reject/timeout/deny etc
-* android preferences select
+* android preferences select doesn't work
+* design / styling
