@@ -32,12 +32,12 @@
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png"
     },
     {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
-        "source": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png"
-    },
-    {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2d80fe1fffdca64c24000c94550ca71740332c7a/output/res/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_half_black_16dp.png",
@@ -222,6 +222,10 @@
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png",
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_os_notification_fallback_white_24dp.png",
+        "source": "/Users/jakobkerkhove/.android/build-cache/d312742459d920fbd6ee3394990938f695412d2d/output/res/drawable-mdpi-v4/ic_os_notification_fallback_white_24dp.png"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png",

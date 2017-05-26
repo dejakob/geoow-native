@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSMotionUsageDescription</key>
-	<string>We need to know if you actually were at a certain place</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We need to know if you actually were at a certain place</string>
 	<key>AccountKitClientToken</key>
 	<string>1675181fadd29b8d7e2be77db84d2e1b</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -15,7 +11,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -54,8 +50,12 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We need to know if you actually were at a certain place</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We need location to discover events around you and to know if you actually went there</string>
+	<key>NSMotionUsageDescription</key>
+	<string>We need to know if you actually were at a certain place</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Entypo.ttf</string>

@@ -16,28 +16,32 @@
         "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/drawable-xxxhdpi-v4/com_accountkit_device.png"
     },
     {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png",
-        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/com_accountkit_code_fb.png",
         "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/drawable-xxxhdpi-v4/com_accountkit_code_fb.png"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png",
+        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/com_accountkit_get_call.png",
         "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/drawable-xxxhdpi-v4/com_accountkit_get_call.png"
     },
     {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/ic_os_notification_fallback_white_24dp.png",
+        "source": "/Users/jakobkerkhove/.android/build-cache/d312742459d920fbd6ee3394990938f695412d2d/output/res/drawable-xxxhdpi-v4/ic_os_notification_fallback_white_24dp.png"
+    },
+    {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_star_black_36dp.png",
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable-xxxhdpi-v4/abc_ic_star_black_36dp.png"
     },
     {
-        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
-        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
-    },
-    {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
+        "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_star_half_black_16dp.png",

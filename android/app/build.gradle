@@ -95,6 +95,8 @@ android {
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
+        manifestPlaceholders = [onesignal_app_id: "b6a0899d-bf4f-491d-b07f-54a31d86f5a8",
+                                onesignal_google_project_number: "REMOTE"]
     }
     signingConfigs {
         release {

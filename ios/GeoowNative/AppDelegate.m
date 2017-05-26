@@ -12,7 +12,9 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 
+
 @implementation AppDelegate
+@synthesize oneSignal = _oneSignal;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -30,7 +32,14 @@
   UIViewController *rootViewController = [UIViewController new];
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
+  self.oneSignal = [[RCTOneSignal alloc] initWithLaunchOptions:launchOptions
+                                                         appId:@"b6a0899d-bf4f-491d-b07f-54a31d86f5a8"];
   [self.window makeKeyAndVisible];
+  
+  - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)notification {
+    [RCTOneSignal didReceiveRemoteNotification:notification];
+  }
+  
   return YES;
 }
 
