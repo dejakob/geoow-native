@@ -15,6 +15,7 @@
     "react-native-background-geolocation-android": "git+ssh://git@github.com/transistorsoft/react-native-background-geolocation-android.git",
     "react-native-facebook-account-kit": "^0.6.2",
     "react-native-maps": "^0.15.2",
+    "react-native-onesignal": "^3.0.4",
     "react-native-styler": "^0.0.9",
     "react-native-timeline-listview": "^0.2.1",
     "react-native-vector-icons": "^4.1.1",

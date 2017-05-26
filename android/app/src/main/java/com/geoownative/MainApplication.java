@@ -3,6 +3,7 @@ package com.geoownative;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.geektime.rnonesignalandroid.ReactNativeOneSignalPackage;
 import com.transistorsoft.rnbackgroundgeolocation.RNBackgroundGeolocation;
 import com.airbnb.android.react.maps.MapsPackage;
 import io.underscope.react.fbak.RNAccountKitPackage;
@@ -27,6 +28,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new ReactNativeOneSignalPackage(),
             new RNBackgroundGeolocation(),
             new MapsPackage(),
             new RNAccountKitPackage(),

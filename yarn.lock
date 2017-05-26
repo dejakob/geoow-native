@@ -1806,7 +1806,7 @@ inquirer@^0.12.0:
     strip-ansi "^3.0.0"
     through "^2.3.6"
 
-invariant@^2.0.0, invariant@^2.2.0:
+invariant@^2.0.0, invariant@^2.2.0, invariant@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
   dependencies:
@@ -3037,6 +3037,12 @@ react-native-facebook-account-kit@^0.6.2:
 react-native-maps@^0.15.2:
   version "0.15.2"
   resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.15.2.tgz#4f63b9501b25d124f0ef1839529e54a6461c2c49"
+
+react-native-onesignal@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/react-native-onesignal/-/react-native-onesignal-3.0.4.tgz#dd81d55741636252e55b3cc2d10b6eb36e5c9b25"
+  dependencies:
+    invariant "^2.2.2"
 
 react-native-styler@^0.0.9:
   version "0.0.9"
