@@ -2,6 +2,7 @@ import { AsyncStorage } from 'react-native';
 import Actions from '../actions';
 import * as UserApi from '../api/user';
 import { call, put } from 'redux-saga/effects';
+import { getCurrentId } from '../services/push-notifications';
 
 /**
  * Update the users categories
@@ -31,6 +32,7 @@ function* loadStats(action) {
 function* loadMe() {
     try {
         const me = yield call(UserApi.fetchMe);
+        yield call(UserApi.addPushNotificationId, getCurrentId());
         yield put(Actions._loadMeSuccess(me));
     }
     catch (ex) {

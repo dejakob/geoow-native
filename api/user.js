@@ -56,8 +56,26 @@ function fetchMe() {
         .then(response => response.json());
 }
 
+function addPushNotificationId(pushNotificationId) {
+    console.log('add push notification id', pushNotificationId);
+
+    const params = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'authorization': `Bearer ${getCurrentToken()}`
+        },
+        body: JSON.stringify({
+            pushNotificationId
+        })
+    };
+
+    return fetch(`${API_URL}/user/push-notification-id`, params);
+}
+
 export {
     updateCategories,
+    addPushNotificationId,
     fetchStats,
     fetchMe
 };

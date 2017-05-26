@@ -9,21 +9,19 @@ function init() {
 
 function handleOpened(result) {
     const payload = result.notification.payload;
-    console.log('notification opened', payload);
 }
 
 function handleIds(ids) {
     const { userId } = ids;
 
     currentPushNotificationUserId = userId;
-    console.log('userId', userId);
 }
 
-function connect() {
-
+function getCurrentId() {
+    return currentPushNotificationUserId;
 }
 
 export {
     init,
-    connect
+    getCurrentId
 }
