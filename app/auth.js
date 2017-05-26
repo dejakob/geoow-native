@@ -5,6 +5,7 @@ import Article from '../components/article/article';
 import Footer from '../components/footer/footer';
 import PrimaryButton from '../components/button/primary-button';
 import Logo from '../components/logo/logo';
+import * as PushNotifications from '../services/push-notifications';
 
 /**
  * <Auth />
@@ -27,6 +28,8 @@ class Auth extends Component
             .then(token => {
                 this.props.loadMe();
             });
+
+        PushNotifications.init();
     }
 
     componentWillReceiveProps(nextProps) {

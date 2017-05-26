@@ -35,12 +35,14 @@
   self.oneSignal = [[RCTOneSignal alloc] initWithLaunchOptions:launchOptions
                                                          appId:@"b6a0899d-bf4f-491d-b07f-54a31d86f5a8"];
   [self.window makeKeyAndVisible];
-  
-  - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)notification {
-    [RCTOneSignal didReceiveRemoteNotification:notification];
-  }
-  
   return YES;
 }
+
+
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)notification {
+  [RCTOneSignal didReceiveRemoteNotification:notification];
+}
+
 
 @end
