@@ -9,6 +9,17 @@ import './directions-map.style';
  * @constructor
  */
 function DirectionsMap(props) {
+    const annotations = [{
+        coordinates: props.directions,
+        type: 'polyline',
+        strokeColor: '#00FB00',
+        strokeWidth: 4,
+        strokeAlpha: .5,
+        id: 'foobar'
+    }];
+
+    console.log('annotations', annotations);
+
     return (
         <View
             style={getStyle('directionsMap__wrapper')}
@@ -20,6 +31,8 @@ function DirectionsMap(props) {
                 showsUserLocation={true}
                 userTrackingMode={Mapbox.userTrackingMode.follow}
                 logoIsHidden={true}
+                annotations={annotations}
+                annotationsAreImmutable
             />
             {props.children}
         </View>

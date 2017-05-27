@@ -10,7 +10,7 @@ import './footer.style';
 function Footer(props) {
     return (
         <View
-            style={getStyle('footer')}
+            style={[getStyle('footer'), props.style]}
         >
             {props.children}
         </View>

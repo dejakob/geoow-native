@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Platform, Linking } from 'react-native';
+import Polyline from '@mapbox/polyline';
+import { getStyle } from 'react-native-styler';
 import DirectionsMap from '../components/directions-map/directions-map';
 import EventDetailHeader from '../components/event-detail-header/event-detail-header';
-import EventDetailDetails from '../components/event-detail-details/event-detail-details';
-import Article from '../components/article/article';
 import Footer from '../components/footer/footer';
 import PrimaryButton from '../components/button/primary-button';
 import * as BackgroundLocation from '../services/background-location';
@@ -37,6 +37,7 @@ class EventDetail extends Component
 
     componentWillMount() {
         this._loadedQuest = false;
+        this._directionsPolygon = [];
         EventDetail.isRunning = false;
 
 
@@ -45,7 +46,17 @@ class EventDetail extends Component
 
         Directions
             .getDirections(this.props.location.get('latitude'), this.props.location.get('longitude'), latitude, longitude)
-            .then(result => console.log('result', result))
+            .then(result => {
+                try {
+                    console.log('first', result.routes[0]);
+                    console.log('?', Polyline.decode(result.routes[0].overview_polyline.points));
+                    this._directionsPolygon = Polyline.decode(result.routes[0].overview_polyline.points);
+                    this.setState({});
+                }
+                catch (ex) {
+                    console.log('ex', ex);
+                }
+            })
     }
 
     componentWillReceiveProps(nextProps) {
@@ -94,16 +105,15 @@ class EventDetail extends Component
 
     render() {
         return (
-            <DirectionsMap>
+            <DirectionsMap
+                directions={this._directionsPolygon}
+            >
                 <EventDetailHeader
                     event={this.event}
                 />
-                <Article>
-                    <EventDetailDetails
-                        event={this.event}
-                    />
-                </Article>
-                <Footer>
+                <Footer
+                    style={getStyle('eventDetailFooter')}
+                >
                     <PrimaryButton
                         onPress={this._acceptQuest}
                     >
