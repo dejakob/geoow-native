@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { Platform, Linking } from 'react-native';
-import PublicBackground from '../components/public-background/public-background';
+import DirectionsMap from '../components/directions-map/directions-map';
 import EventDetailHeader from '../components/event-detail-header/event-detail-header';
 import EventDetailDetails from '../components/event-detail-details/event-detail-details';
 import Article from '../components/article/article';
 import Footer from '../components/footer/footer';
 import PrimaryButton from '../components/button/primary-button';
 import * as BackgroundLocation from '../services/background-location';
+import * as Directions from '../services/directions';
 
 /**
  * <EventDetail />
@@ -37,6 +38,14 @@ class EventDetail extends Component
     componentWillMount() {
         this._loadedQuest = false;
         EventDetail.isRunning = false;
+
+
+        const latitude = this.event.getIn(['location', 'geocoords', 1]);
+        const longitude = this.event.getIn(['location', 'geocoords', 0]);
+
+        Directions
+            .getDirections(this.props.location.get('latitude'), this.props.location.get('longitude'), latitude, longitude)
+            .then(result => console.log('result', result))
     }
 
     componentWillReceiveProps(nextProps) {
@@ -84,10 +93,8 @@ class EventDetail extends Component
     }
 
     render() {
-        console.log('event', this.event.toJS());
-
         return (
-            <PublicBackground>
+            <DirectionsMap>
                 <EventDetailHeader
                     event={this.event}
                 />
@@ -103,7 +110,7 @@ class EventDetail extends Component
                         Accept the quest
                     </PrimaryButton>
                 </Footer>
-            </PublicBackground>
+            </DirectionsMap>
         );
     }
 }

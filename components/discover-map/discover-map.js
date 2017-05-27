@@ -6,7 +6,7 @@ import { getStyle } from 'react-native-styler';
 import './discover-map.style';
 
 /**
- * <DiscoverMap />
+ * <DirectionsMap />
  * @constructor
  */
 function DiscoverMap(props) {
@@ -27,6 +27,7 @@ function DiscoverMap(props) {
             showsUserLocation={true}
             annotationsAreImmutable
             userTrackingMode={Mapbox.userTrackingMode.follow}
+            logoIsHidden={true}
         />
     );
 }

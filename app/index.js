@@ -12,9 +12,10 @@ import Preferences from './preferences';
 import Dashboard from './dashboard';
 import Discover from './discover';
 import EventDetail from './event-detail';
+import { MAPBOX_TOKEN } from '../constants';
 import '../themes';
 
-Mapbox.setAccessToken('pk.eyJ1IjoiamFrZXp2aWxsZSIsImEiOiIzZjVkZGEzNGVmNWQwZTIxOWNiZTcyZjA4NzdjYjYwMCJ9.RCj1QmaIMiDNleLk_JrYvg');
+Mapbox.setAccessToken(MAPBOX_TOKEN);
 
 const App = StackNavigator({
     Auth: { screen: connect(Auth) },
