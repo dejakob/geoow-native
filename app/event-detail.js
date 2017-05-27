@@ -109,6 +109,7 @@ class EventDetail extends Component
         this.props.accomplishQuest(quest.get('_id'), quest.get('verificationKey'));
     }
 
+    // Todo important: calculate credits
     _rejectQuest() {
         Alert.alert(
             'Reject Quest',

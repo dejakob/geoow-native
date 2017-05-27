@@ -29,7 +29,20 @@ function* accomplishQuest(action) {
     }
 }
 
+function* rejectQuest(action) {
+    try {
+        const { questId, verificationCode } = action;
+        const rejectedData = yield call(QuestApi.rejectQuest, questId, verificationCode);
+
+        yield put(Actions._rejectQuestSuccess(rejectedData.score));
+    }
+    catch (ex) {
+        yield put(Actions._rejectQuestFailed());
+    }
+}
+
 export {
     createQuest,
-    accomplishQuest
+    accomplishQuest,
+    rejectQuest
 }

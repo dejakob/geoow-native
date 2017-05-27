@@ -47,6 +47,9 @@ function userReducer(state = defaultState, action) {
 
         case ACTIONS.QUEST_ACCOMPLISH_QUEST_SUCCESS:
             return addScore(state, action);
+
+        case ACTIONS.QUEST_REJECT_QUEST_SUCCESS:
+            return addScore(state, action);
     }
 
     return state;

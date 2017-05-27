@@ -20,6 +20,7 @@ function* mainSaga() {
 
     yield takeEvery(ACTIONS.QUEST_CREATE_QUEST, questSaga.createQuest);
     yield takeEvery(ACTIONS.QUEST_ACCOMPLISH_QUEST, questSaga.accomplishQuest);
+    yield takeEvery(ACTIONS.QUEST_REJECT_QUEST, questSaga.rejectQuest);
 }
 
 export default mainSaga;

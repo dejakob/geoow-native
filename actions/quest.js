@@ -28,15 +28,38 @@ function accomplishQuest(questId, verificationCode) {
     }
 }
 
-function _accomplishQuestSuccess() {
+function _accomplishQuestSuccess(score) {
     return {
-        type: ACTIONS.QUEST_ACCOMPLISH_QUEST_SUCCESS
+        type: ACTIONS.QUEST_ACCOMPLISH_QUEST_SUCCESS,
+        score
     }
 }
 
 function _accomplishQuestFailed() {
     return {
         type: ACTIONS.QUEST_ACCOMPLISH_QUEST_FAILED
+    }
+}
+
+function rejectQuest(questId, verificationCode) {
+    return {
+        type: ACTIONS.QUEST_REJECT_QUEST,
+        questId,
+        verificationCode
+    }
+}
+
+function _rejectQuestSuccess(score) {
+    return {
+        type: ACTIONS.QUEST_REJECT_QUEST,
+        score
+    }
+}
+
+function _rejectQuestFailed() {
+
+    return {
+        type: ACTIONS.QUEST_REJECT_QUEST
     }
 }
 
@@ -47,5 +70,9 @@ export {
 
     accomplishQuest,
     _accomplishQuestSuccess,
-    _accomplishQuestFailed
+    _accomplishQuestFailed,
+
+    rejectQuest,
+    _rejectQuestSuccess,
+    _rejectQuestFailed
 };

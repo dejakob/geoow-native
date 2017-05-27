@@ -43,7 +43,25 @@ function accomplishQuest(questId, verificationKey) {
         .then(response => response.json());
 }
 
+function rejectQuest(questId, verificationKey) {
+    const params = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'authorization': `Bearer ${getCurrentToken()}`
+        },
+        body: JSON.stringify({
+            questId,
+            verificationKey
+        })
+    };
+
+    return fetch(`${API_URL}/quest/reject`, params)
+        .then(response => response.json());
+}
+
 export {
     createQuest,
-    accomplishQuest
+    accomplishQuest,
+    rejectQuest
 }

@@ -5,7 +5,8 @@ const defaultState = Immutable.fromJS({
     currentQuest: null,
 
     isCreatingQuest: false,
-    isAccomplishingQuest: false
+    isAccomplishingQuest: false,
+    isRejectingQuest: false
 });
 
 /**
@@ -32,6 +33,15 @@ function questReducer(state = defaultState, action) {
 
         case ACTIONS.QUEST_ACCOMPLISH_QUEST_FAILED:
             return accomplishQuestFailed(state, action);
+
+        case ACTIONS.QUEST_REJECT_QUEST:
+            return rejectQuest(state, action);
+
+        case ACTIONS.QUEST_REJECT_QUEST_SUCCESS:
+            return rejectQuestSuccess(state, action);
+
+        case ACTIONS.QUEST_REJECT_QUEST_FAILED:
+            return rejectQuestFailed(state, action);
     }
 
     return state;
@@ -68,5 +78,19 @@ function accomplishQuestFailed(state, action) {
         .set('isAccomplishingQuest', false);
 }
 
+function rejectQuest(state, action) {
+    return state
+        .set('isRejectingQuest', true);
+}
+
+function rejectQuestSuccess(state, action) {
+    return state
+        .set('isRejectingQuest', false);
+}
+
+function rejectQuestFailed(state, action) {
+    return state
+        .set('isRejectingQuest', false);
+}
 
 export default questReducer;
