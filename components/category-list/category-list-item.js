@@ -14,6 +14,7 @@ function CategoryListItem(props) {
     return (
         <Touchable
             onPress={props.onPress}
+            style={getStyle('categoryListItem__touch')}
         >
             <Card>
                 <Image
