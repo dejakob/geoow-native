@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, Linking, View } from 'react-native';
+import { Platform, Linking, View, Alert } from 'react-native';
 import Polyline from '@mapbox/polyline';
 import { getStyle } from 'react-native-styler';
 import DirectionsMap from '../components/directions-map/directions-map';
@@ -27,6 +27,7 @@ class EventDetail extends Component
         this._acceptQuest = this._acceptQuest.bind(this);
         this._openMaps = this._openMaps.bind(this);
         this._questSucceeded = this._questSucceeded.bind(this);
+        this._rejectQuest = this._rejectQuest.bind(this);
         this._renderfooter = this._renderfooter.bind(this);
     }
 
@@ -51,8 +52,6 @@ class EventDetail extends Component
             .getDirections(this.props.location.get('latitude'), this.props.location.get('longitude'), latitude, longitude)
             .then(result => {
                 try {
-                    console.log('first', result.routes[0]);
-                    console.log('?', Polyline.decode(result.routes[0].overview_polyline.points));
                     this._directionsPolygon = Polyline.decode(result.routes[0].overview_polyline.points);
                     this.setState({});
                 }
@@ -110,6 +109,18 @@ class EventDetail extends Component
         this.props.accomplishQuest(quest.get('_id'), quest.get('verificationKey'));
     }
 
+    _rejectQuest() {
+        Alert.alert(
+            'Reject Quest',
+            'Are you sure you want to reject this quest? You will lose 20 credits 😱',
+            [
+                { text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel' },
+                { text: 'I don\'t care', onPress: () => console.log('OK Pressed') },
+            ],
+            { cancelable: false }
+        )
+    }
+
     render() {
         const latitude = this.event.getIn(['location', 'geocoords', 1]);
         const longitude = this.event.getIn(['location', 'geocoords', 0]);
@@ -137,7 +148,7 @@ class EventDetail extends Component
                         style={getStyle('eventDetailFooter__danger')}
                     >
                         <DangerButton
-                            onPress={() => {}}
+                            onPress={this._rejectQuest}
                         >
                             Reject
                         </DangerButton>
