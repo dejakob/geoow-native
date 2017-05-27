@@ -14,6 +14,9 @@ createStyle({
             position: 'relative',
             height: '100vh',
             width: '100vw'
+        },
+        polygon: {
+            color: 'theme:primary'
         }
     }
 })

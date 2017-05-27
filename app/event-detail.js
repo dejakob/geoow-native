@@ -104,9 +104,13 @@ class EventDetail extends Component
     }
 
     render() {
+        const latitude = this.event.getIn(['location', 'geocoords', 1]);
+        const longitude = this.event.getIn(['location', 'geocoords', 0]);
+
         return (
             <DirectionsMap
                 directions={this._directionsPolygon}
+                destination={[longitude, latitude]}
             >
                 <EventDetailHeader
                     event={this.event}

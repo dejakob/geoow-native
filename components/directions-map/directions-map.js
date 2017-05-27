@@ -12,10 +12,14 @@ function DirectionsMap(props) {
     const annotations = [{
         coordinates: props.directions,
         type: 'polyline',
-        strokeColor: '#00FB00',
+        strokeColor: StyleSheet.flatten(getStyle('directionsMap__polygon')).color,
         strokeWidth: 4,
         strokeAlpha: .5,
-        id: 'foobar'
+        id: 'directions'
+    }, {
+        coordinates: props.destination,
+        type: 'point',
+        id: 'destination'
     }];
 
     console.log('annotations', annotations);
