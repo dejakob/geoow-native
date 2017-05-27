@@ -25,6 +25,7 @@ class EventDetail extends Component
     constructor() {
         super();
         this._acceptQuest = this._acceptQuest.bind(this);
+        this._openMaps = this._openMaps.bind(this);
         this._questSucceeded = this._questSucceeded.bind(this);
         this._renderfooter = this._renderfooter.bind(this);
     }
@@ -87,12 +88,13 @@ class EventDetail extends Component
         this.props.createQuest(this.eventId);
         EventDetail.isRunning = true;
 
+        this.setState({});
+    }
+
+    _openMaps() {
         const latitude = this.event.getIn(['location', 'geocoords', 1]);
         const longitude = this.event.getIn(['location', 'geocoords', 0]);
 
-        this.setState({});
-
-        /*
         Platform.select({
             ios: () => {
                 Linking.openURL('http://maps.apple.com/maps?daddr=' + latitude + ',' + longitude);
@@ -101,7 +103,6 @@ class EventDetail extends Component
                 Linking.openURL('http://maps.google.com/maps?daddr=' + latitude + ',' + longitude);
             }
         })();
-        */
     }
 
     _questSucceeded(quest) {
@@ -142,7 +143,7 @@ class EventDetail extends Component
                         </DangerButton>
                     </View>
                     <PrimaryButton
-                        onPress={() => {}}
+                        onPress={this._openMaps}
                     >
                         Open Maps
                     </PrimaryButton>
