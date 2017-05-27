@@ -11,9 +11,16 @@ createStyle({
         backgroundColor: 'theme:background',
 
         score: {
-            borderRadius: '25h4s',
             alignItems: 'center',
             justifyContent: 'center',
+            paddingTop: '4h4s',
+            paddingBottom: '4h4s',
+            paddingLeft: '24w4s',
+            paddingRight: '24w4s',
+            borderWidth: 1,
+            borderColor: 'theme:primary',
+            borderStyle: 'solid',
+            borderRadius: '3h4s',
 
             text: {
                 fontSize: '48h4s',
