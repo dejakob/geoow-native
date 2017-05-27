@@ -11,7 +11,9 @@ createStyle({
         bottom: 0,
 
         wrapper: {
-            position: 'relative'
+            position: 'relative',
+            height: '100vh',
+            width: '100vw'
         }
     }
 })

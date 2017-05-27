@@ -8,35 +8,27 @@ import './event-detail-header.style';
  * @constructor
  */
 function EventDetailHeader(props) {
-    console.log('event', props.event.toJS());
-
     return (
         <View
-            style={getStyle('eventDetailHeader')}
+            style={getStyle('eventDetailHeader__content')}
         >
             <Image
-                source={{ uri: props.event.getIn([ 'cover', 'source']) }}
-                style={getStyle('eventDetailHeader__background')}
+                style={getStyle('eventDetailHeader__content__logo')}
+                source={{ uri: `https://graph.facebook.com/${props.event.getIn(['venue', 'fbid'])}/picture?type=large` }}
             />
             <View
-                style={getStyle('eventDetailHeader__content')}
+                style={getStyle('eventDetailHeader__description')}
             >
-                <Image
-                    style={getStyle('eventDetailHeader__content__logo')}
-                    source={{ uri: `https://graph.facebook.com/${props.event.getIn(['venue', 'fbid'])}/picture?type=large` }}
-                />
-                <View>
-                    <Text
-                        style={getStyle('eventDetailHeader__title')}
-                    >
-                        {props.event.get('name')}
-                    </Text>
-                    <Text
-                        style={getStyle('eventDetailHeader__venueTitle')}
-                    >
-                        {props.event.getIn(['venue', 'name'])}
-                    </Text>
-                </View>
+                <Text
+                    style={getStyle('eventDetailHeader__title')}
+                >
+                    {props.event.get('name')}
+                </Text>
+                <Text
+                    style={getStyle('eventDetailHeader__venueTitle')}
+                >
+                    {props.event.getIn(['venue', 'name'])}
+                </Text>
             </View>
         </View>
     );

@@ -2,25 +2,14 @@ import { createStyle } from 'react-native-styler';
 
 createStyle({
     eventDetailHeader: {
-        position: 'relative',
-        height: '200h4s',
-
-        background: {
-            position: 'absolute',
-            top: 0,
-            bottom: 0,
-            left: 0,
-            right: 0,
-            backgroundColor: 'theme:background'
-        },
         content: {
             flexDirection: 'row',
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            backgroundColor: 'theme:lighten8',
+            backgroundColor: 'theme:lighten',
             alignItems: 'center',
+            marginLeft: '20w4s',
+            marginRight: '20w4s',
+            marginTop: '22h4s',
+            borderRadius: '3h4s',
 
             logo: {
                 height: '50h4s',
@@ -28,6 +17,9 @@ createStyle({
                 borderRadius: '25h4s',
                 margin: '8h4s'
             }
+        },
+        description: {
+            flex: 1
         },
         title: {
             fontWeight: '600',
