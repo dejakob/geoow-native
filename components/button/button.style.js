@@ -45,6 +45,17 @@ createStyle({
                 ...text,
                 color: 'theme:primary'
             }
+        },
+        danger: {
+            touch,
+            container: {
+                ...container,
+                backgroundColor: 'theme:danger'
+            },
+            text: {
+                ...text,
+                color: 'theme:sheet',
+            }
         }
     }
 });

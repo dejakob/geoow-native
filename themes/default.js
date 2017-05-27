@@ -13,6 +13,7 @@ createTheme({
         ok: '#2fb536',
         okSoft: '#d7ffd9',
         notok: '#9a2300',
+        danger: '#ba4b33',
         notokSoft: '#ffdbc3',
         lighten: 'rgba(255,255,255,0.5)',
         lighten8: 'rgba(255,255,255,0.8)',

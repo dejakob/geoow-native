@@ -22,8 +22,6 @@ function DirectionsMap(props) {
         id: 'destination'
     }];
 
-    console.log('annotations', annotations);
-
     return (
         <View
             style={getStyle('directionsMap__wrapper')}

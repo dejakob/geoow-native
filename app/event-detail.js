@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Platform, Linking } from 'react-native';
+import { Platform, Linking, View } from 'react-native';
 import Polyline from '@mapbox/polyline';
 import { getStyle } from 'react-native-styler';
 import DirectionsMap from '../components/directions-map/directions-map';
 import EventDetailHeader from '../components/event-detail-header/event-detail-header';
 import Footer from '../components/footer/footer';
 import PrimaryButton from '../components/button/primary-button';
+import DangerButton from '../components/button/danger-button';
 import * as BackgroundLocation from '../services/background-location';
 import * as Directions from '../services/directions';
 
@@ -25,6 +26,7 @@ class EventDetail extends Component
         super();
         this._acceptQuest = this._acceptQuest.bind(this);
         this._questSucceeded = this._questSucceeded.bind(this);
+        this._renderfooter = this._renderfooter.bind(this);
     }
 
     get eventId() {
@@ -88,6 +90,9 @@ class EventDetail extends Component
         const latitude = this.event.getIn(['location', 'geocoords', 1]);
         const longitude = this.event.getIn(['location', 'geocoords', 0]);
 
+        this.setState({});
+
+        /*
         Platform.select({
             ios: () => {
                 Linking.openURL('http://maps.apple.com/maps?daddr=' + latitude + ',' + longitude);
@@ -96,6 +101,7 @@ class EventDetail extends Component
                 Linking.openURL('http://maps.google.com/maps?daddr=' + latitude + ',' + longitude);
             }
         })();
+        */
     }
 
     _questSucceeded(quest) {
@@ -115,17 +121,46 @@ class EventDetail extends Component
                 <EventDetailHeader
                     event={this.event}
                 />
+                {this._renderfooter()}
+            </DirectionsMap>
+        );
+    }
+
+    _renderfooter() {
+        if (EventDetail.isRunning) {
+            return (
                 <Footer
                     style={getStyle('eventDetailFooter')}
                 >
-                    <PrimaryButton
-                        onPress={this._acceptQuest}
+                    <View
+                        style={getStyle('eventDetailFooter__danger')}
                     >
-                        Accept the quest
+                        <DangerButton
+                            onPress={() => {}}
+                        >
+                            Reject
+                        </DangerButton>
+                    </View>
+                    <PrimaryButton
+                        onPress={() => {}}
+                    >
+                        Open Maps
                     </PrimaryButton>
                 </Footer>
-            </DirectionsMap>
-        );
+            )
+        }
+
+        return (
+            <Footer
+                style={getStyle('eventDetailFooter')}
+            >
+                <PrimaryButton
+                    onPress={this._acceptQuest}
+                >
+                    Accept the quest
+                </PrimaryButton>
+            </Footer>
+        )
     }
 }
 

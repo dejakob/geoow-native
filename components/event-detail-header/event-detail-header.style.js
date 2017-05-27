@@ -43,6 +43,11 @@ createStyle({
         position: 'absolute',
         bottom: '20w4s',
         left: 0,
-        right: 0
+        right: 0,
+
+        danger: {
+            marginRight: '16w4s',
+            width: '100w4s'
+        }
     }
 });
