@@ -11,17 +11,13 @@ createStyle({
         backgroundColor: 'theme:background',
 
         score: {
-            height: '50h4s',
-            width: '50h4s',
             borderRadius: '25h4s',
             alignItems: 'center',
             justifyContent: 'center',
-            borderWidth: StyleSheet.hairlineWidth,
-            borderColor: 'theme:primary',
-            borderStyle: 'solid',
 
             text: {
-                fontSize: '16h4s',
+                fontSize: '48h4s',
+                fontWeight: '100',
                 color: 'theme:primary'
             }
         }
