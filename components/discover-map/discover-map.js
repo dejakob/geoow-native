@@ -1,35 +1,43 @@
+import moment from 'moment';
 import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 import { getStyle } from 'react-native-styler';
-import MapView from 'react-native-maps';
+import Mapbox, { MapView } from 'react-native-mapbox-gl';
 import './discover-map.style';
+
+Mapbox.setAccessToken('pk.eyJ1IjoiamFrZXp2aWxsZSIsImEiOiIzZjVkZGEzNGVmNWQwZTIxOWNiZTcyZjA4NzdjYjYwMCJ9.RCj1QmaIMiDNleLk_JrYvg');
+
+let _mapBox = null;
 
 /**
  * <DiscoverMap />
  * @constructor
  */
 function DiscoverMap(props) {
-    // Todo: coords should be opposite? No?
+    const annotations = props.events.map(event => ({
+        coordinates: event.getIn(['location', 'geocoords']).toJS().reverse(),
+        type: 'point',
+        title: event.get('name'),
+        subtitle: `${moment(event.get('startTime')).format('ddd')} • ${moment(event.get('endTime')).format('HH:mm')}`,
+        id: event.get('_id')
+    })).toJS();
+
+
+    console.log('annotations', annotations);
+
 
     return (
         <MapView
+            ref={mapBox => _mapBox = mapBox}
+            initialCenterCoordinate={{ latitude: props.latitude, longitude: props.longitude }}
             style={getStyle('discoverMap')}
-            region={{
-              latitude: props.latitude,
-              longitude: props.longitude,
-              latitudeDelta: 0.0018,
-              longitudeDelta: 0.0321,
-            }}
-        >
-            {props.events.map(event => (
-                <MapView.Marker
-                    key={event.get('_id')}
-                    coordinate={{ latitude: event.getIn(['location', 'geocoords', 1]), longitude: event.getIn(['location', 'geocoords', 0]) }}
-                    title={event.get('name')}
-                    description={event.get('description')}
-                />
-            ))}
-        </MapView>
-    )
+            styleURL='mapbox://styles/mapbox/dark-v9'
+            annotations={annotations}
+            showsUserLocation={true}
+            annotationsAreImmutable
+            userTrackingMode={Mapbox.userTrackingMode.follow}
+        />
+    );
 }
 
 export default DiscoverMap;
