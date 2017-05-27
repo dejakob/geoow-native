@@ -78,7 +78,14 @@ class EventDetail extends Component
             !nextProps.quest.get('isAccomplishingQuest')
             && this.props.quest.get('isAccomplishingQuest')
         ) {
-            this.props.navigation.navigate('Dashboard');
+            Alert.alert(
+                'Mission complete',
+                'Congratulations, you completed the quest successfully 💪',
+                [
+                    { text: 'OK', onPress: () => this.props.navigation.navigate('Dashboard')},
+                ],
+                { cancelable: false }
+            );
             this.props.loadStats();
             this.props.loadMe();
         }
