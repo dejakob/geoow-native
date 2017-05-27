@@ -1,6 +1,6 @@
 import moment from 'moment';
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import Touchable from '../button/touchable';
 import { getStyle } from 'react-native-styler';
 
@@ -18,10 +18,13 @@ function DiscoverListItem(props) {
             <View
                 style={getStyle('discoverListItem')}
             >
-                <View>
-                    <Text>{moment(event.get('startTime')).format('ddd HH:mm')} - {moment(event.get('endTime')).format('HH:mm')}</Text>
-                </View>
-                <View>
+                <Image
+                    source={{ uri: event.getIn([ 'cover', 'source']) }}
+                    style={getStyle('discoverListItem__avatar')}
+                />
+                <View
+                    style={getStyle('discoverListItem__content')}
+                >
                     <Text
                         style={getStyle('discoverListItem__title')}
                     >
@@ -30,7 +33,7 @@ function DiscoverListItem(props) {
                     <Text
                         style={getStyle('discoverListItem__address')}
                     >
-                        {event.getIn(['location', 'street'])}
+                        {`${event.getIn(['location', 'street'])} • ${moment(event.get('startTime')).format('ddd')} • ${moment(event.get('endTime')).format('HH:mm')}`}
                     </Text>
                 </View>
             </View>
