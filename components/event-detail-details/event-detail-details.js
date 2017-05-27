@@ -11,6 +11,7 @@ import './event-detail-details.style';
 function EventDetailDetails(props) {
     const data = [
         { type: 'start', value: moment(props.event.get('startTime')).format('ddd DD MMMM, HH[h]mm') },
+        { type: 'end', value: moment(props.event.get('endTime')).format('ddd DD MMMM, HH[h]mm') },
         { type: 'location', value: `${props.event.getIn(['location', 'street'])}, ${props.event.getIn(['location', 'zip'])} ${props.event.getIn(['location', 'city'])}` },
         { type: 'reward', value: 100 }
     ];

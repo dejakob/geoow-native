@@ -33,7 +33,7 @@ function DiscoverListItem(props) {
                     <Text
                         style={getStyle('discoverListItem__address')}
                     >
-                        {`${event.getIn(['location', 'street'])} • ${moment(event.get('startTime')).format('ddd')} • ${moment(event.get('endTime')).format('HH:mm')}`}
+                        {`${event.getIn(['location', 'street'])} • ${moment(event.get('startTime')).format('ddd')} • ${moment(event.get('startTime')).format('HH:mm')}`}
                     </Text>
                 </View>
             </View>
