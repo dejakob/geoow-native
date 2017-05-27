@@ -19,7 +19,12 @@ class Auth extends Component
     constructor() {
         super();
 
+        this.state = {
+            triedAutoLogin: false
+        };
+
         this._signUp = this._signUp.bind(this);
+        this._renderFooter = this._renderFooter.bind(this);
     }
 
     componentWillMount() {
@@ -27,6 +32,10 @@ class Auth extends Component
             .getItem('token')
             .then(token => {
                 this.props.loadMe();
+                this.setState({ triedAutoLogin: true });
+            })
+            .catch(() => {
+                this.setState({ triedAutoLogin: true });
             });
 
         PushNotifications.init();
@@ -46,25 +55,38 @@ class Auth extends Component
         }
     }
 
+    _signUp() {
+        this.props.authAccountKit();
+    }
+
     render() {
         return (
             <PublicBackground>
                 <Article>
                     <Logo />
                 </Article>
-                <Footer>
-                    <PrimaryButton
-                        onPress={this._signUp}
-                    >
-                        SIGN UP
-                    </PrimaryButton>
-                </Footer>
+                {this._renderFooter()}
             </PublicBackground>
         );
     }
 
-    _signUp() {
-        this.props.authAccountKit();
+    _renderFooter() {
+        if (
+            !this.state.triedAutoLogin ||
+            this.props.user.get('isLoadingProfile')
+        ) {
+            return null;
+        }
+
+        return (
+            <Footer>
+                <PrimaryButton
+                    onPress={this._signUp}
+                >
+                    SIGN UP
+                </PrimaryButton>
+            </Footer>
+        )
     }
 }
 
