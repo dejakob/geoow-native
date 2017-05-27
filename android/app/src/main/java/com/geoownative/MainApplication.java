@@ -3,6 +3,8 @@ package com.geoownative;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.mapbox.reactnativemapboxgl.ReactNativeMapboxGLPackage;
+import com.transistorsoft.rnbackgroundgeolocation.RNBackgroundGeolocation;
 import com.geektime.rnonesignalandroid.ReactNativeOneSignalPackage;
 import com.transistorsoft.rnbackgroundgeolocation.RNBackgroundGeolocation;
 import com.airbnb.android.react.maps.MapsPackage;
@@ -28,6 +30,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new ReactNativeMapboxGLPackage(),
+            new RNBackgroundGeolocation(),
             new ReactNativeOneSignalPackage(),
             new RNBackgroundGeolocation(),
             new MapsPackage(),

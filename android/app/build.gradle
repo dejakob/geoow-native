@@ -143,6 +143,8 @@ repositories {
 }
 
 dependencies {
+    compile project(':react-native-mapbox-gl')
+    compile project(':react-native-background-geolocation-android')
     compile project(':react-native-onesignal')
     compile project(':react-native-background-geolocation')
     compile project(':react-native-maps')
