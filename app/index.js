@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connectStyler } from 'react-native-styler';
 import { StackNavigator } from 'react-navigation';
+import Mapbox from 'react-native-mapbox-gl';
 import { connect as connectRedux } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Actions from '../actions';
@@ -12,6 +13,8 @@ import Dashboard from './dashboard';
 import Discover from './discover';
 import EventDetail from './event-detail';
 import '../themes';
+
+Mapbox.setAccessToken('pk.eyJ1IjoiamFrZXp2aWxsZSIsImEiOiIzZjVkZGEzNGVmNWQwZTIxOWNiZTcyZjA4NzdjYjYwMCJ9.RCj1QmaIMiDNleLk_JrYvg');
 
 const App = StackNavigator({
     Auth: { screen: connect(Auth) },
