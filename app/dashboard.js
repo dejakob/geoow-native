@@ -24,10 +24,8 @@ class Dashboard extends Component
     render() {
         return (
             <PublicBackground>
-                <DashboardMe
-                    me={this.props.user}
-                />
                 <DashboardList
+                    me={this.props.user}
                     stats={this.props.user.getIn(['me', 'stats'])}
                 />
                 <DashboardPrimaryAction

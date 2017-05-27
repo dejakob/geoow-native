@@ -27,7 +27,7 @@ function DirectionsMap(props) {
             style={getStyle('directionsMap__wrapper')}
         >
             <MapView
-                initialCenterCoordinate={{ latitude: props.latitude, longitude: props.longitude }}
+                initialCenterCoordinate={{ latitude: props.destination[1], longitude: props.destination[0] }}
                 style={getStyle('directionsMap')}
                 styleURL='mapbox://styles/mapbox/dark-v9'
                 showsUserLocation={true}

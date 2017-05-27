@@ -9,6 +9,16 @@ const Touchable = Platform.OS === 'android' ? TouchableNativeFeedback : Touchabl
  * @constructor
  */
 function Button(props) {
+    const shadow = {
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 2
+        },
+        shadowOpacity: 0.2,
+        marginBottom: 10
+    };
+
     return (
         <Touchable
             onPress={props.onPress}
@@ -16,7 +26,7 @@ function Button(props) {
             style={[ props.touchStyle, props.disabled ? { opacity: 0.5 } : {} ]}
         >
             <View
-                style={props.containerStyle}
+                style={[props.containerStyle, shadow]}
                 onPress={props.onPress}
             >
                 <Text

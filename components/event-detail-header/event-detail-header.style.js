@@ -41,7 +41,7 @@ createStyle({
     },
     eventDetailFooter: {
         position: 'absolute',
-        bottom: '20w4s',
+        bottom: '20h4s',
         left: 0,
         right: 0,
 

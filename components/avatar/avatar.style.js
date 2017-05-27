@@ -2,12 +2,12 @@ import { createStyle } from 'react-native-styler';
 
 createStyle({
     avatar: {
-        height: '100h4s',
-        width: '100h4s',
+        height: '70h4s',
+        width: '70h4s',
 
         wrapper: {
-            height: '100h4s',
-            width: '100h4s',
+            height: '70h4s',
+            width: '70h4s',
             borderRadius: '50h4s',
             backgroundColor: 'theme:primary',
             alignItems: 'center',

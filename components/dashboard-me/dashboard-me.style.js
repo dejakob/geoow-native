@@ -6,9 +6,7 @@ createStyle({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        height: '150h4s',
-        paddingBottom: '20h4s',
-        backgroundColor: 'theme:background',
+        marginTop: '40h4s',
 
         score: {
             alignItems: 'center',
