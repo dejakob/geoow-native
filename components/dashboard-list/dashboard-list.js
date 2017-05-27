@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import { FlatList, StyleSheet, View } from 'react-native';
+import { FlatList, StyleSheet, View, ScrollView } from 'react-native';
 import Timeline from 'react-native-timeline-listview';
 import { getDescription } from '../../helpers/user-stats-helper';
 import { getStyle } from 'react-native-styler';
@@ -24,42 +24,35 @@ function DashboardList(props) {
         }));
 
     return (
-        <Timeline
-            data={data}
-            columnFormat='two-column'
-            renderDetail={renderListItem}
-            circleColor={StyleSheet.flatten(getStyle('dashboard__listItem__line')).color}
-            lineColor={StyleSheet.flatten(getStyle('dashboard__listItem__line')).color}
-            lineWidth={StyleSheet.hairlineWidth}
-            detailContainerStyle={getStyle('dashboard__listItem')}
-            descriptionStyle={{ margin: 0, padding: 0 }}
-            timeStyle={getStyle('dashboard__listItem__date')}
-            options={{ renderHeader: () => <View style={getStyle('dashboard__list__header')} /> }}
-            renderCircle={renderBadge}
-            separator={false}
-            innerCircle='icon'
-            style={getStyle('dashboard__list')}
-        />
+        <ScrollView>
+            <View
+                style={getStyle('dashboard__list')}
+            >
+                <View
+                    style={getStyle('dashboard__list__column')}
+                >
+                    {data.filter((item, index) => index % 2 === 0).map(renderListItem)}
+                </View>
+                <View
+                    style={getStyle('dashboard__list__column')}
+                >
+                    {data.filter((item, index) => index % 2 === 1).map(renderListItem)}
+                </View>
+            </View>
+        </ScrollView>
     );
 
-    function renderListItem(item) {
+    function renderListItem(item, index) {
         return (
             <DashboardListItem
+                key={index}
                 item={item}
             />
         )
     }
 
     function renderBadge(item) {
-        return (
-            <View
-                style={getStyle('dashboard__listItem__badge')}
-            >
-                <ScoreBadge
-                    score={item.score}
-                />
-            </View>
-        )
+        return null;
     }
 }
 

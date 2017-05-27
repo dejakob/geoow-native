@@ -12,7 +12,9 @@ function DashboardListItem(props) {
     const { item } = props;
 
     return (
-        <View>
+        <View
+            style={getStyle('dashboard__listItem')}
+        >
             <View
                 style={getStyle('dashboard__listItem__descriptionContainer')}
             >

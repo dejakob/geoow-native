@@ -4,23 +4,24 @@ import { createStyle } from 'react-native-styler';
 createStyle({
     dashboard: {
         list: {
-            paddingLeft: '8w4s',
-            paddingRight: '8w4s',
+            flexDirection: 'row',
+            flex: 1,
+            paddingTop: '30h4s',
 
             header: {
                 paddingTop: '40h4s'
+            },
+            column: {
+                flexDirection: 'column',
+                width: '50%'
             }
         },
 
         listItem: {
-            paddingTop: 0,
-            paddingBottom: 0,
-            margin: 0,
-            alignItems: 'center',
+            backgroundColor: 'theme:sheet',
+            borderRadius: '3h4s',
+            margin: '4h4s',
 
-            line: {
-                color: 'theme:sheet2'
-            },
             date: {
                 fontSize: 'theme:small',
                 fontWeight: '600',
@@ -36,9 +37,6 @@ createStyle({
             description: {
                 fontSize: 'theme:small',
                 textAlign: 'center'
-            },
-            badge: {
-                position: 'absolute'
             }
         }
     }
