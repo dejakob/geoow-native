@@ -10,6 +10,9 @@ function getDescription(statType, additionalData = {}) {
 
         case USER_STATS.QUEST_WENT:
             return `Mission accomplished! You successfully completed a quest`;
+
+        case USER_STATS.QUEST_DENIED:
+            return `You decided not to go 👎`;
     }
 }
 

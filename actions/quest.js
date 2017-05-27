@@ -51,7 +51,7 @@ function rejectQuest(questId, verificationCode) {
 
 function _rejectQuestSuccess(score) {
     return {
-        type: ACTIONS.QUEST_REJECT_QUEST,
+        type: ACTIONS.QUEST_REJECT_QUEST_SUCCESS,
         score
     }
 }
@@ -59,7 +59,7 @@ function _rejectQuestSuccess(score) {
 function _rejectQuestFailed() {
 
     return {
-        type: ACTIONS.QUEST_REJECT_QUEST
+        type: ACTIONS.QUEST_REJECT_QUEST_FAILED
     }
 }
 

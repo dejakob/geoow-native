@@ -27,6 +27,7 @@ class EventDetail extends Component
         this._acceptQuest = this._acceptQuest.bind(this);
         this._openMaps = this._openMaps.bind(this);
         this._questSucceeded = this._questSucceeded.bind(this);
+        this._rejectQuestWarn = this._rejectQuestWarn.bind(this);
         this._rejectQuest = this._rejectQuest.bind(this);
         this._renderfooter = this._renderfooter.bind(this);
     }
@@ -81,6 +82,15 @@ class EventDetail extends Component
             this.props.loadStats();
             this.props.loadMe();
         }
+
+        if (
+            !nextProps.quest.get('isRejectingQuest')
+            && this.props.quest.get('isRejectingQuest')
+        ) {
+            this.props.navigation.navigate('Dashboard');
+            this.props.loadStats();
+            this.props.loadMe();
+        }
     }
 
     _acceptQuest() {
@@ -110,16 +120,20 @@ class EventDetail extends Component
     }
 
     // Todo important: calculate credits
-    _rejectQuest() {
+    _rejectQuestWarn() {
         Alert.alert(
             'Reject Quest',
             'Are you sure you want to reject this quest? You will lose 20 credits 😱',
             [
-                { text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel' },
-                { text: 'I don\'t care', onPress: () => console.log('OK Pressed') },
+                { text: 'Cancel', onPress: () => {}, style: 'cancel' },
+                { text: 'I don\'t care', onPress: this._rejectQuest },
             ],
             { cancelable: false }
         )
+    }
+
+    _rejectQuest() {
+        this.props.rejectQuest(this.props.quest.get('_id'), this.props.quest.get('verificationKey'));
     }
 
     render() {
@@ -149,7 +163,7 @@ class EventDetail extends Component
                         style={getStyle('eventDetailFooter__danger')}
                     >
                         <DangerButton
-                            onPress={this._rejectQuest}
+                            onPress={this._rejectQuestWarn}
                         >
                             Reject
                         </DangerButton>

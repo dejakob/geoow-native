@@ -31,8 +31,12 @@ function* accomplishQuest(action) {
 
 function* rejectQuest(action) {
     try {
+        console.log('reject', action)
+
         const { questId, verificationCode } = action;
         const rejectedData = yield call(QuestApi.rejectQuest, questId, verificationCode);
+
+        console.log('rejected', rejectedData);
 
         yield put(Actions._rejectQuestSuccess(rejectedData.score));
     }
