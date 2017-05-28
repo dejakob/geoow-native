@@ -15,7 +15,7 @@ createStyle({
             left: '16w4s'
         },
         touch: {
-            height: '100h4s',
+            height: '120h4s',
             width: '100%'
         },
         backgroundImage: {

@@ -254,7 +254,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">మీ కోడ్‌ను Facebook నుండి వాయిస్ కాల్ రూపంలో పొందండి</string>
     <string name="com_accountkit_button_send_code_in_fb">Facebookలో కోడ్‌ను పొందండి</string>
     <string name="com_accountkit_button_send_code_in_fb_details">కోడ్ Facebook నోటిఫికేషన్ రూపంలో అందుతుంది</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">మీ కోడ్‌ను Facebookలో నోటిఫికేషన్ వలె స్వీకరించడానికి "Facebookలో కోడ్‌ను పొందండి" ఎంపికను నొక్కండి.</string>
     <string name="com_accountkit_button_start">ప్రారంభించు</string>
     <string name="com_accountkit_button_start_over">మళ్లీ ప్రయత్నించండి</string>
     <string name="com_accountkit_button_submit">సమర్పించు</string>

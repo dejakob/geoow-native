@@ -253,7 +253,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Dapatkan kode Anda dalam telepon suara dari Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb">Dapatkan Kode di Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Kode akan sampai sebagai pemberitahuan Facebook</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Ketuk "Dapatkan Kode di Facebook" untuk menerima kode Anda sebagai pemberitahuan di Facebook.</string>
     <string name="com_accountkit_button_start">Mulai</string>
     <string name="com_accountkit_button_start_over">Coba Lagi</string>
     <string name="com_accountkit_button_submit">Ajukan</string>

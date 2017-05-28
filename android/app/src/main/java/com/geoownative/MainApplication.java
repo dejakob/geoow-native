@@ -4,9 +4,8 @@ import android.app.Application;
 
 import com.facebook.react.ReactApplication;
 import com.mapbox.reactnativemapboxgl.ReactNativeMapboxGLPackage;
-import com.transistorsoft.rnbackgroundgeolocation.RNBackgroundGeolocation;
+import com.transistorsoft.rnbackgroundgeolocation.*;
 import com.geektime.rnonesignalandroid.ReactNativeOneSignalPackage;
-import com.transistorsoft.rnbackgroundgeolocation.RNBackgroundGeolocation;
 import io.underscope.react.fbak.RNAccountKitPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactNativeHost;
@@ -29,10 +28,9 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNBackgroundGeolocation(),
             new ReactNativeMapboxGLPackage(),
-            new RNBackgroundGeolocation(),
             new ReactNativeOneSignalPackage(),
-            new RNBackgroundGeolocation(),
             new RNAccountKitPackage(),
             new VectorIconsPackage()
       );

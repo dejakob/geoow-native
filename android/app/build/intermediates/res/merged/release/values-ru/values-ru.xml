@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Получить код с помощью голосового вызова от Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb">Получить код на Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Код будет отправлен в уведомлении Facebook</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Нажмите «Получить код на Facebook», чтобы получить код в уведомлении на Facebook.</string>
     <string name="com_accountkit_button_start">Старт</string>
     <string name="com_accountkit_button_start_over">Попробуйте еще раз</string>
     <string name="com_accountkit_button_submit">Отправить</string>
@@ -297,7 +296,7 @@
     <string name="com_accountkit_confirmation_code_agreement_instant_verification">
         Коснитесь %1$s, чтобы принять &lt;a href="%2$s">Условия&lt;/a>, &lt;a href="%3$s">Политику использования данных&lt;/a> и &lt;a href="%4$s">файлов «cookie»&lt;/a> Facebook. Узнайте больше о том, &lt;a href="%5$s">как выполняется проверка вашего аккаунта&lt;/a>.
     </string>
-    <string name="com_accountkit_confirmation_code_text">Я не получил(-a) код</string>
+    <string name="com_accountkit_confirmation_code_text">Я не получил(-a) код.</string>
     <string name="com_accountkit_confirmation_code_title">Введите код</string>
     <string name="com_accountkit_email_invalid">Неверный эл. адрес. Попробуйте еще раз.</string>
     <string name="com_accountkit_email_loading_title">Отправка…</string>
@@ -308,7 +307,7 @@
     <string name="com_accountkit_email_login_title">Введите свой эл. адрес</string>
     <string name="com_accountkit_email_not_received">Повторная отправка эл. письма</string>
     <string name="com_accountkit_email_verify_title">Откройте эл. письмо и подтвердите свой эл. адрес.</string>
-    <string name="com_accountkit_enter_code_sent_to">Введите код, отправленный на номер %1$s</string>
+    <string name="com_accountkit_enter_code_sent_to">Введите код, отправленный на номер %1$s.</string>
     <string name="com_accountkit_error_title">Произошла системная ошибка. Повторите попытку.</string>
     <string name="com_accountkit_facebook_code_entry_title">Введите код, полученный от Facebook.</string>
     <string name="com_accountkit_logging_in">Выполняется вход…</string>
@@ -319,7 +318,7 @@
     <string name="com_accountkit_phone_login_text">
       Коснитесь %1$s, чтобы подтвердить свой аккаунт с помощью Account Kit от Facebook.  Для использования Account Kit не нужен аккаунт Facebook.  Чтобы подтвердить ваш номер, мы можем отправить вам SMS. Может взиматься плата за передачу сообщений и данных. Узнайте, &lt;a href="%2$s">как Facebook использует вашу информацию&lt;/a>.
     </string>
-    <string name="com_accountkit_phone_login_title">Введите свой номер мобильного телефона</string>
+    <string name="com_accountkit_phone_login_title">Введите свой номер мобильного телефона.</string>
     <string name="com_accountkit_resend_check">Проверьте входящие SMS</string>
     <string name="com_accountkit_resend_email_text">Отправить письмо заново</string>
     <string name="com_accountkit_resend_title">Если вы не получили код:</string>

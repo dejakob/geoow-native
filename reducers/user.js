@@ -5,7 +5,8 @@ const defaultState = Immutable.fromJS({
     me: {
         categories: [],
         score: 0,
-        stats: []
+        stats: [],
+        email: null
     },
 
     isUpdatingCategories: false,

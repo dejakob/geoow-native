@@ -43,12 +43,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/com_accountkit_spinner_triangle"
-            android:paddingStart="40dp"
-            android:paddingLeft="40dp"
+            android:paddingStart="60dp"
+            android:paddingLeft="60dp"
             tools:background="@android:color/holo_red_dark"/>
         <View
             android:id="@+id/com_accountkit_country_code_underline"
-            android:layout_width="75dp"
+            android:layout_width="95dp"
             android:layout_height="2dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="7dp"

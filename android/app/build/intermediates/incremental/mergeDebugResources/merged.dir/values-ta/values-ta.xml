@@ -254,7 +254,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Facebook இன் குரல் அழைப்பு மூலம் உங்கள் குறியீட்டைப் பெறவும்</string>
     <string name="com_accountkit_button_send_code_in_fb">குறியீட்டை Facebook இல் பெறு</string>
     <string name="com_accountkit_button_send_code_in_fb_details">குறியீடு Facebook அறிவிப்பிற்கு வரும்</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Facebook இல் அறிவிப்பாக குறியீட்டைப் பெறுவதற்கு "Facebook இல் குறியீட்டைப் பெறுக" என்பதைத் தட்டவும்.</string>
     <string name="com_accountkit_button_start">தொடங்கு</string>
     <string name="com_accountkit_button_start_over">மீண்டும் முயற்சிக்கவும்</string>
     <string name="com_accountkit_button_submit">சமர்ப்பி</string>

@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Λάβετε τον κωδικό σας ως φωνητική κλήση από το Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb">Λήψη κωδικού στο Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Θα λάβετε τον κωδικό ως ειδοποίηση στο Facebook</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Πατήστε "Λήψη κωδικού στο Facebook" για να λάβετε τον κωδικό μέσω ειδοποίησης στο Facebook.</string>
     <string name="com_accountkit_button_start">Έναρξη</string>
     <string name="com_accountkit_button_start_over">Προσπαθήστε ξανά.</string>
     <string name="com_accountkit_button_submit">Υποβολή</string>

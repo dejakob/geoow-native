@@ -20,6 +20,10 @@
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/color/switch_thumb_material_light.xml"
     },
     {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/color/material_bg_selector.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2f65fb49b0997b3bc246cd235daa45866c77c4a0/output/res/color/material_bg_selector.xml"
+    },
+    {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/color/abc_secondary_text_material_light.xml",
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/color/abc_secondary_text_material_light.xml"
     },

@@ -1,4 +1,4 @@
-import BackgroundGeolocation from "react-native-background-geolocation";
+import BackgroundGeolocation from "react-native-background-geolocation-android";
 import { getDistanceInMeter } from '../helpers/distance-helper';
 // In meter
 const MAX_DISTANCE_TO_BE_VALID = 150;

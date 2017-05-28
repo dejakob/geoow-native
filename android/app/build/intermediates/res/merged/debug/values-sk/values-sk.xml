@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Získajte svoj kód prostredníctvom hlasového hovoru od Facebooku</string>
     <string name="com_accountkit_button_send_code_in_fb">Získať kód na Facebooku</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Kód vám bude doručený ako upozornenie od Facebooku</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Ťuknite na „Získať kód na Facebooku“, ak chcete kód dostať ako upozornenie na Facebooku.</string>
     <string name="com_accountkit_button_start">Štart</string>
     <string name="com_accountkit_button_start_over">Skúsiť znova</string>
     <string name="com_accountkit_button_submit">Odoslať</string>

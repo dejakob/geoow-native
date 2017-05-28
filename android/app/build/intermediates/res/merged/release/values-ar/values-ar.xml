@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">الحصول على الرمز من خلال مكالمة صوتية من فيسبوك</string>
     <string name="com_accountkit_button_send_code_in_fb">الحصول على رمز على فيسبوك</string>
     <string name="com_accountkit_button_send_code_in_fb_details">سيتم إرسال الرمز كإشعار فيسبوك</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">اضغط على "الحصول على الرمز على فيسبوك" لتلقي الرمز كإشعار على فيسبوك.</string>
     <string name="com_accountkit_button_start">بدء</string>
     <string name="com_accountkit_button_start_over">حاول مرة أخرى</string>
     <string name="com_accountkit_button_submit">تقديم</string>

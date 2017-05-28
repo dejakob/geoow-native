@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Kunin ang iyong code sa isang voice call mula sa Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb">Kumuha ng Code sa Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Darating ang code bilang notification sa Facebook</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">I-tap ang “Kunin ang Code sa Facebook” para matanggap ang iyong code bilang notification sa Facebook.</string>
     <string name="com_accountkit_button_start">Simulan</string>
     <string name="com_accountkit_button_start_over">Subukang Muli</string>
     <string name="com_accountkit_button_submit">Isumite</string>

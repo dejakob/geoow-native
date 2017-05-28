@@ -270,10 +270,9 @@
     <string name="com_accountkit_button_send">Poslat</string>
     <string name="com_accountkit_button_send_code_in_call">Přijmout hovor</string>
     <string name="com_accountkit_button_send_code_in_call_details">Kód dostanete formou hlasového volání</string>
-    <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Získejte kód formou hlasového hovoru z Facebooku</string>
+    <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Získejte kód formou hlasového hovoru z Facebooku</string>
     <string name="com_accountkit_button_send_code_in_fb">Získat kód na Facebooku</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Kód dostanete jako upozornění na Facebooku</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Pokud chcete, aby vám kód přišel v upozornění na Facebooku, klepněte na Získat kód na Facebooku.</string>
     <string name="com_accountkit_button_start">Spustit</string>
     <string name="com_accountkit_button_start_over">Zkuste to znovu</string>
     <string name="com_accountkit_button_submit">Odeslat</string>
@@ -289,13 +288,13 @@
         Klepnutím na %1$s přijmete &lt;a href="%2$s">podmínky&lt;/a>, &lt;a href="%3$s">zásady používání dat&lt;/a>, &lt;a href="%4$s">zásady používání souborů cookie&lt;/a> a &lt;a href="%5$s">zásady soukromí&lt;/a> a &lt;a href="%6$s">smluvní podmínky&lt;/a> Facebooku služby %7$s.
     </string>
     <string name="com_accountkit_confirmation_code_agreement_app_privacy_policy_and_terms_instant_verification">
-        Klepnutím na %1$s přijmete &lt;a href="%2$s">smluvní podmínky&lt;/a>, &lt;a href="%3$s">zásady používání dat&lt;/a>, &lt;a href="%4$s">zásady používání souborů cookie&lt;/a> a &lt;a href="%5$s">zásady ochrany osobních údajů&lt;/a> na Facebooku a &lt;a href="%6$s">podmínky používání služby&lt;/a> %7$s. &lt;a href="%8$s">Přečtěte si další informace&lt;/a> o tom, jak byl váš účet ověřen.
+        Klepnutím na %1$s přijmete &lt;a href="%2$s">smluvní podmínky&lt;/a>, &lt;a href="%3$s">zásady používání dat&lt;/a>, &lt;a href="%4$s">zásady používání souborů cookie&lt;/a> a &lt;a href="%5$s">zásady ochrany osobních údajů&lt;/a> na Facebooku a &lt;a href="%6$s">podmínky používání služby&lt;/a> %7$s. &lt;a href="%8$s">Přečtěte si další informace&lt;/a> o tom, jak byl váš účet ověřen.
     </string>
     <string name="com_accountkit_confirmation_code_agreement_app_privacy_policy_instant_verification">
-        Klepnutím na %1$s přijmete &lt;a href="%2$s">smluvní podmínky&lt;/a>, &lt;a href="%3$s">zásady používání dat&lt;/a>, &lt;a href="%4$s">zásady používání souborů cookie&lt;/a> na Facebooku a &lt;a href="%5$s">zásady ochrany osobních údajů&lt;/a> ve službě %6$s. &lt;a href="%7$s">Přečtěte si další informace&lt;/a> o tom, jak byl váš účet ověřen.
+        Klepnutím na %1$s přijmete &lt;a href="%2$s">smluvní podmínky&lt;/a>, &lt;a href="%3$s">zásady používání dat&lt;/a>, &lt;a href="%4$s">zásady používání souborů cookie&lt;/a> na Facebooku a &lt;a href="%5$s">zásady ochrany osobních údajů&lt;/a> ve službě %6$s. &lt;a href="%7$s">Přečtěte si další informace&lt;/a> o tom, jak byl váš účet ověřen.
     </string>
     <string name="com_accountkit_confirmation_code_agreement_instant_verification">
-        Klepnutím na %1$s přijmete &lt;a href="%2$s">smluvní podmínky&lt;/a>, &lt;a href="%3$s">zásady používání dat&lt;/a> a &lt;a href="%4$s">zásady používání souborů cookie&lt;/a> na Facebooku. &lt;a href="%5$s">Přečtěte si další informace&lt;/a> o tom, jak byl váš účet ověřen.
+        Klepnutím na %1$s přijmete &lt;a href="%2$s">smluvní podmínky&lt;/a>, &lt;a href="%3$s">zásady používání dat&lt;/a> a &lt;a href="%4$s">zásady používání souborů cookie&lt;/a> na Facebooku. &lt;a href="%5$s">Přečtěte si další informace&lt;/a> o tom, jak byl váš účet ověřen.
     </string>
     <string name="com_accountkit_confirmation_code_text">Žádný kód mi nepřišel</string>
     <string name="com_accountkit_confirmation_code_title">Zadejte kód</string>
@@ -303,21 +302,21 @@
     <string name="com_accountkit_email_loading_title">Odesílání e-mailu…</string>
     <string name="com_accountkit_email_login_retry_title">Potvrdit e-mail</string>
     <string name="com_accountkit_email_login_text">
-        Po klepnutí na %1$s vám ze služby Account Kit by Facebook přijde potvrzovací e-mail, který vám usnadní používání aplikace %2$s. Tuto službu můžete používat, i když nemáte Facebook účet. &lt;a href="%3$s">Přečtěte si, jak Facebook používá vaše údaje&lt;/a>.
+        Po klepnutí na %1$s vám ze služby Account Kit by Facebook přijde potvrzovací e-mail, který vám usnadní používání aplikace %2$s. Tuto službu můžete používat, i když nemáte Facebook účet. &lt;a href="%3$s">Přečtěte si, jak Facebook používá vaše údaje&lt;/a>.
     </string>
     <string name="com_accountkit_email_login_title">Zadejte e-mailovou adresu</string>
     <string name="com_accountkit_email_not_received">Poslat e-mail znovu</string>
-    <string name="com_accountkit_email_verify_title">Otevřete e-mail a potvrďte svou e-mailovou adresu</string>
+    <string name="com_accountkit_email_verify_title">Otevřete e-mail a potvrďte svou e-mailovou adresu</string>
     <string name="com_accountkit_enter_code_sent_to">Zadejte kód, který byl odeslán na %1$s</string>
-    <string name="com_accountkit_error_title">V systému došlo k chybě. Zkuste to znovu.</string>
-    <string name="com_accountkit_facebook_code_entry_title">Zadejte kód z Facebooku</string>
+    <string name="com_accountkit_error_title">V systému došlo k chybě. Zkuste to znovu.</string>
+    <string name="com_accountkit_facebook_code_entry_title">Zadejte kód z Facebooku</string>
     <string name="com_accountkit_logging_in">Přihlašování…</string>
     <string name="com_accountkit_other_ways_to_get_code">Další způsoby, jak kód získat:</string>
     <string name="com_accountkit_phone_error_title">Zadejte platné číslo mobilního telefonu.</string>
     <string name="com_accountkit_phone_loading_title">Posílání kódu…</string>
     <string name="com_accountkit_phone_login_retry_title">Potvrďte číslo svého mobilního telefonu</string>
     <string name="com_accountkit_phone_login_text">
-      Klepnutím na %1$s svůj účet ověříte pomocí služby Account Kit využívající technologii Facebooku.  K tomu, abyste mohli Account Kit používat, nemusíte mít Facebook účet.  Pro ověření vašeho čísla vám můžeme poslat SMS. Zpráva a data můžou být zpoplatněny podle příslušného tarifu. &lt;a href="%2$s">Přečtěte si, jak Facebook používá vaše údaje&lt;/a>.
+      Klepnutím na %1$s svůj účet ověříte pomocí služby Account Kit využívající technologii Facebooku.  K tomu, abyste mohli Account Kit používat, nemusíte mít Facebook účet.  Pro ověření vašeho čísla vám můžeme poslat SMS. Zpráva a data můžou být zpoplatněny podle příslušného tarifu. &lt;a href="%2$s">Přečtěte si, jak Facebook používá vaše údaje&lt;/a>.
     </string>
     <string name="com_accountkit_phone_login_title">Zadejte číslo svého mobilního telefonu</string>
     <string name="com_accountkit_resend_check">Zkontrolujte si doručené SMS</string>

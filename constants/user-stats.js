@@ -15,7 +15,10 @@ const USER_STATS = {
     QUEST_WENT: 'QUEST_WENT',
 
     // Lose points for denying a quest
-    QUEST_DENIED: 'QUEST_DENIED'
+    QUEST_DENIED: 'QUEST_DENIED',
+
+    // Bought something with the credits
+    BOUGHT: 'BOUGHT'
 };
 
 export default USER_STATS;

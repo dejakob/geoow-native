@@ -18,6 +18,19 @@ function* loadEventsNearby(action) {
     }
 }
 
+function* loadEventById(action) {
+    try {
+        const result = yield call(
+            EventApi.loadEventById,
+            action.eventId
+        );
+
+        yield put(Actions._loadEventByIdSuccess(result));
+    } catch (e) {
+        yield put(Actions._loadEventByIdFailed());
+    }
+}
+
 function* loadCategories() {
     try {
         const categories = yield call(EventApi.loadCategories);
@@ -31,5 +44,6 @@ function* loadCategories() {
 
 export {
     loadEventsNearby,
+    loadEventById,
     loadCategories
 };

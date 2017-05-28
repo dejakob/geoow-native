@@ -254,7 +254,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Facebook द्वारे व्हॉइस कॉलमध्ये तुमचा कोड प्राप्त करा</string>
     <string name="com_accountkit_button_send_code_in_fb">Facebook वर कोड प्राप्त करा</string>
     <string name="com_accountkit_button_send_code_in_fb_details">कोड Facebook सूचनेच्या रूपात प्राप्त होईल</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Facebook वर एक सूचना म्हणून तुमचा कोड प्राप्त करण्यासाठी "Facebook वर कोड मिळवा" टॅप करा.</string>
     <string name="com_accountkit_button_start">सुरू करा</string>
     <string name="com_accountkit_button_start_over">पुन्‍हा प्रयत्‍न करा</string>
     <string name="com_accountkit_button_submit">सादर करा</string>

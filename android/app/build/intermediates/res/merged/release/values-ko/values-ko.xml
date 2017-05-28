@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Facebook으로부터 음성 통화로 코드를 받습니다</string>
     <string name="com_accountkit_button_send_code_in_fb">Facebook에서 코드 받기</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Facebook 알림을 통해 코드를 받습니다</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Facebook 알림으로 코드를 받으려면 "Facebook에서 코드 받기"를 누르세요.</string>
     <string name="com_accountkit_button_start">시작</string>
     <string name="com_accountkit_button_start_over">다시 시도</string>
     <string name="com_accountkit_button_submit">제출</string>

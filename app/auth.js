@@ -31,7 +31,10 @@ class Auth extends Component
         AsyncStorage
             .getItem('token')
             .then(token => {
-                this.props.loadMe();
+                if (token) {
+                    this.props.loadMe();
+                }
+
                 this.setState({ triedAutoLogin: true });
             })
             .catch(() => {
@@ -44,7 +47,8 @@ class Auth extends Component
     componentWillReceiveProps(nextProps) {
         if (
             !this.props.user.getIn(['me', 'email']) &&
-            nextProps.user.getIn(['me', 'email'])
+            nextProps.user.getIn(['me', 'email']) &&
+            this.props.event.get('events').count() === 0
         ) {
             if (nextProps.user.getIn(['me', 'categories']).count() === 0) {
                 this.props.navigation.navigate('Preferences');

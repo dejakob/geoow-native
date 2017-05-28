@@ -256,7 +256,7 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Partager avec"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Partager avec %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Réduire"</string>
-    <string name="com_accountkit_account_verified">Compte vérifié !</string>
+    <string name="com_accountkit_account_verified">Compte vérifié !</string>
     <string name="com_accountkit_button_begin">Commencer</string>
     <string name="com_accountkit_button_cancel">Annuler</string>
     <string name="com_accountkit_button_confirm">Confirmer</string>
@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Obtenir votre code via un appel vocal de Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb">Obtenir un code sur Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Le code sera envoyé sous la forme d’une notification Facebook</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Appuyez sur Obtenir le code sur Facebook pour recevoir votre code sous la forme d’une notification sur Facebook.</string>
     <string name="com_accountkit_button_start">Démarrer</string>
     <string name="com_accountkit_button_start_over">Réessayer</string>
     <string name="com_accountkit_button_submit">Soumettre</string>
@@ -295,7 +294,7 @@
         Appuyez sur %1$s pour accepter les &lt;a href="%2$s">conditions d’utilisation&lt;/a> de Facebook, sa &lt;a href="%3$s">politique d’utilisation des données&lt;/a> et &lt;a href="%4$s">des cookies&lt;/a>, ainsi que la &lt;a href="%5$s">politique de confidentialité&lt;/a> de %6$s. &lt;a href="%7$s">En savoir plus&lt;/a> sur la manière dont votre compte a été vérifié.
     </string>
     <string name="com_accountkit_confirmation_code_agreement_instant_verification">
-        Appuyez sur %1$s pour accepter les &lt;a href="%2$s">conditions d’utilisation&lt;/a> de Facebook, sa &lt;a href="%3$s">politique d’utilisation des données&lt;/a> et &lt;a href="%4$s">des cookies&lt;/a>. &lt;a href="%5$s">En savoir plus&lt;/a> sur la manière dont votre compte a été vérifié.
+        Appuyez sur %1$s pour accepter les &lt;a href="%2$s">conditions d’utilisation&lt;/a> de Facebook, sa &lt;a href="%3$s">politique d’utilisation des données&lt;/a> et &lt;a href="%4$s">des cookies&lt;/a>. &lt;a href="%5$s">En savoir plus&lt;/a> sur la manière dont votre compte a été vérifié.
     </string>
     <string name="com_accountkit_confirmation_code_text">Je n’ai pas reçu de code</string>
     <string name="com_accountkit_confirmation_code_title">Saisissez votre code</string>
@@ -303,32 +302,32 @@
     <string name="com_accountkit_email_loading_title">Envoi de l\'e-mail…</string>
     <string name="com_accountkit_email_login_retry_title">Confirmez votre adresse e-mail</string>
     <string name="com_accountkit_email_login_text">
-        Appuyez sur %1$s pour recevoir un code de confirmation par e-mail de Account Kit par Facebook, qui, une fois saisi, vous permettra d’utiliser %2$s. Vous n’avez pas besoin d’un compte Facebook pour l’utiliser. &lt;a href="%3$s">Découvrez comment Facebook utilise vos informations&lt;/a>.
+        Appuyez sur %1$s pour recevoir un code de confirmation par e-mail de Account Kit par Facebook, qui, une fois saisi, vous permettra d’utiliser %2$s. Vous n’avez pas besoin d’un compte Facebook pour l’utiliser. &lt;a href="%3$s">Découvrez comment Facebook utilise vos informations&lt;/a>.
     </string>
     <string name="com_accountkit_email_login_title">Saisissez votre adresse e-mail</string>
     <string name="com_accountkit_email_not_received">Renvoyer l\'e-mail</string>
-    <string name="com_accountkit_email_verify_title">Ouvrez l’e-mail pour confirmer votre adresse e-mail</string>
+    <string name="com_accountkit_email_verify_title">Ouvrez l’e-mail pour confirmer votre adresse e-mail.</string>
     <string name="com_accountkit_enter_code_sent_to">Saisissez le code envoyé au %1$s</string>
     <string name="com_accountkit_error_title">Une erreur système s’est produite. Veuillez réessayer.</string>
     <string name="com_accountkit_facebook_code_entry_title">Saisissez le code envoyé par Facebook</string>
     <string name="com_accountkit_logging_in">Connexion…</string>
-    <string name="com_accountkit_other_ways_to_get_code">Autres moyens d’obtenir le code :</string>
+    <string name="com_accountkit_other_ways_to_get_code">Autres moyens d’obtenir le code :</string>
     <string name="com_accountkit_phone_error_title">Veuillez saisir un numéro de téléphone mobile valide.</string>
     <string name="com_accountkit_phone_loading_title">Envoi de votre code en cours…</string>
     <string name="com_accountkit_phone_login_retry_title">Confirmez votre numéro de téléphone mobile</string>
     <string name="com_accountkit_phone_login_text">
-      Appuyez sur %1$s pour vérifier votre compte avec Account Kit par Facebook.  Vous n’avez pas besoin d’un compte Facebook pour utiliser Account Kit.  Vous recevrez peut-être un SMS pour vérifier votre numéro. Frais de message et de données applicables. &lt;a href="%2$s">Découvrez comment Facebook utilise vos informations&lt;/a>.
+      Appuyez sur %1$s pour vérifier votre compte avec Account Kit par Facebook.  Vous n’avez pas besoin d’un compte Facebook pour utiliser Account Kit.  Vous recevrez peut-être un SMS pour vérifier votre numéro. Frais de message et de données applicables. &lt;a href="%2$s">Découvrez comment Facebook utilise vos informations&lt;/a>.
     </string>
     <string name="com_accountkit_phone_login_title">Saisissez votre numéro de mobile</string>
     <string name="com_accountkit_resend_check">Vérifiez votre boîte de réception de textos</string>
     <string name="com_accountkit_resend_email_text">Envoyer un e-mail</string>
-    <string name="com_accountkit_resend_title">Si vous n’avez pas reçu votre code :</string>
+    <string name="com_accountkit_resend_title">Si vous n’avez pas reçu votre code :</string>
     <string name="com_accountkit_return_title">Retour à %1$s…</string>
     <string name="com_accountkit_sent_title">Envoyé!</string>
     <string name="com_accountkit_success_title">Terminé!</string>
     <string name="com_accountkit_toolbar_title">Se connecter à %1$s</string>
     <string name="com_accountkit_verify_confirmation_code_title">
-        Impossible de vérifier votre code.\nVeuillez réessayer :
+        Impossible de vérifier votre code.\nVeuillez réessayer :
     </string>
     <string name="com_accountkit_verify_title">Vérification de votre code en cours…</string>
     <string name="com_accountkit_voice_call_code_entry_title">Saisissez le code envoyé via l’appel vocal</string>

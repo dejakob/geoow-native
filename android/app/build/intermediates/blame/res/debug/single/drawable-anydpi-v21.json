@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_info_outline_24dp_selected.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2f65fb49b0997b3bc246cd235daa45866c77c4a0/output/res/drawable-anydpi-v21/ic_info_outline_24dp_selected.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility_off.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/3e8d53c702c6e010d5699206e896eb414b84e547/output/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_info_outline_24dp.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2f65fb49b0997b3bc246cd235daa45866c77c4a0/output/res/drawable-anydpi-v21/ic_info_outline_24dp.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/mapbox_info_icon_default.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/4cd8982baff94b4643022e6530dc1936c7a15d22/output/res/drawable-anydpi-v21/mapbox_info_icon_default.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/3e8d53c702c6e010d5699206e896eb414b84e547/output/res/drawable-anydpi-v21/design_ic_visibility.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/mapbox_info_icon_selected.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/4cd8982baff94b4643022e6530dc1936c7a15d22/output/res/drawable-anydpi-v21/mapbox_info_icon_selected.xml"
+    }
+]

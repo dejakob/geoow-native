@@ -254,7 +254,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Facebook-ൽ നിന്നുള്ള ഒരു വോയ്സ് കോളിൽ നിങ്ങളുടെ കോഡ് നേടുക</string>
     <string name="com_accountkit_button_send_code_in_fb">Facebook-ൽ ഒരു കോഡ്‌ നേടുക</string>
     <string name="com_accountkit_button_send_code_in_fb_details">കോഡ്‌ ഒരു Facebook അറിയിപ്പായി വരും</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">നിങ്ങളുടെ കോഡ്‌ Facebook-ൽ ഒരു അറിയിപ്പായി ലഭിക്കാൻ, "കോഡ്‌‌ Facebook-ൽ ലഭ്യമാക്കുക" ടാപ്പുചെയ്യുക.</string>
     <string name="com_accountkit_button_start">തുടങ്ങുക</string>
     <string name="com_accountkit_button_start_over">വീണ്ടും ശ്രമിക്കുക</string>
     <string name="com_accountkit_button_submit">സമർപ്പിക്കുക</string>

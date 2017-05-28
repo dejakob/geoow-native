@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Få din kod i ett röstsamtal från Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb">Hämta en kod på Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Koden kommer som en Facebook-avisering</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Tryck på Hämta kod på Facebook och få koden som en avisering på Facebook.</string>
     <string name="com_accountkit_button_start">Start</string>
     <string name="com_accountkit_button_start_over">Försök igen</string>
     <string name="com_accountkit_button_submit">Skicka</string>

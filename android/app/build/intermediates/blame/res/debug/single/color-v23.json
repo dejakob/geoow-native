@@ -36,6 +36,10 @@
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/color-v23/abc_tint_default.xml"
     },
     {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/717feb28ffa1ac9fd8ec199d2b300a46433f6875/output/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/color-v23/abc_tint_spinner.xml"
     }

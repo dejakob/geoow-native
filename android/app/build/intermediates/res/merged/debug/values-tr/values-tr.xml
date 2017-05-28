@@ -273,12 +273,11 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Kodunuzu Facebook\'tan bir sesli mesajla alın</string>
     <string name="com_accountkit_button_send_code_in_fb">Facebook\'ta Kod Al</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Kodu Facebook\'ta bildirim olarak alırsınız</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Kodunuzu Facebook\'ta bir bildirim olarak almak için \"Facebook\'ta Kodu Al\"a dokunun.</string>
     <string name="com_accountkit_button_start">Başlangıç</string>
     <string name="com_accountkit_button_start_over">Tekrar Dene</string>
     <string name="com_accountkit_button_submit">Gönder</string>
     <string name="com_accountkit_check_email">E-postanı aç</string>
-    <string name="com_accountkit_code_sent_to">%1$s cep telefonu numaranızı doğrulayın</string>
+    <string name="com_accountkit_code_sent_to">1%$s cep telefonu numaranızı doğrulayın</string>
     <string name="com_accountkit_confirmation_code_agreement">
         Facebook &lt;a href="%2$s">Koşulları&lt;/a>, &lt;a href="%3$s">Veri İlkesi&lt;/a> ve &lt;a href="%4$s">çerez kullanımını&lt;/a> kabul etmek için %1$s düğmesine dokunun.
     </string>

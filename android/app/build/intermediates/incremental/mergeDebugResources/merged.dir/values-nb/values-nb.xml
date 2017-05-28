@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Få koden i et taleanrop fra Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb">Få en kode på Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Koden leveres som et Facebook-varsel</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Trykk på «Få kode på Facebook» for å få koden din som et varsel på Facebook.</string>
     <string name="com_accountkit_button_start">Start</string>
     <string name="com_accountkit_button_start_over">Prøv på nytt</string>
     <string name="com_accountkit_button_submit">Send inn</string>
@@ -300,7 +299,7 @@
     <string name="com_accountkit_confirmation_code_text">Jeg fikk ikke en kode</string>
     <string name="com_accountkit_confirmation_code_title">Oppgi koden din</string>
     <string name="com_accountkit_email_invalid">Denne e-posten er feil. Prøv på nytt.</string>
-    <string name="com_accountkit_email_loading_title">Sender e-post …</string>
+    <string name="com_accountkit_email_loading_title">Sender e-post …</string>
     <string name="com_accountkit_email_login_retry_title">Bekreft e-postadressen din</string>
     <string name="com_accountkit_email_login_text">
         Trykk på %1$s og få en e-postbekreftelse fra Account Kit fra Facebook for å bruke %2$s. Du trenger ikke en Facebook-konto for å bruke dette. &lt;a href="%3$s">Lær hvordan Facebook bruker informasjonen din&lt;/a>.
@@ -311,7 +310,7 @@
     <string name="com_accountkit_enter_code_sent_to">Oppgi koden som ble sendt til %1$s</string>
     <string name="com_accountkit_error_title">Det har oppstått en systemfeil. Prøv på nytt.</string>
     <string name="com_accountkit_facebook_code_entry_title">Oppgi koden fra Facebook</string>
-    <string name="com_accountkit_logging_in">Logger inn …</string>
+    <string name="com_accountkit_logging_in">Logger inn …</string>
     <string name="com_accountkit_other_ways_to_get_code">Andre måter å få koden på:</string>
     <string name="com_accountkit_phone_error_title">Oppgi et gyldig mobilnummer.</string>
     <string name="com_accountkit_phone_loading_title">Sender koden…</string>

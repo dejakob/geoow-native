@@ -12,7 +12,13 @@ function loadEventsNearby(latitude, longitude) {
         .then(response => response.json())
 }
 
+function loadEventById(eventId) {
+    return fetch(`${API_URL}/event/${eventId}`)
+        .then(response => response.json())
+}
+
 export {
     loadCategories,
-    loadEventsNearby
+    loadEventsNearby,
+    loadEventById
 };
