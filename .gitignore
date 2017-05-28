@@ -3,3 +3,4 @@ node_modules
 android/.idea
 android/.gradle
 android/build
+android/app/build
