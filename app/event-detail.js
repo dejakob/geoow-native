@@ -45,28 +45,65 @@ class EventDetail extends Component
         this._directionsPolygon = [];
         EventDetail.isRunning = false;
 
-
-        const latitude = this.event.getIn(['location', 'geocoords', 1]);
-        const longitude = this.event.getIn(['location', 'geocoords', 0]);
-
-        Directions
-            .getDirections(this.props.location.get('latitude'), this.props.location.get('longitude'), latitude, longitude)
-            .then(result => {
-                try {
-                    this._directionsPolygon = Polyline.decode(result.routes[0].overview_polyline.points);
-                    this.setState({});
-                }
-                catch (ex) {
-                    console.log('ex', ex);
-                }
-            })
-    }
-
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.quest.get('currentQuest') && !this._loadedQuest) {
+        if (this.event) {
             const latitude = this.event.getIn(['location', 'geocoords', 1]);
             const longitude = this.event.getIn(['location', 'geocoords', 0]);
 
+            this._loadedEvent = true;
+
+            Directions
+                .getDirections(this.props.location.get('latitude'), this.props.location.get('longitude'), latitude, longitude)
+                .then(result => {
+                    try {
+                        this._directionsPolygon = Polyline.decode(result.routes[0].overview_polyline.points);
+                        this.setState({});
+                    }
+                    catch (ex) {
+                        console.log('ex', ex);
+                    }
+                })
+        }
+        else {
+            this.props.loadEventById(this.eventId);
+            this.props.loadGeolocation();
+        }
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (!nextProps.event.getIn(['events', this.eventId])) {
+            return false;
+        }
+
+        const event = nextProps.event.getIn(['events', this.eventId]);
+        const latitude = event.getIn(['location', 'geocoords', 1]);
+        const longitude = event.getIn(['location', 'geocoords', 0]);
+
+        // Event loaded
+        if (
+            !this._loadedEvent &&
+            (nextProps.location.get('latitude') !== 0 || nextProps.location.get('longitude') !== 0)
+        ) {
+            Directions
+                .getDirections(nextProps.location.get('latitude'), nextProps.location.get('longitude'), latitude, longitude)
+                .then(result => {
+                    try {
+                        this._directionsPolygon = Polyline.decode(result.routes[0].overview_polyline.points);
+                        this.setState({});
+                    }
+                    catch (ex) {
+                        console.log('ex', ex);
+                    }
+                });
+
+            if (this.props.navigation.state.params.autoStart) {
+                this._acceptQuest();
+            }
+
+            this._loadedEvent = true;
+        }
+
+        // Started
+        if (nextProps.quest.get('currentQuest') && !this._loadedQuest) {
             BackgroundLocation
                 .questTillLocation(latitude, longitude)
                 .then(() => this._questSucceeded(nextProps.quest.get('currentQuest')));
@@ -74,6 +111,7 @@ class EventDetail extends Component
             this._loadedQuest = true;
         }
 
+        // Accomplished
         if (
             !nextProps.quest.get('isAccomplishingQuest')
             && this.props.quest.get('isAccomplishingQuest')
@@ -90,6 +128,7 @@ class EventDetail extends Component
             this.props.loadMe();
         }
 
+        // Rejected
         if (
             !nextProps.quest.get('isRejectingQuest')
             && this.props.quest.get('isRejectingQuest')
@@ -144,6 +183,12 @@ class EventDetail extends Component
     }
 
     render() {
+        if (!this.event) {
+            return (
+                <View />
+            );
+        }
+
         const latitude = this.event.getIn(['location', 'geocoords', 1]);
         const longitude = this.event.getIn(['location', 'geocoords', 0]);
 

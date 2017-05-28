@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">透過語音通話的方式取得 Facebook 驗證碼</string>
     <string name="com_accountkit_button_send_code_in_fb">在 Facebook 上取得驗證碼</string>
     <string name="com_accountkit_button_send_code_in_fb_details">驗證碼將會以 Facebook 通知形式傳送</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">點按「在 Facebook 上取得驗證碼」即可透過 Facebook 通知接收您的驗證碼。</string>
     <string name="com_accountkit_button_start">開始</string>
     <string name="com_accountkit_button_start_over">再試一次</string>
     <string name="com_accountkit_button_submit">提交</string>

@@ -19,8 +19,32 @@ function _loadCategoriesFailed() {
     }
 }
 
+function loadEventById(eventId) {
+    return {
+        type: ACTIONS.EVENTS_LOAD_BY_ID,
+        eventId
+    }
+}
+
+function _loadEventByIdSuccess(event) {
+    return {
+        type: ACTIONS.EVENTS_LOAD_BY_ID_SUCCESS,
+        event
+    }
+}
+
+function _loadEventByIdFailed() {
+    return {
+        type: ACTIONS.EVENTS_LOAD_BY_ID_FAILED
+    }
+}
+
 export {
     loadCategories,
     _loadCategoriesSuccess,
-    _loadCategoriesFailed
+    _loadCategoriesFailed,
+
+    loadEventById,
+    _loadEventByIdSuccess,
+    _loadEventByIdFailed
 };

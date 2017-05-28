@@ -21,7 +21,7 @@
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_verified_code_center.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_verified_code_center.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_verified_code_center.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/design_layout_snackbar.xml",
@@ -41,7 +41,7 @@
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_phone_login_text.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_phone_login_text.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_phone_login_text.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/abc_screen_simple_overlay_action_mode.xml",
@@ -57,11 +57,11 @@
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_phone_login_bottom.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_phone_login_bottom.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_phone_login_bottom.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_email_login_text.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_email_login_text.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_email_login_text.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/abc_screen_simple.xml",
@@ -69,7 +69,7 @@
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_email_verify_bottom.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_email_verify_bottom.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_email_verify_bottom.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/abc_list_menu_item_icon.xml",
@@ -77,7 +77,7 @@
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_sent_code_center.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_sent_code_center.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_sent_code_center.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/redbox_item_frame.xml",
@@ -97,19 +97,19 @@
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_verifying_code_center.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_verifying_code_center.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_verifying_code_center.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_activity_layout.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_activity_layout.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_activity_layout.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_resend_bottom.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_resend_bottom.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_resend_bottom.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_email_login_bottom.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_email_login_bottom.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_email_login_bottom.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/notification_media_cancel_action.xml",
@@ -137,7 +137,15 @@
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_email_verify_center.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_email_verify_center.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_email_verify_center.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/attribution_list_item.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2f65fb49b0997b3bc246cd235daa45866c77c4a0/output/res/layout/attribution_list_item.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/mapview_internal.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2f65fb49b0997b3bc246cd235daa45866c77c4a0/output/res/layout/mapview_internal.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/abc_action_menu_layout.xml",
@@ -146,6 +154,14 @@
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/abc_list_menu_item_layout.xml",
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/onesignal_bgimage_notif_layout.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/d312742459d920fbd6ee3394990938f695412d2d/output/res/layout/onesignal_bgimage_notif_layout.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/mapview_preview.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2f65fb49b0997b3bc246cd235daa45866c77c4a0/output/res/layout/mapview_preview.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/abc_popup_menu_header_item_layout.xml",
@@ -160,12 +176,16 @@
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/layout/abc_dialog_title_material.xml"
     },
     {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/view_image_marker.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2f65fb49b0997b3bc246cd235daa45866c77c4a0/output/res/layout/view_image_marker.xml"
+    },
+    {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_confirmation_code_input.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_confirmation_code_input.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_confirmation_code_input.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_email_login_top.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_email_login_top.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_email_login_top.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/abc_alert_dialog_material.xml",
@@ -173,11 +193,11 @@
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_confirmation_code_center.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_confirmation_code_center.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_confirmation_code_center.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_phone_login_top.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_phone_login_top.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_phone_login_top.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/dev_loading_view.xml",
@@ -185,7 +205,7 @@
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_email_login_center.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_email_login_center.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_email_login_center.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/abc_action_menu_item_layout.xml",
@@ -201,7 +221,7 @@
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_phone_login_center.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_phone_login_center.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_phone_login_center.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/notification_template_big_media_narrow.xml",
@@ -220,8 +240,12 @@
         "source": "/Users/jakobkerkhove/.android/build-cache/e505b9e6e43b0dc40558fa2545a12270cbbb9d0f/output/res/layout/design_layout_tab_text.xml"
     },
     {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/infowindow_view.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2f65fb49b0997b3bc246cd235daa45866c77c4a0/output/res/layout/infowindow_view.xml"
+    },
+    {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_phone_country_code_layout.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_phone_country_code_layout.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_phone_country_code_layout.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/design_navigation_menu.xml",
@@ -233,7 +257,7 @@
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_confirmation_code_top.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_confirmation_code_top.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_confirmation_code_top.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/redbox_view.xml",
@@ -260,8 +284,12 @@
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/layout/abc_activity_chooser_view.xml"
     },
     {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/infowindow_content.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2f65fb49b0997b3bc246cd235daa45866c77c4a0/output/res/layout/infowindow_content.xml"
+    },
+    {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_phone_country_code_item_layout.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_phone_country_code_item_layout.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_phone_country_code_item_layout.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/design_navigation_item.xml",
@@ -269,7 +297,7 @@
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_sending_code_center.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_sending_code_center.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_sending_code_center.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/abc_action_mode_bar.xml",
@@ -277,7 +305,7 @@
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_error_bottom.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_error_bottom.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_error_bottom.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/select_dialog_multichoice_material.xml",
@@ -293,7 +321,7 @@
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_title.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_title.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_title.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/abc_action_bar_view_list_nav_layout.xml",
@@ -305,7 +333,7 @@
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_confirmation_code_bottom.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_confirmation_code_bottom.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_confirmation_code_bottom.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/abc_search_view.xml",
@@ -313,7 +341,7 @@
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_static_content.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_static_content.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_static_content.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/abc_screen_toolbar.xml",
@@ -325,6 +353,6 @@
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/layout/com_accountkit_fragment_error_center.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/layout/com_accountkit_fragment_error_center.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/layout/com_accountkit_fragment_error_center.xml"
     }
 ]

@@ -1,12 +1,10 @@
 rootProject.name = 'GeoowNative'
+include ':react-native-background-geolocation'
+project(':react-native-background-geolocation').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-background-geolocation-android/android')
 include ':react-native-mapbox-gl'
 project(':react-native-mapbox-gl').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-mapbox-gl/android')
-include ':react-native-background-geolocation-android'
-project(':react-native-background-geolocation-android').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-background-geolocation-android/android')
 include ':react-native-onesignal'
 project(':react-native-onesignal').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-onesignal/android')
-include ':react-native-background-geolocation'
-project(':react-native-background-geolocation').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-background-geolocation/android')
 include ':react-native-facebook-account-kit'
 project(':react-native-facebook-account-kit').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-facebook-account-kit/android')
 include ':react-native-vector-icons'

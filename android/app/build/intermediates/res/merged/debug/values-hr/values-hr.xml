@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Primite kôd glasovnim pozivom iz Facebooka</string>
     <string name="com_accountkit_button_send_code_in_fb">Primite kôd na Facebooku</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Kôd će stići u obliku obavijesti na Facebooku</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Dodirnite „Dohvati kôd na Facebooku“ da biste kôd primili kao obavijest na Facebooku.</string>
     <string name="com_accountkit_button_start">Početak</string>
     <string name="com_accountkit_button_start_over">Pokušajte ponovno</string>
     <string name="com_accountkit_button_submit">Pošalji</string>

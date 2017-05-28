@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Obtén tu código mediante una llamada de voz de Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb">Obtener un código en Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Recibirás el código como una notificación de Facebook</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Toca \"Obtener código en Facebook\" para recibir tu código como una notificación de Facebook.</string>
     <string name="com_accountkit_button_start">Inicio</string>
     <string name="com_accountkit_button_start_over">Intentar de nuevo</string>
     <string name="com_accountkit_button_submit">Enviar</string>
@@ -324,7 +323,7 @@
     <string name="com_accountkit_resend_email_text">Enviar un nuevo correo electrónico</string>
     <string name="com_accountkit_resend_title">Si no recibiste un código:</string>
     <string name="com_accountkit_return_title">Se te está redirigiendo a %1$s…</string>
-    <string name="com_accountkit_sent_title">¡Enviado!</string>
+    <string name="com_accountkit_sent_title">Enviado</string>
     <string name="com_accountkit_success_title">¡Listo!</string>
     <string name="com_accountkit_toolbar_title">Iniciar sesión en %1$s</string>
     <string name="com_accountkit_verify_confirmation_code_title">

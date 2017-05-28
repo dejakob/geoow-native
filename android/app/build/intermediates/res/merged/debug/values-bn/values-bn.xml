@@ -237,7 +237,7 @@
         <item>260:ZM:জাম্বিয়া</item>
         <item>263:ZW:জিম্বাবোয়ে</item>
     </string-array>
-    <string name="com_accountkit_account_verified">অ্যাকাউন্ট যাচাই করা হয়েছে!</string>
+    <string name="com_accountkit_account_verified">অ্যাকাউন্ট যাচাই করা হয়েছে!</string>
     <string name="com_accountkit_button_begin">আরম্ভ করুন</string>
     <string name="com_accountkit_button_cancel">বাতিল করুন</string>
     <string name="com_accountkit_button_confirm">নিশ্চিত করুন</string>
@@ -250,11 +250,10 @@
     <string name="com_accountkit_button_resend_sms">আবার এসএমএস পাঠান</string>
     <string name="com_accountkit_button_send">পাঠান</string>
     <string name="com_accountkit_button_send_code_in_call">একটি কল পান</string>
-    <string name="com_accountkit_button_send_code_in_call_details">কোনো ভয়েস কলের মধ্যে আপনার কোড পান</string>
+    <string name="com_accountkit_button_send_code_in_call_details">কোনো ভয়েস কলের মধ্যে আপনার কোড পান</string>
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Facebook থেকে একটি ভয়েস কলে আপনার কোডটি পান</string>
     <string name="com_accountkit_button_send_code_in_fb">Facebook -এ একটি কোড পান</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Facebook এর একটি বিজ্ঞপ্তি হিসেবে কোড আসবে</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Facebook -এ একটি বিজ্ঞপ্তি হিসাবে আপনার কোড পেতে "Facebook -এ কোডটি পান" -এ আলতো চাপুন৷</string>
     <string name="com_accountkit_button_start">শুরু করুন</string>
     <string name="com_accountkit_button_start_over">আবার চেষ্টা করুন</string>
     <string name="com_accountkit_button_submit">জমা দিন</string>
@@ -270,13 +269,13 @@
         Facebook এর &lt;a href="%2$s">শ্র্তাবলী&lt;/a>, &lt;a href="%3$s">ডেটা নীতি&lt;/a>, &lt;a href="%4$s">কুকির ব্যবহার&lt;/a> এবং &lt;a href="%5$s">গোপনীয়তা নীতি&lt;/a> এবং %7$s এর &lt;a href="%6$s">পরিষেবার শ্র্তাবলী&lt;/a> স্বীকার করার জন্য %1$s এ আলতো চাপ দিন৷
     </string>
     <string name="com_accountkit_confirmation_code_agreement_app_privacy_policy_and_terms_instant_verification">
-        Facebook\এর &lt;a href="%2$s">শর্তাবলী&lt;/a>, &lt;a href="%3$s">ডেটার নীতি&lt;/a>, &lt;a href="%4$s">কুকির ব্যবহার&lt;/a> এবং &lt;a href="%5$s">গোপনীয়তা নীতি&lt;/a> এবং %7$s এর &lt;a href="%6$s">পরিষেবার শর্তাবলী&lt;/a> প্রাপ্ত করতে %1$s এ টোকা দিন৷ &lt;a href="%8$s">আরও জানুন&lt;/a> আপনার অ্যাকাউন্ট কীভাবে যাচাই করা হয়েছে সে সম্বন্ধে৷
+        Facebook\এর &lt;a href="%2$s">শর্তাবলী&lt;/a>, &lt;a href="%3$s">ডেটার নীতি&lt;/a>, &lt;a href="%4$s">কুকির ব্যবহার&lt;/a> এবং &lt;a href="%5$s">গোপনীয়তা নীতি&lt;/a> এবং %7$s এর &lt;a href="%6$s">পরিষেবার শর্তাবলী&lt;/a> প্রাপ্ত করতে %1$s এ টোকা দিন৷ &lt;a href="%8$s">আরও জানুন&lt;/a> আপনার অ্যাকাউন্ট কীভাবে যাচাই করা হয়েছে সে সম্বন্ধে৷
     </string>
     <string name="com_accountkit_confirmation_code_agreement_app_privacy_policy_instant_verification">
-        Facebook\এর &lt;a href="%2$s">শর্তাবলী&lt;/a>, &lt;a href="%3$s">ডেটার নীতি&lt;/a>, &lt;a href="%4$s">কুকির ব্যবহার&lt;/a> এবং %6$s এর &lt;a href="%5$s">গোপনীয়তা নীতি&lt;/a> প্রাপ্ত করতে %1$s এ টোকা দিন৷ &lt;a href="%7$s">আরও জানুন&lt;/a> আপনার অ্যাকাউন্ট কীভাবে যাচাই করা হয়েছে সে সম্বন্ধে৷
+        Facebook\এর &lt;a href="%2$s">শর্তাবলী&lt;/a>, &lt;a href="%3$s">ডেটার নীতি&lt;/a>, &lt;a href="%4$s">কুকির ব্যবহার&lt;/a> এবং %6$s এর &lt;a href="%5$s">গোপনীয়তা নীতি&lt;/a> প্রাপ্ত করতে %1$s এ টোকা দিন৷ &lt;a href="%7$s">আরও জানুন&lt;/a> আপনার অ্যাকাউন্ট কীভাবে যাচাই করা হয়েছে সে সম্বন্ধে৷
     </string>
     <string name="com_accountkit_confirmation_code_agreement_instant_verification">
-        Facebook\এর &lt;a href="%2$s">শর্তাবলী&lt;/a>, &lt;a href="%3$s">ডেটার নীতি&lt;/a> এবং &lt;a href="%4$s">কুকির ব্যবহার&lt;/a> প্রাপ্ত করতে %1$s এ টোকা দিন৷ &lt;a href="%5$s">আরও জানুন&lt;/a> আপনার অ্যাকাউন্ট কীভাবে যাচাই করা হয়েছে সে সম্বন্ধে৷
+        Facebook\এর &lt;a href="%2$s">শর্তাবলী&lt;/a>, &lt;a href="%3$s">ডেটার নীতি&lt;/a> এবং &lt;a href="%4$s">কুকির ব্যবহার&lt;/a> প্রাপ্ত করতে %1$s এ টোকা দিন৷ &lt;a href="%5$s">আরও জানুন&lt;/a> আপনার অ্যাকাউন্ট কীভাবে যাচাই করা হয়েছে সে সম্বন্ধে৷
     </string>
     <string name="com_accountkit_confirmation_code_text">আমি কোনো কোড পাইনি</string>
     <string name="com_accountkit_confirmation_code_title">আপনার কোড লিখুন</string>
@@ -293,12 +292,12 @@
     <string name="com_accountkit_error_title">সিস্টেমে কোনো সমস্যা হয়েছে৷ অনুগ্রহ করে আবার চেষ্টা করুন৷</string>
     <string name="com_accountkit_facebook_code_entry_title">Facebook থেকে আপনার কোড প্রবেশ করান</string>
     <string name="com_accountkit_logging_in">লগ ইন করা হচ্ছে…</string>
-    <string name="com_accountkit_other_ways_to_get_code">কোড পাওয়ার অন্য উপায়:</string>
+    <string name="com_accountkit_other_ways_to_get_code">কোড পাওয়ার অন্য উপায়:</string>
     <string name="com_accountkit_phone_error_title">অনুগ্রহ করে একটি বৈধ মোবাইল নম্বর লিখুন।</string>
     <string name="com_accountkit_phone_loading_title">আপনার কোড পাঠানো হচ্ছে…</string>
     <string name="com_accountkit_phone_login_retry_title">আপনার মোবাইল নম্বর নিশ্চিত করুন</string>
     <string name="com_accountkit_phone_login_text">
-      Facebook চালিত Account Kit দিয়ে আপনার অ্যাকাউন্ট যাচাই করতে %1$s -এ আলতো চাপ দিন৷  Account Kit ব্যবহার করার জন্য আপনার কোনও Facebook অ্যাকাউন্টের প্রয়োজন নেই৷  আপনার নম্বর যাচাই করতে একটি SMS পাঠানো হতে পারে৷ বার্তা ও ডেটা রেট প্রযোজ্য হবে। &lt;a href="%2$s">Facebook আপনার তথ্য কিভাবে ব্যবহার করে তা জানুন&lt;/a>৷
+      Facebook চালিত Account Kit দিয়ে আপনার অ্যাকাউন্ট যাচাই করতে %1$s -এ আলতো চাপ দিন৷  Account Kit ব্যবহার করার জন্য আপনার কোনও Facebook অ্যাকাউন্টের প্রয়োজন নেই৷  আপনার নম্বর যাচাই করতে একটি SMS পাঠানো হতে পারে৷ বার্তা ও ডেটা রেট প্রযোজ্য হবে। &lt;a href="%2$s">Facebook আপনার তথ্য কিভাবে ব্যবহার করে তা জানুন&lt;/a>৷
     </string>
     <string name="com_accountkit_phone_login_title">আপনার মোবাইল নম্বর লিখুন</string>
     <string name="com_accountkit_resend_check">আপনার এসএমএস ইনবক্স চেক করুন</string>

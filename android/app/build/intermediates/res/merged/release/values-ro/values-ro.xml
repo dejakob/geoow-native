@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Primește codul într-un apel vocal de la Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb">Primește un cod pe Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Vei primi codul sub formă de notificare pe Facebook</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Atinge „Obține codul pe Facebook” pentru a primi codul sub formă de notificare pe Facebook.</string>
     <string name="com_accountkit_button_start">Începe</string>
     <string name="com_accountkit_button_start_over">Încearcă din nou</string>
     <string name="com_accountkit_button_submit">Trimite</string>

@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <array formatted="false" name="attribution_links" translatable="false">
+        <item>https://www.mapbox.com/about/maps/</item>
+        <item>http://www.openstreetmap.org/about/</item>
+        <item>https://www.mapbox.com/map-feedback/#/%1$f/%2$f/%3$d</item>
+        <item>https://www.mapbox.com/telemetry/</item>
+    </array>
+    <array name="attribution_names">
+        <item>© Mapbox</item>
+        <item>© OpenStreetMap</item>
+        <item>Improve this map</item>
+        <item>Telemetry Settings</item>
+    </array>
     <string-array name="com_accountkit_phone_country_codes">
         <item>376:AD:Andorra</item>
         <item>971:AE:United Arab Emirates</item>
@@ -256,6 +268,7 @@
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
+    <color name="black">#000000</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -290,10 +303,13 @@
     <color name="dim_foreground_material_light">#ff323232</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
+    <color name="gray">#7D7F80</color>
+    <color name="gray_light">#EEEEEE</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
+    <color name="mapbox_blue">#1E8CAB</color>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
@@ -306,6 +322,7 @@
     <color name="material_grey_800">#ff424242</color>
     <color name="material_grey_850">#ff303030</color>
     <color name="material_grey_900">#ff212121</color>
+    <color name="my_location_ring">@color/mapbox_blue</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
     <color name="primary_material_dark">@color/material_grey_900</color>
@@ -324,6 +341,7 @@
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
+    <color name="white">#F9F9F9</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode">
             
             <enum name="normal" value="0"/>
@@ -597,18 +615,7 @@
 <enum name="adjust_height" value="2"/>
 
 </attr><attr format="float" name="imageAspectRatio"/><attr format="boolean" name="circleCrop"/></declare-styleable>
-    <declare-styleable name="MapAttrs"><attr name="mapType">
-<enum name="none" value="0"/>
-
-<enum name="normal" value="1"/>
-
-<enum name="satellite" value="2"/>
-
-<enum name="terrain" value="3"/>
-
-<enum name="hybrid" value="4"/>
-
-</attr><attr format="float" name="cameraBearing"/><attr format="float" name="cameraTargetLat"/><attr format="float" name="cameraTargetLng"/><attr format="float" name="cameraTilt"/><attr format="float" name="cameraZoom"/><attr format="boolean" name="liteMode"/><attr format="boolean" name="uiCompass"/><attr format="boolean" name="uiRotateGestures"/><attr format="boolean" name="uiScrollGestures"/><attr format="boolean" name="uiTiltGestures"/><attr format="boolean" name="uiZoomControls"/><attr format="boolean" name="uiZoomGestures"/><attr format="boolean" name="useViewLifecycle"/><attr format="boolean" name="zOrderOnTop"/><attr format="boolean" name="uiMapToolbar"/><attr format="boolean" name="ambientEnabled"/><attr format="float" name="cameraMinZoomPreference"/><attr format="float" name="cameraMaxZoomPreference"/><attr format="float" name="latLngBoundsSouthWestLatitude"/><attr format="float" name="latLngBoundsSouthWestLongitude"/><attr format="float" name="latLngBoundsNorthEastLatitude"/><attr format="float" name="latLngBoundsNorthEastLongitude"/></declare-styleable>
+    <declare-styleable name="MapView"><attr format="string" name="access_token"/><attr format="string" name="style_url"/><attr format="string" name="api_base_url"/><attr format="float" name="center_longitude"/><attr format="float" name="center_latitude"/><attr format="float" name="zoom"/><attr format="float" name="direction"/><attr format="float" name="tilt"/><attr format="float" name="zoom_max"/><attr format="float" name="zoom_min"/><attr format="boolean" name="zoom_enabled"/><attr format="boolean" name="scroll_enabled"/><attr format="boolean" name="rotate_enabled"/><attr format="boolean" name="tilt_enabled"/><attr format="boolean" name="debug_active"/><attr format="boolean" name="zoom_controls_enabled"/><attr format="boolean" name="my_location_enabled"/><attr format="reference" name="my_location_foreground"/><attr format="reference" name="my_location_foreground_bearing"/><attr format="color" name="my_location_foreground_tint"/><attr format="reference" name="my_location_background"/><attr format="color" name="my_location_background_tint"/><attr format="dimension" name="my_location_background_left"/><attr format="dimension" name="my_location_background_top"/><attr format="dimension" name="my_location_background_right"/><attr format="dimension" name="my_location_background_bottom"/><attr format="color" name="my_location_accuracy_tint"/><attr format="integer" name="my_location_accuracy_alpha"/><attr format="boolean" name="compass_enabled"/><attr name="compass_gravity"><flag name="top" value="0x30"/><flag name="bottom" value="0x50"/><flag name="left" value="0x03"/><flag name="right" value="0x05"/><flag name="center_vertical" value="0x10"/><flag name="fill_vertical" value="0x70"/><flag name="center_horizontal" value="0x01"/><flag name="fill_horizontal" value="0x07"/><flag name="center" value="0x11"/><flag name="fill" value="0x77"/><flag name="clip_vertical" value="0x80"/><flag name="clip_horizontal" value="0x08"/><flag name="start" value="0x00800003"/><flag name="end" value="0x00800005"/></attr><attr format="dimension" name="compass_margin_left"/><attr format="dimension" name="compass_margin_top"/><attr format="dimension" name="compass_margin_right"/><attr format="dimension" name="compass_margin_bottom"/><attr format="boolean" name="compass_fade_facing_north"/><attr name="logo_gravity"><flag name="top" value="0x30"/><flag name="bottom" value="0x50"/><flag name="left" value="0x03"/><flag name="right" value="0x05"/><flag name="center_vertical" value="0x10"/><flag name="fill_vertical" value="0x70"/><flag name="center_horizontal" value="0x01"/><flag name="fill_horizontal" value="0x07"/><flag name="center" value="0x11"/><flag name="fill" value="0x77"/><flag name="clip_vertical" value="0x80"/><flag name="clip_horizontal" value="0x08"/><flag name="start" value="0x00800003"/><flag name="end" value="0x00800005"/></attr><attr format="dimension" name="logo_margin_left"/><attr format="dimension" name="logo_margin_top"/><attr format="dimension" name="logo_margin_right"/><attr format="dimension" name="logo_margin_bottom"/><attr format="boolean" name="logo_enabled"/><attr name="attribution_gravity"><flag name="top" value="0x30"/><flag name="bottom" value="0x50"/><flag name="left" value="0x03"/><flag name="right" value="0x05"/><flag name="center_vertical" value="0x10"/><flag name="fill_vertical" value="0x70"/><flag name="center_horizontal" value="0x01"/><flag name="fill_horizontal" value="0x07"/><flag name="center" value="0x11"/><flag name="fill" value="0x77"/><flag name="clip_vertical" value="0x80"/><flag name="clip_horizontal" value="0x08"/><flag name="start" value="0x00800003"/><flag name="end" value="0x00800005"/></attr><attr format="dimension" name="attribution_margin_left"/><attr format="dimension" name="attribution_margin_top"/><attr format="dimension" name="attribution_margin_right"/><attr format="dimension" name="attribution_margin_bottom"/><attr format="boolean" name="attribution_enabled"/><attr format="color" name="attribution_tint"/><attr format="boolean" name="texture_mode"/></declare-styleable>
     <declare-styleable name="MenuGroup"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:checkableBehavior"/><attr name="android:visible"/><attr name="android:enabled"/></declare-styleable>
     <declare-styleable name="MenuItem"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:title"/><attr name="android:titleCondensed"/><attr name="android:icon"/><attr name="android:alphabeticShortcut"/><attr name="android:numericShortcut"/><attr name="android:checkable"/><attr name="android:checked"/><attr name="android:visible"/><attr name="android:enabled"/><attr name="android:onClick"/><attr name="showAsAction">
             
@@ -860,15 +867,25 @@
     <dimen name="design_tab_text_size_2line">12sp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <dimen name="eight_dp">8dp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
     <item format="float" name="highlight_alpha_material_light" type="dimen">0.12</item>
+    <dimen name="infowindow_line_width">1.5dp</dimen>
+    <dimen name="infowindow_margin">8dp</dimen>
+    <dimen name="infowindow_offset">-2dp</dimen>
+    <dimen name="infowindow_tipview_width">20dp</dimen>
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
+    <dimen name="my_locationview_outer_circle">18dp</dimen>
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
+    <dimen name="seven_dp">7dp</dimen>
+    <dimen name="seventy_six_dp">76dp</dimen>
+    <dimen name="sixteen_dp">16dp</dimen>
+    <dimen name="ten_dp">10dp</dimen>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_bar_spinner" type="id"/>
@@ -889,6 +906,7 @@
     <integer name="design_snackbar_text_max_lines">2</integer>
     <integer name="google_play_services_version">10240000</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
+    <integer name="style_version">9</integer>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
     <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
@@ -921,8 +939,15 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="ak_client_token">1675181fadd29b8d7e2be77db84d2e1b</string>
-    <string name="app_name">GeoowNative</string>
+    <string name="app_name">Geoow</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="attributionTelemetryMessage">You are helping to make OpenStreetMap and Mapbox maps better by contributing anonymous usage data.</string>
+    <string name="attributionTelemetryNegative">Disagree</string>
+    <string name="attributionTelemetryNeutral">More info</string>
+    <string name="attributionTelemetryPositive">Agree</string>
+    <string name="attributionTelemetryTitle">Make Mapbox Maps Better</string>
+    <string name="attributionsDialogTitle">Mapbox Android SDK</string>
+    <string name="attributionsIconContentDescription">Attribution icon. Click to show attribution dialog.</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="catalyst_copy_button" project="catalyst" translatable="false">Copy</string>
     <string name="catalyst_debugjs" project="catalyst" translatable="false">Debug JS Remotely</string>
@@ -947,83 +972,63 @@
     <string name="catalyst_settings" project="catalyst" translatable="false">Dev Settings</string>
     <string name="catalyst_settings_title" project="catalyst" translatable="false">Catalyst Dev Settings</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
-    <string name="com_accountkit_account_verified">Account verified!</string>
-    <string name="com_accountkit_button_begin">Begin</string>
-    <string name="com_accountkit_button_cancel">Cancel</string>
-    <string name="com_accountkit_button_confirm">Confirm</string>
-    <string name="com_accountkit_button_continue">Continue</string>
-    <string name="com_accountkit_button_edit">EDIT</string>
-    <string name="com_accountkit_button_log_in">Log In</string>
-    <string name="com_accountkit_button_next">Next</string>
-    <string name="com_accountkit_button_ok">OK</string>
-    <string name="com_accountkit_button_resend_code_in">Send SMS Again in %1$d</string>
-    <string name="com_accountkit_button_resend_sms">Send SMS Again</string>
-    <string name="com_accountkit_button_send">Send</string>
-    <string name="com_accountkit_button_send_code_in_call">Get a Call</string>
-    <string name="com_accountkit_button_send_code_in_call_details">Get your code in a voice call</string>
-    <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Get your code in a voice call from Facebook</string>
-    <string name="com_accountkit_button_send_code_in_fb">Get a Code on Facebook</string>
-    <string name="com_accountkit_button_send_code_in_fb_details">Code will arrive as a Facebook notification</string>
-    <string name="com_accountkit_button_start">Start</string>
-    <string name="com_accountkit_button_start_over">Try Again</string>
-    <string name="com_accountkit_button_submit">Submit</string>
-    <string name="com_accountkit_check_email">Open your Email</string>
-    <string name="com_accountkit_code_sent_to">Verify your mobile number %1$s</string>
-    <string name="com_accountkit_confirmation_code_agreement">
-        Tap %1$s to accept Facebook\'s &lt;a href="%2$s">Terms&lt;/a>, &lt;a href="%3$s">Data Policy&lt;/a> and &lt;a href="%4$s">cookie use&lt;/a>.
-    </string>
-    <string name="com_accountkit_confirmation_code_agreement_app_privacy_policy">
-        Tap %1$s to accept Facebook\'s &lt;a href="%2$s">Terms&lt;/a>, &lt;a href="%3$s">Data Policy&lt;/a>, &lt;a href="%4$s">cookie use&lt;/a> and the &lt;a href="%5$s">Privacy Policy&lt;/a> of %6$s.
-    </string>
-    <string name="com_accountkit_confirmation_code_agreement_app_privacy_policy_and_terms">
-        Tap %1$s to accept Facebook\'s &lt;a href="%2$s">Terms&lt;/a>, &lt;a href="%3$s">Data Policy&lt;/a>, &lt;a href="%4$s">cookie use&lt;/a> and the &lt;a href="%5$s">Privacy Policy&lt;/a> and &lt;a href="%6$s">Terms of Service&lt;/a> of %7$s.
-    </string>
-    <string name="com_accountkit_confirmation_code_agreement_app_privacy_policy_and_terms_instant_verification">
-        Tap %1$s to accept Facebook\'s &lt;a href="%2$s">Terms&lt;/a>, &lt;a href="%3$s">Data Policy&lt;/a>, &lt;a href="%4$s">cookie use&lt;/a> and the &lt;a href="%5$s">Privacy Policy&lt;/a> and &lt;a href="%6$s">Terms of Service&lt;/a> of %7$s. &lt;a href="%8$s">Learn more&lt;/a> about how your account was verified.
-    </string>
-    <string name="com_accountkit_confirmation_code_agreement_app_privacy_policy_instant_verification">
-        Tap %1$s to accept Facebook\'s &lt;a href="%2$s">Terms&lt;/a>, &lt;a href="%3$s">Data Policy&lt;/a>, &lt;a href="%4$s">cookie use&lt;/a> and the &lt;a href="%5$s">Privacy Policy&lt;/a> of %6$s. &lt;a href="%7$s">Learn more&lt;/a> about how your account was verified.
-    </string>
-    <string name="com_accountkit_confirmation_code_agreement_instant_verification">
-        Tap %1$s to accept Facebook\'s &lt;a href="%2$s">Terms&lt;/a>, &lt;a href="%3$s">Data Policy&lt;/a> and &lt;a href="%4$s">cookie use&lt;/a>. &lt;a href="%5$s">Learn more&lt;/a> about how your account was verified.
-    </string>
-    <string name="com_accountkit_confirmation_code_text">I didn\'t get a code</string>
-    <string name="com_accountkit_confirmation_code_title">Enter your code</string>
-    <string name="com_accountkit_email_invalid">
-        This email is incorrect. Please try again.
-    </string>
-    <string name="com_accountkit_email_loading_title">Sending email…</string>
-    <string name="com_accountkit_email_login_retry_title">Confirm your email</string>
-    <string name="com_accountkit_email_login_text">
-      Tap %1$s to get an email confirmation from Account Kit by Facebook to help you use %2$s. You don\'t need a Facebook account to use it. &lt;a href="%3$s">Learn how Facebook uses your info&lt;/a>.
-    </string>
-    <string name="com_accountkit_email_login_title">Enter your email address</string>
-    <string name="com_accountkit_email_not_received">Resend Email</string>
-    <string name="com_accountkit_email_verify_title">Open the email and confirm your email address</string>
-    <string name="com_accountkit_enter_code_sent_to">Enter the code that was sent to %1$s</string>
-    <string name="com_accountkit_error_title">A system issue occurred. Please try again.</string>
-    <string name="com_accountkit_facebook_code_entry_title">Enter your code from Facebook</string>
-    <string name="com_accountkit_logging_in">Logging in…</string>
-    <string name="com_accountkit_other_ways_to_get_code">Other ways to get code:</string>
-    <string name="com_accountkit_phone_error_title">Please enter a valid mobile number.</string>
-    <string name="com_accountkit_phone_loading_title">Verifying your number…</string>
-    <string name="com_accountkit_phone_login_retry_title">Confirm your mobile number</string>
-    <string name="com_accountkit_phone_login_text">
-        Tap %1$s to verify your account with Account Kit powered by Facebook. You don’t need a Facebook account to use Account Kit. An SMS may be sent to verify your number. Message and data rates may apply. &lt;a href="%2$s">Learn how Facebook uses your info&lt;/a>.
-    </string>
-    <string name="com_accountkit_phone_login_title">Enter your mobile number</string>
-    <string name="com_accountkit_resend_check">Check your SMS inbox</string>
-    <string name="com_accountkit_resend_email_text">Send New Email</string>
-    <string name="com_accountkit_resend_title">If you haven\'t gotten a code:</string>
-    <string name="com_accountkit_return_title">Taking you back to %1$s…</string>
-    <string name="com_accountkit_sent_title">Sent!</string>
-    <string name="com_accountkit_success_title">Verified!</string>
-    <string name="com_accountkit_toolbar_title">Log Into %1$s</string>
-    <string name="com_accountkit_verify_confirmation_code_title">
-        We couldn\'t verify your code.\nPlease try again:
-    </string>
-    <string name="com_accountkit_verify_title">Verifying your code…</string>
-    <string name="com_accountkit_voice_call_code_entry_title">Enter your code from Voice Call</string>
+    <string description="Large label shown when account verification is successful" name="com_accountkit_account_verified">Account verified!</string>
+    <string description="Button label" name="com_accountkit_button_begin">Begin</string>
+    <string description="Button label for cancel" name="com_accountkit_button_cancel">Cancel</string>
+    <string description="Button label for confirm" name="com_accountkit_button_confirm">Confirm</string>
+    <string description="Button label for continue" name="com_accountkit_button_continue">Continue</string>
+    <string description="Button label for edit" name="com_accountkit_button_edit">EDIT</string>
+    <string description="Button label for log in button" name="com_accountkit_button_log_in">Log In</string>
+    <string description="Button label for next" name="com_accountkit_button_next">Next</string>
+    <string description="Button label for ok" name="com_accountkit_button_ok">OK</string>
+    <string description="Countdown here %1$d is a countdown digits to when an SMS confirmation code can be sent again" name="com_accountkit_button_resend_code_in">Send SMS Again in <ns1:g id="countdown">%1$d</ns1:g></string>
+    <string description="Button that will resend an SMS confirmation code to a person&apos;s phone number" name="com_accountkit_button_resend_sms">Send SMS Again</string>
+    <string description="Button label for send" name="com_accountkit_button_send">Send</string>
+    <string description="Button label for when you receive a call." name="com_accountkit_button_send_code_in_call">Get a Call</string>
+    <string description="Button label to allow the user to receive a phone call." name="com_accountkit_button_send_code_in_call_details">Get your code in a voice call</string>
+    <string description="Button label to allow a user to receive a phone call" name="com_accountkit_button_send_code_in_call_from_facebook_details">Get your code in a voice call from Facebook</string>
+    <string description="Button that will send a given confirmation code to a person&apos;s Facebook" name="com_accountkit_button_send_code_in_fb">Get a Code on Facebook</string>
+    <string description="Details text saying how the notification will arrive." name="com_accountkit_button_send_code_in_fb_details">Code will arrive as a Facebook notification</string>
+    <string description="Text under the button to send a code to Facebook that explains how the process works. The code will appear as a notification in their Facebook application" name="com_accountkit_button_start">Start</string>
+    <string description="Button to start the flow over again" name="com_accountkit_button_start_over">Try Again</string>
+    <string description="Button label for submit" name="com_accountkit_button_submit">Submit</string>
+    <string description="Info text telling the user to check their email" name="com_accountkit_check_email">Open your Email</string>
+    <string description="Prompt for a person to check if %1$s is their correct phone number and they haven&apos;t made a mistake typing it in" name="com_accountkit_code_sent_to">Verify your mobile number <ns1:g id="phone_number">%1$s</ns1:g></string>
+    <string description="Contains links to terms and agreements" name="com_accountkit_confirmation_code_agreement">Tap <ns1:g id="button_name">%1$s</ns1:g> to accept Facebook\'s <ns1:g id="start facebook terms link">&lt;a href=%2$s></ns1:g>Terms<ns1:g id="end link">&lt;/a></ns1:g>, <ns1:g id="start data policy link">&lt;a href=%3$s></ns1:g>Data Policy<ns1:g id="end link">&lt;/a></ns1:g> and <ns1:g id="start cookie policy link">&lt;a href=%4$s></ns1:g>cookie use<ns1:g id="end link">&lt;/a></ns1:g>.</string>
+    <string description="Contains links to terms and agreements" name="com_accountkit_confirmation_code_agreement_app_privacy_policy">Tap <ns1:g id="button_name">%1$s</ns1:g> to accept Facebook\'s <ns1:g id="start facebook terms link">&lt;a href=%2$s></ns1:g>Terms<ns1:g id="end link">&lt;/a></ns1:g>, <ns1:g id="start data policy link">&lt;a href=%3$s></ns1:g>Data Policy<ns1:g id="end link">&lt;/a></ns1:g>, <ns1:g id="start cookie policy link">&lt;a href=%4$s></ns1:g>cookie use<ns1:g id="end link">&lt;/a></ns1:g> and the <ns1:g id="start privacy policy link">&lt;a href=%5$s></ns1:g>Privacy Policy<ns1:g id="end link">&lt;/a></ns1:g> of <ns1:g id="app_name">%6$s</ns1:g>.</string>
+    <string description="Contains links to terms and agreements" name="com_accountkit_confirmation_code_agreement_app_privacy_policy_and_terms">Tap <ns1:g id="button_name">%1$s</ns1:g> to accept Facebook\'s <ns1:g id="start facebook terms link">&lt;a href=%2$s></ns1:g>Terms<ns1:g id="end link">&lt;/a></ns1:g>, <ns1:g id="start data policy link">&lt;a href=%3$s></ns1:g>Data Policy<ns1:g id="end link">&lt;/a></ns1:g>, <ns1:g id="start cookie policy link">&lt;a href=%4$s></ns1:g>cookie use<ns1:g id="end link">&lt;/a></ns1:g> and the <ns1:g id="start privacy policy link">&lt;a href=%5$s></ns1:g>Privacy Policy<ns1:g id="end link">&lt;/a></ns1:g> and <ns1:g id="start app terms link">&lt;a href=%6$s></ns1:g>Terms of Service<ns1:g id="end link">&lt;/a></ns1:g> of <ns1:g id="app_name">%7$s</ns1:g>.</string>
+    <string description="Contains links to terms and agreements" name="com_accountkit_confirmation_code_agreement_app_privacy_policy_and_terms_instant_verification">Tap <ns1:g id="button_name">%1$s</ns1:g> to accept Facebook\'s <ns1:g id="start facebook terms link">&lt;a href=%2$s></ns1:g>Terms<ns1:g id="end link">&lt;/a></ns1:g>, <ns1:g id="start data policy link">&lt;a href=%3$s></ns1:g>Data Policy<ns1:g id="end link">&lt;/a></ns1:g>, <ns1:g id="start cookie policy link">&lt;a href=%4$s></ns1:g>cookie use<ns1:g id="end link">&lt;/a></ns1:g> and the <ns1:g id="start privacy policy link">&lt;a href=%5$s></ns1:g>Privacy Policy<ns1:g id="end link">&lt;/a></ns1:g> and <ns1:g id="start app terms link">&lt;a href=%6$s></ns1:g>Terms of Service<ns1:g id="end link">&lt;/a></ns1:g> of <ns1:g id="app_name">%7$s</ns1:g>. <ns1:g id="start iv learn more link">&lt;a href=%8$s></ns1:g>Learn more<ns1:g id="end link">&lt;/a></ns1:g> about how your account was verified.</string>
+    <string description="Contains links to terms and agreements" name="com_accountkit_confirmation_code_agreement_app_privacy_policy_instant_verification">Tap <ns1:g id="button_name">%1$s</ns1:g> to accept Facebook\'s <ns1:g id="start facebook terms link">&lt;a href=%2$s</ns1:g>>Terms<ns1:g id="end link">&lt;/a></ns1:g>, <ns1:g id="start data policy link">&lt;a href=%3$s></ns1:g>Data Policy<ns1:g id="end link">&lt;/a></ns1:g>, <ns1:g id="start cookie policy link">&lt;a href=%4$s></ns1:g>cookie use<ns1:g id="end link">&lt;/a></ns1:g> and the <ns1:g id="start privacy policy link">&lt;a href=%5$s></ns1:g>Privacy Policy<ns1:g id="end link">&lt;/a></ns1:g> of <ns1:g id="app_name">%6$s</ns1:g>. <ns1:g id="start iv learn more link">&lt;a href=%7$s></ns1:g>Learn more<ns1:g id="end link">&lt;/a></ns1:g> about how your account was verified.</string>
+    <string description="Contains links to terms and agreements" name="com_accountkit_confirmation_code_agreement_instant_verification">Tap <ns1:g id="button_name">%1$s</ns1:g> to accept Facebook\'s <ns1:g id="start facebook terms link">&lt;a href=%2$s></ns1:g>Terms<ns1:g id="end link">&lt;/a></ns1:g>, <ns1:g id="start data policy link">&lt;a href=%3$s></ns1:g>Data Policy<ns1:g id="end link">&lt;/a></ns1:g> and <ns1:g id="start cookie policy link">&lt;a href=%4$s></ns1:g>cookie use<ns1:g id="end link">&lt;/a></ns1:g>. <ns1:g id="start iv learn more link">&lt;a href=%5$s></ns1:g>Learn more<ns1:g id="end link">&lt;/a></ns1:g> about how your account was verified.</string>
+    <string description="Button prompt that a person can click if they didn&apos;t receive an SMS confirmation code" name="com_accountkit_confirmation_code_text">I didn\'t get a code</string>
+    <string description="Title on top of confirmation code screen" name="com_accountkit_confirmation_code_title">Enter your code</string>
+    <string description="Title on top of invalid email screen" name="com_accountkit_email_invalid">This email is incorrect. Please try again.</string>
+    <string description="Shown when sending an email." name="com_accountkit_email_loading_title">Sending email…</string>
+    <string description="Title on retry screen of email flow" name="com_accountkit_email_login_retry_title">Confirm your email</string>
+    <string description="Legal text on email login screen" name="com_accountkit_email_login_text">Tap <ns1:g id="button_name">%1$s</ns1:g> to get an email confirmation from Account Kit by Facebook to help you use <ns1:g id="app_name">%2$s</ns1:g>. You don\'t need a Facebook account to use it. <ns1:g id="start learn link">&lt;a href=%3$s></ns1:g>Learn how Facebook uses your info<ns1:g id="end link">&lt;/a></ns1:g>.</string>
+    <string description="Title on email login flow." name="com_accountkit_email_login_title">Enter your email address</string>
+    <string description="Button to click when email not received" name="com_accountkit_email_not_received">Resend Email</string>
+    <string description="Prompt after an email has been sent to a given email address and a person then needs to navigate to their email application to confirm that this is their email address by opening an email they should have received" name="com_accountkit_email_verify_title">Open the email and confirm your email address</string>
+    <string description="Explanation that a person should look for a SMS confirmation code that was sent to the phone number %1$s" name="com_accountkit_enter_code_sent_to">Enter the code that was sent to %1$s</string>
+    <string description="When an error occurs in the experience this is the default error that is shown. A person has an option to restart the flow" name="com_accountkit_error_title">A system issue occurred. Please try again.</string>
+    <string description="Prompt over an area where a person can enter the confirmation code they received as a notification from Facebook" name="com_accountkit_facebook_code_entry_title">Enter your code from Facebook</string>
+    <string description="Shown when logging in" name="com_accountkit_logging_in">Logging in…</string>
+    <string description="Detail text above list of other ways to receive a confirmation code." name="com_accountkit_other_ways_to_get_code">Other ways to get code:</string>
+    <string description="Displays when a person enters an incorrect mobile phone number" name="com_accountkit_phone_error_title">Please enter a valid mobile number.</string>
+    <string description="Shown when attempting to verify number." name="com_accountkit_phone_loading_title">Verifying your number…</string>
+    <string description="Prompt over a box that contains a persons phone number where they should verify that it is the correct one" name="com_accountkit_phone_login_retry_title">Confirm your mobile number</string>
+    <string description="Legal text when logging in with phone." name="com_accountkit_phone_login_text">Tap <ns1:g id="button_name">%1$s</ns1:g> to verify your account with Account Kit powered by Facebook. You don’t need a Facebook account to use Account Kit. An SMS may be sent to verify your number. Message and data rates may apply. <ns1:g id="start data info link">&lt;a href=%2$s></ns1:g>Learn how Facebook uses your info<ns1:g id="end link">&lt;/a></ns1:g>.</string>
+    <string description="Prompt over an entry box where a person can enter their mobile phone number" name="com_accountkit_phone_login_title">Enter your mobile number</string>
+    <string description="Prompt for a person to check the phone number they entered before a new SMS is sent to them" name="com_accountkit_resend_check">Check your SMS inbox</string>
+    <string description="Title when resending an email." name="com_accountkit_resend_email_text">Send New Email</string>
+    <string description="Prompt for a person to check their SMS client for messages that contain an SMS confirmation code that they are prompted to enter" name="com_accountkit_resend_title">If you haven\'t gotten a code:</string>
+    <string description="Shown at the end of the flow when going back to the app." name="com_accountkit_return_title">Taking you back to <ns1:g id="app_name">%1$s</ns1:g>…</string>
+    <string description="Shown went the SMS code has been sent." name="com_accountkit_sent_title">Sent!</string>
+    <string description="Show when the code is verified." name="com_accountkit_success_title">Verified!</string>
+    <string description="Title for login flow." name="com_accountkit_toolbar_title">Log Into <ns1:g id="app_name">%1$s</ns1:g></string>
+    <string description="Shown when the code fails to verify." name="com_accountkit_verify_confirmation_code_title">We couldn\'t verify your code.\nPlease try again:</string>
+    <string description="Shown when verifying the code." name="com_accountkit_verify_title">Verifying your code…</string>
+    <string description="Text above code entry input." name="com_accountkit_voice_call_code_entry_title">Enter your code from Voice Call</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t work unless you enable Google Play services.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Enable Google Play services</string>
@@ -1041,9 +1046,21 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="compassContentDescription">Map compass. Click to reset the map rotation to North.</string>
     <string name="fb_app_id">1610970229164585</string>
+    <string name="infoWindowAddress">Address</string>
+    <string name="infoWindowDescription">Description</string>
+    <string name="infoWindowTitle">Title</string>
+    <string name="mapboxIconContentDescription">The Mapbox logo.</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="style_dark">mapbox://styles/mapbox/dark-v9</string>
+    <string name="style_emerald">mapbox://styles/mapbox/emerald-v8</string>
+    <string name="style_light">mapbox://styles/mapbox/light-v9</string>
+    <string name="style_mapbox_streets">mapbox://styles/mapbox/streets-v9</string>
+    <string name="style_outdoors">mapbox://styles/mapbox/outdoors-v9</string>
+    <string name="style_satellite">mapbox://styles/mapbox/satellite-v9</string>
+    <string name="style_satellite_streets">mapbox://styles/mapbox/satellite-streets-v9</string>
     <style name="AccountKit.ActionBar" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="android:background">?attr/com_accountkit_header_background_color</item>
         <item name="colorControlNormal">?attr/com_accountkit_header_text_color</item>
@@ -1086,6 +1103,9 @@
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+    </style>
+    <style name="AttributionAlertDialogStyle" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:textColorPrimary">@android:color/white</item>
     </style>
     <style name="Base.AccountKit.AgreementText" parent="TextAppearance.AppCompat.Small">
         <item name="android:textColor">?attr/com_accountkit_text_color</item>
@@ -2453,6 +2473,7 @@
     <style name="SpinnerDatePickerStyle" ns2:targetApi="lollipop" parent="android:Widget.Material.Light.DatePicker">
         <item name="android:datePickerMode">spinner</item>
     </style>
+    <style name="TelemAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert"/>
     <style name="TextAppearance.AppCompat" parent="Base.TextAppearance.AppCompat"/>
     <style name="TextAppearance.AppCompat.Body1" parent="Base.TextAppearance.AppCompat.Body1"/>
     <style name="TextAppearance.AppCompat.Body2" parent="Base.TextAppearance.AppCompat.Body2"/>

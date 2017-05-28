@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">A kódot beszédhívás formájában fogod megkapni a Facebooktól.</string>
     <string name="com_accountkit_button_send_code_in_fb">Kód kérése a Facebookra</string>
     <string name="com_accountkit_button_send_code_in_fb_details">A kód Facebook-értesítésként fog megjönni.</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">A „Kód kérése a Facebookon” pontra koppintva a Facebookon, értesítésként kaphatod meg a kódot.</string>
     <string name="com_accountkit_button_start">Indítás</string>
     <string name="com_accountkit_button_start_over">Újra</string>
     <string name="com_accountkit_button_submit">Küldés</string>

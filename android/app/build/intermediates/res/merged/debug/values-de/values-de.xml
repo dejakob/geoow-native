@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Erhalte deinen Code in einem Sprachanruf von Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb">Code auf Facebook erhalten</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Der Code wird als Facebook-Benachrichtigung zugesendet</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Tippe auf „Code auf Facebook erhalten\“, um deinen Code als Benachrichtigung auf Facebook zu erhalten.</string>
     <string name="com_accountkit_button_start">Start</string>
     <string name="com_accountkit_button_start_over">Erneut versuchen</string>
     <string name="com_accountkit_button_submit">Senden</string>
@@ -300,7 +299,7 @@
     <string name="com_accountkit_confirmation_code_text">Ich habe keinen Code erhalten</string>
     <string name="com_accountkit_confirmation_code_title">Gib deinen Code ein</string>
     <string name="com_accountkit_email_invalid">Diese E-Mail-Adresse ist falsch. Versuche es erneut.</string>
-    <string name="com_accountkit_email_loading_title">E-Mail wird gesendet …</string>
+    <string name="com_accountkit_email_loading_title">E-Mail wird gesendet …</string>
     <string name="com_accountkit_email_login_retry_title">Bestätige deine E-Mail-Adresse</string>
     <string name="com_accountkit_email_login_text">
       Tippe %1$s ein, um eine Bestätigungs-E-Mail von Account Kit von Facebook zu erhalten, für Hilfe verwendest du %2$s. Du benötigst kein Facebook-Konto, um es zu nutzen. &lt;a href="%3$s">Erfahre, wie Facebook deine Informationen verwendet&lt;/a>.

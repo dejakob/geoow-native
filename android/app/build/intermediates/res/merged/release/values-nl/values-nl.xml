@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Ontvang je code via je een spraakoproep van Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb">Een code ontvangen op Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Je ontvangt de code als een Facebook-melding</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Tik op Code op Facebook ontvangen om je code te ontvangen als een melding op Facebook.</string>
     <string name="com_accountkit_button_start">Starten</string>
     <string name="com_accountkit_button_start_over">Probeer het opnieuw</string>
     <string name="com_accountkit_button_submit">Verzenden</string>

@@ -1,2 +1,5 @@
 node_modules
 .idea
+android/.idea
+android/.gradle
+android/build

@@ -254,7 +254,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Recibirás el código mediante una llamada de voz de Facebook.</string>
     <string name="com_accountkit_button_send_code_in_fb">Recibir el código en Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Recibirás el código como una notificación de Facebook.</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Toca \"Recibir el código en Facebook\" para obtenerlo en forma de notificación en la plataforma.</string>
     <string name="com_accountkit_button_start">Comenzar</string>
     <string name="com_accountkit_button_start_over">Volver a intentarlo</string>
     <string name="com_accountkit_button_submit">Enviar</string>

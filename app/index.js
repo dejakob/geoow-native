@@ -12,6 +12,7 @@ import Preferences from './preferences';
 import Dashboard from './dashboard';
 import Discover from './discover';
 import EventDetail from './event-detail';
+import * as Router from '../services/router';
 import { MAPBOX_TOKEN } from '../constants';
 import '../themes';
 
@@ -25,7 +26,10 @@ const App = StackNavigator({
     Discover: { screen: connect(Discover) },
     EventDetail: { screen: connect(EventDetail) }
 }, {
-    mode: 'modal'
+    mode: 'modal',
+    onTransitionStart: params => {
+        Router.triggerTransitionListeners(params);
+    }
 });
 
 function mapStateToProps (state) {
@@ -49,4 +53,4 @@ function connect (component) {
     return connected;
 }
 
-export default connectStyler(<App />);
+export default connectStyler(<App ref={router => Router._setRouter(router)} />);

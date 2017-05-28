@@ -1,7 +1,7 @@
 [
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/drawable-v21/com_accountkit_input_cursor.xml",
-        "source": "/Users/jakobkerkhove/.android/build-cache/fb7108dc59299a716d698028ba474ab958c26305/output/res/drawable-v21/com_accountkit_input_cursor.xml"
+        "source": "/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/res/drawable-v21/com_accountkit_input_cursor.xml"
     },
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/drawable-v21/abc_action_bar_item_background_material.xml",
@@ -14,5 +14,9 @@
     {
         "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/drawable-v21/abc_edit_text_material.xml",
         "source": "/Users/jakobkerkhove/.android/build-cache/22fc8911b4ae86260c71654a58af4fd42ad421d1/output/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/res/merged/release/drawable-v21/bg_default_selector.xml",
+        "source": "/Users/jakobkerkhove/.android/build-cache/2f65fb49b0997b3bc246cd235daa45866c77c4a0/output/res/drawable-v21/bg_default_selector.xml"
     }
 ]

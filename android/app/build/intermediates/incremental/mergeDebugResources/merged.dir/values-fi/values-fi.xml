@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Saa koodi Facebookilta puhelussa</string>
     <string name="com_accountkit_button_send_code_in_fb">Koodi Facebookissa</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Koodi lähetetään Facebook-ilmoituksena</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Saat koodin Facebook-ilmoituksessa valitsemalla Hae koodi Facebookissa.</string>
     <string name="com_accountkit_button_start">Alku</string>
     <string name="com_accountkit_button_start_over">Yritä uudelleen</string>
     <string name="com_accountkit_button_submit">Lähetä</string>

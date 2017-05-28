@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Facebook से अपना कोड वॉइस कॉल से पाएँ</string>
     <string name="com_accountkit_button_send_code_in_fb">Facebook पर कोड प्राप्त करें</string>
     <string name="com_accountkit_button_send_code_in_fb_details">कोड Facebook सूचना के रूप में मिलेगा</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Facebook पर नोटिफ़िकेशन के रूप में अपना कोड प्राप्त करने के लिए "Facebook पर कोड पाएँ" पर टैप करें.</string>
     <string name="com_accountkit_button_start">शुरू करें</string>
     <string name="com_accountkit_button_start_over">फिर से प्रयास करें</string>
     <string name="com_accountkit_button_submit">सबमिट करें</string>
@@ -309,7 +308,7 @@
     <string name="com_accountkit_email_not_received">ईमेल फिर से भेजें</string>
     <string name="com_accountkit_email_verify_title">ईमेल खोलें और अपना ईमेल कन्फ़र्म करें</string>
     <string name="com_accountkit_enter_code_sent_to">%1$s पर भेजा गया कोड दर्ज करें</string>
-    <string name="com_accountkit_error_title">एक सिस्टम समस्या हुई. कृपया फिर से कोशिश करें.</string>
+    <string name="com_accountkit_error_title">सिस्टम संबंधी समस्या हुई है. कृपया फिर से कोशिश करें.</string>
     <string name="com_accountkit_facebook_code_entry_title">Facebook से अपना कोड डालें</string>
     <string name="com_accountkit_logging_in">लॉग इन हो रहा है…</string>
     <string name="com_accountkit_other_ways_to_get_code">कोड प्राप्त करने के अन्य तरीके:</string>
@@ -324,8 +323,8 @@
     <string name="com_accountkit_resend_email_text">नया ईमेल भेजें</string>
     <string name="com_accountkit_resend_title">अगर आपको कोड प्राप्त नहीं हुआ है तो:</string>
     <string name="com_accountkit_return_title">आपको वापस %1$s पर ले जाया जा रहा है…</string>
-    <string name="com_accountkit_sent_title">भेज दिया!</string>
-    <string name="com_accountkit_success_title">सत्यापित!</string>
+    <string name="com_accountkit_sent_title">भेजा दिया!</string>
+    <string name="com_accountkit_success_title">पूर्ण!</string>
     <string name="com_accountkit_toolbar_title">%1$s में लॉग इन करें</string>
     <string name="com_accountkit_verify_confirmation_code_title">
         हम आपका कोड सत्यापित नहीं कर सके.\nकृपया फिर से कोशिश करें:

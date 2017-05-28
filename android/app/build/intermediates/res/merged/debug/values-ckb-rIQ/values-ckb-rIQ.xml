@@ -254,7 +254,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">کۆدەکەت.بە.تەلەفەنیکی.دەنگەوە دەستبکەوە.لە فەیسبووک</string>
     <string name="com_accountkit_button_send_code_in_fb">لە فەیسبووک کۆدێک وەربگرە</string>
     <string name="com_accountkit_button_send_code_in_fb_details">کۆدەکە وەکوو ئاگاداریەکی فەیسبووک دەگاتە دەستت</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">بۆ وەرگرتن کۆدەکەت بە شێوەی ئاگاداری لەسەر فەیسبووک لەسەر «وەرگرتنی کۆد لەسەر فەیسبووک» تەپ بکە.</string>
     <string name="com_accountkit_button_start">دەست پێکردن</string>
     <string name="com_accountkit_button_start_over">دووبارە هەوڵ بدە</string>
     <string name="com_accountkit_button_submit">بەڕێکردن</string>

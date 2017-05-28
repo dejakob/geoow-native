@@ -14,25 +14,28 @@ function CategoryListItem(props) {
     return (
         <Touchable
             onPress={props.onPress}
-            style={getStyle('categoryListItem__touch')}
         >
-            <Card>
-                <Image
-                    style={getStyle('categoryListItem__backgroundImage')}
-                    resizeMode='cover'
-                    source={CategoryImageHelper.getImageForCategory(props.category)}
-                />
-                <View
-                    style={getStyle('categoryListItem__overlay')}
-                >
-                    <Text
-                        style={getStyle('categoryListItem__text')}
+            <View
+                style={getStyle('categoryListItem__touch')}
+            >
+                <Card>
+                    <Image
+                        style={getStyle('categoryListItem__backgroundImage')}
+                        resizeMode='cover'
+                        source={CategoryImageHelper.getImageForCategory(props.category)}
+                    />
+                    <View
+                        style={getStyle('categoryListItem__overlay')}
                     >
-                        {props.category.toUpperCase()}
-                    </Text>
-                    {renderCheck()}
-                </View>
-            </Card>
+                        <Text
+                            style={getStyle('categoryListItem__text')}
+                        >
+                            {props.category.toUpperCase()}
+                        </Text>
+                        {renderCheck()}
+                    </View>
+                </Card>
+            </View>
         </Touchable>
     );
 

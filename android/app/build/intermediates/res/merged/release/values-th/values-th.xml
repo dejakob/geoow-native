@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">รับโค้ดการโทรด้วยเสียงจาก Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb">รับรหัสบน Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb_details">รหัสจะส่งในรูปแบบการแจ้งเตือนบน Facebook</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">แตะ "รับรหัสบน Facebook" เพื่อรับรหัสเป็นการแจ้งเตือนบน Facebook</string>
     <string name="com_accountkit_button_start">เริ่ม</string>
     <string name="com_accountkit_button_start_over">ลองอีกครั้ง</string>
     <string name="com_accountkit_button_submit">ส่ง</string>

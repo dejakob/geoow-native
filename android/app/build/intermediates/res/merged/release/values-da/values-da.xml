@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Få din kode i et taleopkald fra Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb">Få en kode på Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Koden leveres som en Facebook-notifikation</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Tryk på "Få koden på Facebook" for at modtage din kode som en notifikation på Facebook.</string>
     <string name="com_accountkit_button_start">Start</string>
     <string name="com_accountkit_button_start_over">Prøv igen</string>
     <string name="com_accountkit_button_submit">Indsend</string>

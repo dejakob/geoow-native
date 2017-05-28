@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">コードをFacebookからの音声通話で取得</string>
     <string name="com_accountkit_button_send_code_in_fb">Facebookでコードを取得</string>
     <string name="com_accountkit_button_send_code_in_fb_details">コードはFacebookのお知らせとして届きます</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">[Facebookでコードを取得]をタップすると、コードをFacebookの通知で受信します。</string>
     <string name="com_accountkit_button_start">開始</string>
     <string name="com_accountkit_button_start_over">もう一度試す</string>
     <string name="com_accountkit_button_submit">送信</string>
@@ -303,7 +302,7 @@
     <string name="com_accountkit_email_loading_title">メールを送信中…</string>
     <string name="com_accountkit_email_login_retry_title">メールアドレスを確認</string>
     <string name="com_accountkit_email_login_text">
-        %1$sをタップして、Account Kit by Facebookからメールアドレスの認証を受け取ると、%2$sの使用に役立ちます。これは、Facebookアカウントがなくても使用できます。&lt;a href="%3$s">あなたの情報がFacebookでどのように使われるかについては、こちらをご覧ください&lt;/a>。
+        %1$sをタップして、Account Kit by Facebookからメールアドレスの認証を受け取ると、%2$sの使用に役立ちます。これは、Facebookアカウントがなくても使用できます。あなたの情報がFacebookでどのように使われるかについては、&lt;a href="%3$s">こちら&lt;/a>をご覧ください。
     </string>
     <string name="com_accountkit_email_login_title">メールアドレスを入力</string>
     <string name="com_accountkit_email_not_received">メールを再送信</string>
@@ -328,7 +327,7 @@
     <string name="com_accountkit_success_title">完了しました</string>
     <string name="com_accountkit_toolbar_title">%1$sにログイン</string>
     <string name="com_accountkit_verify_confirmation_code_title">
-        コードを確認できませんでした。\nもう一度実行してください：
+        コードを確認できませんでした。\nもう一度実行してください。
     </string>
     <string name="com_accountkit_verify_title">コードを認証しています…</string>
     <string name="com_accountkit_voice_call_code_entry_title">音声通話から取得したコードを入力してください</string>

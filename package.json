@@ -12,7 +12,6 @@
     "moment": "^2.18.1",
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.0",
-    "react-native-background-geolocation": "^2.8.1",
     "react-native-background-geolocation-android": "git+ssh://git@github.com/transistorsoft/react-native-background-geolocation-android.git",
     "react-native-facebook-account-kit": "^0.6.2",
     "react-native-mapbox-gl": "hippware/react-native-mapbox-gl#master",

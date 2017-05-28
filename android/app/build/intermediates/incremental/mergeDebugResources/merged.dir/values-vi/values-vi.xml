@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Nhận mã qua cuộc gọi thoại từ Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb">Nhận mã trên Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Mã sẽ tới dưới dạng thông báo Facebook</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Nhấn vào "Nhận mã trên Facebook" để nhận mã của bạn dưới dạng thông báo trên Facebook.</string>
     <string name="com_accountkit_button_start">Bắt đầu</string>
     <string name="com_accountkit_button_start_over">Thử lại</string>
     <string name="com_accountkit_button_submit">Gửi</string>

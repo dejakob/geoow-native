@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">קבל את הקוד בשיחה קולית מפייסבוק</string>
     <string name="com_accountkit_button_send_code_in_fb">קבל קוד בפייסבוק</string>
     <string name="com_accountkit_button_send_code_in_fb_details">הקוד יגיע כהתראה בפייסבוק</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">הקש על \'קבל את הקוד בפייסבוק\' כדי לקבל את הקוד כהתראה בפייסבוק.</string>
     <string name="com_accountkit_button_start">התחל</string>
     <string name="com_accountkit_button_start_over">נסה שוב</string>
     <string name="com_accountkit_button_submit">שלח</string>

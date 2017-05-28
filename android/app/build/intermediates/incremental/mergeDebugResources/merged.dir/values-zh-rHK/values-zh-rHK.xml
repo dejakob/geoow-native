@@ -273,7 +273,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">透過 Facebook 語音通話取得代碼</string>
     <string name="com_accountkit_button_send_code_in_fb">透過 Facebook 取得代碼</string>
     <string name="com_accountkit_button_send_code_in_fb_details">代碼會傳送到 Facebook 通知</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">點按「透過 Facebook 取得代碼」以便透過 Facebook 通知取得您的代碼。</string>
     <string name="com_accountkit_button_start">開始</string>
     <string name="com_accountkit_button_start_over">再試一次</string>
     <string name="com_accountkit_button_submit">送出</string>

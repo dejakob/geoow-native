@@ -254,7 +254,6 @@
     <string name="com_accountkit_button_send_code_in_call_from_facebook_details">Dapatkan kod anda dalam panggilan suara daripada Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb">Dapatkan Kod di Facebook</string>
     <string name="com_accountkit_button_send_code_in_fb_details">Kod akan tiba sebagai pemberitahuan Facebook</string>
-    <string name="com_accountkit_button_send_code_in_fb_disclosure">Ketik "Dapatkan Kod di Facebook" untuk menerima kod anda sebagai pemberitahuan di Facebook.</string>
     <string name="com_accountkit_button_start">Mula</string>
     <string name="com_accountkit_button_start_over">Cuba Lagi</string>
     <string name="com_accountkit_button_submit">Hantar</string>
