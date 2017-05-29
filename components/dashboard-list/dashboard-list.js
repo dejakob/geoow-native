@@ -28,6 +28,7 @@ function DashboardList(props) {
         <ScrollView>
             <DashboardMe
                 me={props.me}
+                navigation={props.navigation}
             />
             <View
                 style={getStyle('dashboard__list')}

@@ -21,6 +21,7 @@ function DashboardMe(props) {
                     {props.me.getIn(['me', 'score'])}
                 </Text>
             </View>
+
         </View>
     );
 }

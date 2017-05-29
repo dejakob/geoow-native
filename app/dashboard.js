@@ -27,6 +27,7 @@ class Dashboard extends Component
                 <DashboardList
                     me={this.props.user}
                     stats={this.props.user.getIn(['me', 'stats'])}
+                    navigation={this.props.navigation}
                 />
                 <DashboardPrimaryAction
                     onPress={() => this.props.navigation.navigate('Discover')}
