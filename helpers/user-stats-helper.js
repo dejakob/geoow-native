@@ -13,6 +13,9 @@ function getDescription(statType, additionalData = {}) {
 
         case USER_STATS.QUEST_DENIED:
             return `You decided not to go 👎`;
+
+        case USER_STATS.BOUGHT:
+            return `You bought an article`;
     }
 }
 
