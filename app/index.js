@@ -12,6 +12,7 @@ import Preferences from './preferences';
 import Dashboard from './dashboard';
 import Discover from './discover';
 import EventDetail from './event-detail';
+import Scan from './scan';
 import * as Router from '../services/router';
 import { MAPBOX_TOKEN } from '../constants';
 import '../themes';
@@ -24,7 +25,8 @@ const App = StackNavigator({
     Preferences: { screen: connect(Preferences) },
     Dashboard: { screen: connect(Dashboard) },
     Discover: { screen: connect(Discover) },
-    EventDetail: { screen: connect(EventDetail) }
+    EventDetail: { screen: connect(EventDetail) },
+    Scan: { screen: connect(Scan) }
 }, {
     mode: 'modal',
     onTransitionStart: params => {

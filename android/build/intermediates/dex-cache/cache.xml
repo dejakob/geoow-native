@@ -21,48 +21,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/jakobkerkhove/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
-        <dex dex="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.1.0_247a1c94bc16d5cf0aba8c1ada7abef917ee4ba4/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
-        <dex dex="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_4d2cace69412e469b5f8d603d4ce77e6b3e03ba9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/jakobkerkhove/.android/build-cache/123014c1f0f555443059f10a95dbe33d7dbb192c/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
         <dex dex="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a776440549ba82bd4a165b21e7367f01b8be0091/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f0d3a0c84eb73fd55228e9dc5471140d6295f7a3">
-        <dex dex="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1574b371d466da7860ec283fe03646a658eb4f65/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/jakobkerkhove/.android/build-cache/d312742459d920fbd6ee3394990938f695412d2d/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="fc006a0e3cffa83bbf4d8157cda67bc4ce3e9ca4">
-        <dex dex="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_449a86699a9b3d88122c7a8ba23935c255473b0a/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -79,7 +43,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="4bbfac95c9b6fe1b542cd5543080203a1b1695b1">
+        sha1="95e135b527609bf7d4405bdd59a8ca463a349baf">
         <dex dex="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_2aeec0d97ddf636b82e02f31d544a2aed3dd3460/classes.dex" />
     </item>
     <item
@@ -108,24 +72,6 @@
         revision="25.0.0"
         sha1="6bda5f2cf57af827c1a9703a77ed9e451e6d6d25">
         <dex dex="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/mapbox-java-services-1.3.1_e7eec5d3f7364de6681c18b61d4cfded02a507ec/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/jakobkerkhove/.gradle/caches/modules-2/files-2.1/org.greenrobot/eventbus/3.0.0/ddd99896e9569eaababbe81b35d80e1b91c4ad85/eventbus-3.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
-        <dex dex="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/eventbus-3.0.0_ef020da6071056b9d77bbf6b972c6683c468930e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/jakobkerkhove/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.3.1/99ce730034c6f5aaed710d1e0e9df95e8714ed5f/logging-interceptor-3.3.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="99ce730034c6f5aaed710d1e0e9df95e8714ed5f">
-        <dex dex="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/logging-interceptor-3.3.1_63270dd2881e2fd378fb8c6c61e1e1af48ca567f/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -180,6 +126,87 @@
         revision="25.0.0"
         sha1="139535a69a4239db087de9bab0bee568bf8e0b70">
         <dex dex="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/slf4j-api-1.7.21_1431e9fd33291cf0851004c56a707ff86addb683/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.2.1/2287494d4f5f9f3a9a2bb6980e3f32053721b315/core-3.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2287494d4f5f9f3a9a2bb6980e3f32053721b315">
+        <dex dex="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/core-3.2.1_5c2b55961af38359cfa75e0faa399407d6731ed3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.1.0_247a1c94bc16d5cf0aba8c1ada7abef917ee4ba4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_4d2cace69412e469b5f8d603d4ce77e6b3e03ba9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/e4dc3fcc46070e52de71ca9b5ecf4435cc9b5d13/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f0d3a0c84eb73fd55228e9dc5471140d6295f7a3">
+        <dex dex="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1574b371d466da7860ec283fe03646a658eb4f65/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/d312742459d920fbd6ee3394990938f695412d2d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fc006a0e3cffa83bbf4d8157cda67bc4ce3e9ca4">
+        <dex dex="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_449a86699a9b3d88122c7a8ba23935c255473b0a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.gradle/caches/modules-2/files-2.1/com.drewnoakes/metadata-extractor/2.9.1/53fdf22be10c9d426ec63431c7342895bc642261/metadata-extractor-2.9.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="53fdf22be10c9d426ec63431c7342895bc642261">
+        <dex dex="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/metadata-extractor-2.9.1_6b1e92c3531de15332166fe9248767d063356576/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.gradle/caches/modules-2/files-2.1/org.greenrobot/eventbus/3.0.0/ddd99896e9569eaababbe81b35d80e1b91c4ad85/eventbus-3.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
+        <dex dex="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/eventbus-3.0.0_ef020da6071056b9d77bbf6b972c6683c468930e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.gradle/caches/modules-2/files-2.1/com.adobe.xmp/xmpcore/5.1.2/55615fa2582424e38705487d1d3969af8554f637/xmpcore-5.1.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="55615fa2582424e38705487d1d3969af8554f637">
+        <dex dex="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/xmpcore-5.1.2_4d54c9f761f0ee6b7a408c9cea489436e92f30e8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.3.1/99ce730034c6f5aaed710d1e0e9df95e8714ed5f/logging-interceptor-3.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="99ce730034c6f5aaed710d1e0e9df95e8714ed5f">
+        <dex dex="/Users/jakobkerkhove/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/logging-interceptor-3.3.1_63270dd2881e2fd378fb8c6c61e1e1af48ca567f/classes.dex" />
     </item>
 
 </items>

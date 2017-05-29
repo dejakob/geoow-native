@@ -1,6 +1,8 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { getStyle } from 'react-native-styler';
+import Touchable from '../button/touchable';
+import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import './dashboard-me.style';
 
 /**
@@ -21,7 +23,17 @@ function DashboardMe(props) {
                     {props.me.getIn(['me', 'score'])}
                 </Text>
             </View>
-
+            <View>
+                <Touchable
+                    onPress={() => props.navigation.navigate('Scan')}
+                >
+                    <MaterialCommunityIcon
+                        name="qrcode-scan"
+                        color={StyleSheet.flatten(getStyle('dashboardMe__cameraIcon')).color}
+                        size={StyleSheet.flatten(getStyle('dashboardMe__cameraIcon')).fontSize}
+                    />
+                </Touchable>
+            </View>
         </View>
     );
 }

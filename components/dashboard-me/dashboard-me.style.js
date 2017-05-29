@@ -5,8 +5,10 @@ createStyle({
     dashboardMe: {
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         marginTop: '40h4s',
+        paddingLeft: '8h4s',
+        paddingRight: '8h4s',
 
         score: {
             alignItems: 'center',
@@ -19,12 +21,18 @@ createStyle({
             borderColor: 'theme:primary',
             borderStyle: 'solid',
             borderRadius: '3h4s',
+            flex: 1,
+            marginRight: '16w4s',
 
             text: {
                 fontSize: '48h4s',
                 fontWeight: '100',
                 color: 'theme:primary'
             }
+        },
+        cameraIcon: {
+            color: 'theme:primary',
+            fontSize: '48h4s'
         }
     }
 });
