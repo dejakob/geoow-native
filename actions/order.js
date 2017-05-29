@@ -7,9 +7,10 @@ function buy(articleId) {
     }
 }
 
-function _buySuccess() {
+function _buySuccess(score) {
     return {
-        type: ACTIONS.ORDER_BUY_SUCCESS
+        type: ACTIONS.ORDER_BUY_SUCCESS,
+        score
     }
 }
 

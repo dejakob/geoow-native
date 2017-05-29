@@ -4,11 +4,12 @@ import { call, put } from 'redux-saga/effects';
 
 function* buy(action) {
     try {
-        yield call(
+        const result = yield call(
             OrderApi.buy,
             action.articleId
         );
-        yield put(Actions._buySuccess());
+
+        yield put(Actions._buySuccess(result.addScore));
     }
     catch (ex) {
         yield put(Actions._buyFailed());

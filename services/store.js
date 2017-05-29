@@ -7,6 +7,7 @@ import userReducer from '../reducers/user';
 import locationReducer from '../reducers/location';
 import discoverReducer from '../reducers/discover';
 import questReducer from '../reducers/quest';
+import orderReducer from '../reducers/order';
 import mainSaga from '../sagas';
 
 const store = createStore();
@@ -27,7 +28,8 @@ function createStore() {
         user: userReducer,
         location: locationReducer,
         discover: discoverReducer,
-        quest: questReducer
+        quest: questReducer,
+        order: orderReducer
     };
 
     const reduxStore = createReduxStore(

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Alert } from 'react-native';
 import * as ArticleApi from '../api/article';
 import Camera from 'react-native-camera';
 
@@ -16,6 +17,16 @@ class Scan extends Component
         this._stopScan = false;
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (
+            this.props.order.get('isPaying') &&
+            !nextProps.order.get('isPaying')
+        ) {
+            this.props.loadMe();
+            this.props.navigation.goBack();
+        }
+    }
+
     _handleBarCodeRead({ type, data }) {
         if (!this._stopScan && type === 'QR_CODE') {
             this._stopScan = true;
@@ -23,7 +34,15 @@ class Scan extends Component
             ArticleApi
                 .loadByCode(data)
                 .then(article => {
-
+                    Alert.alert(
+                        'Buy with Geoow credits',
+                        `Are you sure you want to spend ${article.price} credits on ${article.title}?`,
+                        [
+                            { text: 'Hell no', onPress: () => this._stopScan = false, style: 'cancel' },
+                            { text: 'Yup!', onPress: () => this.props.buy(article._id) },
+                        ],
+                        { cancelable: false }
+                    )
                 })
                 .catch(() => this._stopScan = false)
         }
