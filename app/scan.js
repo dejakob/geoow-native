@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as ArticleApi from '../api/article';
 import Camera from 'react-native-camera';
 
 /**
@@ -11,8 +12,21 @@ class Scan extends Component
         this._handleBarCodeRead = this._handleBarCodeRead.bind(this);
     }
 
-    _handleBarCodeRead(result) {
-        console.log('result', result);
+    componentWillMount() {
+        this._stopScan = false;
+    }
+
+    _handleBarCodeRead({ type, data }) {
+        if (!this._stopScan && type === 'QR_CODE') {
+            this._stopScan = true;
+
+            ArticleApi
+                .loadByCode(data)
+                .then(article => {
+
+                })
+                .catch(() => this._stopScan = false)
+        }
     }
 
     render() {

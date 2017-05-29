@@ -15,6 +15,7 @@ Todo
 * put _hidden on venue-event in db (for manual verification)
 * Quest timeout
 * Terms of Service
+* Reject payments if not enough credits, goes now below 0
 * 'Pay credits', scan QR code in app
     * the other side can be crappy website where a QR is shown (for in venue)
 
