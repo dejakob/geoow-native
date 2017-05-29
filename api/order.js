@@ -3,7 +3,7 @@ import { API } from '../constants';
 
 const API_URL = API.URL;
 
-function pay(article) {
+function buy(article) {
     const params = {
         method: 'POST',
         headers: {
@@ -20,5 +20,5 @@ function pay(article) {
 }
 
 export {
-    pay
+    buy
 }

@@ -5,6 +5,7 @@ import * as eventSaga from './event';
 import * as userSaga from './user';
 import * as locationSaga from './location';
 import * as questSaga from './quest';
+import * as orderSaga from './order';
 
 function* mainSaga() {
     yield takeEvery(ACTIONS.DISCOVER_LOAD_EVENTS_NEARBY, eventSaga.loadEventsNearby);
@@ -22,6 +23,8 @@ function* mainSaga() {
     yield takeEvery(ACTIONS.QUEST_CREATE_QUEST, questSaga.createQuest);
     yield takeEvery(ACTIONS.QUEST_ACCOMPLISH_QUEST, questSaga.accomplishQuest);
     yield takeEvery(ACTIONS.QUEST_REJECT_QUEST, questSaga.rejectQuest);
+
+    yield takeEvery(ACTIONS.ORDER_BUY, orderSaga.buy);
 }
 
 export default mainSaga;
