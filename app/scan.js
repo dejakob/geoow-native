@@ -8,6 +8,10 @@ import Camera from 'react-native-camera';
  */
 class Scan extends Component
 {
+    static navigationOptions = {
+        header: null
+    };
+
     constructor() {
         super();
         this._handleBarCodeRead = this._handleBarCodeRead.bind(this);

@@ -22,3 +22,9 @@ Todo
 Todo for later on
 * Profile data [Not for MVP]
 * calendar
+
+Ideas
+* beacons
+* 'Casino arcade’ of activities
+* Notes about activities
+* TicketSwap summer festival ticket
