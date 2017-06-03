@@ -7,7 +7,9 @@ import HeaderCredits from '../components/header/header-credits';
 import PublicBackground from '../components/public-background/public-background';
 import DashboardList from '../components/dashboard-list/dashboard-list';
 import DashboardPrimaryAction from '../components/dashboard-primary-action/dashboard-primary-action';
+import FlatIcon from '../components/flat-icon/flat-icon';
 import '../components/header/header.style.js';
+import '../components/tab-bar/tab-bar.style.js';
 
 /**
  * <Dashboard />
@@ -23,7 +25,9 @@ class Dashboard extends Component
                 onPress={() => props.navigation.navigate('Scan')}
             />
         ),
-        gesturesEnabled: false
+        gesturesEnabled: false,
+
+        tabBarIcon: ({ tintColor }) => <FlatIcon name="list" style={[getStyle('tabBar__icon'), { color: tintColor }]} />
     });
 
     componentWillMount() {

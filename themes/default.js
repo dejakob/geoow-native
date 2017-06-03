@@ -22,6 +22,7 @@ createTheme({
         darken: 'rgba(0,0,0,0.5)',
         darken3: 'rgba(0,0,0,0.3)',
         active: '#66B8C8',
+        inactive: '#999999',
         headerBackground: 'rgb(46,65,89)'
     },
     fontSizes: {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connectStyler } from 'react-native-styler';
-import { StackNavigator } from 'react-navigation';
+import { StackNavigator, TabNavigator } from 'react-navigation';
 import Mapbox from 'react-native-mapbox-gl';
 import { connect as connectRedux } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -19,11 +19,14 @@ import '../themes';
 
 Mapbox.setAccessToken(MAPBOX_TOKEN);
 
+const TabNavigation = TabNavigator({
+    Dashboard: { screen: connect(Dashboard) },
+});
 const App = StackNavigator({
     Auth: { screen: connect(Auth) },
     Plan: { screen: connect(Plan) },
     Preferences: { screen: connect(Preferences) },
-    Dashboard: { screen: connect(Dashboard) },
+    Tabs: { screen: TabNavigation },
     Discover: { screen: connect(Discover) },
     EventDetail: { screen: connect(EventDetail) },
     Scan: { screen: connect(Scan) }
