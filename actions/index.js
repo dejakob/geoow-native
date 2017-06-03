@@ -5,6 +5,7 @@ import * as LocationActions from './location';
 import * as DiscoverActions from './discover';
 import * as QuestActions from './quest';
 import * as OrderActions from './order';
+import * as DiaryActions from './diary';
 
 export default {
     ...AuthActions,
@@ -13,5 +14,6 @@ export default {
     ...LocationActions,
     ...DiscoverActions,
     ...QuestActions,
-    ...OrderActions
+    ...OrderActions,
+    ...DiaryActions
 };

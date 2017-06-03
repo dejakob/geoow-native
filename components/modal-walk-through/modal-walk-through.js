@@ -17,7 +17,7 @@ class ModalWalkThrough extends Component
             <Modal
                 transparent={true}
                 animationType="fade"
-                visible={true}
+                visible={this.props.visible}
             >
                 <View
                     style={{ backgroundColor: 'rgba(0,0,0,0.8)', flex: 1, alignItems: 'center', justifyContent: 'center' }}

@@ -32,21 +32,29 @@ class Diary extends Component
     });
 
     componentWillMount() {
-
+        this.state = {
+            modalVisible: false
+        };
     }
 
     render() {
+        console.log('diary', this.props.diary.toJS());
+
         return (
             <PublicBackground>
                 <DiaryList
                     diary={this.props.diary}
                 />
                 <DashboardPrimaryAction
-                    onPress={() => {}}
+                    onPress={() => this.setState({ modalVisible: true })}
                 >
                     Write into diary
                 </DashboardPrimaryAction>
-                <DiaryAddModal />
+                <DiaryAddModal
+                    visible={this.state.modalVisible}
+                    diary={this.props.diary}
+                    changePropOfNewDiaryItem={this.props.changePropOfNewDiaryItem}
+                />
             </PublicBackground>
         );
     }

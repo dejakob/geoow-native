@@ -12,7 +12,9 @@ import './diary-add-modal.style';
  */
 function DiaryAddModal(props) {
     return (
-        <ModalWalkThrough>
+        <ModalWalkThrough
+            visible={props.visible}
+        >
             {G5_QUESTIONS.map((item, index) => (
                 <View
                     key={index}
@@ -35,8 +37,8 @@ function DiaryAddModal(props) {
                         <StarRating
                             disabled={false}
                             maxStars={5}
-                            rating={0}
-                            selectedStar={(rating) => { console.log('rating', rating) }}
+                            rating={props.diary.getIn(['newItem', `${item.prop}Rating`])}
+                            selectedStar={(rating) => props.changePropOfNewDiaryItem(`${item.prop}Rating`, rating)}
                             acceptHalfStars={true}
                             starSize={StyleSheet.flatten(getStyle('diaryAddModal__star')).height}
                         />
