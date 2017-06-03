@@ -7,6 +7,6 @@ createStyle({
         marginRight: '20w4s',
         left: 0,
         right: 0,
-        bottom: '20h4s'
+        bottom: '6h4s'
     }
 });
