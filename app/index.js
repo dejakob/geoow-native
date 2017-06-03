@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connectStyler } from 'react-native-styler';
+import { connectStyler, getCurrentTheme } from 'react-native-styler';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 import Mapbox from 'react-native-mapbox-gl';
 import { connect as connectRedux } from 'react-redux';
@@ -16,11 +16,18 @@ import Scan from './scan';
 import * as Router from '../services/router';
 import { MAPBOX_TOKEN } from '../constants';
 import '../themes';
+import '../constants/'
 
 Mapbox.setAccessToken(MAPBOX_TOKEN);
 
 const TabNavigation = TabNavigator({
     Dashboard: { screen: connect(Dashboard) },
+}, {
+    tabBarOptions: {
+        activeTintColor: getCurrentTheme().colors.active,
+        inactiveTintColor: getCurrentTheme().colors.inactive,
+        showLabel: false,
+    },
 });
 const App = StackNavigator({
     Auth: { screen: connect(Auth) },
@@ -34,7 +41,7 @@ const App = StackNavigator({
     mode: 'modal',
     onTransitionStart: params => {
         Router.triggerTransitionListeners(params);
-    }
+    },
 });
 
 function mapStateToProps (state) {
