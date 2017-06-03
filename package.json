@@ -17,6 +17,7 @@
     "react-native-facebook-account-kit": "^0.6.2",
     "react-native-mapbox-gl": "github:hippware/react-native-mapbox-gl#master",
     "react-native-onesignal": "^3.0.4",
+    "react-native-star-rating": "dejakob/react-native-star-rating",
     "react-native-styler": "^0.0.9",
     "react-native-timeline-listview": "^0.2.1",
     "react-native-vector-icons": "^4.1.1",
@@ -35,6 +36,8 @@
     "preset": "react-native"
   },
   "rnpm": {
-    "assets": ["./assets/fonts"]
+    "assets": [
+      "./assets/fonts"
+    ]
   }
 }
