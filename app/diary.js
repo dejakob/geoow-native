@@ -34,6 +34,7 @@ class Diary extends Component
     render() {
         return (
             <PublicBackground>
+
             </PublicBackground>
         );
     }

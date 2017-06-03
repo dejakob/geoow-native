@@ -26,16 +26,7 @@ function DashboardList(props) {
             <View
                 style={getStyle('dashboard__list')}
             >
-                <View
-                    style={getStyle('dashboard__list__column')}
-                >
-                    {data.filter((item, index) => index % 2 === 0).map(renderListItem)}
-                </View>
-                <View
-                    style={getStyle('dashboard__list__column')}
-                >
-                    {data.filter((item, index) => index % 2 === 1).map(renderListItem)}
-                </View>
+                {data.filter((item, index) => index % 2 === 0).map(renderListItem)}
             </View>
         </ScrollView>
     );

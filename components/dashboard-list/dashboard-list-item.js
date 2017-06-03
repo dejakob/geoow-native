@@ -19,14 +19,14 @@ function DashboardListItem(props) {
         <View
             style={getStyle('dashboard__listItem')}
         >
+            <Image
+                style={getStyle('dashboard__listItem__header__image')}
+                source={require('../../assets/beach-pexels.jpeg')}
+                resizeMethod='cover'
+            />
             <View
                 style={getStyle('dashboard__listItem__header')}
             >
-                <Image
-                    style={getStyle('dashboard__listItem__header__image')}
-                    source={require('../../assets/beach-pexels.jpeg')}
-                    resizeMode='cover'
-                />
                 <View
                     style={[getStyle('dashboard__listItem__header__overlay'), overlayStyle]}
                 >
@@ -45,12 +45,12 @@ function DashboardListItem(props) {
                 >
                     {getDescription(item.type, item.data)}
                 </Text>
+                <Text
+                    style={getStyle('dashboard__listItem__date')}
+                >
+                    {moment(item.createdAt).format('DD MMM, HH[h]')}
+                </Text>
             </View>
-            <Text
-                style={getStyle('dashboard__listItem__date')}
-            >
-                {moment(item.createdAt).format('DD MMM, HH[h]')}
-            </Text>
         </View>
     );
 }

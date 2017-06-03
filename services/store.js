@@ -1,5 +1,10 @@
 import { AsyncStorage } from 'react-native';
-import { compose, combineReducers, createStore as createReduxStore, applyMiddleware } from 'redux';
+import {
+    compose,
+    combineReducers,
+    createStore as createReduxStore,
+    applyMiddleware
+} from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
 import eventReducer from '../reducers/event';
@@ -8,6 +13,7 @@ import locationReducer from '../reducers/location';
 import discoverReducer from '../reducers/discover';
 import questReducer from '../reducers/quest';
 import orderReducer from '../reducers/order';
+import diaryReducer from '../reducers/diary';
 import mainSaga from '../sagas';
 
 const store = createStore();
@@ -29,7 +35,8 @@ function createStore() {
         location: locationReducer,
         discover: discoverReducer,
         quest: questReducer,
-        order: orderReducer
+        order: orderReducer,
+        diary: diaryReducer,
     };
 
     const reduxStore = createReduxStore(

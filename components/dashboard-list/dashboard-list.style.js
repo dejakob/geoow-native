@@ -4,7 +4,7 @@ import { createStyle } from 'react-native-styler';
 createStyle({
     dashboard: {
         list: {
-            flexDirection: 'row',
+            flexDirection: 'column',
             flex: 1,
             paddingTop: '8h4s',
             paddingLeft: '4h4s',
@@ -13,13 +13,10 @@ createStyle({
             header: {
                 paddingTop: '40h4s'
             },
-            column: {
-                flexDirection: 'column',
-                width: '50%'
-            }
         },
 
         listItem: {
+            flexDirection: 'row',
             backgroundColor: 'theme:sheet',
             borderRadius: '3h4s',
             overflow: 'hidden',
@@ -27,7 +24,8 @@ createStyle({
 
             header: {
                 position: 'relative',
-                height: '100h4s',
+                height: '70h4s',
+                width: '100h4s',
 
                 image: {
                     position: 'absolute',
@@ -52,7 +50,7 @@ createStyle({
                 },
                 score: {
                     color: 'theme:sheet',
-                    fontSize: '36h4s',
+                    fontSize: '24h4s',
                     fontWeight: '100'
                 }
             },
@@ -61,15 +59,14 @@ createStyle({
                 fontWeight: '600',
                 textAlign: 'center',
                 color: 'theme:subtext',
-                marginBottom: '8h4s'
             },
             descriptionContainer: {
+                flex: 1,
                 backgroundColor: 'theme:lighten8',
                 paddingLeft: '4w4s',
                 paddingRight: '4w4s',
-                paddingTop: '8h4s',
-                paddingBottom: '8h4s',
-                borderRadius: '2h4s'
+                borderRadius: '2h4s',
+                justifyContent: 'space-around'
             },
             description: {
                 fontSize: 'theme:small',
