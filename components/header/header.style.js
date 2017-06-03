@@ -2,12 +2,14 @@ import { createStyle } from 'react-native-styler';
 
 createStyle({
     header: {
-        backgroundColor: 'theme:sheet2',
+        backgroundColor: 'theme:headerBackground',
+        paddingLeft: '8w4s',
+        paddingRight: '8w4s',
 
         title: {
-            fontWeight: '200',
+            fontWeight: '300',
             fontSize: 'theme:h2',
-            color: 'theme:secondary'
+            color: 'theme:primary'
         }
     }
 })

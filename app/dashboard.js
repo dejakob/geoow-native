@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { View, Image, Text, StyleSheet } from 'react-native';
+import { getStyle } from 'react-native-styler';
+import store from '../services/store';
+import HeaderTitle from '../components/header/header-title';
+import HeaderCredits from '../components/header/header-credits';
 import PublicBackground from '../components/public-background/public-background';
 import DashboardList from '../components/dashboard-list/dashboard-list';
 import DashboardMe from '../components/dashboard-me/dashboard-me';
@@ -11,10 +15,12 @@ import '../components/header/header.style.js';
  */
 class Dashboard extends Component
 {
-    static navigationOptions = {
-        header: null,
+    static navigationOptions = () => ({
+        headerStyle: getStyle('header'),
+        headerLeft: <HeaderTitle>Dashboard</HeaderTitle>,
+        headerRight: <HeaderCredits score={store.getState().user.getIn(['me', 'score'])} />,
         gesturesEnabled: false
-    };
+    });
 
     componentWillMount() {
         this.props.loadStats();
