@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Modal, FlatList, View } from 'react-native';
+import { Modal, FlatList, View, Dimensions } from 'react-native';
 
 /**
  * <ModalWalkThrough />
@@ -26,7 +26,8 @@ class ModalWalkThrough extends Component
                         data={this.props.children}
                         renderItem={this.renderChild}
                         horizontal={true}
-                        style={{ backgroundColor: '#fff', borderRadius: 3, padding: 8, maxHeight: '40%' || this.props.height, width: '80%' || this.props.width }}
+                        style={{ backgroundColor: '#fff', borderRadius: 3, maxHeight: '40%' || this.props.height, width: '80%' || this.props.width }}
+                        pagingEnabled={true}
                     />
                 </View>
             </Modal>
@@ -34,7 +35,16 @@ class ModalWalkThrough extends Component
     }
 
     renderChild({ item, index }) {
-        return item;
+        const { width } = Dimensions.get('window');
+
+        return (
+            <View
+                key={index}
+                style={{ flex: 1, width: this.props.width || width * 0.8 }}
+            >
+                {item}
+            </View>
+        );
     }
 }
 
