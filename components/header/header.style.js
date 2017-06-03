@@ -11,5 +11,24 @@ createStyle({
             fontSize: 'theme:h2',
             color: 'theme:primary'
         }
+    },
+
+    headerCredits: {
+        flexDirection: 'row',
+        alignItems: 'center',
+
+        coinsIcon: {
+            color: 'theme:primary',
+            fontSize: '12h4s'
+        },
+        payIcon: {
+            color: 'theme:primary',
+            fontSize: '22h4s'
+        },
+        score: {
+            color: 'theme:primary',
+            paddingLeft: '8w4s',
+            paddingRight: '8w4s'
+        }
     }
-})
+});

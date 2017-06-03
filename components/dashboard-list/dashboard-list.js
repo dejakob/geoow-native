@@ -1,12 +1,9 @@
 import React from 'react';
 import moment from 'moment';
 import { FlatList, StyleSheet, View, ScrollView } from 'react-native';
-import Timeline from 'react-native-timeline-listview';
 import { getDescription } from '../../helpers/user-stats-helper';
 import { getStyle } from 'react-native-styler';
-import DashboardMe from '../dashboard-me/dashboard-me';
 import DashboardListItem from './dashboard-list-item';
-import ScoreBadge from '../score-badge/score-badge';
 import './dashboard-list.style';
 
 /**
@@ -26,10 +23,6 @@ function DashboardList(props) {
 
     return (
         <ScrollView>
-            <DashboardMe
-                me={props.me}
-                navigation={props.navigation}
-            />
             <View
                 style={getStyle('dashboard__list')}
             >

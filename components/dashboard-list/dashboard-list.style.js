@@ -6,7 +6,7 @@ createStyle({
         list: {
             flexDirection: 'row',
             flex: 1,
-            paddingTop: '30h4s',
+            paddingTop: '8h4s',
             paddingLeft: '4h4s',
             paddingRight: '4h4s',
 
