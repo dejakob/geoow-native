@@ -12,6 +12,10 @@ class ModalWalkThrough extends Component
         this.renderChild = this.renderChild.bind(this);
     }
 
+    goToStep(index = 0) {
+        this.flatList.scrollToIndex({ viewPosition: 0, index });
+    }
+
     render() {
         return (
             <Modal
@@ -29,6 +33,7 @@ class ModalWalkThrough extends Component
                         style={{ backgroundColor: '#fff', borderRadius: 3, maxHeight: '40%' || this.props.height, width: '80%' || this.props.width }}
                         pagingEnabled={true}
                         showsHorizontalScrollIndicator={false}
+                        ref={flatList => this.flatList = flatList}
                     />
                 </View>
             </Modal>

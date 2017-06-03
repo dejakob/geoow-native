@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View, Text, TextInput, StyleSheet} from 'react-native';
 import { getStyle } from 'react-native-styler';
 import StarRating from 'react-native-star-rating';
@@ -10,43 +10,62 @@ import './diary-add-modal.style';
  * <DiaryAddModal />
  * @constructor
  */
-function DiaryAddModal(props) {
-    return (
-        <ModalWalkThrough
-            visible={props.visible}
-        >
-            {G5_QUESTIONS.map((item, index) => (
-                <View
-                    key={index}
-                    style={getStyle('diaryAddModal__scene')}
-                >
-                    <Text
-                        style={getStyle('diaryAddModal__title')}
-                    >
-                        {item.question}
-                    </Text>
-                    <TextInput
-                        style={getStyle('diaryAddModal__textInput')}
-                        multiline={true}
-                        placeholder='Type something here'
-                        placeholderTextColor={StyleSheet.flatten(getStyle('diaryAddModal__textInput')).borderTopColor}
-                    />
+class DiaryAddModal extends Component {
+    constructor() {
+        super();
+
+        this.modal = null;
+    }
+
+    componentWillMount() {
+        this.state = {
+            step: 0
+        }
+    }
+
+    render() {
+        return (
+            <ModalWalkThrough
+                visible={this.props.visible}
+                ref={m => this.modal = m}
+            >
+                {G5_QUESTIONS.map((item, index) => (
                     <View
-                        style={getStyle('diaryAddModal__stars')}
+                        key={index}
+                        style={getStyle('diaryAddModal__scene')}
                     >
-                        <StarRating
-                            disabled={false}
-                            maxStars={5}
-                            rating={props.diary.getIn(['newItem', `${item.prop}Rating`])}
-                            selectedStar={(rating) => props.changePropOfNewDiaryItem(`${item.prop}Rating`, rating)}
-                            acceptHalfStars={true}
-                            starSize={StyleSheet.flatten(getStyle('diaryAddModal__star')).height}
+                        <Text
+                            style={getStyle('diaryAddModal__title')}
+                        >
+                            {item.question}
+                        </Text>
+                        <TextInput
+                            style={getStyle('diaryAddModal__textInput')}
+                            multiline={true}
+                            placeholder='Type something here'
+                            placeholderTextColor={StyleSheet.flatten(getStyle('diaryAddModal__textInput')).borderTopColor}
                         />
+                        <View
+                            style={getStyle('diaryAddModal__stars')}
+                        >
+                            <StarRating
+                                disabled={false}
+                                maxStars={5}
+                                rating={this.props.diary.getIn(['newItem', `${item.prop}Rating`])}
+                                selectedStar={(rating) => {
+                                    this.props.changePropOfNewDiaryItem(`${item.prop}Rating`, rating);
+                                    this.modal.goToStep(this.state.step + 1);
+                                    this.setState({ step: this.state.step + 1 });
+                                }}
+                                acceptHalfStars={true}
+                                starSize={StyleSheet.flatten(getStyle('diaryAddModal__star')).height}
+                            />
+                        </View>
                     </View>
-                </View>
-            ))}
-        </ModalWalkThrough>
-    )
+                ))}
+            </ModalWalkThrough>
+        )
+    }
 }
 
 export default DiaryAddModal
