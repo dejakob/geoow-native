@@ -12,6 +12,8 @@ function* loadEventsNearby(action) {
             location.get('latitude')
         );
 
+        console.log('result', result)
+
         yield put(Actions._loadEventsNearbySuccess(result));
     } catch (e) {
         yield put(Actions._loadEventsNearbyFailed());

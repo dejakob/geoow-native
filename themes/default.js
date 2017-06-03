@@ -20,7 +20,8 @@ createTheme({
         lighten: 'rgba(255,255,255,0.5)',
         lighten8: 'rgba(255,255,255,0.8)',
         darken: 'rgba(0,0,0,0.5)',
-        darken3: 'rgba(0,0,0,0.3)'
+        darken3: 'rgba(0,0,0,0.3)',
+        active: '#66B8C8'
     },
     fontSizes: {
         h1: '28h4s',

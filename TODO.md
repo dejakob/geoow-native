@@ -18,6 +18,7 @@ Todo
 * Reject payments if not enough credits, goes now below 0
 * 'Pay credits', scan QR code in app
     * the other side can be crappy website where a QR is shown (for in venue)
+* Mention icons author
 
 Todo for later on
 * Profile data [Not for MVP]
