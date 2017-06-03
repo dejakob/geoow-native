@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListView } from 'react-native';
+import { FlatList } from 'react-native';
 import DiaryListItem from './diary-list-item';
 
 /**

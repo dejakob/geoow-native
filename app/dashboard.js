@@ -45,7 +45,9 @@ class Dashboard extends Component
                 />
                 <DashboardPrimaryAction
                     onPress={() => this.props.navigation.navigate('Discover')}
-                />
+                >
+                    Discover
+                </DashboardPrimaryAction>
             </PublicBackground>
         );
     }

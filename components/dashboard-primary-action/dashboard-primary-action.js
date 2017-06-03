@@ -16,7 +16,7 @@ function DashboardPrimaryAction(props) {
             <PrimaryButton
                 onPress={props.onPress}
             >
-                Discover
+                {props.children}
             </PrimaryButton>
         </View>
     )

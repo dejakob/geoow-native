@@ -5,6 +5,9 @@ import store from '../services/store';
 import HeaderTitle from '../components/header/header-title';
 import HeaderCredits from '../components/header/header-credits';
 import PublicBackground from '../components/public-background/public-background';
+import DashboardPrimaryAction from '../components/dashboard-primary-action/dashboard-primary-action';
+import DiaryList from '../components/diary-list/diary-list';
+import DiaryAddModal from '../components/diary-add-modal/diary-add-modal';
 import FlatIcon from '../components/flat-icon/flat-icon';
 import '../components/header/header.style.js';
 import '../components/tab-bar/tab-bar.style.js';
@@ -29,12 +32,21 @@ class Diary extends Component
     });
 
     componentWillMount() {
+
     }
 
     render() {
         return (
             <PublicBackground>
-
+                <DiaryList
+                    diary={this.props.diary}
+                />
+                <DashboardPrimaryAction
+                    onPress={() => {}}
+                >
+                    Write into diary
+                </DashboardPrimaryAction>
+                <DiaryAddModal />
             </PublicBackground>
         );
     }
