@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
-import { Modal, FlatList, View, Dimensions } from 'react-native';
+import React, {Component} from 'react';
+import {Modal, FlatList, View, Dimensions, StyleSheet} from 'react-native';
 
 /**
  * <ModalWalkThrough />
  */
-class ModalWalkThrough extends Component
-{
+class ModalWalkThrough extends Component {
     constructor() {
         super();
 
+        this.goToStep = this.goToStep.bind(this);
+        this.handleScroll = this.handleScroll.bind(this);
         this.renderChild = this.renderChild.bind(this);
     }
 
@@ -26,7 +27,7 @@ class ModalWalkThrough extends Component
 
     goToStep(index = 0) {
         if (index > this.props.children.length - 1) {
-            this.setState({ visible: false });
+            this.setState({visible: false});
 
             if (typeof this.props.onFinish === 'function') {
                 this.props.onFinish();
@@ -34,8 +35,12 @@ class ModalWalkThrough extends Component
         }
         else {
             const width = this.props.width || Dimensions.get('window').width * 0.8;
-            this.flatList.scrollToOffset({ animated: true, offset: index * width });
+            this.flatList.scrollToOffset({animated: true, offset: index * width});
         }
+    }
+
+    handleScroll(eventData) {
+        console.log('native event', eventData);
     }
 
     render() {
@@ -46,34 +51,51 @@ class ModalWalkThrough extends Component
                 visible={this.state.visible}
             >
                 <View
-                    style={{ backgroundColor: 'rgba(0,0,0,0.8)', flex: 1, alignItems: 'center', justifyContent: 'center' }}
+                    style={style.overlay}
                 >
                     <FlatList
                         data={this.props.children}
                         renderItem={this.renderChild}
                         horizontal={true}
-                        style={{ backgroundColor: '#fff', borderRadius: 3, maxHeight: this.props.height || '40%', width: this.props.width || '80%' }}
+                        style={[style.list, { maxHeight: this.props.height || '40%', width: this.props.width || '80%' }]}
                         pagingEnabled={true}
                         showsHorizontalScrollIndicator={false}
                         ref={flatList => this.flatList = flatList}
+                        onScroll={this.handleScroll}
                     />
                 </View>
             </Modal>
         );
     }
 
-    renderChild({ item, index }) {
-        const { width } = Dimensions.get('window');
+    renderChild({item, index}) {
+        const {width} = Dimensions.get('window');
 
         return (
             <View
                 key={index}
-                style={{ flex: 1, width: this.props.width || width * 0.8 }}
+                style={[style.scene, { width: this.props.width || width * 0.8 }]}
             >
                 {item}
             </View>
         );
     }
 }
+
+const style = StyleSheet.create({
+    overlay: {
+        backgroundColor: 'rgba(0,0,0,0.8)',
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    list: {
+        backgroundColor: '#ffffff',
+        borderRadius: 3
+    },
+    scene: {
+        flex: 1
+    }
+});
 
 export default ModalWalkThrough;
