@@ -27,6 +27,10 @@ class ModalWalkThrough extends Component
     goToStep(index = 0) {
         if (index > this.props.children.length - 1) {
             this.setState({ visible: false });
+
+            if (typeof this.props.onFinish === 'function') {
+                this.props.onFinish();
+            }
         }
         else {
             const width = this.props.width || Dimensions.get('window').width * 0.8;
