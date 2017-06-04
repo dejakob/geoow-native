@@ -40,8 +40,6 @@ class Diary extends Component
     }
 
     render() {
-        console.log('diary', this.props.diary.toJS());
-
         return (
             <PublicBackground>
                 <DiaryList
