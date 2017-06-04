@@ -19,7 +19,9 @@ function DiaryListItem(props) {
                     >
                         {item.question}
                     </Text>
-                    <Text>
+                    <Text
+                        style={getStyle('diaryList__item__answer')}
+                    >
                         {props.diaryItem.get(item.prop)}
                     </Text>
                 </View>

@@ -2,12 +2,18 @@ import { createStyle } from 'react-native-styler';
 
 createStyle({
     diaryList: {
-        paddingLeft: '8w4s',
-        paddingRight: '8w4s',
+        padding: '8h4s',
 
         item: {
             padding: '8h4s',
-            backgroundColor: 'theme:sheet'
+            backgroundColor: 'theme:sheet',
+            borderRadius: '3h4s',
+
+            answer: {
+                padding: '6h4s',
+                opacity: 0.9,
+                fontStyle: 'italic'
+            }
         }
     }
 });
