@@ -54,6 +54,7 @@ class Diary extends Component
                     visible={this.state.modalVisible}
                     diary={this.props.diary}
                     changePropOfNewDiaryItem={this.props.changePropOfNewDiaryItem}
+                    saveDiaryItem={this.props.saveDiaryItem}
                 />
             </PublicBackground>
         );

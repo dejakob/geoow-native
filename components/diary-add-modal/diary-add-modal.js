@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { View, Text, TextInput, StyleSheet} from 'react-native';
+import ModalWalkThrough from 'react-native-modal-walk-through';
 import { getStyle } from 'react-native-styler';
 import StarRating from 'react-native-star-rating';
 import { G5_QUESTIONS } from '../../constants';
-import ModalWalkThrough from '../modal-walk-through/modal-walk-through';
 import './diary-add-modal.style';
 
 /**
@@ -15,6 +15,7 @@ class DiaryAddModal extends Component {
         super();
 
         this.modal = null;
+        this.handleOnFinish = this.handleOnFinish.bind(this);
     }
 
     componentWillMount() {
@@ -23,11 +24,17 @@ class DiaryAddModal extends Component {
         }
     }
 
+    handleOnFinish() {
+        this.props.saveDiaryItem();
+    }
+
     render() {
         return (
             <ModalWalkThrough
                 visible={this.props.visible}
                 ref={m => this.modal = m}
+                onStepChange={step => this.setState({ step })}
+                onFinish={this.handleOnFinish}
             >
                 {G5_QUESTIONS.map((item, index) => {
                     let sheet = null;

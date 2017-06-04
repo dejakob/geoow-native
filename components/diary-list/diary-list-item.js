@@ -8,6 +8,8 @@ import './diary-list.style';
  * <DiaryListItem />
  */
 function DiaryListItem(props) {
+    console.log('item', props.item);
+
     return (
         <View
             style={getStyle('diaryList')}
@@ -20,7 +22,6 @@ function DiaryListItem(props) {
                         {item.question}
                     </Text>
                     <Text>
-                        {props.item.get(item.prop)}
                     </Text>
                 </View>
             ))}

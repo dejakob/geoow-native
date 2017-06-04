@@ -3141,6 +3141,12 @@ react-native-facebook-account-kit@^0.6.2:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/react-native-facebook-account-kit/-/react-native-facebook-account-kit-0.6.2.tgz#493f70673103158f80ea0749c0e45f76cfecd90a"
 
+react-native-keyboard-aware-scroll-view@^0.2.9:
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/react-native-keyboard-aware-scroll-view/-/react-native-keyboard-aware-scroll-view-0.2.9.tgz#2a1ae49cfae90a9665b21763c1f8bd03ed5fb92c"
+  dependencies:
+    react-timer-mixin "^0.13.3"
+
 "react-native-mapbox-gl@github:hippware/react-native-mapbox-gl#master":
   version "5.2.0"
   resolved "https://codeload.github.com/hippware/react-native-mapbox-gl/tar.gz/81329465c665ed2cd0c71149d022f5afc1e77854"
@@ -3148,13 +3154,17 @@ react-native-facebook-account-kit@^0.6.2:
     babel-eslint "^6.1.2"
     lodash "^4.13.1"
 
+react-native-modal-walk-through@dejakob/react-native-modal-walk-through:
+  version "0.0.1"
+  resolved "https://codeload.github.com/dejakob/react-native-modal-walk-through/tar.gz/689b2c8e47da0c4dffef595c71f02f54cdf1daee"
+
 react-native-onesignal@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-native-onesignal/-/react-native-onesignal-3.0.4.tgz#dd81d55741636252e55b3cc2d10b6eb36e5c9b25"
   dependencies:
     invariant "^2.2.2"
 
-react-native-star-rating@dejakob/react-native-star-rating:
+react-native-star-rating@dejakob/react-native-star-rating#master:
   version "1.0.7"
   resolved "https://codeload.github.com/dejakob/react-native-star-rating/tar.gz/b419c367d6761fd0fe8cdd4fb9b4875702bbf45d"
   dependencies:
@@ -3316,7 +3326,7 @@ react-test-renderer@16.0.0-alpha.6:
     fbjs "^0.8.9"
     object-assign "^4.1.0"
 
-react-timer-mixin@^0.13.2:
+react-timer-mixin@^0.13.2, react-timer-mixin@^0.13.3:
   version "0.13.3"
   resolved "https://registry.yarnpkg.com/react-timer-mixin/-/react-timer-mixin-0.13.3.tgz#0da8b9f807ec07dc3e854d082c737c65605b3d22"
 
