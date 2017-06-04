@@ -15,6 +15,7 @@ class DiaryAddModal extends Component {
         super();
 
         this.modal = null;
+        this.goToNextStep = this.goToNextStep.bind(this);
         this.handleOnFinish = this.handleOnFinish.bind(this);
     }
 
@@ -26,6 +27,11 @@ class DiaryAddModal extends Component {
 
     handleOnFinish() {
         this.props.saveDiaryItem();
+    }
+
+    goToNextStep() {
+        this.modal.goToStep(this.state.step + 1);
+        this.setState({ step: this.state.step + 1 });
     }
 
     render() {
@@ -56,6 +62,16 @@ class DiaryAddModal extends Component {
                             placeholder='Type something here'
                             placeholderTextColor={StyleSheet.flatten(getStyle('diaryAddModal__textInput')).borderTopColor}
                             onChangeText={value => this.props.changePropOfNewDiaryItem(item.prop, value)}
+                            returnKeyType='done'
+                            blurOnSubmit={true}
+                            onSubmitEditing={() => {
+                                if (
+                                    this.props.diary.getIn(['newItem', `${item.prop}Rating`]) &&
+                                    this.props.diary.getIn(['newItem', `${item.prop}Rating`]) > 0
+                                ) {
+                                    this.goToNextStep();
+                                }
+                            }}
                         />
                         <View
                             style={getStyle('diaryAddModal__stars')}
@@ -66,8 +82,12 @@ class DiaryAddModal extends Component {
                                 rating={this.props.diary.getIn(['newItem', `${item.prop}Rating`])}
                                 selectedStar={(rating) => {
                                     this.props.changePropOfNewDiaryItem(`${item.prop}Rating`, rating);
-                                    this.modal.goToStep(this.state.step + 1);
-                                    this.setState({ step: this.state.step + 1 });
+                                    if (
+                                        this.props.diary.getIn(['newItem', item.prop]) &&
+                                        this.props.diary.getIn(['newItem', item.prop]).length
+                                    ) {
+                                        this.goToNextStep();
+                                    }
                                 }}
                                 acceptHalfStars={true}
                                 starSize={StyleSheet.flatten(getStyle('diaryAddModal__star')).height}
