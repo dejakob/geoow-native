@@ -12,8 +12,26 @@ class ModalWalkThrough extends Component
         this.renderChild = this.renderChild.bind(this);
     }
 
+    componentWillMount() {
+        this.state = {
+            visible: this.props.visible
+        };
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.visible !== this.state.visible) {
+            this.state.visible = nextProps.visible;
+        }
+    }
+
     goToStep(index = 0) {
-        this.flatList.scrollToIndex({ viewPosition: 0, index });
+        if (index > this.props.children.length - 1) {
+            this.setState({ visible: false });
+        }
+        else {
+            const width = this.props.width || Dimensions.get('window').width * 0.8;
+            this.flatList.scrollToOffset({ animated: true, offset: index * width });
+        }
     }
 
     render() {
@@ -21,7 +39,7 @@ class ModalWalkThrough extends Component
             <Modal
                 transparent={true}
                 animationType="fade"
-                visible={this.props.visible}
+                visible={this.state.visible}
             >
                 <View
                     style={{ backgroundColor: 'rgba(0,0,0,0.8)', flex: 1, alignItems: 'center', justifyContent: 'center' }}
@@ -30,7 +48,7 @@ class ModalWalkThrough extends Component
                         data={this.props.children}
                         renderItem={this.renderChild}
                         horizontal={true}
-                        style={{ backgroundColor: '#fff', borderRadius: 3, maxHeight: '40%' || this.props.height, width: '80%' || this.props.width }}
+                        style={{ backgroundColor: '#fff', borderRadius: 3, maxHeight: this.props.height || '40%', width: this.props.width || '80%' }}
                         pagingEnabled={true}
                         showsHorizontalScrollIndicator={false}
                         ref={flatList => this.flatList = flatList}

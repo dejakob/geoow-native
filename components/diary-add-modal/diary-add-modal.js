@@ -29,10 +29,14 @@ class DiaryAddModal extends Component {
                 visible={this.props.visible}
                 ref={m => this.modal = m}
             >
-                {G5_QUESTIONS.map((item, index) => (
+                {G5_QUESTIONS.map((item, index) => {
+                    let sheet = null;
+
+                    return (
                     <View
                         key={index}
                         style={getStyle('diaryAddModal__scene')}
+                        ref={s => sheet = s}
                     >
                         <Text
                             style={getStyle('diaryAddModal__title')}
@@ -62,7 +66,7 @@ class DiaryAddModal extends Component {
                             />
                         </View>
                     </View>
-                ))}
+                );})}
             </ModalWalkThrough>
         )
     }
