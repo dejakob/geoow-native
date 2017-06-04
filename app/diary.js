@@ -35,6 +35,8 @@ class Diary extends Component
         this.state = {
             modalVisible: false
         };
+
+        this.props.loadDiaryItems();
     }
 
     render() {

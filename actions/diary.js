@@ -26,10 +26,33 @@ function saveDiaryItemFailed() {
     }
 }
 
+function loadDiaryItems() {
+    return {
+        type: ACTIONS.DIARY_LOAD_ITEMS
+    }
+}
+
+function loadDiaryItemsSuccess(diaryItems) {
+    return {
+        type: ACTIONS.DIARY_LOAD_ITEMS_SUCCESS,
+        diaryItems
+    }
+}
+
+function loadDiaryItemsFailed() {
+    return {
+        type: ACTIONS.DIARY_LOAD_ITEMS_FAILED
+    }
+}
+
 export {
     changePropOfNewDiaryItem,
 
     saveDiaryItem,
     saveDiaryItemSuccess,
-    saveDiaryItemFailed
+    saveDiaryItemFailed,
+
+    loadDiaryItems,
+    loadDiaryItemsSuccess,
+    loadDiaryItemsFailed
 };

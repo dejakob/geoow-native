@@ -13,6 +13,7 @@ function getMyDiary() {
     };
 
     return fetch(`${API_URL}/user/diary`, params)
+        .then(response => response.json());
 }
 
 function createDiaryItem(item) {

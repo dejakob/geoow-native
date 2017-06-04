@@ -22,7 +22,7 @@ function DiaryListItem(props) {
                     <Text
                         style={getStyle('diaryList__item__answer')}
                     >
-                        {props.diaryItem.get(item.prop)}
+                        {props.diaryItem.getIn(['contents', item.prop])}
                     </Text>
                 </View>
             ))}

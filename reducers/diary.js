@@ -10,7 +10,9 @@ G5_QUESTIONS.forEach(({ prop }) => {
 
 const defaultState = Immutable.fromJS({
     myDiary: [],
-    newItem
+    newItem,
+
+    isLoadingItems: false
 });
 
 function diaryReducer(state = defaultState, action) {
@@ -22,6 +24,15 @@ function diaryReducer(state = defaultState, action) {
 
         case ACTIONS.DIARY_SAVE_ITEM:
             return diarySaveItem(state, action);
+
+        case ACTIONS.DIARY_LOAD_ITEMS:
+            return diaryLoadItems(state, action);
+
+        case ACTIONS.DIARY_LOAD_ITEMS_SUCCESS:
+            return diaryLoadItemsSuccess(state, action);
+
+        case ACTIONS.DIARY_LOAD_ITEMS_FAILED:
+            return diaryLoadItemsFailed(state, action);
     }
 
     return state;
@@ -35,8 +46,26 @@ function diarySaveItem(state, action) {
     const newItem = state.get('newItem');
 
     return state
-        .update('myDiary', myDiary => myDiary.push(newItem))
+        .update('myDiary', myDiary => myDiary.push(Immutable.fromJS({ contents: newItem })))
         .set('newItem', Immutable.fromJS(newItem));
+}
+
+function diaryLoadItems(state, action) {
+    return state
+        .set('isLoadingItems', true);
+}
+
+function diaryLoadItemsSuccess(state, action) {
+    console.log('diary items', action.diaryItems);
+
+    return state
+        .set('isLoadingItems', false)
+        .update('myDiary', myDiary => myDiary.mergeDeep(Immutable.fromJS(action.diaryItems)))
+}
+
+function diaryLoadItemsFailed(state, action) {
+    return state
+        .set('isLoadingItems', false);
 }
 
 export default diaryReducer;
