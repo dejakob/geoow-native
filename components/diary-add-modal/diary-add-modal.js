@@ -55,6 +55,7 @@ class DiaryAddModal extends Component {
                             multiline={true}
                             placeholder='Type something here'
                             placeholderTextColor={StyleSheet.flatten(getStyle('diaryAddModal__textInput')).borderTopColor}
+                            onChangeText={value => this.props.changePropOfNewDiaryItem(item.prop, value)}
                         />
                         <View
                             style={getStyle('diaryAddModal__stars')}

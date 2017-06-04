@@ -1,5 +1,6 @@
 import React from 'react';
 import { FlatList } from 'react-native';
+import { getStyle } from 'react-native-styler';
 import DiaryListItem from './diary-list-item';
 
 /**
@@ -15,6 +16,7 @@ function DiaryList(props) {
         <FlatList
             data={diaryListItems}
             renderItem={renderDiaryListItem}
+            style={getStyle('diaryList')}
         />
     );
 

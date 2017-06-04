@@ -8,11 +8,9 @@ import './diary-list.style';
  * <DiaryListItem />
  */
 function DiaryListItem(props) {
-    console.log('item', props.item);
-
     return (
         <View
-            style={getStyle('diaryList')}
+            style={getStyle('diaryList__item')}
         >
             {G5_QUESTIONS.map(item => (
                 <View>
@@ -22,6 +20,7 @@ function DiaryListItem(props) {
                         {item.question}
                     </Text>
                     <Text>
+                        {props.diaryItem.get(item.prop)}
                     </Text>
                 </View>
             ))}
