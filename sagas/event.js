@@ -8,11 +8,9 @@ function* loadEventsNearby(action) {
         const location = store.getState().location;
         const result = yield call(
             EventApi.loadEventsNearby,
-            location.get('longitude'),
-            location.get('latitude')
+            location.get('latitude'),
+            location.get('longitude')
         );
-
-        console.log('result', result)
 
         yield put(Actions._loadEventsNearbySuccess(result));
     } catch (e) {
