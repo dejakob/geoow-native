@@ -25,7 +25,7 @@ Mapbox.setAccessToken(MAPBOX_TOKEN);
 const TabNavigation = TabNavigator({
     Dashboard: { screen: connect(Dashboard) },
     Diary: { screen: connect(Diary) },
-    Profile: { screen: connect(Profile) },
+    // Profile: { screen: connect(Profile) },
 }, {
     tabBarOptions: {
         activeTintColor: getCurrentTheme().colors.active,
