@@ -22,7 +22,7 @@ function DashboardListItem(props) {
             <Image
                 style={getStyle('dashboard__listItem__header__image')}
                 source={require('../../assets/beach-pexels.jpeg')}
-                resizeMethod='cover'
+                resizeMode='cover'
             />
             <View
                 style={getStyle('dashboard__listItem__header')}

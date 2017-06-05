@@ -27,6 +27,7 @@ const TabNavigation = TabNavigator({
     Diary: { screen: connect(Diary) },
     // Profile: { screen: connect(Profile) },
 }, {
+    tabBarPosition: 'bottom',
     tabBarOptions: {
         activeTintColor: getCurrentTheme().colors.active,
         inactiveTintColor: getCurrentTheme().colors.inactive,

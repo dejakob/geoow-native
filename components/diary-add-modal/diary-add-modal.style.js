@@ -16,6 +16,7 @@ createStyle({
             flex: 1,
             padding: '12h4s',
             fontSize: '12h4s',
+            width: '40vw',
             borderTopColor: 'theme:inactive',
             borderTopWidth: 1,
         },
