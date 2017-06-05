@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList } from 'react-native';
+import { FlatList, View } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import DiaryListItem from './diary-list-item';
 
@@ -16,16 +16,22 @@ function DiaryList(props) {
         <FlatList
             data={diaryListItems}
             renderItem={renderDiaryListItem}
-            style={getStyle('diaryList')}
+            horizontal={true}
+            pagingEnabled={true}
+            removeClippedSubviews={false}
         />
     );
 
     function renderDiaryListItem({ item, index }) {
         return (
-            <DiaryListItem
-                key={index}
-                diaryItem={item}
-            />
+            <View
+                style={getStyle('diaryList__scene')}
+            >
+                <DiaryListItem
+                    key={index}
+                    diaryItem={item}
+                />
+            </View>
         )
     }
 }

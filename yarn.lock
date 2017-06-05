@@ -3155,8 +3155,8 @@ react-native-keyboard-aware-scroll-view@^0.2.9:
     lodash "^4.13.1"
 
 react-native-modal-walk-through@dejakob/react-native-modal-walk-through:
-  version "0.0.1"
-  resolved "https://codeload.github.com/dejakob/react-native-modal-walk-through/tar.gz/689b2c8e47da0c4dffef595c71f02f54cdf1daee"
+  version "0.1.0"
+  resolved "https://codeload.github.com/dejakob/react-native-modal-walk-through/tar.gz/530cd22d30104ba58a97d33bcc5698ba2e1cbe33"
 
 react-native-onesignal@^3.0.4:
   version "3.0.4"
@@ -3164,7 +3164,7 @@ react-native-onesignal@^3.0.4:
   dependencies:
     invariant "^2.2.2"
 
-react-native-star-rating@dejakob/react-native-star-rating#master:
+react-native-star-rating@dejakob/react-native-star-rating:
   version "1.0.7"
   resolved "https://codeload.github.com/dejakob/react-native-star-rating/tar.gz/b419c367d6761fd0fe8cdd4fb9b4875702bbf45d"
   dependencies:
