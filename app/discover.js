@@ -9,8 +9,7 @@ import DiscoverList from '../components/discover-list/discover-list';
 class Discover extends Component
 {
     static navigationOptions = {
-        header: null,
-        gesturesEnabled: false
+        header: null
     };
 
     get eventsNearby() {
