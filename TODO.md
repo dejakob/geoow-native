@@ -20,6 +20,7 @@ Todo
     * the other side can be crappy website where a QR is shown (for in venue)
 * Mention icons author
 * Verify static data
+* Apple test user
 
 Todo for later on
 * Profile data [Not for MVP]
