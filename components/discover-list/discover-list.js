@@ -9,9 +9,20 @@ import './discover-list.style';
  * @constructor
  */
 function DiscoverList(props) {
+
+    // Filter out duplicates with exactly the same name
+    const events = props.events
+        .filter((event, index) =>
+            props.events
+                .map(event => event.get('name'))
+                .toArray()
+                .indexOf(event.get('name')) === index
+        )
+        .toArray();
+
     return (
         <FlatList
-            data={props.events.toArray()}
+            data={events}
             renderItem={renderItem}
             ItemSeparatorComponent={ListSeparator}
             bounces={false}
