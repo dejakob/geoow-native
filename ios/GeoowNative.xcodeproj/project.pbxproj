@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -57,10 +58,10 @@
 		B3FB67F11ED61B5C002DEDD0 /* TSBackgroundFetch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FB67F01ED61B5C002DEDD0 /* TSBackgroundFetch.framework */; };
 		B3FB67F31ED61C51002DEDD0 /* RNBackgroundFetch+AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FB67F21ED61C51002DEDD0 /* RNBackgroundFetch+AppDelegate.m */; };
 		BEC500F337F842DEA70031EB /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B81790F6C3473FAF12AE23 /* Octicons.ttf */; };
+		C22CA1B913CD4E32A76611E7 /* Flaticon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F8863CABD0E452493FE6A8F /* Flaticon.ttf */; };
 		C6FEC1D6E5A14D6D8B9F295B /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B254A6CD2E9D47D19159CF16 /* libRCTCamera.a */; };
 		C818A5F3117F40F0AC6720D0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 334008D573EB443192352566 /* libsqlite3.tbd */; };
 		E71C33B474BB4F5FAF2AB73D /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 582C99593D5C4859BCE44046 /* MaterialIcons.ttf */; };
-		C22CA1B913CD4E32A76611E7 /* Flaticon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F8863CABD0E452493FE6A8F /* Flaticon.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -431,6 +432,7 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		5F80CC5643714CC2A6BBDDCC /* RNBackgroundFetch.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNBackgroundFetch.xcodeproj; path = "../node_modules/react-native-background-fetch/ios/RNBackgroundFetch.xcodeproj"; sourceTree = "<group>"; };
 		64E30FB730884EB5B49C39E0 /* RCTOneSignal.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTOneSignal.xcodeproj; path = "../node_modules/react-native-onesignal/ios/RCTOneSignal.xcodeproj"; sourceTree = "<group>"; };
+		6F8863CABD0E452493FE6A8F /* Flaticon.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Flaticon.ttf; path = ../assets/fonts/Flaticon.ttf; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		97BD73072E82454E93FB7CE6 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
@@ -453,7 +455,6 @@
 		F296AC012DF64785B93BB8DE /* libRCTMapboxGL.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTMapboxGL.a; sourceTree = "<group>"; };
 		F74BC00BC3C04900AA940CC9 /* Lumberjack.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = Lumberjack.xcodeproj; path = "../node_modules/cocoa-lumberjack/CocoaLumberjack/Lumberjack.xcodeproj"; sourceTree = "<group>"; };
 		FA71A3EF8E754A02876C1268 /* RCTMapboxGL.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTMapboxGL.xcodeproj; path = "../node_modules/react-native-mapbox-gl/ios/RCTMapboxGL.xcodeproj"; sourceTree = "<group>"; };
-		6F8863CABD0E452493FE6A8F /* Flaticon.ttf */ = {isa = PBXFileReference; name = "Flaticon.ttf"; path = "../assets/fonts/Flaticon.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1567,6 +1568,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.geoownative;
 				PRODUCT_NAME = GeoowNative;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1605,6 +1607,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.geoownative;
 				PRODUCT_NAME = GeoowNative;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
