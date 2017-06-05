@@ -1,6 +1,7 @@
 import moment from 'moment';
 import React from 'react';
 import { View, Image, Text } from 'react-native';
+import * as CategoryImageHelper from '../../helpers/category-image-helper';
 import ScoreBadge from '../score-badge/score-badge';
 import { getStyle } from 'react-native-styler';
 import './event-detail-header.style';
@@ -17,10 +18,7 @@ function EventDetailHeader(props) {
             <View
                 style={getStyle('eventDetailHeader')}
             >
-                <Image
-                    style={getStyle('eventDetailHeader__logo')}
-                    source={{ uri: `https://graph.facebook.com/${props.event.getIn(['venue', 'fbid'])}/picture?type=large` }}
-                />
+                {renderImage()}
                 <View
                     style={getStyle('eventDetailHeader__description')}
                 >
@@ -48,6 +46,31 @@ function EventDetailHeader(props) {
             </View>
         </View>
     );
+
+    function renderImage() {
+        if (props.event.getIn(['venue', 'fbid'])) {
+            return (
+                <Image
+                    style={getStyle('eventDetailHeader__logo')}
+                    source={{ uri: `https://graph.facebook.com/${props.event.getIn(['venue', 'fbid'])}/picture?type=large` }}
+                />
+            );
+        }
+
+        const tag = props.event.get('tags').find(tag => CategoryImageHelper.getImageForCategory(tag) !== null);
+        const image = CategoryImageHelper.getImageForCategory(tag);
+
+        if (image) {
+            return (
+                <Image
+                    style={getStyle('eventDetailHeader__logo')}
+                    source={image}
+                />
+            );
+        }
+
+        return null;
+    }
 }
 
 export default EventDetailHeader;
