@@ -32,6 +32,16 @@ const TabNavigation = TabNavigator({
         activeTintColor: getCurrentTheme().colors.active,
         inactiveTintColor: getCurrentTheme().colors.inactive,
         showLabel: false,
+        activeBackgroundColor: getCurrentTheme().colors.sheet,
+        inactiveBackgroundColor: getCurrentTheme().colors.sheet,
+        showIcon: true,
+        style: {
+            backgroundColor: getCurrentTheme().colors.sheet,
+        },
+        indicatorStyle: {
+            backgroundColor: getCurrentTheme().colors.active,
+        },
+        pressColor: getCurrentTheme().colors.active
     },
 });
 const App = StackNavigator({

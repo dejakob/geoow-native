@@ -12,22 +12,22 @@ function FlatIcon(props) {
         <Text
             style={[getStyle('flatIcon'), props.style]}
         >
-            {getIconContent()}
+            {String.fromCharCode(parseInt(getIconContent(), 16))}
         </Text>
     );
 
     function getIconContent() {
         switch (props.name) {
             case 'qr-code':
-                return '\uf100';
+                return 'f100';
             case 'coins':
-                return '\uf101';
+                return 'f101';
             case 'user':
-                return '\uf102';
+                return 'f102';
             case 'list':
-                return '\uf103';
+                return 'f103';
             case 'notebook':
-                return '\uf104';
+                return 'f104';
         }
 
         return '';
