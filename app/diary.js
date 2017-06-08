@@ -46,7 +46,7 @@ class Diary extends Component
                     diary={this.props.diary}
                 />
                 <DashboardPrimaryAction
-                    onPress={() => this.setState({ modalVisible: true })}
+                    onPress={() => { this.diaryAddModal.show(); }}
                 >
                     Write into diary
                 </DashboardPrimaryAction>
@@ -55,6 +55,7 @@ class Diary extends Component
                     diary={this.props.diary}
                     changePropOfNewDiaryItem={this.props.changePropOfNewDiaryItem}
                     saveDiaryItem={this.props.saveDiaryItem}
+                    ref={(dam) => { this.diaryAddModal = dam; }}
                 />
             </PublicBackground>
         );

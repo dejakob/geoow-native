@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TextInput, StyleSheet} from 'react-native';
+import { View, Text, TextInput, StyleSheet } from 'react-native';
 import ModalWalkThrough from 'react-native-modal-walk-through';
 import { getStyle } from 'react-native-styler';
 import StarRating from 'react-native-star-rating';
@@ -17,12 +17,14 @@ class DiaryAddModal extends Component {
         this.modal = null;
         this.goToNextStep = this.goToNextStep.bind(this);
         this.handleOnFinish = this.handleOnFinish.bind(this);
+        this.show = this.show.bind(this);
+        this.hide = this.hide.bind(this);
     }
 
     componentWillMount() {
         this.state = {
             step: 0
-        }
+        };
     }
 
     handleOnFinish() {
@@ -34,10 +36,17 @@ class DiaryAddModal extends Component {
         this.setState({ step: this.state.step + 1 });
     }
 
+    show() {
+        this.modal.show();
+    }
+
+    hide() {
+        this.modal.hide();
+    }
+
     render() {
         return (
             <ModalWalkThrough
-                visible={this.props.visible}
                 ref={m => this.modal = m}
                 onStepChange={step => this.setState({ step })}
                 onFinish={this.handleOnFinish}
