@@ -3,6 +3,10 @@
  * @param category
  */
 function getImageForCategory(category : string) {
+    if (!category) {
+        return {};
+    }
+
     switch (category.toLowerCase()) {
         case 'sport':
         case 'sports':
