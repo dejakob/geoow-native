@@ -12,6 +12,7 @@ class Discover extends Component
 {
     static navigationOptions = {
         header: null,
+        gesturesEnabled: false,
         tabBarIcon: ({ tintColor }) => <Icon name="map" style={[getStyle('tabBar__icon'), { color: tintColor }]} />
     };
 
@@ -25,7 +26,6 @@ class Discover extends Component
 
     componentWillMount() {
         this.props.loadGeolocation();
-        this.props.loadEventsNearby();
     }
 
     componentWillReceiveProps(newProps) {
@@ -39,6 +39,12 @@ class Discover extends Component
 
     render() {
         const { eventsNearby } = this;
+
+        console.log('lat', this.props.location.get('latitude'));
+
+        if (!this.props.location.get('latitude') || !this.props.location.get('longitude')) {
+            return null;
+        }
 
         return (
             <MainBackground>

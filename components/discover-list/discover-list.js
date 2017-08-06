@@ -26,6 +26,7 @@ function DiscoverList(props) {
             renderItem={renderItem}
             ItemSeparatorComponent={ListSeparator}
             bounces={false}
+            removeClippedSubviews={false}
         />
     );
 

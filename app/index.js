@@ -22,12 +22,13 @@ import '../constants/'
 Mapbox.setAccessToken(MAPBOX_TOKEN);
 
 const TabNavigation = TabNavigator({
-    Dashboard: { screen: connect(Dashboard) },
     Discover: { screen: connect(Discover) },
+    Dashboard: { screen: connect(Dashboard) },
     People: { screen: connect(People) },
     Scan: { screen: connect(Scan) },
 }, {
     tabBarPosition: 'bottom',
+    initialRouteName: 'Discover',
     tabBarOptions: {
         activeTintColor: getCurrentTheme().colors.active,
         inactiveTintColor: getCurrentTheme().colors.inactive,
@@ -41,7 +42,7 @@ const TabNavigation = TabNavigator({
         indicatorStyle: {
             backgroundColor: getCurrentTheme().colors.active,
         },
-        pressColor: getCurrentTheme().colors.active
+        pressColor: getCurrentTheme().colors.active,
     },
 });
 const App = StackNavigator({
