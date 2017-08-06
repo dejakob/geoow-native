@@ -14,6 +14,7 @@ class People extends Component
 {
     static navigationOptions = {
         header: null,
+        gesturesEnabled: false,
         tabBarIcon: ({ tintColor }) => <Icon name="people" style={[getStyle('tabBar__icon'), { color: tintColor }]} />
     };
 

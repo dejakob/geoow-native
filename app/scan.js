@@ -12,6 +12,7 @@ class Scan extends Component
 {
     static navigationOptions = {
         header: null,
+        gesturesEnabled: false,
         tabBarIcon: ({ tintColor }) => <Icon name="camera-iris" style={[getStyle('tabBar__icon'), { color: tintColor }]} />
     };
 
