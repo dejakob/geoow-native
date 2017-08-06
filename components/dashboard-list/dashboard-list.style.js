@@ -4,6 +4,7 @@ import { createStyle } from 'react-native-styler';
 createStyle({
     dashboard: {
         list: {
+            marginTop: '24h4s',
             flexDirection: 'column',
             flex: 1,
             paddingTop: '8h4s',

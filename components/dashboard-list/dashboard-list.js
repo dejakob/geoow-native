@@ -39,10 +39,6 @@ function DashboardList(props) {
             />
         )
     }
-
-    function renderBadge(item) {
-        return null;
-    }
 }
 
 export default DashboardList;

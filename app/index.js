@@ -13,6 +13,7 @@ import Dashboard from './dashboard';
 import Discover from './discover';
 import EventDetail from './event-detail';
 import Scan from './scan';
+import People from './people';
 import * as Router from '../services/router';
 import { MAPBOX_TOKEN } from '../constants';
 import '../themes';
@@ -23,6 +24,7 @@ Mapbox.setAccessToken(MAPBOX_TOKEN);
 const TabNavigation = TabNavigator({
     Dashboard: { screen: connect(Dashboard) },
     Discover: { screen: connect(Discover) },
+    People: { screen: connect(People) },
     Scan: { screen: connect(Scan) },
 }, {
     tabBarPosition: 'bottom',
