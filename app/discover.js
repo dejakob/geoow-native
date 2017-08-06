@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { getStyle } from 'react-native-styler';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import MainBackground from '../components/main-background/main-background';
 import DiscoverMap from '../components/discover-map/discover-map';
 import DiscoverList from '../components/discover-list/discover-list';
@@ -9,7 +11,8 @@ import DiscoverList from '../components/discover-list/discover-list';
 class Discover extends Component
 {
     static navigationOptions = {
-        header: null
+        header: null,
+        tabBarIcon: ({ tintColor }) => <Icon name="map" style={[getStyle('tabBar__icon'), { color: tintColor }]} />
     };
 
     get eventsNearby() {

@@ -58,7 +58,6 @@
 		B3FB67F11ED61B5C002DEDD0 /* TSBackgroundFetch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FB67F01ED61B5C002DEDD0 /* TSBackgroundFetch.framework */; };
 		B3FB67F31ED61C51002DEDD0 /* RNBackgroundFetch+AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FB67F21ED61C51002DEDD0 /* RNBackgroundFetch+AppDelegate.m */; };
 		BEC500F337F842DEA70031EB /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B81790F6C3473FAF12AE23 /* Octicons.ttf */; };
-		C22CA1B913CD4E32A76611E7 /* Flaticon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F8863CABD0E452493FE6A8F /* Flaticon.ttf */; };
 		C6FEC1D6E5A14D6D8B9F295B /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B254A6CD2E9D47D19159CF16 /* libRCTCamera.a */; };
 		C818A5F3117F40F0AC6720D0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 334008D573EB443192352566 /* libsqlite3.tbd */; };
 		E71C33B474BB4F5FAF2AB73D /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 582C99593D5C4859BCE44046 /* MaterialIcons.ttf */; };
@@ -1350,7 +1349,6 @@
 				BEC500F337F842DEA70031EB /* Octicons.ttf in Resources */,
 				B017112DB6414286B5928773 /* SimpleLineIcons.ttf in Resources */,
 				671AFDEA8A3C4CC2BD28C18B /* Zocial.ttf in Resources */,
-				C22CA1B913CD4E32A76611E7 /* Flaticon.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

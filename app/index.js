@@ -10,8 +10,6 @@ import Auth from './auth';
 import Plan from './plan';
 import Preferences from './preferences';
 import Dashboard from './dashboard';
-import Diary from './diary';
-import Profile from './profile';
 import Discover from './discover';
 import EventDetail from './event-detail';
 import Scan from './scan';
@@ -24,8 +22,8 @@ Mapbox.setAccessToken(MAPBOX_TOKEN);
 
 const TabNavigation = TabNavigator({
     Dashboard: { screen: connect(Dashboard) },
-    Diary: { screen: connect(Diary) },
-    Profile: { screen: connect(Profile) },
+    Discover: { screen: connect(Discover) },
+    Scan: { screen: connect(Scan) },
 }, {
     tabBarPosition: 'bottom',
     tabBarOptions: {
@@ -49,9 +47,7 @@ const App = StackNavigator({
     Plan: { screen: connect(Plan) },
     Preferences: { screen: connect(Preferences) },
     Tabs: { screen: TabNavigation },
-    Discover: { screen: connect(Discover) },
-    EventDetail: { screen: connect(EventDetail) },
-    Scan: { screen: connect(Scan) }
+    EventDetail: { screen: connect(EventDetail) }
 }, {
     mode: 'modal',
     onTransitionStart: params => {

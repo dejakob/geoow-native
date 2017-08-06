@@ -5,7 +5,6 @@ import store from '../services/store';
 import HeaderTitle from '../components/header/header-title';
 import HeaderCredits from '../components/header/header-credits';
 import PublicBackground from '../components/public-background/public-background';
-import FlatIcon from '../components/flat-icon/flat-icon';
 import InfoText from '../components/info-text/info-text';
 
 import '../components/header/header.style.js';
@@ -26,8 +25,6 @@ class Profile extends Component
             />
         ),
         gesturesEnabled: false,
-
-        tabBarIcon: ({ tintColor }) => <FlatIcon name="user" style={[getStyle('tabBar__icon'), { color: tintColor }]} />
     });
 
     componentWillMount() {

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Alert } from 'react-native';
+import { getStyle } from 'react-native-styler';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import * as ArticleApi from '../api/article';
 import Camera from 'react-native-camera';
 
@@ -9,7 +11,8 @@ import Camera from 'react-native-camera';
 class Scan extends Component
 {
     static navigationOptions = {
-        header: null
+        header: null,
+        tabBarIcon: ({ tintColor }) => <Icon name="camera-iris" style={[getStyle('tabBar__icon'), { color: tintColor }]} />
     };
 
     constructor() {

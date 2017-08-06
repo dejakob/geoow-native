@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>In order to scan, you need camera permission</string>
 	<key>AccountKitClientToken</key>
 	<string>1675181fadd29b8d7e2be77db84d2e1b</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -78,7 +80,6 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
-		<string>Flaticon.ttf</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>
