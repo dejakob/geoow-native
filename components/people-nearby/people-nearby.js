@@ -12,6 +12,7 @@ class PeopleNearby extends Component
         return (
             <FlatList
                 horizontal
+                style={getStyle('peopleNearby')}
             />
         );
     }

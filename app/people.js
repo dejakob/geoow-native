@@ -35,8 +35,7 @@ class People extends Component
                 <PeopleNearby
 
                 />
-                <Text>Gifted chat view</Text>
-                <Text>'Scan to become friends'</Text>
+                <SmallTitle>Area conversation</SmallTitle>
                 <GiftedChat
                     messages={messages}
                     onSend={(messages) => this.onSend(messages)}
