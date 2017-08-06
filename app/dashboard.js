@@ -4,6 +4,7 @@ import { getStyle } from 'react-native-styler';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import PublicBackground from '../components/public-background/public-background';
 import DashboardList from '../components/dashboard-list/dashboard-list';
+import * as BackgroundLocation from '../services/background-location';
 import '../components/header/header.style.js';
 import '../components/tab-bar/tab-bar.style.js';
 
@@ -22,6 +23,7 @@ class Dashboard extends Component
     componentWillMount() {
         this.props.loadStats();
         this.props.loadMe();
+        BackgroundLocation.start();
     }
 
     render() {

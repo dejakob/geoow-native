@@ -1,4 +1,5 @@
 import { AsyncStorage } from 'react-native';
+import BackgroundGeolocation from 'react-native-background-geolocation-android';
 import Actions from '../actions';
 import AccountKit from 'react-native-facebook-account-kit';
 import * as AuthApi from '../api/auth';
@@ -10,7 +11,16 @@ const getCurrentToken = () => _token;
 // Tooo: change
 AsyncStorage
     .getItem('token')
-    .then(token => _token = token);
+    .then(token => {
+        _token = token;
+        BackgroundGeolocation.configure({
+            headers: {              // <-- Optional HTTP headers
+                'Content-Type': 'application/json',
+                'authorization': `Bearer ${token}`
+            },
+            autoSync: true
+        });
+    });
 
 function* authAccountKit(action) {
     try {
@@ -41,6 +51,14 @@ function* authAccountKit(action) {
         yield AsyncStorage.setItem('token', geoowToken);
         yield put(Actions._authAccountKitSuccess({}));
         yield put(Actions.loadMe());
+
+        BackgroundGeolocation.configure({
+            headers: {              // <-- Optional HTTP headers
+                'Content-Type': 'application/json',
+                'authorization': `Bearer ${geoowToken}`
+            },
+            autoSync: true
+        });
     } catch (e) {
         console.log('ex', e);
         yield put(Actions._authAccountKitFailed());
