@@ -3,21 +3,102 @@
 
     <item
         is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/4c819c49ac6414e49af49ec5a1959ff7c394508e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dd282bdeaa904c59d77e57dedd7e0a241c9b679d">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_cd448c94977af4bf64c018ec65ec2c98a1ac9916/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/a1f6dd8639c7e98230b3eb1df74f31e26c3f2742/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c1b91bc7e480ab100d0397b16c93732e26fd10eb">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_83729ad241930b7c264d08f2eed9aca2e6d6a34f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/67434418d389774c8e8fc8f02413a58fb1615356/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6cfe119a4d5986e4a93f4d14909f55871a601271">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_45bd85ab063d5a244ec44264652e3780d7c0b112/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/d7565db29ba88aa93fa4a219914f893760f572b4/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_307dd965daa3b41cdaaab23ae5ea6466524da2d9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="5fc44d486bc7200de813b88e034b29716771227a">
+        sha1="bcc8e67c3cb58d205e9d5017c2fcfcad56135b5c">
         <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_f6eb1863c8164732123fb78f5d429abcec33b19d/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/jakobkerkhove/.android/build-cache/fe99e86272f34bb9e8f55345d26089a395bc7d19/output/jars/classes.jar"
+        jar="/Users/jakobkerkhove/.android/build-cache/30c3c317c27c2c44540b04a304d966ad1b9cf2a9/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="2ce289d1bd980a87320ec22aeedda3e4b2b54ed7">
-        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b5163041773209cd98f6dbe9d41f05ea085cf1d1/classes.dex" />
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bcf4197ce9fe91bff2a867c833ddce6c3465201c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/2e54534203845491d9b18c122d4cade9116eb09e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4f7b26bc981165a44c865a9e54af0bff5b2e0938/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/59b60ca1d92b5730d93030ace76c59aa6f2d8625/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="90095b555b72205db6f9b93aca3cb9978d1e3344">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c842202a2ec36ad7bcfa47b7b7404157f63cb246/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/110cc8b79144a20cee02d4a8c810996984fb1e86/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2fa4bed8a1213a783ee394e58924fdc1aedc298a">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f4f3401a83a20f3d94cfa50d1bb2a567ff636c92/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/9f3f319ee411d4d083c589f2b9fa3ff3e4caea73/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="364364bf77b4a71afc5930fc3ae57b3f0eea637c">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_32bf66a9ea786cd2a313ddc05392bd2cca080659/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/f39f555886297882ad108519ebf92e5e01268f7c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2c2f1b3f82c027e98f56bb0154de0acbcce42e6d">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_34a3ad5f21794b2950bdba3b829816e57d66a1b3/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -30,6 +111,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/3f1adfbf4aabc4e0140a0d92dd47e2d2e8e5510a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0a9a85e785113d7710692a01b98b8115768f35b7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/jakobkerkhove/.android/build-cache/ccd7185d237aedc52b848819f637cc194bee2657/output/jars/libs/infer-annotations-1.5.jar"
         jumboMode="true"
         optimize="true"
@@ -39,12 +129,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/jakobkerkhove/.android/build-cache/245a0cbc222e86e03354485665b3fb6ddebc00bc/output/jars/classes.jar"
+        jar="/Users/jakobkerkhove/.android/build-cache/b8b0de4982eed0b537fafa23557a36844a42ed7f/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="bfeba9e17614c43b87b9dbef4d9014d66de49b34">
-        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_47b2e02d17eb0c026fcbf3b4a7f811698c17f18e/classes.dex" />
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_243cb735d009ea77c51d4920dec0a4059f68a645/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/ce63f823d27f6c3f54d94ee9302e55fc9e3dda47/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ec5c6f5e9313c258cf08602af5349729ee8e3516/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -54,6 +153,150 @@
         revision="25.0.0"
         sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
         <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_77e5f102c20af65273544bde12c22462b6275aee/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/a3d448da64685bed80341f81ac90cb388584bc63/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="70ffe00aaf049893f59d1dad57bd82992faa38ef">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f6484d2b755389d5660f55c42d7654e1c7be5362/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/970c0f6c40a31e0061bf2e82159d1fcca10ab1cd/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9be14bdce9fc895b4347b624165f0f4083f1aacb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/5c2df4c7c5cc952fa55099b1de166d7434aab609/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3ccf3483ddb4cde709d9512f7a0f6315df9bd895/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.1_073a031686473e7edce4c36c56632760d7fffa00/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/faec7f68730faf56fd85975b42ea4747c1303f3b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0fab0f8b5adaf1a2c14dd900528a4e366e2d8bab/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/991fdabf5f33f9372aa44104835f3ea59cd5df40/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_425b9f3f7200b226a3ea00fea1253d1b39f133b2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.gradle/caches/modules-2/files-2.1/com.googlecode.libphonenumber/libphonenumber/8.5.2/4a5b5caed312654f6aa2171d2f24e44785621d3d/libphonenumber-8.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4a5b5caed312654f6aa2171d2f24e44785621d3d">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/libphonenumber-8.5.2_f5976f010285fc6a379b7b6815d692f42946fa23/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/070db3a76c23b487e03dffdefe6dce9575dc5359/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e008b4da5e3b482dbec61746f1ccdb126cff5b40">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_20c0c3cfad4e1011b2207a3c8a6ec7d55ad56143/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/6530ee77f2b02da161531c3cfa024b900b2a0d69/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d4ba7399a1a4f5c998b5ce4f6bf33a2e8347820c">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e269ca85589fdf0f4e055a88352a8a61fe477d60/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/a31a84fa7d842937a6aacbe5e67fa4deaf06b742/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="41f47bbcd281fdb1e42e220220ab3bfa1da591e0">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_84e53423558ec1476e27a01e0aff0163f6d1df06/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/4b042eec3c5a5b49df659eb367ab19c5a1972c78/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_85c5f531ae3d6e15ab73e8f331548fd2ffc36983/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/ad2b4e39ac3e98d07e16002c87c5050c70e8b2c2/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d8942ee348aaa9341f08f7e2437063893fe27542">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1e90e4d5482d9e97fdae0b6dbbf405cb88908e30/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/2c84208ecf4408fa6281b3289aeed8f34fb5f233/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1ef6ceed5366c560d72386a6127f6baeb4a36077">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5c45a35f394dd8b03a67c3fdf4825e5f0ad2746e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/2c5420ca19508903a048a6e6443375d209d1e4e9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a25b0b5aec89681b95d32780ad7904c1e1e4c679">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4857e37a02828a18d0705ab456169b1452719697/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/8d57e0d771901b0b4fb41a8ef7640c1cbb3aad4e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_dd8597959276f2ae0c9f1b1011e5f9aa8aaff67f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/1e709c727732b922515b03d0e04c68732ea63500/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2430e711762a749feb00b3d64858ca4768251b9d">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fdebde01e77c15ceedf759d33f5b12ba89e190bf/classes.dex" />
     </item>
 
 </items>

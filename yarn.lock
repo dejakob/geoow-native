@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@expo/react-native-action-sheet@github:cribspot/react-native-action-sheet#b422c54f26d30b9e85eb14a882ea9cec38600730":
+"@expo/react-native-action-sheet@cribspot/react-native-action-sheet#b422c54f26d30b9e85eb14a882ea9cec38600730":
   version "1.0.0"
   resolved "https://codeload.github.com/cribspot/react-native-action-sheet/tar.gz/b422c54f26d30b9e85eb14a882ea9cec38600730"
   dependencies:
@@ -1492,6 +1492,10 @@ fancy-log@^1.1.0:
 fast-levenshtein@~2.0.4:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
+
+fast-plist@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/fast-plist/-/fast-plist-0.1.2.tgz#a45aff345196006d406ca6cdcd05f69051ef35b8"
 
 fb-watchman@^1.8.0:
   version "1.9.2"
@@ -3075,7 +3079,7 @@ pinkie@^2.0.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
 
-plist@2.0.1:
+plist@2.0.1, plist@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/plist/-/plist-2.0.1.tgz#0a32ca9481b1c364e92e18dc55c876de9d01da8b"
   dependencies:
@@ -3194,16 +3198,20 @@ react-devtools-core@^2.0.8:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
-react-native-background-fetch@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/react-native-background-fetch/-/react-native-background-fetch-2.0.5.tgz#2611151f44cf23e57e3e88073009218463bbed2c"
+react-native-background-fetch@^2.0.6:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/react-native-background-fetch/-/react-native-background-fetch-2.0.8.tgz#30332cc9bc56b6bbc5e75f1b0d14ce116775d8f2"
+  dependencies:
+    fast-plist "^0.1.2"
+    plist "^2.0.1"
+    xcode "^0.9.1"
 
 "react-native-background-geolocation-android@git+ssh://git@github.com/transistorsoft/react-native-background-geolocation-android.git":
-  version "2.8.2"
-  resolved "git+ssh://git@github.com/transistorsoft/react-native-background-geolocation-android.git#75a97509d4b91c77d72f4eb8ede3ff2b6437a7ac"
+  version "2.9.0"
+  resolved "git+ssh://git@github.com/transistorsoft/react-native-background-geolocation-android.git#e2db2cfee6c8454c7381905dca8855ecbbc40c0b"
   dependencies:
     cocoa-lumberjack "^3.0.3"
-    react-native-background-fetch "^2.0.5"
+    react-native-background-fetch "^2.0.6"
 
 react-native-button@^1.6.0:
   version "1.8.2"
@@ -3267,7 +3275,7 @@ react-native-keyboard-aware-scroll-view@^0.2.9:
   dependencies:
     react-timer-mixin "^0.13.3"
 
-"react-native-lightbox@github:oblador/react-native-lightbox#c84a8543d4511fe6a44c3d7820747c9c1bddd875":
+react-native-lightbox@oblador/react-native-lightbox#c84a8543d4511fe6a44c3d7820747c9c1bddd875:
   version "0.6.0"
   resolved "https://codeload.github.com/oblador/react-native-lightbox/tar.gz/c84a8543d4511fe6a44c3d7820747c9c1bddd875"
   dependencies:
@@ -4190,11 +4198,11 @@ utils-merge@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.0.tgz#0294fb922bb9375153541c4f7096231f287c8af8"
 
-uuid@3.0.1, uuid@^3.0.0:
+uuid@3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.1.tgz#6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1"
 
-uuid@3.1.0:
+uuid@3.1.0, uuid@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
 

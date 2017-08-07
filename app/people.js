@@ -34,7 +34,7 @@ class People extends Component
             <MainBackground>
                 <SmallTitle>People nearby</SmallTitle>
                 <PeopleNearby
-
+                    peopleNearby={this.props.people.get('nearby').map(nearbyPersonId => this.props.people.getIn(['all', nearbyPersonId]))}
                 />
                 <SmallTitle>Area conversation</SmallTitle>
                 <GiftedChat

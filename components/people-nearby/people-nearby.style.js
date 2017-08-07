@@ -8,5 +8,10 @@ createStyle({
         backgroundColor: 'yellow',
         paddingLeft: '20h4s',
         paddingRight: '20h4s',
+        avatar: {
+            height: '50h4s',
+            width: '50h4s',
+            borderRadius: '25h4s'
+        }
     }
 })

@@ -10,7 +10,7 @@ function Avatar(props) {
         >
             <Image
                 style={[getStyle('avatar'), props.style]}
-                source={require('../../assets/female.png')}
+                source={props.image ? { uri: props.image} : require('../../assets/female.png')}
             />
         </View>
     )

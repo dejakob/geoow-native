@@ -56,11 +56,11 @@
 
 # okhttp
 
--keepattributes Signature
--keepattributes *Annotation*
--keep class okhttp3.** { *; }
--keep interface okhttp3.** { *; }
--dontwarn okhttp3.**
+# -keepattributes Signature
+# -keepattributes *Annotation*
+# -keep class okhttp3.** { *; }
+# -keep interface okhttp3.** { *; }
+# -dontwarn okhttp3.**
 
 # okio
 
@@ -68,6 +68,7 @@
 -dontwarn java.nio.file.*
 -dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
 -dontwarn okio.**
+
 
 # BackgroundGeolocation lib tslocationmanager.aar is *already* proguarded
 -keep class com.transistorsoft.** { *; }
