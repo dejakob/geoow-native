@@ -6,6 +6,7 @@ import * as DiscoverActions from './discover';
 import * as QuestActions from './quest';
 import * as OrderActions from './order';
 import * as DiaryActions from './diary';
+import * as PeopleActions from './people';
 
 export default {
     ...AuthActions,
@@ -15,5 +16,6 @@ export default {
     ...DiscoverActions,
     ...QuestActions,
     ...OrderActions,
-    ...DiaryActions
+    ...DiaryActions,
+    ...PeopleActions
 };
