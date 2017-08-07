@@ -15,7 +15,7 @@ function loadPeopleNearby() {
  * @param peopleNearby
  * @returns {Object}
  */
-function loadPeopleNearbySuccess(peopleNearby) {
+function _loadPeopleNearbySuccess(peopleNearby) {
     return {
         type: ACTIONS.PEOPLE_LOAD_NEARBY_SUCCESS,
         peopleNearby
@@ -27,7 +27,7 @@ function loadPeopleNearbySuccess(peopleNearby) {
  * @param errData
  * @returns {Object}
  */
-function loadPeopleNearbyFailed(errData) {
+function _loadPeopleNearbyFailed(errData) {
     return {
         type: ACTIONS.PEOPLE_LOAD_NEARBY_FAILED,
         errData
@@ -36,6 +36,6 @@ function loadPeopleNearbyFailed(errData) {
 
 export {
     loadPeopleNearby,
-    loadPeopleNearbySuccess,
-    loadPeopleNearbyFailed
+    _loadPeopleNearbySuccess,
+    _loadPeopleNearbyFailed
 }

@@ -18,6 +18,10 @@ class People extends Component
         tabBarIcon: ({ tintColor }) => <Icon name="people" style={[getStyle('tabBar__icon'), { color: tintColor }]} />
     };
 
+    componentWillMount() {
+        this.props.loadPeopleNearby();
+    }
+
     render() {
         const messages = [{
             _id: 1,
