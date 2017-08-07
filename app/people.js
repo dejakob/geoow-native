@@ -22,6 +22,15 @@ class People extends Component
         this.props.loadPeopleNearby();
     }
 
+    componentWillReceiveProps(newProps) {
+        if (
+            newProps.location.get('latitude') !== this.props.location.get('latitude') ||
+            newProps.location.get('longitude') !== this.props.location.get('longitude')
+        ) {
+            this.props.loadPeopleNearby();
+        }
+    }
+
     render() {
         const messages = [{
             _id: 1,

@@ -15,7 +15,7 @@ function* loadNearby() {
             location.get('longitude')
         );
 
-        yield put(Actions._loadPeopleNearbySuccess(result));
+        yield put(Actions._loadPeopleNearbySuccess(result.peopleNearby));
     }
     catch (ex) {
         yield put(Actions._loadPeopleNearbyFailed(ex));

@@ -25,11 +25,12 @@ class PeopleNearby extends Component
         );
     }
 
-    renderItem(person) {
+    renderItem({ item, index }) {
         return (
             <Avatar
+                key={index}
                 style={getStyle('peopleNearby__avatar')}
-                image={person.get('avatar')}
+                image={item.get('avatar')}
             />
         );
     }
