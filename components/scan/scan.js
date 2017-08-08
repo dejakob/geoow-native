@@ -26,7 +26,7 @@ class Scan extends Component
                     style={getStyle('scan__footer')}
                 >
                     <Touchable
-                        onPress={() => this.props.navigation.goBack.call(this.props.navigation)}
+                        onPress={() => this.props.goBack()}
                         style={getStyle('scan__footer__back')}
                     >
                         <Icon

@@ -60,7 +60,7 @@ class Scan extends Component
     render() {
         return (
             <ScanComponent
-                navigation={this.props.navigation}
+                goBack={() => this.props.navigation.navigate('Dashboard')}
                 onBarCodeRead={this._handleBarCodeRead}
             />
         )
