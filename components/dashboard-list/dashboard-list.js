@@ -1,8 +1,8 @@
 import React from 'react';
-import moment from 'moment';
 import { FlatList, StyleSheet, View, ScrollView } from 'react-native';
-import { getDescription } from '../../helpers/user-stats-helper';
 import { getStyle } from 'react-native-styler';
+import { getDescription } from '../../helpers/user-stats-helper';
+import DashboardHeader from '../dashboard-header/dashboard-header';
 import DashboardListItem from './dashboard-list-item';
 import './dashboard-list.style';
 
@@ -21,17 +21,22 @@ function DashboardList(props) {
             ...item
         }));
 
-    return (
-        <ScrollView>
-            <View
-                style={getStyle('dashboard__list')}
-            >
-                {data.filter((item, index) => index % 2 === 0).map(renderListItem)}
-            </View>
-        </ScrollView>
+    const header = (
+        <DashboardHeader
+            me={props.user.get('me')}
+        />
     );
 
-    function renderListItem(item, index) {
+    return (
+        <FlatList
+            data={data}
+            style={getStyle('dashboard__list')}
+            renderItem={renderListItem}
+            ListHeaderComponent={header}
+        />
+    );
+
+    function renderListItem({ item, index }) {
         return (
             <DashboardListItem
                 key={index}
