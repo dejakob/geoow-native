@@ -14,7 +14,7 @@
     "react-native": "0.47.1",
     "react-native-background-geolocation-android": "git+ssh://git@github.com/transistorsoft/react-native-background-geolocation-android.git",
     "react-native-camera": "git+https://github.com/lwansbrough/react-native-camera.git",
-    "react-native-facebook-account-kit": "^0.6.2",
+    "react-native-facebook-account-kit": "^0.7.0",
     "react-native-gifted-chat": "^0.2.5",
     "react-native-keyboard-aware-scroll-view": "^0.2.9",
     "react-native-mapbox-gl": "github:hippware/react-native-mapbox-gl#master",

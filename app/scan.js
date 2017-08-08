@@ -62,6 +62,7 @@ class Scan extends Component
             <ScanComponent
                 goBack={() => this.props.navigation.navigate('Dashboard')}
                 onBarCodeRead={this._handleBarCodeRead}
+                onCapture={() => {}}
             />
         )
     }

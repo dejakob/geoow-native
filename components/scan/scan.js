@@ -11,6 +11,23 @@ import './scan.style';
  */
 class Scan extends Component
 {
+    constructor() {
+        super();
+        this.handlePrimaryPress = this.handlePrimaryPress.bind(this);
+    }
+
+    handlePrimaryPress() {
+
+        // Video is also possible with this lib! :)
+        this.camera
+            .capture()
+            .then(result => {
+                const { mediaUrl, path } = result;
+
+                this.props.onCapture(path);
+            })
+    }
+
     render() {
         return (
             <View
@@ -20,6 +37,8 @@ class Scan extends Component
                     style={getStyle('scan__camera')}
                     barCodeTypes={['qr']}
                     onBarCodeRead={this.props.onBarCodeRead}
+                    ref={camera => this.camera = camera}
+                    type="front"
                 />
 
                 <View
@@ -35,11 +54,15 @@ class Scan extends Component
                             size={StyleSheet.flatten(getStyle('header__icon')).fontSize}
                         />
                     </Touchable>
-                    <View
-                        style={getStyle('scan__footer__primary')}
+                    <Touchable
+                        onPress={this.handlePrimaryPress}
                     >
+                        <View
+                            style={getStyle('scan__footer__primary')}
+                        >
 
-                    </View>
+                        </View>
+                    </Touchable>
                     <View>
 
                     </View>
