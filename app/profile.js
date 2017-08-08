@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, TouchableWithoutFeedback } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import HeaderTitle from '../components/header/header-title';
 import PublicBackground from '../components/public-background/public-background';
-import InfoText from '../components/info-text/info-text';
 import Touchable from '../components/button/touchable';
+import ProfileComponent from '../components/profile/profile';
 
 import '../components/header/header.style.js';
 import '../components/tab-bar/tab-bar.style.js';
@@ -31,19 +31,12 @@ class Profile extends Component
         ),
     });
 
-    componentWillMount() {
-    }
-
     render() {
         return (
             <PublicBackground>
-                <View
-                    style={{ flex: 1, justifyContent: 'center' }}
-                >
-                    <InfoText>You are registered with {this.props.user.getIn(['me', 'email'])}</InfoText>
-                    <InfoText>By using Geoow, you agree to the Terms of Service, which can be found on geoow.com/terms</InfoText>
-                    <InfoText>Icons used in the app are designed by Madebyoliver, Freepik and Oleksandr Yershov from Flaticon</InfoText>
-                </View>
+                <ProfileComponent
+                    {...this.props}
+                />
             </PublicBackground>
         );
     }
