@@ -24,6 +24,7 @@ function DashboardList(props) {
     const header = (
         <DashboardHeader
             me={props.user.get('me')}
+            onPress={() => props.navigation.navigate('Profile')}
         />
     );
 

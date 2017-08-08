@@ -14,6 +14,7 @@ import Discover from './discover';
 import EventDetail from './event-detail';
 import Scan from './scan';
 import People from './people';
+import Profile from './profile';
 import * as Router from '../services/router';
 import { MAPBOX_TOKEN } from '../constants';
 import '../themes';
@@ -49,6 +50,7 @@ const App = StackNavigator({
     Auth: { screen: connect(Auth) },
     Plan: { screen: connect(Plan) },
     Preferences: { screen: connect(Preferences) },
+    Profile: { screen: connect(Profile) },
     Tabs: { screen: TabNavigation },
     EventDetail: { screen: connect(EventDetail) }
 }, {

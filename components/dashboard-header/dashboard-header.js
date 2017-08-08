@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableWithoutFeedback } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import Avatar from '../avatar/avatar';
 import './dashboard-header.style';
@@ -13,18 +13,22 @@ class DashboardHeader extends Component
         console.log('this.props.me', this.props.me.toJS());
 
         return (
-            <View
-                style={getStyle('dashboardHeader')}
+            <TouchableWithoutFeedback
+                onPress={this.props.onPress}
             >
-                <Avatar
-                    image={this.props.me.get('avatar')}
-                />
-                <Text
-                    style={getStyle('dashboardHeader__score')}
+                <View
+                    style={getStyle('dashboardHeader')}
                 >
-                    Your score: {this.props.me.get('score')}
-                </Text>
-            </View>
+                    <Avatar
+                        image={this.props.me.get('avatar')}
+                    />
+                    <Text
+                        style={getStyle('dashboardHeader__score')}
+                    >
+                        Your score: {this.props.me.get('score')}
+                    </Text>
+                </View>
+            </TouchableWithoutFeedback>
         )
     }
 }
