@@ -4,16 +4,10 @@ import { createStyle } from 'react-native-styler';
 createStyle({
     dashboard: {
         list: {
-            marginTop: '24h4s',
             flexDirection: 'column',
             flex: 1,
-            paddingTop: '8h4s',
             paddingLeft: '4h4s',
-            paddingRight: '4h4s',
-
-            header: {
-                paddingTop: '40h4s'
-            },
+            paddingRight: '4h4s'
         },
 
         listItem: {
