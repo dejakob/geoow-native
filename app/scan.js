@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
-import { Alert } from 'react-native';
+import { Alert, StyleSheet, View } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import * as ArticleApi from '../api/article';
-import Camera from 'react-native-camera';
+import ScanComponent from '../components/scan/scan';
 
 /**
  * <Scan />
  */
 class Scan extends Component
 {
-    static navigationOptions = {
+    static navigationOptions = props => ({
         header: null,
         gesturesEnabled: false,
-        tabBarIcon: ({ tintColor }) => <Icon name="camera-iris" style={[getStyle('tabBar__icon'), { color: tintColor }]} />
-    };
+        tabBarIcon: ({ tintColor }) => <Icon name="camera-iris" style={[getStyle('tabBar__icon'), { color: tintColor }]} />,
+        tabBarVisible: false
+    });
 
     constructor() {
         super();
@@ -58,9 +59,8 @@ class Scan extends Component
 
     render() {
         return (
-            <Camera
-                style={{ flex: 1 }}
-                barCodeTypes={['qr']}
+            <ScanComponent
+                navigation={this.props.navigation}
                 onBarCodeRead={this._handleBarCodeRead}
             />
         )
