@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { getStyle } from 'react-native-styler';
-import store from '../services/store';
+import Icon from 'react-native-vector-icons/MaterialIcons'
 import HeaderTitle from '../components/header/header-title';
-import HeaderCredits from '../components/header/header-credits';
 import PublicBackground from '../components/public-background/public-background';
 import InfoText from '../components/info-text/info-text';
+import Touchable from '../components/button/touchable';
 
 import '../components/header/header.style.js';
 import '../components/tab-bar/tab-bar.style.js';
@@ -17,14 +17,18 @@ class Profile extends Component
 {
     static navigationOptions = (props) => ({
         headerStyle: getStyle('header'),
-        headerLeft: <HeaderTitle>Info</HeaderTitle>,
+        headerLeft: <HeaderTitle>Profile</HeaderTitle>,
         headerRight: (
-            <HeaderCredits
-                score={store.getState().user.getIn(['me', 'score'])}
-                onPress={() => props.navigation.navigate('Scan')}
-            />
+            <Touchable
+                onPress={() => props.navigation.goBack()}
+            >
+                <Icon
+                    name="close"
+                    color={StyleSheet.flatten(getStyle('header__icon')).color}
+                    size={StyleSheet.flatten(getStyle('header__icon')).fontSize}
+                />
+            </Touchable>
         ),
-        gesturesEnabled: false,
     });
 
     componentWillMount() {

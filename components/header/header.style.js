@@ -10,6 +10,11 @@ createStyle({
             fontWeight: '300',
             fontSize: 'theme:h2',
             color: 'theme:primary'
+        },
+
+        icon: {
+            color: 'theme:primary',
+            fontSize: 'theme:h2'
         }
     },
 
