@@ -73,9 +73,31 @@ function addPushNotificationId(pushNotificationId) {
     return fetch(`${API_URL}/user/push-notification-id`, params);
 }
 
+function uploadAvatar(imageUrl) {
+    const body = new FormData();
+    body.append('file', {
+        uri: imageUrl,
+        name: 'avatar.jpg',
+        filename: 'avatar.jpg',
+        type: 'image/jpeg',
+    });
+
+    const params = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'multipart/form-data',
+            'authorization': `Bearer ${getCurrentToken()}`
+        },
+        body,
+    };
+
+    return fetch(`${API_URL}/user/avatar`, params);
+}
+
 export {
     updateCategories,
     addPushNotificationId,
     fetchStats,
-    fetchMe
+    fetchMe,
+    uploadAvatar
 };

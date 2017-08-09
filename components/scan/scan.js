@@ -3,6 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import Camera from 'react-native-camera';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { uploadAvatar } from '../../api/user';
 import Touchable from '../button/touchable';
 import './scan.style';
 
@@ -25,6 +26,10 @@ class Scan extends Component
                 const { mediaUrl, path } = result;
 
                 this.props.onCapture(path);
+
+                // Todo can be both feed and avatar...
+                console.log('UPLOAD AVATAR', path);
+                uploadAvatar(path);
             })
     }
 
@@ -37,6 +42,7 @@ class Scan extends Component
                     style={getStyle('scan__camera')}
                     barCodeTypes={['qr']}
                     onBarCodeRead={this.props.onBarCodeRead}
+                    captureTarget={Camera.constants.CaptureTarget.disk}
                     ref={camera => this.camera = camera}
                     type="front"
                 />
