@@ -17,9 +17,26 @@ class Scan extends Component
         tabBarVisible: false
     });
 
+    static TYPES = {
+        AVATAR: 'AVATAR',
+        FEED: 'FEED'
+    };
+
     constructor() {
         super();
         this._handleBarCodeRead = this._handleBarCodeRead.bind(this);
+    }
+
+    get type() {
+        if (
+            this.props.navigation.state.params &&
+            typeof this.props.navigation.state.params.type === 'string' &&
+            Scan.TYPES.indexOf(typeof this.props.navigation.state.params.type) > -1
+        ) {
+            return this.props.navigation.state.params.type;
+        }
+
+        return Scan.TYPES.FEED;
     }
 
     componentWillMount() {
