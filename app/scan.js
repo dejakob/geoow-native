@@ -52,6 +52,10 @@ class Scan extends Component
             this.props.loadMe();
             this.props.navigation.goBack();
         }
+
+        if (nextProps.user.getIn(['me', 'avatar']) !== this.props.user.getIn(['me', 'avatar'])) {
+            this.props.navigation.navigate('Dashboard');
+        }
     }
 
     handleBarCodeRead({ type, data }) {
