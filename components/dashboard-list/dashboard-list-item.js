@@ -3,6 +3,7 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import { getDescription } from '../../helpers/user-stats-helper';
+import ScoreBadge from '../score-badge/score-badge';
 
 /**
  * <DashboardList />
@@ -10,10 +11,6 @@ import { getDescription } from '../../helpers/user-stats-helper';
  */
 function DashboardListItem(props) {
     const { item } = props;
-
-    const overlayStyle = item.score > 0 ?
-        getStyle('dashboard__listItem__header__overlay__ok') :
-        getStyle('dashboard__listItem__header__overlay__notok');
 
     return (
         <View
@@ -40,48 +37,18 @@ function DashboardListItem(props) {
                         {moment(item.createdAt).format('HH[h]')}
                     </Text>
                 </View>
-                <View>
-
-                </View>
-            </View>
-        </View>
-    );
-
-    return (
-        <View
-            style={getStyle('dashboard__listItem')}
-        >
-            <Image
-                style={getStyle('dashboard__listItem__header__image')}
-                source={require('../../assets/beach-pexels.jpeg')}
-                resizeMode='cover'
-            />
-            <View
-                style={getStyle('dashboard__listItem__header')}
-            >
                 <View
-                    style={[getStyle('dashboard__listItem__header__overlay'), overlayStyle]}
+                    style={getStyle('dashboard__listItem__content__descScore')}
                 >
                     <Text
-                        style={getStyle('dashboard__listItem__header__score')}
+                        style={getStyle('dashboard__listItem__content__description')}
                     >
-                        {item.score}
+                        {getDescription(item.type, item.data)}
                     </Text>
+                    <ScoreBadge
+                        score={item.score}
+                    />
                 </View>
-            </View>
-            <View
-                style={getStyle('dashboard__listItem__descriptionContainer')}
-            >
-                <Text
-                    style={getStyle('dashboard__listItem__description')}
-                >
-                    {getDescription(item.type, item.data)}
-                </Text>
-                <Text
-                    style={getStyle('dashboard__listItem__date')}
-                >
-                    {moment(item.createdAt).format('DD MMM, HH[h]')}
-                </Text>
             </View>
         </View>
     );

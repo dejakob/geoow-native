@@ -14,6 +14,8 @@ createStyle({
             backgroundColor: 'theme:sheet',
             overflow: 'hidden',
             minHeight: '50h4s',
+            borderBottomColor: 'theme:lightBorder',
+            borderBottomWidth: 1,
 
             line: {
                 width: 1,
@@ -49,6 +51,17 @@ createStyle({
                     fontSize: '10h4s',
                     color: 'theme:subtext',
                     fontWeight: '300'
+                },
+                descScore: {
+                    marginLeft: '22h4s',
+                    marginRight: '22h4s'
+                },
+                description: {
+                    fontSize: '10h4s',
+                    color: 'theme:subtext',
+                    fontWeight: '300',
+                    paddingTop: '10h4s',
+                    paddingBottom: '10h4s'
                 }
             },
         }
