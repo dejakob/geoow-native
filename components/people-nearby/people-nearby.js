@@ -26,10 +26,11 @@ class PeopleNearby extends Component
     }
 
     renderItem({ item, index }) {
+        // Opacity 1 for current conversation
         return (
             <Avatar
                 key={index}
-                style={getStyle('peopleNearby__avatar')}
+                style={[getStyle('peopleNearby__avatar'), { opacity: 0.5 }]}
                 image={item.get('avatar')}
             />
         );

@@ -20,6 +20,8 @@ class People extends Component
 
     componentWillMount() {
         this.props.loadPeopleNearby();
+
+        setInterval(() => this.props.loadPeopleNearby(), 5000);
     }
 
     componentWillReceiveProps(newProps) {
