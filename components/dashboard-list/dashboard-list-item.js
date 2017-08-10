@@ -25,6 +25,25 @@ function DashboardListItem(props) {
             <View
                 style={getStyle('dashboard__listItem__dot')}
             />
+            <View
+                style={getStyle('dashboard__listItem__content')}
+            >
+                <View>
+                    <Text
+                        style={getStyle('dashboard__listItem__content__day')}
+                    >
+                        {moment(item.createdAt).format('DD MMM')}
+                    </Text>
+                    <Text
+                        style={getStyle('dashboard__listItem__content__hour')}
+                    >
+                        {moment(item.createdAt).format('HH[h]')}
+                    </Text>
+                </View>
+                <View>
+
+                </View>
+            </View>
         </View>
     );
 

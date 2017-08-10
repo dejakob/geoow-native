@@ -32,24 +32,25 @@ createStyle({
                 top: '21h4s',
                 left: '21h4s'
             },
-            date: {
-                fontSize: 'theme:small',
-                fontWeight: '600',
-                textAlign: 'center',
-                color: 'theme:subtext',
-            },
-            descriptionContainer: {
+            content: {
                 flex: 1,
-                backgroundColor: 'theme:lighten8',
-                paddingLeft: '4w4s',
-                paddingRight: '4w4s',
-                borderRadius: '2h4s',
-                justifyContent: 'space-around'
+                flexDirection: 'row',
+                paddingLeft: '32h4s',
+                paddingRight: '32h4s',
+                paddingTop: '13h4s',
+                paddingBottom: '13h4s',
+
+                day: {
+                    color: 'theme:secondary',
+                    fontWeight: '600',
+                    fontSize: '14h4s'
+                },
+                hour: {
+                    fontSize: '10h4s',
+                    color: 'theme:subtext',
+                    fontWeight: '300'
+                }
             },
-            description: {
-                fontSize: 'theme:small',
-                textAlign: 'center'
-            }
         }
     }
 });
