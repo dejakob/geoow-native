@@ -6,48 +6,31 @@ createStyle({
         list: {
             flexDirection: 'column',
             flex: 1,
-            paddingLeft: '4h4s',
-            paddingRight: '4h4s'
+            position: 'relative'
         },
 
         listItem: {
             flexDirection: 'row',
             backgroundColor: 'theme:sheet',
-            borderRadius: '3h4s',
             overflow: 'hidden',
-            margin: '4h4s',
+            minHeight: '50h4s',
 
-            header: {
-                position: 'relative',
-                height: '70h4s',
-                width: '100h4s',
-
-                image: {
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    height: '100h4s',
-                    width: '100%'
-                },
-                overlay: {
-                    flex: 1,
-                    alignItems: 'center',
-                    justifyContent: 'center',
-
-                    ok: {
-                        backgroundColor: 'theme:okOpacity'
-                    },
-                    notok: {
-                        backgroundColor: 'theme:notokOpacity'
-                    }
-                },
-                score: {
-                    color: 'theme:sheet',
-                    fontSize: '24h4s',
-                    fontWeight: '100'
-                }
+            line: {
+                width: 1,
+                backgroundColor: 'theme:lightBorder',
+                left: '24h4s',
+                top: 0,
+                bottom: 0,
+                position: 'absolute'
+            },
+            dot: {
+                height: '6h4s',
+                width: '6h4s',
+                borderRadius: '3h4s',
+                backgroundColor: 'theme:secondary',
+                position: 'absolute',
+                top: '21h4s',
+                left: '21h4s'
             },
             date: {
                 fontSize: 'theme:small',

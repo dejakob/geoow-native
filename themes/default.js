@@ -11,6 +11,7 @@ createTheme({
         sheet: '#ffffff',
         sheet2: '#f4fdff',
         border: '#cccccc',
+        lightBorder: '#eeeeee',
         ok: '#2fb536',
         okSoft: '#d7ffd9',
         okOpacity: 'rgba(47,181,54,0.8)',

@@ -13,7 +13,20 @@ function DashboardListItem(props) {
 
     const overlayStyle = item.score > 0 ?
         getStyle('dashboard__listItem__header__overlay__ok') :
-        getStyle('dashboard__listItem__header__overlay__notok')
+        getStyle('dashboard__listItem__header__overlay__notok');
+
+    return (
+        <View
+            style={getStyle('dashboard__listItem')}
+        >
+            <View
+                style={getStyle('dashboard__listItem__line')}
+            />
+            <View
+                style={getStyle('dashboard__listItem__dot')}
+            />
+        </View>
+    );
 
     return (
         <View
