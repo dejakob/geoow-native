@@ -7,6 +7,7 @@ import * as QuestActions from './quest';
 import * as OrderActions from './order';
 import * as DiaryActions from './diary';
 import * as PeopleActions from './people';
+import * as CameraActions from './camera';
 
 export default {
     ...AuthActions,
@@ -17,5 +18,6 @@ export default {
     ...QuestActions,
     ...OrderActions,
     ...DiaryActions,
-    ...PeopleActions
+    ...PeopleActions,
+    ...CameraActions
 };

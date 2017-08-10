@@ -3,9 +3,13 @@ import { Image, View } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import './avatar.style';
 
+/**
+ * <Avatar />
+ * @param props
+ * @returns {XML}
+ * @constructor
+ */
 function Avatar(props) {
-    console.log('avatar', props.image);
-
     return (
         <View
             style={[getStyle('avatar__wrapper'), props.style]}

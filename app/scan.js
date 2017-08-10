@@ -24,7 +24,8 @@ class Scan extends Component
 
     constructor() {
         super();
-        this._handleBarCodeRead = this._handleBarCodeRead.bind(this);
+        this.handleBarCodeRead = this.handleBarCodeRead.bind(this);
+        this.handleCapture = this.handleCapture.bind(this);
     }
 
     get type() {
@@ -53,7 +54,7 @@ class Scan extends Component
         }
     }
 
-    _handleBarCodeRead({ type, data }) {
+    handleBarCodeRead({ type, data }) {
         if (!this._stopScan && type === 'QR_CODE') {
             this._stopScan = true;
 
@@ -74,12 +75,16 @@ class Scan extends Component
         }
     }
 
+    handleCapture(path) {
+        this.props.uploadImage(this.type, path);
+    }
+
     render() {
         return (
             <ScanComponent
                 goBack={() => this.props.navigation.navigate('Dashboard')}
-                onBarCodeRead={this._handleBarCodeRead}
-                onCapture={() => {}}
+                onBarCodeRead={this.handleBarCodeRead}
+                onCapture={this.handleCapture}
             />
         )
     }

@@ -3,7 +3,6 @@ import { View, StyleSheet } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import Camera from 'react-native-camera';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { uploadAvatar } from '../../api/user';
 import Touchable from '../button/touchable';
 import './scan.style';
 
@@ -25,11 +24,9 @@ class Scan extends Component
             .then(result => {
                 const { mediaUrl, path } = result;
 
-                this.props.onCapture(path);
+                console.log('path', path);
 
-                // Todo can be both feed and avatar...
-                console.log('UPLOAD AVATAR', path);
-                uploadAvatar(path);
+                this.props.onCapture(path);
             })
     }
 

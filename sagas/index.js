@@ -8,6 +8,7 @@ import * as questSaga from './quest';
 import * as orderSaga from './order';
 import * as diarySaga from './diary';
 import * as peopleSaga from './people';
+import * as cameraSaga from './camera';
 
 function* mainSaga() {
     yield takeEvery(ACTIONS.DISCOVER_LOAD_EVENTS_NEARBY, eventSaga.loadEventsNearby);
@@ -32,6 +33,8 @@ function* mainSaga() {
     yield takeEvery(ACTIONS.DIARY_LOAD_ITEMS, diarySaga.getItems);
 
     yield takeEvery(ACTIONS.PEOPLE_LOAD_NEARBY, peopleSaga.loadNearby);
+
+    yield takeEvery(ACTIONS.CAMERA_UPLOAD_IMAGE, cameraSaga.uploadImage);
 }
 
 export default mainSaga;
