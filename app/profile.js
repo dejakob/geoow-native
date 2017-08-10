@@ -3,7 +3,7 @@ import { View, StyleSheet, TouchableWithoutFeedback } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import HeaderTitle from '../components/header/header-title';
-import PublicBackground from '../components/public-background/public-background';
+import MainBackground from '../components/main-background/main-background'
 import Touchable from '../components/button/touchable';
 import ProfileComponent from '../components/profile/profile';
 
@@ -17,7 +17,8 @@ class Profile extends Component
 {
     static navigationOptions = (props) => ({
         headerStyle: getStyle('header'),
-        headerLeft: <HeaderTitle>Profile</HeaderTitle>,
+        headerLeft: null,
+        headerTitle: <HeaderTitle>Profile</HeaderTitle>,
         headerRight: (
             <Touchable
                 onPress={() => props.navigation.goBack()}
@@ -33,11 +34,11 @@ class Profile extends Component
 
     render() {
         return (
-            <PublicBackground>
+            <MainBackground>
                 <ProfileComponent
                     {...this.props}
                 />
-            </PublicBackground>
+            </MainBackground>
         );
     }
 }
