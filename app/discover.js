@@ -40,8 +40,6 @@ class Discover extends Component
     render() {
         const { eventsNearby } = this;
 
-        console.log('lat', this.props.location.get('latitude'));
-
         if (!this.props.location.get('latitude') || !this.props.location.get('longitude')) {
             return null;
         }

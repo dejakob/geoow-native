@@ -37,7 +37,6 @@ class Profile extends Component
     }
 
     chooseAvatar() {
-        console.log('choose avatar...');
         this.props.navigation.navigate('Scan', { type: 'AVATAR' })
     }
 }

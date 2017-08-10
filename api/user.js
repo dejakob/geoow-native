@@ -91,7 +91,8 @@ function uploadAvatar(imageUrl) {
         body,
     };
 
-    return fetch(`${API_URL}/user/avatar`, params);
+    return fetch(`${API_URL}/user/avatar`, params)
+        .then(response => response.json());
 }
 
 export {

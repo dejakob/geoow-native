@@ -10,8 +10,6 @@ import './dashboard-header.style';
 class DashboardHeader extends Component
 {
     render() {
-        console.log('this.props.me', this.props.me.toJS());
-
         return (
             <TouchableWithoutFeedback
                 onPress={this.props.onPress}

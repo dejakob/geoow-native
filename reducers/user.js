@@ -54,6 +54,10 @@ function userReducer(state = defaultState, action) {
 
         case ACTIONS.ORDER_BUY_SUCCESS:
             return addScore(state, action);
+
+
+        case ACTIONS.CAMERA_UPLOAD_IMAGE_SUCCESS:
+            return changeAvatar(state, action);
     }
 
     return state;
@@ -106,6 +110,12 @@ function loadMeFailed(state, action) {
 
 function addScore(state, action) {
     return state.updateIn(['me', 'score'], oldScore => oldScore + action.score);
+}
+
+function changeAvatar(state, action) {
+    console.log('action.savedImagePath', action.savedImagePath);
+
+    return state.setIn(['me', 'avatar'], action.savedImagePath);
 }
 
 export default userReducer;
