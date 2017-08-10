@@ -2,6 +2,8 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
+import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
 
 /**
  * <ProfileRow />
@@ -10,6 +12,17 @@ import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
  * @constructor
  */
 function ProfileRow(props) {
+    let Icon = MaterialIcon;
+
+    switch (props.iconFamily) {
+        case 'MaterialCommunityIcons':
+            Icon = MaterialCommunityIcon;
+            break;
+        case 'FontAwesomeIcons':
+            Icon = FontAwesomeIcon;
+            break;
+    }
+
     return (
         <View
             style={getStyle('profile__list__item')}
@@ -17,9 +30,10 @@ function ProfileRow(props) {
             <View
                 style={getStyle('profile__list__item__icon__wrapper')}
             >
-                <MaterialIcon
+                <Icon
                     name={props.icon}
                     size={StyleSheet.flatten(getStyle('profile__list__item__icon')).fontSize}
+                    color={StyleSheet.flatten(getStyle('profile__list__item__icon')).color}
                 />
             </View>
             <View

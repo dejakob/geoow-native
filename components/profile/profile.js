@@ -31,12 +31,37 @@ class Profile extends Component
                 >
                     <ProfileRow
                         icon="person-outline"
+                        iconFamily="MaterialIcons"
                     >
                         <TextInput
                             placeholder='Your name'
                         />
                     </ProfileRow>
-                    <InfoText>You are registered with {this.props.user.getIn(['me', 'email'])}</InfoText>
+                    <ProfileRow
+                        icon="gender-male-female"
+                        iconFamily="MaterialCommunityIcons"
+                    >
+                        <TextInput
+                            placeholder='Gender'
+                        />
+                    </ProfileRow>
+                    <ProfileRow
+                        icon="birthday-cake"
+                        iconFamily="FontAwesomeIcons"
+                    >
+                        <TextInput
+                            placeholder='Birthday'
+                        />
+                    </ProfileRow>
+                    <ProfileRow
+                        icon="email-outline"
+                        iconFamily="MaterialCommunityIcons"
+                    >
+                        <TextInput
+                            placeholder='Email'
+                            defaultValue={this.props.user.getIn(['me', 'email'])}
+                        />
+                    </ProfileRow>
                     <InfoText>By using Geoow, you agree to the Terms of Service, which can be found on geoow.com/terms</InfoText>
                 </ScrollView>
             </View>
