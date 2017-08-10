@@ -113,8 +113,6 @@ function addScore(state, action) {
 }
 
 function changeAvatar(state, action) {
-    console.log('action.savedImagePath', action.savedImagePath);
-
     return state.setIn(['me', 'avatar'], action.savedImagePath);
 }
 

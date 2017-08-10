@@ -24,8 +24,6 @@ class Scan extends Component
             .then(result => {
                 const { mediaUrl, path } = result;
 
-                console.log('path', path);
-
                 this.props.onCapture(path);
             })
     }

@@ -33,8 +33,6 @@ class DiscoverMap extends Component
     _handleRouteChange(params) {
         const lastRouteName = params.navigation.state.routes[params.navigation.state.routes.length - 1].routeName;
 
-        console.log('last route name', lastRouteName);
-
         this.setState({
             showMap: lastRouteName === 'Tabs'
         });

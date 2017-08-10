@@ -9,7 +9,6 @@ import { call, put } from 'redux-saga/effects';
 function* uploadImage(action) {
     try {
         const { scanType, imagePath } = action;
-        console.log('scanType', scanType);
 
         let savedImagePath = null;
 
@@ -18,11 +17,10 @@ function* uploadImage(action) {
             savedImagePath = result.path;
         }
 
-        console.log('saved image path', savedImagePath);
-
         yield put(Actions.uploadImageSuccess(savedImagePath));
     }
     catch (ex) {
+        console.log(ex);
         yield put(Actions.uploadImageFailed(ex));
     }
 }

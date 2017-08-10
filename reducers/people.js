@@ -28,8 +28,6 @@ function peopleReducer(state = defaultState, action) {
             const { peopleNearby } = action;
             const peopleNearbyCollection = {};
 
-            console.log('peopleNearby', peopleNearby);
-
             peopleNearby.forEach(personNearby =>
                 peopleNearbyCollection[personNearby._id] = personNearby
             );

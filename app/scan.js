@@ -32,7 +32,7 @@ class Scan extends Component
         if (
             this.props.navigation.state.params &&
             typeof this.props.navigation.state.params.type === 'string' &&
-            Object.keys(Scan.TYPES).indexOf(typeof this.props.navigation.state.params.type) > -1
+            Object.keys(Scan.TYPES).indexOf(this.props.navigation.state.params.type) > -1
         ) {
             return this.props.navigation.state.params.type;
         }
@@ -77,7 +77,6 @@ class Scan extends Component
 
     handleCapture(path) {
         this.props.uploadImage(this.type, path);
-        console.log('handle capture', this.type, path);
     }
 
     render() {
