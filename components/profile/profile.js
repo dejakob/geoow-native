@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, TouchableWithoutFeedback, ScrollView, StyleSheet, TextInput } from 'react-native';
 import { getStyle } from 'react-native-styler';
+import HumanNames from 'human-names';
 import ProfileSousHeader from './profile-sous-header';
 import InfoText from '../info-text/info-text';
 import Scan from '../scan/scan';
@@ -34,7 +35,7 @@ class Profile extends Component
                         iconFamily="MaterialIcons"
                     >
                         <TextInput
-                            placeholder='Your name'
+                            placeholder={HumanNames.allRandomEn()}
                         />
                     </ProfileRow>
                     <ProfileRow

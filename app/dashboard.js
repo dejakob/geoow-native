@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { View, Image, Text, StyleSheet } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import PublicBackground from '../components/public-background/public-background';
+import MainBackground from '../components/main-background/main-background';
 import DashboardList from '../components/dashboard-list/dashboard-list';
+import ProfileSousHeader from '../components/profile/profile-sous-header';
 import * as BackgroundLocation from '../services/background-location';
 import '../components/header/header.style.js';
 import '../components/tab-bar/tab-bar.style.js';
@@ -28,13 +29,17 @@ class Dashboard extends Component
 
     render() {
         return (
-            <PublicBackground>
+            <MainBackground>
+                <ProfileSousHeader
+                    avatar={this.props.user.getIn(['me', 'avatar'])}
+                    chooseAvatar={() => this.props.navigation.navigate('Profile')}
+                />
                 <DashboardList
                     user={this.props.user}
                     stats={this.props.user.getIn(['me', 'stats'])}
                     navigation={this.props.navigation}
                 />
-            </PublicBackground>
+            </MainBackground>
         );
     }
 }

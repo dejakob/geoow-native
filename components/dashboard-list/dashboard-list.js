@@ -2,7 +2,6 @@ import React from 'react';
 import { FlatList, StyleSheet, View, ScrollView } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import { getDescription } from '../../helpers/user-stats-helper';
-import DashboardHeader from '../dashboard-header/dashboard-header';
 import DashboardListItem from './dashboard-list-item';
 import './dashboard-list.style';
 
@@ -21,19 +20,11 @@ function DashboardList(props) {
             ...item
         }));
 
-    const header = (
-        <DashboardHeader
-            me={props.user.get('me')}
-            onPress={() => props.navigation.navigate('Profile')}
-        />
-    );
-
     return (
         <FlatList
             data={data}
             style={getStyle('dashboard__list')}
             renderItem={renderListItem}
-            ListHeaderComponent={header}
         />
     );
 
