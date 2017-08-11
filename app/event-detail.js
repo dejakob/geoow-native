@@ -169,10 +169,10 @@ class EventDetail extends Component
     _rejectQuestWarn() {
         Alert.alert(
             'Reject Quest',
-            'Are you sure you want to reject this quest? You will lose 20 credits 😱',
+            'Are you sure you want to reject this quest?  😱',
             [
                 { text: 'Cancel', onPress: () => {}, style: 'cancel' },
-                { text: 'I don\'t care', onPress: this._rejectQuest },
+                { text: 'I\'m sure', onPress: this._rejectQuest },
             ],
             { cancelable: false }
         )
