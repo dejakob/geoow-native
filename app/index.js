@@ -22,14 +22,21 @@ import '../constants/'
 
 Mapbox.setAccessToken(MAPBOX_TOKEN);
 
+const DashboardNavigation = StackNavigator({
+    DashboardMain: { screen: connect(Dashboard) },
+    Profile: { screen: connect(Profile) },
+});
 const TabNavigation = TabNavigator({
     Discover: { screen: connect(Discover) },
-    Dashboard: { screen: connect(Dashboard) },
+    Dashboard: { screen: DashboardNavigation },
     People: { screen: connect(People) },
     Scan: { screen: connect(Scan) },
 }, {
     tabBarPosition: 'bottom',
     initialRouteName: 'Discover',
+    navigationOptions: {
+        gesturesEnabled: false
+    },
     tabBarOptions: {
         activeTintColor: getCurrentTheme().colors.active,
         inactiveTintColor: getCurrentTheme().colors.inactive,
@@ -54,7 +61,6 @@ const App = StackNavigator({
     Auth: { screen: connect(Auth) },
     Plan: { screen: connect(Plan) },
     Preferences: { screen: connect(Preferences) },
-    Profile: { screen: connect(Profile) },
     Tabs: { screen: TabNavigation },
     EventDetail: { screen: connect(EventDetail) }
 }, {
