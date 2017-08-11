@@ -44,7 +44,7 @@ createStyle({
 
                 icon: {
                     fontSize: '16h4s',
-                    color: 'theme:icon',
+                    color: 'theme:subtext',
 
                     wrapper: {
                         height: '50h4s',
