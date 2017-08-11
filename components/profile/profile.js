@@ -8,6 +8,11 @@ import Scan from '../scan/scan';
 import ProfileRow from './profile-row';
 import './profile.style';
 
+const GENDERS = {
+    MALE: 'MALE',
+    FEMALE: 'FEMALE'
+};
+
 /**
  * <Profile />
  */
@@ -16,6 +21,33 @@ class Profile extends Component
     constructor() {
         super();
         this.chooseAvatar = this.chooseAvatar.bind(this);
+        this.handleNameChange = this.handleNameChange.bind(this);
+    }
+
+    componentWillMount() {
+        this.state = {
+            name: '',
+            genderGuess: null
+        }
+    }
+
+    chooseAvatar() {
+        this.props.navigation.navigate('Scan', { type: 'AVATAR' })
+    }
+
+    handleNameChange(name) {
+        this.setState({ name });
+
+        const isMaleName = HumanNames.maleEn.some(maleName => maleName.toLowerCase() === name.toLowerCase());
+        const isFemaleName = HumanNames.femaleEn.some(femaleName => femaleName.toLowerCase() === name.toLowerCase());
+
+        if (isMaleName && !isFemaleName) {
+            this.setState({ genderGuess: GENDERS.MALE });
+        }
+
+        if (isFemaleName && !isMaleName) {
+            this.setState({ genderGuess: GENDERS.FEMALE });
+        }
     }
 
     render() {
@@ -35,7 +67,9 @@ class Profile extends Component
                         iconFamily="MaterialIcons"
                     >
                         <TextInput
-                            placeholder={HumanNames.allRandomEn()}
+                            placeholder="Your name"
+                            value={this.state.name}
+                            onChangeText={this.handleNameChange}
                         />
                     </ProfileRow>
                     <ProfileRow
@@ -67,9 +101,6 @@ class Profile extends Component
                 </ScrollView>
             </View>
         );
-    }
-    chooseAvatar() {
-        this.props.navigation.navigate('Scan', { type: 'AVATAR' })
     }
 }
 
