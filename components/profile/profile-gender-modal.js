@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import PartialModal from '../partial-modal/partial-modal';
 import ProfileRow from './profile-row';
-import SmallTitle from '../small-title/small-title';
 
 /**
  * <ProfileGenderModal />

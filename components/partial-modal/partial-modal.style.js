@@ -12,7 +12,8 @@ createStyle({
         content: {
             backgroundColor: 'theme:sheet',
             borderRadius: '6h4s',
-            width: '80%'
+            width: '80%',
+            paddingBottom: '10h4s'
         }
     }
 });

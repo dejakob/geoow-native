@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, TouchableWithoutFeedback, ScrollView, StyleSheet, TextInput } from 'react-native';
+import { View, TouchableWithoutFeedback, ScrollView, StyleSheet, TextInput, Platform } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import HumanNames from 'human-names';
 import ProfileSousHeader from './profile-sous-header';
@@ -7,6 +7,7 @@ import InfoText from '../info-text/info-text';
 import Scan from '../scan/scan';
 import ProfileRow from './profile-row';
 import ProfileGenderModal from './profile-gender-modal';
+import ProfileBirthdateModal from './profile-birthdate-modal';
 import './profile.style';
 
 const GENDERS = {
@@ -24,13 +25,16 @@ class Profile extends Component
         this.chooseAvatar = this.chooseAvatar.bind(this);
         this.handleNameChange = this.handleNameChange.bind(this);
         this.showGenderModal = this.showGenderModal.bind(this);
+        this.showDatepicker = this.showDatepicker.bind(this);
     }
 
     componentWillMount() {
         this.state = {
             name: '',
+            birthDate: null,
             genderGuess: null,
             genderModalVisible: false,
+            iosDatepickerVisible: false
         }
     }
 
@@ -57,6 +61,18 @@ class Profile extends Component
         this.setState({
             genderModalVisible: true
         });
+    }
+
+    showDatepicker() {
+        if (Platform.OS === 'ios') {
+            this.setState({
+                iosDatepickerVisible: true
+            });
+        }
+        else if (Platform.OS === 'android') {
+            // Todo
+            // Android date picker
+        }
     }
 
     render() {
@@ -96,6 +112,7 @@ class Profile extends Component
                     >
                         <TextInput
                             placeholder='Birthday'
+                            onFocus={this.showDatepicker}
                         />
                     </ProfileRow>
                     <ProfileRow
@@ -111,7 +128,14 @@ class Profile extends Component
                 </ScrollView>
                 <ProfileGenderModal
                     visible={this.state.genderModalVisible}
+                    guess={this.state.genderGuess}
+                    gender={this.state.gender}
                     onHide={() => this.setState({ genderModalVisible: false })}
+                />
+                <ProfileBirthdateModal
+                    visible={this.state.iosDatepickerVisible}
+                    date={this.state.birthDate}
+                    onHide={() => this.setState({ iosDatepickerVisible: false })}
                 />
             </View>
         );
