@@ -1,5 +1,7 @@
 import Actions from '../actions';
 import * as UserApi from '../api/user';
+import * as FeedApi from '../api/feed';
+import store from '../services/store';
 import { call, put } from 'redux-saga/effects';
 
 /**
@@ -15,6 +17,15 @@ function* uploadImage(action) {
         if (scanType === 'AVATAR') {
             const result = yield call(UserApi.uploadAvatar, imagePath);
             savedImagePath = result.path;
+        }
+        else {
+            const location = store.getState().location;
+            yield call(
+                FeedApi.postImage,
+                imagePath,
+                location.get('latitude'),
+                location.get('longitude')
+            );
         }
 
         yield put(Actions.uploadImageSuccess(savedImagePath));
