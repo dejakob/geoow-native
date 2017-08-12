@@ -25,7 +25,7 @@ function ProfileRow(props) {
 
     return (
         <View
-            style={getStyle('profile__list__item')}
+            style={[getStyle('profile__list__item'), props.style]}
         >
             <View
                 style={getStyle('profile__list__item__icon__wrapper')}

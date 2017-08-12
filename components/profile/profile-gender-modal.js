@@ -1,16 +1,43 @@
 import React, { Component } from 'react';
-import { Modal, View } from 'react-native';
+import { View, Text } from 'react-native';
+import PartialModal from '../partial-modal/partial-modal';
+import ProfileRow from './profile-row';
+import SmallTitle from '../small-title/small-title';
 
 /**
  * <ProfileGenderModal />
  */
 class ProfileGenderModal extends Component
 {
+    // Sort gender based on guess and random
     render() {
         return (
-            <Modal>
-
-            </Modal>
+            <PartialModal
+                transparent
+                animationType="fade"
+                visible={this.props.visible}
+                onHide={this.props.onHide}
+            >
+                <ProfileRow
+                    icon="gender-male"
+                    iconFamily="MaterialCommunityIcons"
+                >
+                    <Text>Male</Text>
+                </ProfileRow>
+                <ProfileRow
+                    icon="gender-female"
+                    iconFamily="MaterialCommunityIcons"
+                >
+                    <Text>Female</Text>
+                </ProfileRow>
+                <ProfileRow
+                    icon="gender-transgender"
+                    iconFamily="MaterialCommunityIcons"
+                    style={{ borderBottomWidth: 0, borderBottomColor: 'transparent' }}
+                >
+                    <Text>Other</Text>
+                </ProfileRow>
+            </PartialModal>
         );
     }
 }

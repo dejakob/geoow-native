@@ -6,6 +6,7 @@ import ProfileSousHeader from './profile-sous-header';
 import InfoText from '../info-text/info-text';
 import Scan from '../scan/scan';
 import ProfileRow from './profile-row';
+import ProfileGenderModal from './profile-gender-modal';
 import './profile.style';
 
 const GENDERS = {
@@ -22,12 +23,14 @@ class Profile extends Component
         super();
         this.chooseAvatar = this.chooseAvatar.bind(this);
         this.handleNameChange = this.handleNameChange.bind(this);
+        this.showGenderModal = this.showGenderModal.bind(this);
     }
 
     componentWillMount() {
         this.state = {
             name: '',
-            genderGuess: null
+            genderGuess: null,
+            genderModalVisible: false,
         }
     }
 
@@ -48,6 +51,12 @@ class Profile extends Component
         if (isFemaleName && !isMaleName) {
             this.setState({ genderGuess: GENDERS.FEMALE });
         }
+    }
+
+    showGenderModal() {
+        this.setState({
+            genderModalVisible: true
+        });
     }
 
     render() {
@@ -78,6 +87,7 @@ class Profile extends Component
                     >
                         <TextInput
                             placeholder='Gender'
+                            onFocus={this.showGenderModal}
                         />
                     </ProfileRow>
                     <ProfileRow
@@ -99,6 +109,10 @@ class Profile extends Component
                     </ProfileRow>
                     <InfoText>By using Geoow, you agree to the Terms of Service, which can be found on geoow.com/terms</InfoText>
                 </ScrollView>
+                <ProfileGenderModal
+                    visible={this.state.genderModalVisible}
+                    onHide={() => this.setState({ genderModalVisible: false })}
+                />
             </View>
         );
     }
