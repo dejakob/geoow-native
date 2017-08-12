@@ -20,7 +20,7 @@ createStyle({
             line: {
                 width: 1,
                 backgroundColor: 'theme:lightBorder',
-                left: '24h4s',
+                left: '10h4s',
                 top: 0,
                 bottom: 0,
                 position: 'absolute'
@@ -32,12 +32,12 @@ createStyle({
                 backgroundColor: 'theme:secondary',
                 position: 'absolute',
                 top: '21h4s',
-                left: '21h4s'
+                left: '8h4s'
             },
             content: {
                 flex: 1,
                 flexDirection: 'row',
-                paddingLeft: '32h4s',
+                paddingLeft: '18h4s',
                 paddingRight: '32h4s',
                 paddingTop: '13h4s',
                 paddingBottom: '13h4s',
