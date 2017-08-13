@@ -15,6 +15,21 @@ const GENDERS = {
     FEMALE: 'FEMALE'
 };
 
+const maleNames = [
+    ...HumanNames.maleEn,
+    ...HumanNames.maleIt,
+    ...HumanNames.maleFr,
+    ...HumanNames.maleEs,
+    ...HumanNames.maleNl
+];
+const femaleNames = [
+    ...HumanNames.femaleEn,
+    ...HumanNames.femaleIt,
+    ...HumanNames.femaleFr,
+    ...HumanNames.femaleEs,
+    ...HumanNames.femaleNl
+];
+
 /**
  * <Profile />
  */
@@ -45,8 +60,8 @@ class Profile extends Component
     handleNameChange(name) {
         this.setState({ name });
 
-        const isMaleName = HumanNames.maleEn.some(maleName => maleName.toLowerCase() === name.toLowerCase());
-        const isFemaleName = HumanNames.femaleEn.some(femaleName => femaleName.toLowerCase() === name.toLowerCase());
+        const isMaleName = maleNames.some(maleName => maleName.toLowerCase() === name.toLowerCase());
+        const isFemaleName = femaleNames.some(femaleName => femaleName.toLowerCase() === name.toLowerCase());
 
         if (isMaleName && !isFemaleName) {
             this.setState({ genderGuess: GENDERS.MALE });
