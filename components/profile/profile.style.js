@@ -42,6 +42,14 @@ createStyle({
                 borderBottomColor: 'theme:border',
                 borderBottomWidth: 1,
 
+                text: {
+                    fontSize: '12h4s',
+                    color: 'theme:icon'
+                },
+                placeholder: {
+                    fontSize: '12h4s',
+                    color: 'theme:placeholder'
+                },
                 icon: {
                     fontSize: '16h4s',
                     color: 'theme:subtext',

@@ -25,6 +25,7 @@ createTheme({
         darken3: 'rgba(0,0,0,0.3)',
         active: '#66B8C8',
         inactive: '#999999',
+        placeholder: '#cccccc',
         icon: '#333333',
         headerBackground: 'rgb(46,65,89)'
     },

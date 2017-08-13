@@ -3,7 +3,8 @@ import { View, StyleSheet } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import Touchable from '../button/touchable';
 
 /**
  * <ProfileRow />
@@ -23,7 +24,7 @@ function ProfileRow(props) {
             break;
     }
 
-    return (
+    const content = (
         <View
             style={[getStyle('profile__list__item'), props.style]}
         >
@@ -43,6 +44,18 @@ function ProfileRow(props) {
             </View>
         </View>
     );
+
+    if (typeof props.onPress === 'function') {
+        return (
+            <Touchable
+                onPress={props.onPress}
+            >
+                {content}
+            </Touchable>
+        )
+    }
+
+    return content;
 }
 
 export default ProfileRow;

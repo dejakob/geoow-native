@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, TouchableWithoutFeedback, ScrollView, StyleSheet, TextInput, Platform } from 'react-native';
+import { View, TouchableWithoutFeedback, ScrollView, StyleSheet, Text, TextInput, Platform } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import HumanNames from 'human-names';
 import ProfileSousHeader from './profile-sous-header';
@@ -95,25 +95,31 @@ class Profile extends Component
                             placeholder="Your name"
                             value={this.state.name}
                             onChangeText={this.handleNameChange}
+                            style={getStyle('profile__list__item__text')}
+                            placeholderTextColor={StyleSheet.flatten(getStyle('profile__list__item__placeholder')).color}
                         />
                     </ProfileRow>
                     <ProfileRow
                         icon="gender-male-female"
                         iconFamily="MaterialCommunityIcons"
+                        onPress={this.showGenderModal}
                     >
-                        <TextInput
-                            placeholder='Gender'
-                            onFocus={this.showGenderModal}
-                        />
+                        <Text
+                            style={getStyle('profile__list__item__placeholder')}
+                        >
+                            Gender
+                        </Text>
                     </ProfileRow>
                     <ProfileRow
                         icon="birthday-cake"
                         iconFamily="FontAwesomeIcons"
+                        onPress={this.showDatepicker}
                     >
-                        <TextInput
-                            placeholder='Birthday'
-                            onFocus={this.showDatepicker}
-                        />
+                        <Text
+                            style={getStyle('profile__list__item__placeholder')}
+                        >
+                            Birthday
+                        </Text>
                     </ProfileRow>
                     <ProfileRow
                         icon="email-outline"
@@ -122,6 +128,8 @@ class Profile extends Component
                         <TextInput
                             placeholder='Email'
                             defaultValue={this.props.user.getIn(['me', 'email'])}
+                            style={getStyle('profile__list__item__text')}
+                            placeholderTextColor={StyleSheet.flatten(getStyle('profile__list__item__placeholder')).color}
                         />
                     </ProfileRow>
                     <InfoText>By using Geoow, you agree to the Terms of Service, which can be found on geoow.com/terms</InfoText>
