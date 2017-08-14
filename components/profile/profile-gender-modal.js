@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 import PartialModal from '../partial-modal/partial-modal';
 import ProfileRow from './profile-row';
 
 const GENDERS = {
     MALE: 'MALE',
-    FEMALE: 'FEMALE'
+    FEMALE: 'FEMALE',
+    OTHER: 'OTHER'
 };
 
 /**
@@ -13,17 +14,36 @@ const GENDERS = {
  */
 class ProfileGenderModal extends Component
 {
+    constructor() {
+        super();
+        this.selectGender = this.selectGender.bind(this);
+    }
+
+    componentWillMount() {
+        this.state = { selectedGender: this.props.gender };
+    }
+
+    selectGender(gender) {
+        this.setState({
+            selectedGender: gender
+        });
+    }
+
     render() {
         const rows = [
             <ProfileRow
                 icon="gender-male"
                 iconFamily="MaterialCommunityIcons"
+                onPress={() => this.selectGender(GENDERS.MALE)}
+                selected={this.state.selectedGender === GENDERS.MALE}
             >
                 <Text>Male</Text>
             </ProfileRow>,
             <ProfileRow
                 icon="gender-female"
                 iconFamily="MaterialCommunityIcons"
+                onPress={() => this.selectGender(GENDERS.FEMALE)}
+                selected={this.state.selectedGender === GENDERS.FEMALE}
             >
                 <Text>Female</Text>
             </ProfileRow>
@@ -40,7 +60,8 @@ class ProfileGenderModal extends Component
             <ProfileRow
                 icon="gender-transgender"
                 iconFamily="MaterialCommunityIcons"
-                style={{ borderBottomWidth: 0, borderBottomColor: 'transparent' }}
+                onPress={() => this.selectGender(GENDERS.OTHER)}
+                selected={this.state.selectedGender === GENDERS.OTHER}
             >
                 <Text>Other</Text>
             </ProfileRow>
@@ -54,6 +75,10 @@ class ProfileGenderModal extends Component
                 onHide={this.props.onHide}
             >
                 {rows}
+                <Button
+                    onPress={() => this.props.onSubmit(this.state.selectedGender)}
+                    title="OK"
+                />
             </PartialModal>
         );
     }

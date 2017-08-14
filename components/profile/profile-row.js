@@ -24,6 +24,22 @@ function ProfileRow(props) {
             break;
     }
 
+    let rightIcon = null;
+
+    if (props.selected) {
+        rightIcon = (
+            <View
+                style={getStyle('profile__list__item__checkIcon__wrapper')}
+            >
+                <MaterialIcon
+                    name="check"
+                    size={StyleSheet.flatten(getStyle('profile__list__item__checkIcon')).fontSize}
+                    color={StyleSheet.flatten(getStyle('profile__list__item__checkIcon')).color}
+                />
+            </View>
+        )
+    }
+
     const content = (
         <View
             style={[getStyle('profile__list__item'), props.style]}
@@ -42,6 +58,7 @@ function ProfileRow(props) {
             >
                 {props.children}
             </View>
+            {rightIcon}
         </View>
     );
 

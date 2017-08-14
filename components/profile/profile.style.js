@@ -61,6 +61,17 @@ createStyle({
                         justifyContent: 'center'
                     }
                 },
+                checkIcon:{
+                    fontSize: '16h4s',
+                    color: 'theme:ok',
+
+                    wrapper: {
+                        height: '50h4s',
+                        width: '50h4s',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                    }
+                },
                 content: {
                     flex: 1
                 }
