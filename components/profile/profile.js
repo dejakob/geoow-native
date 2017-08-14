@@ -41,15 +41,19 @@ class Profile extends Component
         this.handleNameChange = this.handleNameChange.bind(this);
         this.showGenderModal = this.showGenderModal.bind(this);
         this.showDatepicker = this.showDatepicker.bind(this);
+        this.selectGender = this.selectGender.bind(this);
+        this.selectBirthdate = this.selectBirthdate.bind(this);
+        this.syncData = this.syncData.bind(this);
     }
 
     componentWillMount() {
         this.state = {
             name: '',
-            birthDate: null,
             genderGuess: null,
             genderModalVisible: false,
-            iosDatepickerVisible: false
+            iosDatepickerVisible: false,
+            gender: null,
+            birthDate: null
         }
     }
 
@@ -90,6 +94,24 @@ class Profile extends Component
         }
     }
 
+    selectGender(gender) {
+        this.setState({ gender });
+        this.syncData();
+    }
+
+    selectBirthdate(birthDate) {
+        this.setState({ birthDate });
+        this.syncData();
+    }
+
+    syncData() {
+        this.props.profileUpdate({
+            name: this.state.name,
+            gender: this.state.gender,
+            birthDate: this.state.birthDate
+        })
+    }
+
     render() {
         return (
             <View
@@ -110,6 +132,7 @@ class Profile extends Component
                             placeholder="Your name"
                             value={this.state.name}
                             onChangeText={this.handleNameChange}
+                            onBlur={this.syncData}
                             style={getStyle('profile__list__item__text')}
                             placeholderTextColor={StyleSheet.flatten(getStyle('profile__list__item__placeholder')).color}
                         />
@@ -145,6 +168,7 @@ class Profile extends Component
                             defaultValue={this.props.user.getIn(['me', 'email'])}
                             style={getStyle('profile__list__item__text')}
                             placeholderTextColor={StyleSheet.flatten(getStyle('profile__list__item__placeholder')).color}
+                            editable={false}
                         />
                     </ProfileRow>
                     <InfoText>By using Geoow, you agree to the Terms of Service, which can be found on geoow.com/terms</InfoText>
@@ -154,11 +178,13 @@ class Profile extends Component
                     guess={this.state.genderGuess}
                     gender={this.state.gender}
                     onHide={() => this.setState({ genderModalVisible: false })}
+                    onSubmit={this.selectGender}
                 />
                 <ProfileBirthdateModal
                     visible={this.state.iosDatepickerVisible}
                     date={this.state.birthDate}
                     onHide={() => this.setState({ iosDatepickerVisible: false })}
+                    onSubmit={this.selectBirthdate}
                 />
             </View>
         );
