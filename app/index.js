@@ -22,9 +22,13 @@ import '../constants/'
 
 Mapbox.setAccessToken(MAPBOX_TOKEN);
 
+
 const DashboardNavigation = StackNavigator({
     DashboardMain: { screen: connect(Dashboard) },
     Profile: { screen: connect(Profile) },
+},
+{
+    initialRouteName: 'DashboardMain'
 });
 const TabNavigation = TabNavigator({
     Discover: { screen: connect(Discover) },
@@ -56,6 +60,7 @@ const TabNavigation = TabNavigator({
         },
         pressColor: getCurrentTheme().colors.active,
     },
+    lazy: true
 });
 const App = StackNavigator({
     Auth: { screen: connect(Auth) },
@@ -67,7 +72,7 @@ const App = StackNavigator({
     mode: 'modal',
     onTransitionStart: params => {
         Router.triggerTransitionListeners(params);
-    },
+    }
 });
 
 function mapStateToProps (state) {

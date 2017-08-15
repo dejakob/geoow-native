@@ -17,18 +17,23 @@ function* uploadImage(action) {
         if (scanType === 'AVATAR') {
             const result = yield call(UserApi.uploadAvatar, imagePath);
             savedImagePath = result.path;
+
+            yield put(Actions.uploadImageSuccess(savedImagePath));
         }
         else {
             const location = store.getState().location;
-            yield call(
+            const feedResult = yield call(
                 FeedApi.postImage,
                 imagePath,
                 location.get('latitude'),
                 location.get('longitude')
             );
-        }
+            const { userStat } = feedResult;
 
-        yield put(Actions.uploadImageSuccess(savedImagePath));
+            console.log('userStat', userStat);
+
+            yield put(Actions._loadStatsSuccess([feedResult]));
+        }
     }
     catch (ex) {
         console.log(ex);
