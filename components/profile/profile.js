@@ -1,3 +1,4 @@
+import moment from 'moment';
 import React, { Component } from 'react';
 import { View, TouchableWithoutFeedback, ScrollView, StyleSheet, Text, TextInput, Platform } from 'react-native';
 import { getStyle } from 'react-native-styler';
@@ -12,7 +13,8 @@ import './profile.style';
 
 const GENDERS = {
     MALE: 'MALE',
-    FEMALE: 'FEMALE'
+    FEMALE: 'FEMALE',
+    OTHER: 'OTHER'
 };
 
 const maleNames = [
@@ -46,6 +48,28 @@ class Profile extends Component
         this.syncData = this.syncData.bind(this);
     }
 
+    get selectedGender() {
+        if (this.state.gender === GENDERS.MALE) {
+            return 'Male';
+        }
+        else if (this.state.gender === GENDERS.FEMALE) {
+            return 'Female';
+        }
+        else if (this.state.gender === GENDERS.OTHER) {
+            return 'Other';
+        }
+
+        return 'Gender';
+    }
+
+    get birthDate() {
+        if (!this.state.birthDate) {
+            return 'Date of birth';
+        }
+
+        return moment(this.state.birthDate).format('DD/MM/YYYY');
+    }
+
     componentWillMount() {
         this.state = {
             name: '',
@@ -54,6 +78,20 @@ class Profile extends Component
             iosDatepickerVisible: false,
             gender: null,
             birthDate: null
+        }
+    }
+
+    componentWillReceiveProps() {
+        if (this.state.name === '' && this.props.user.getIn(['me', 'name'])) {
+            this.state.name = this.props.user.getIn(['me', 'name']);
+        }
+
+        if (!this.state.gender && this.props.user.getIn(['me', 'gender'])) {
+            this.state.gender = this.props.user.getIn(['me', 'gender']);
+        }
+
+        if (!this.state.birthDate && this.props.user.getIn(['me', 'birthDate'])) {
+            this.state.birthDate = this.props.user.getIn(['me', 'birthDate']);
         }
     }
 
@@ -95,12 +133,14 @@ class Profile extends Component
     }
 
     selectGender(gender) {
-        this.setState({ gender });
+        console.log('SELECT GENDER', gender);
+
+        this.setState({ gender, genderModalVisible: false });
         this.syncData();
     }
 
     selectBirthdate(birthDate) {
-        this.setState({ birthDate });
+        this.setState({ birthDate, iosDatepickerVisible: false });
         this.syncData();
     }
 
@@ -143,9 +183,9 @@ class Profile extends Component
                         onPress={this.showGenderModal}
                     >
                         <Text
-                            style={getStyle('profile__list__item__placeholder')}
+                            style={this.state.gender === null ? getStyle('profile__list__item__placeholder') : getStyle('profile__list__item__text')}
                         >
-                            Gender
+                            {this.selectedGender}
                         </Text>
                     </ProfileRow>
                     <ProfileRow
@@ -154,9 +194,9 @@ class Profile extends Component
                         onPress={this.showDatepicker}
                     >
                         <Text
-                            style={getStyle('profile__list__item__placeholder')}
+                            style={this.state.birthDate === null ? getStyle('profile__list__item__placeholder') : getStyle('profile__list__item__text')}
                         >
-                            Birthday
+                            {this.birthDate}
                         </Text>
                     </ProfileRow>
                     <ProfileRow

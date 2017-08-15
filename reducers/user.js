@@ -58,6 +58,9 @@ function userReducer(state = defaultState, action) {
 
         case ACTIONS.CAMERA_UPLOAD_IMAGE_SUCCESS:
             return changeAvatar(state, action);
+
+        case ACTIONS.PROFILE_UPDATE:
+            return profileUpdate(state, action);
     }
 
     return state;
@@ -114,6 +117,10 @@ function addScore(state, action) {
 
 function changeAvatar(state, action) {
     return state.setIn(['me', 'avatar'], action.savedImagePath);
+}
+
+function profileUpdate(state, action) {
+    return state.update('me', me => me.mergeDeep(Immutable.fromJS(action.data)));
 }
 
 export default userReducer;
