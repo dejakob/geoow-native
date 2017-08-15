@@ -9,6 +9,7 @@ import SmallTitle from '../components/small-title/small-title';
 
 /**
  * <People />
+ * V2
  */
 class People extends Component
 {
@@ -19,9 +20,9 @@ class People extends Component
     };
 
     componentWillMount() {
-        this.props.loadPeopleNearby();
+        // this.props.loadPeopleNearby();
 
-        setInterval(() => this.props.loadPeopleNearby(), 5000);
+        // setInterval(() => this.props.loadPeopleNearby(), 5000);
     }
 
     componentWillReceiveProps(newProps) {
