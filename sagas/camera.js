@@ -30,9 +30,7 @@ function* uploadImage(action) {
             );
             const { userStat } = feedResult;
 
-            console.log('userStat', userStat);
-
-            yield put(Actions._loadStatsSuccess([feedResult]));
+            yield put(Actions._loadStatsSuccess([userStat]));
         }
     }
     catch (ex) {

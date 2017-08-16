@@ -44,7 +44,7 @@ function DashboardListItem(props) {
                     <Text
                         style={getStyle('dashboard__listItem__content__hour')}
                     >
-                        {moment(item.createdAt).format('HH[h]')}
+                        {moment(item.createdAt).format('HH[h]mm')}
                     </Text>
                 </View>
                 <View

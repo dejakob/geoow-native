@@ -85,11 +85,12 @@ function loadStats(state, action) {
 }
 
 function loadStatsSuccess(state, action) {
+    action.stats.forEach(stat => {
+        state = state.updateIn(['me', 'stats'], stats => stats.unshift(Immutable.fromJS(stat)));
+    });
+
     return state
-        .set('isLoadingStats', false)
-        .updateIn(['me', 'stats'], stats =>
-            stats.mergeDeep(Immutable.fromJS(action.stats))
-        );
+        .set('isLoadingStats', false);
 }
 
 function loadStatsFailed(state, action) {
