@@ -21,20 +21,11 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/jakobkerkhove/.android/build-cache/67434418d389774c8e8fc8f02413a58fb1615356/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="6cfe119a4d5986e4a93f4d14909f55871a601271">
-        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_45bd85ab063d5a244ec44264652e3780d7c0b112/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="8f4556ec1d8d78848448b55178089006675982e3">
+        sha1="2f25dddd10257d19b7d78e4037da635b927a6497">
         <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_f6eb1863c8164732123fb78f5d429abcec33b19d/classes.dex" />
     </item>
     <item
@@ -117,6 +108,15 @@
         revision="25.0.0"
         sha1="70ffe00aaf049893f59d1dad57bd82992faa38ef">
         <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f6484d2b755389d5660f55c42d7654e1c7be5362/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/999118c92d73ecb5d445c3ecab2812a8f88ac606/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="221aa6a0f73f09f59032b5378e3181def72216fe">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b303c67d53683e92244413a336b2828488649850/classes.dex" />
     </item>
     <item
         is-multidex="true"

@@ -131,7 +131,7 @@ class Profile extends Component
         else if (Platform.OS === 'android') {
             try {
                 const {action, year, month, day} = await DatePickerAndroid.open({
-                    date: this.state.birthDate
+                    date: this.state.birthDate || new Date()
                 });
                 if (action !== DatePickerAndroid.dismissedAction) {
                     this.selectBirthdate(new Date(year, month, day));
@@ -173,16 +173,6 @@ class Profile extends Component
                     score={this.props.user.getIn(['me', 'score'])}
                     chooseAvatar={this.chooseAvatar}
                 />
-                <Touchable
-                    onPress={() => this.props.navigation.goBack()}
-                    style={getStyle('profile__backButton')}
-                >
-                    <Icon
-                        name="arrow-back"
-                        color={StyleSheet.flatten(getStyle('header__icon')).color}
-                        size={StyleSheet.flatten(getStyle('header__icon')).fontSize}
-                    />
-                </Touchable>
                 <ScrollView
                     style={getStyle('profile__list')}
                 >
@@ -197,6 +187,7 @@ class Profile extends Component
                             onBlur={this.syncData}
                             style={getStyle('profile__list__item__text')}
                             placeholderTextColor={StyleSheet.flatten(getStyle('profile__list__item__placeholder')).color}
+                            underlineColorAndroid="transparent"
                         />
                     </ProfileRow>
                     <ProfileRow
@@ -231,6 +222,7 @@ class Profile extends Component
                             style={getStyle('profile__list__item__text')}
                             placeholderTextColor={StyleSheet.flatten(getStyle('profile__list__item__placeholder')).color}
                             editable={false}
+                            underlineColorAndroid="transparent"
                         />
                     </ProfileRow>
                     <InfoText>By using Geoow, you agree to the Terms of Service, which can be found on geoow.com/terms</InfoText>
@@ -248,6 +240,16 @@ class Profile extends Component
                     onHide={() => this.setState({ iosDatepickerVisible: false })}
                     onSubmit={this.selectBirthdate}
                 />
+                <Touchable
+                    onPress={() => this.props.navigation.goBack()}
+                    style={getStyle('profile__backButton')}
+                >
+                    <Icon
+                        name="arrow-back"
+                        color={StyleSheet.flatten(getStyle('header__icon')).color}
+                        size={StyleSheet.flatten(getStyle('header__icon')).fontSize}
+                    />
+                </Touchable>
             </View>
         );
     }

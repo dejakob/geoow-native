@@ -3,6 +3,7 @@ import { createStyle } from 'react-native-styler';
 createStyle({
     profile: {
         flex: 1,
+        position: 'relative',
         backgroundColor: 'theme:sheet2',
 
         sousHeader: {
