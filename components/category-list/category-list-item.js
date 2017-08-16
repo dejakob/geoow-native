@@ -11,6 +11,10 @@ import * as CategoryImageHelper from '../../helpers/category-image-helper';
  * @constructor
  */
 function CategoryListItem(props) {
+    if (!CategoryImageHelper.getImageForCategory(props.category)) {
+        return null;
+    }
+
     return (
         <Touchable
             onPress={props.onPress}

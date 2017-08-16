@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, AsyncStorage } from 'react-native';
-import PublicBackground from '../components/public-background/public-background';
+import AuthBackground from '../components/auth-background/auth-background';
 import Article from '../components/article/article';
 import Footer from '../components/footer/footer';
 import PrimaryButton from '../components/button/primary-button';
@@ -65,12 +65,12 @@ class Auth extends Component
 
     render() {
         return (
-            <PublicBackground>
+            <AuthBackground>
                 <Article>
                     <Logo />
                 </Article>
                 {this._renderFooter()}
-            </PublicBackground>
+            </AuthBackground>
         );
     }
 

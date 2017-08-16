@@ -13,7 +13,10 @@ import { MIN_CATEGORIES } from '../constants';
 class Preferences extends Component
 {
     static navigationOptions = {
-        header: null
+        header: null,
+        navigationOptions: {
+            gesturesEnabled: false
+        }
     };
 
     constructor() {
@@ -57,7 +60,7 @@ class Preferences extends Component
             <AuthBackground>
                 <Article>
                     <CategoryList
-                        categories={this.props.event.get('categories')}
+                        categories={this.props.event.get('categories').filter(a => a !== null)}
                         onItemSelect={this._selectCategory}
                         onItemDeselect={this._deselectCategory}
                         selectedCategories={this.state.selectedCategories.toArray()}

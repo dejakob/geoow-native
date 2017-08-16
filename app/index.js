@@ -72,6 +72,9 @@ const App = StackNavigator({
     mode: 'modal',
     onTransitionStart: params => {
         Router.triggerTransitionListeners(params);
+    },
+    navigationOptions: {
+        gesturesEnabled: false
     }
 });
 

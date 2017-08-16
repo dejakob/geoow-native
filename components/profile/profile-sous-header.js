@@ -18,7 +18,7 @@ function ProfileSousHeader(props) {
                 style={getStyle('profile__sousHeader__backgroundImage')}
             >
                 <Image
-                    source={{ uri: props.avatar }}
+                    source={props.avatar ? { uri: props.avatar } : {}}
                     blurRadius={16}
                     resizeMode='cover'
                     style={getStyle('profile__sousHeader__backgroundImage__img')}
