@@ -56,6 +56,9 @@ class Scan extends Component
         if (nextProps.user.getIn(['me', 'avatar']) !== this.props.user.getIn(['me', 'avatar'])) {
             this.props.navigation.navigate('Dashboard');
         }
+        else if (nextProps.user.getIn(['me', 'stats']).count() !== this.props.user.getIn(['me', 'stats']).count()) {
+            this.props.navigation.navigate('Dashboard');
+        }
     }
 
     handleBarCodeRead({ type, data }) {
