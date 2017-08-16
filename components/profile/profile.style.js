@@ -40,6 +40,12 @@ createStyle({
                 marginTop: '10h4s',
             }
         },
+        backButton: {
+            position: 'absolute',
+            top: '48h4s',
+            left: '32h4s',
+            backgroundColor: 'transparent'
+        },
         list: {
             flex: 1,
             backgroundColor: 'theme:sheet',

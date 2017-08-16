@@ -2,6 +2,7 @@ import moment from 'moment';
 import React, { Component } from 'react';
 import { View, TouchableWithoutFeedback, ScrollView, StyleSheet, Text, TextInput, Platform } from 'react-native';
 import { getStyle } from 'react-native-styler';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import HumanNames from 'human-names';
 import ProfileSousHeader from './profile-sous-header';
 import InfoText from '../info-text/info-text';
@@ -9,6 +10,7 @@ import Scan from '../scan/scan';
 import ProfileRow from './profile-row';
 import ProfileGenderModal from './profile-gender-modal';
 import ProfileBirthdateModal from './profile-birthdate-modal';
+import Touchable from '../button/touchable';
 import './profile.style';
 
 const GENDERS = {
@@ -162,6 +164,16 @@ class Profile extends Component
                     score={this.props.user.getIn(['me', 'score'])}
                     chooseAvatar={this.chooseAvatar}
                 />
+                <Touchable
+                    onPress={() => this.props.navigation.goBack()}
+                    style={getStyle('profile__backButton')}
+                >
+                    <Icon
+                        name="arrow-back"
+                        color={StyleSheet.flatten(getStyle('header__icon')).color}
+                        size={StyleSheet.flatten(getStyle('header__icon')).fontSize}
+                    />
+                </Touchable>
                 <ScrollView
                     style={getStyle('profile__list')}
                 >
