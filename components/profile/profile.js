@@ -1,6 +1,6 @@
 import moment from 'moment';
 import React, { Component } from 'react';
-import { View, TouchableWithoutFeedback, ScrollView, StyleSheet, Text, TextInput, Platform } from 'react-native';
+import { View, TouchableWithoutFeedback, ScrollView, StyleSheet, Text, TextInput, Platform, DatePickerAndroid } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import HumanNames from 'human-names';
@@ -74,26 +74,26 @@ class Profile extends Component
 
     componentWillMount() {
         this.state = {
-            name: '',
+            name: this.props.user.getIn(['me', 'name']) || '',
             genderGuess: null,
             genderModalVisible: false,
             iosDatepickerVisible: false,
-            gender: null,
-            birthDate: null
+            gender: this.props.user.getIn(['me', 'gender']) || null,
+            birthDate: this.props.user.getIn(['me', 'birthDate']) || null
         }
     }
 
-    componentWillReceiveProps() {
-        if (this.state.name === '' && this.props.user.getIn(['me', 'name'])) {
-            this.state.name = this.props.user.getIn(['me', 'name']);
+    componentWillReceiveProps(newProps) {
+        if (this.state.name === '' && newProps.user.getIn(['me', 'name'])) {
+            this.state.name = newProps.user.getIn(['me', 'name']);
         }
 
-        if (!this.state.gender && this.props.user.getIn(['me', 'gender'])) {
-            this.state.gender = this.props.user.getIn(['me', 'gender']);
+        if (!this.state.gender && newProps.user.getIn(['me', 'gender'])) {
+            this.state.gender = newProps.user.getIn(['me', 'gender']);
         }
 
-        if (!this.state.birthDate && this.props.user.getIn(['me', 'birthDate'])) {
-            this.state.birthDate = this.props.user.getIn(['me', 'birthDate']);
+        if (!this.state.birthDate && newProps.user.getIn(['me', 'birthDate'])) {
+            this.state.birthDate = newProps.user.getIn(['me', 'birthDate']);
         }
     }
 
@@ -122,28 +122,37 @@ class Profile extends Component
         });
     }
 
-    showDatepicker() {
+    async showDatepicker() {
         if (Platform.OS === 'ios') {
             this.setState({
                 iosDatepickerVisible: true
             });
         }
         else if (Platform.OS === 'android') {
-            // Todo
-            // Android date picker
+            try {
+                const {action, year, month, day} = await DatePickerAndroid.open({
+                    date: this.state.birthDate
+                });
+                if (action !== DatePickerAndroid.dismissedAction) {
+                    this.selectBirthdate(new Date(year, month, day));
+                }
+            } catch ({code, message}) {
+                console.warn('Cannot open date picker', message);
+            }
         }
     }
 
     selectGender(gender) {
-        console.log('SELECT GENDER', gender);
-
         this.setState({ gender, genderModalVisible: false });
-        this.syncData();
+        setTimeout(() => this.syncData(), 400);
     }
 
     selectBirthdate(birthDate) {
-        this.setState({ birthDate, iosDatepickerVisible: false });
-        this.syncData();
+        this.setState({
+            birthDate: birthDate.getTime(),
+            iosDatepickerVisible: false
+        });
+        setTimeout(() => this.syncData(), 400);
     }
 
     syncData() {

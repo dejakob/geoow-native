@@ -72,7 +72,6 @@ class ProfileGenderModal extends Component
                 transparent
                 animationType="fade"
                 visible={this.props.visible}
-                onHide={this.props.onHide}
             >
                 {rows}
                 <Button

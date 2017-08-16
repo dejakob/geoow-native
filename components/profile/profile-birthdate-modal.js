@@ -1,3 +1,4 @@
+import moment from 'moment';
 import React, { Component } from 'react';
 import { Button, View, Text, DatePickerIOS } from 'react-native';
 import PartialModal from '../partial-modal/partial-modal';
@@ -25,12 +26,13 @@ class ProfileBirthdateModal extends Component
                 transparent
                 animationType="fade"
                 visible={this.props.visible}
-                onHide={this.props.onHide}
             >
                 <DatePickerIOS
                     mode='date'
                     date={this.state.date}
                     onDateChange={date => this.setState({ date })}
+                    minimumDate={new Date('1990-00-00T00:00:00')}
+                    maximumDate={moment().subtract(13, 'year').startOf('day').toDate()}
                 />
                 <Button
                     onPress={() => this.props.onSubmit(this.state.date)}
