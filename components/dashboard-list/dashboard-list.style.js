@@ -1,5 +1,7 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native';
 import { createStyle } from 'react-native-styler';
+
+const window = Dimensions.get('window');
 
 createStyle({
     dashboard: {
@@ -64,6 +66,14 @@ createStyle({
                     paddingBottom: '10h4s'
                 }
             },
+        },
+
+        listItemMedia: {
+            image: {
+                backgroundColor: 'theme:sheet2',
+                borderRadius: '3h4s',
+                height: '100h4s',
+            }
         }
     }
 });

@@ -4,6 +4,7 @@ import { View, Text, Image } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import { getDescription } from '../../helpers/user-stats-helper';
 import ScoreBadge from '../score-badge/score-badge';
+import DashboardListItemMedia from './dashboard-list-item-media';
 
 /**
  * <DashboardList />
@@ -11,6 +12,15 @@ import ScoreBadge from '../score-badge/score-badge';
  */
 function DashboardListItem(props) {
     const { item } = props;
+    let media = null;
+
+    if (item.data && item.data.feedItem) {
+        media = (
+            <DashboardListItemMedia
+                feedItem={item.data.feedItem}
+            />
+        );
+    }
 
     return (
         <View
@@ -40,6 +50,7 @@ function DashboardListItem(props) {
                 <View
                     style={getStyle('dashboard__listItem__content__descScore')}
                 >
+                    {media}
                     <Text
                         style={getStyle('dashboard__listItem__content__description')}
                     >
