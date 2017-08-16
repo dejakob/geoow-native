@@ -29,6 +29,15 @@ createStyle({
                 right: 0,
                 bottom: 0,
                 backgroundColor: 'theme:secondary80'
+            },
+            score: {
+                backgroundColor: 'transparent',
+                color: 'theme:primary',
+                fontWeight: '300',
+                fontSize: '16h4s',
+                textAlign: 'center',
+                width: '70h4s',
+                marginTop: '10h4s',
             }
         },
         list: {

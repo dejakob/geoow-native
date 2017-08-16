@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TouchableWithoutFeedback, Image } from 'react-native';
+import { View, TouchableWithoutFeedback, Image, Text } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import Avatar from '../avatar/avatar';
 
@@ -34,6 +34,11 @@ function ProfileSousHeader(props) {
                     <Avatar
                         image={props.avatar}
                     />
+                    <Text
+                        style={getStyle('profile__sousHeader__score')}
+                    >
+                        {props.score}
+                    </Text>
                 </View>
             </TouchableWithoutFeedback>
         </View>

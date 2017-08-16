@@ -159,6 +159,7 @@ class Profile extends Component
             >
                 <ProfileSousHeader
                     avatar={this.props.user.getIn(['me', 'avatar'])}
+                    score={this.props.user.getIn(['me', 'score'])}
                     chooseAvatar={this.chooseAvatar}
                 />
                 <ScrollView
