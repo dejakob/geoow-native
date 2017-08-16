@@ -22,6 +22,7 @@ createStyle({
             back: {
                 backgroundColor: 'transparent'
             },
+
             primary: {
                 borderRadius: '25h4s',
                 height: '50h4s',

@@ -16,6 +16,12 @@ class Scan extends Component
         this.handlePrimaryPress = this.handlePrimaryPress.bind(this);
     }
 
+    componentWillMount() {
+        this.state = {
+            type: 'front'
+        }
+    }
+
     handlePrimaryPress() {
 
         // Video is also possible with this lib! :)
@@ -39,7 +45,7 @@ class Scan extends Component
                     onBarCodeRead={this.props.onBarCodeRead}
                     captureTarget={Camera.constants.CaptureTarget.disk}
                     ref={camera => this.camera = camera}
-                    type="front"
+                    type={this.state.type}
                 />
 
                 <View
@@ -64,9 +70,16 @@ class Scan extends Component
 
                         </View>
                     </Touchable>
-                    <View>
-
-                    </View>
+                    <Touchable
+                        onPress={() => this.setState({ type: this.state.type === 'front' ? 'back' : 'front' })}
+                        style={getStyle('scan__footer__back')}
+                    >
+                        <Icon
+                            name="swap-horiz"
+                            color={StyleSheet.flatten(getStyle('header__icon')).color}
+                            size={StyleSheet.flatten(getStyle('header__icon')).fontSize}
+                        />
+                    </Touchable>
                 </View>
             </View>
         );
