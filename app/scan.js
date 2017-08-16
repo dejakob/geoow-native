@@ -57,6 +57,7 @@ class Scan extends Component
             this.props.navigation.navigate('Dashboard');
         }
         else if (nextProps.user.getIn(['me', 'stats']).count() !== this.props.user.getIn(['me', 'stats']).count()) {
+            this.props.loadMe();
             this.props.navigation.navigate('Dashboard');
         }
     }

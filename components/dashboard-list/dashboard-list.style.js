@@ -6,7 +6,6 @@ const window = Dimensions.get('window');
 createStyle({
     dashboard: {
         list: {
-            flexDirection: 'column',
             flex: 1,
             position: 'relative'
         },

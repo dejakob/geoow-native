@@ -41,6 +41,8 @@ const TabNavigation = TabNavigator({
     navigationOptions: {
         gesturesEnabled: false
     },
+    swipeEnabled: false,
+    animationEnabled: false,
     tabBarOptions: {
         activeTintColor: getCurrentTheme().colors.active,
         inactiveTintColor: getCurrentTheme().colors.inactive,
@@ -60,7 +62,7 @@ const TabNavigation = TabNavigator({
         },
         pressColor: getCurrentTheme().colors.active,
     },
-    lazy: true
+    lazy: false
 });
 const App = StackNavigator({
     Auth: { screen: connect(Auth) },
