@@ -1636,7 +1636,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.geoownative;
 				PRODUCT_NAME = GeoowNative;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1675,7 +1675,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.geoownative;
 				PRODUCT_NAME = GeoowNative;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
