@@ -31,6 +31,16 @@ createStyle({
                 borderWidth: 1,
                 borderStyle: 'solid'
             }
+        },
+        overlay: {
+            position: 'absolute',
+            backgroundColor: 'theme:secondary80',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            alignItems: 'center',
+            justifyContent: 'center'
         }
     }
 });

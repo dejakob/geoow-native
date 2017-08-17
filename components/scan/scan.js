@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { ActivityIndicator, View, StyleSheet } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import Camera from 'react-native-camera';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -14,6 +14,7 @@ class Scan extends Component
     constructor() {
         super();
         this.handlePrimaryPress = this.handlePrimaryPress.bind(this);
+        this.renderLoadingOverlay = this.renderLoadingOverlay.bind(this);
     }
 
     componentWillMount() {
@@ -81,6 +82,25 @@ class Scan extends Component
                         />
                     </Touchable>
                 </View>
+                {this.renderLoadingOverlay()}
+            </View>
+        );
+    }
+
+    renderLoadingOverlay() {
+        if (!this.props.isBusy) {
+            return null;
+        }
+
+        return (
+            <View
+                style={getStyle('scan__overlay')}
+            >
+                <ActivityIndicator
+                    animating={true}
+                    color="#ffffff"
+                    size="large"
+                />
             </View>
         );
     }

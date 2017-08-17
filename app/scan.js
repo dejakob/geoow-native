@@ -42,6 +42,9 @@ class Scan extends Component
 
     componentWillMount() {
         this._stopScan = false;
+        this.state = {
+            isUploading: false
+        };
     }
 
     componentWillReceiveProps(nextProps) {
@@ -54,9 +57,11 @@ class Scan extends Component
         }
 
         if (nextProps.user.getIn(['me', 'avatar']) !== this.props.user.getIn(['me', 'avatar'])) {
+            this.state.isUploading = false;
             this.props.navigation.navigate('Dashboard');
         }
         else if (nextProps.user.getIn(['me', 'stats']).count() !== this.props.user.getIn(['me', 'stats']).count()) {
+            this.state.isUploading = false;
             this.props.loadMe();
             this.props.navigation.navigate('Dashboard');
         }
@@ -84,6 +89,7 @@ class Scan extends Component
     }
 
     handleCapture(path) {
+        this.setState({ isUploading: true });
         this.props.uploadImage(this.type, path);
     }
 
@@ -93,6 +99,7 @@ class Scan extends Component
                 goBack={() => this.props.navigation.navigate('Dashboard')}
                 onBarCodeRead={this.handleBarCodeRead}
                 onCapture={this.handleCapture}
+                isBusy={this.state.isUploading}
             />
         )
     }
