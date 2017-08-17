@@ -1,24 +1,50 @@
 import React, { Component } from 'react';
-import { Alert } from 'react-native';
+import { Alert, StyleSheet, View } from 'react-native';
+import { getStyle } from 'react-native-styler';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import * as ArticleApi from '../api/article';
-import Camera from 'react-native-camera';
+import ScanComponent from '../components/scan/scan';
 
 /**
  * <Scan />
  */
 class Scan extends Component
 {
-    static navigationOptions = {
-        header: null
+    static navigationOptions = props => ({
+        header: null,
+        gesturesEnabled: false,
+        tabBarIcon: ({ tintColor }) => <Icon name="camera-iris" style={[getStyle('tabBar__icon'), { color: tintColor }]} />,
+        tabBarVisible: false
+    });
+
+    static TYPES = {
+        AVATAR: 'AVATAR',
+        FEED: 'FEED'
     };
 
     constructor() {
         super();
-        this._handleBarCodeRead = this._handleBarCodeRead.bind(this);
+        this.handleBarCodeRead = this.handleBarCodeRead.bind(this);
+        this.handleCapture = this.handleCapture.bind(this);
+    }
+
+    get type() {
+        if (
+            this.props.navigation.state.params &&
+            typeof this.props.navigation.state.params.type === 'string' &&
+            Object.keys(Scan.TYPES).indexOf(this.props.navigation.state.params.type) > -1
+        ) {
+            return this.props.navigation.state.params.type;
+        }
+
+        return Scan.TYPES.FEED;
     }
 
     componentWillMount() {
         this._stopScan = false;
+        this.state = {
+            isUploading: false
+        };
     }
 
     componentWillReceiveProps(nextProps) {
@@ -29,9 +55,19 @@ class Scan extends Component
             this.props.loadMe();
             this.props.navigation.goBack();
         }
+
+        if (nextProps.user.getIn(['me', 'avatar']) !== this.props.user.getIn(['me', 'avatar'])) {
+            this.state.isUploading = false;
+            this.props.navigation.navigate('Dashboard');
+        }
+        else if (nextProps.user.getIn(['me', 'stats']).count() !== this.props.user.getIn(['me', 'stats']).count()) {
+            this.state.isUploading = false;
+            this.props.loadMe();
+            this.props.navigation.navigate('Dashboard');
+        }
     }
 
-    _handleBarCodeRead({ type, data }) {
+    handleBarCodeRead({ type, data }) {
         if (!this._stopScan && type === 'QR_CODE') {
             this._stopScan = true;
 
@@ -52,12 +88,18 @@ class Scan extends Component
         }
     }
 
+    handleCapture(path) {
+        this.setState({ isUploading: true });
+        this.props.uploadImage(this.type, path);
+    }
+
     render() {
         return (
-            <Camera
-                style={{ flex: 1 }}
-                barCodeTypes={['qr']}
-                onBarCodeRead={this._handleBarCodeRead}
+            <ScanComponent
+                goBack={() => this.props.navigation.navigate('Dashboard')}
+                onBarCodeRead={this.handleBarCodeRead}
+                onCapture={this.handleCapture}
+                isBusy={this.state.isUploading}
             />
         )
     }

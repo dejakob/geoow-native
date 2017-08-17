@@ -1,5 +1,7 @@
 import BackgroundGeolocation from "react-native-background-geolocation-android";
 import { getDistanceInMeter } from '../helpers/distance-helper';
+import API from '../constants/api';
+import { getCurrentToken } from '../sagas/auth';
 // In meter
 const MAX_DISTANCE_TO_BE_VALID = 350;
 const QUEST_TIMEOUT = 43200000;
@@ -13,13 +15,20 @@ function initTracking() {
         stationaryRadius: 25,
         distanceFilter: 10,
         // Activity Recognition
-        stopTimeout: 1,
         // Application config
-        debug: true, // <-- enable this hear sounds for background-geolocation life-cycle.
-        logLevel: BackgroundGeolocation.LOG_LEVEL_VERBOSE,
-        stopOnTerminate: false,   // <-- Allow the background-service to continue tracking when user closes the app.
-        startOnBoot: false,        // <-- Auto start tracking when device is powered-up.
+        debug: false, // <-- enable this hear sounds for background-geolocation life-cycle.
+        logLevel: BackgroundGeolocation.LOG_LEVEL_DEBUG,
+        stopOnTerminate: true,   // <-- Allow the background-service to continue tracking when user closes the app.
+        startOnBoot: true,        // <-- Auto start tracking when device is powered-up.
+        url: `${API.URL}/locations`,
+        headers: {              // <-- Optional HTTP headers
+            'Content-Type': 'application/json',
+            'authorization': `Bearer ${getCurrentToken()}`
+        },
+        batchSync: false,       // <-- [Default: false] Set true to sync locations to server in a single HTTP request.
+        autoSync: true
     }, function(state) {
+        console.log('state', state);
         console.log("- BackgroundGeolocation is configured and ready: ", state.enabled);
 
         if (!state.enabled) {

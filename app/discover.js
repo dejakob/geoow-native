@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { getStyle } from 'react-native-styler';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import MainBackground from '../components/main-background/main-background';
 import DiscoverMap from '../components/discover-map/discover-map';
 import DiscoverList from '../components/discover-list/discover-list';
@@ -9,7 +11,9 @@ import DiscoverList from '../components/discover-list/discover-list';
 class Discover extends Component
 {
     static navigationOptions = {
-        header: null
+        header: null,
+        gesturesEnabled: false,
+        tabBarIcon: ({ tintColor }) => <Icon name="map" style={[getStyle('tabBar__icon'), { color: tintColor }]} />
     };
 
     get eventsNearby() {
@@ -22,7 +26,6 @@ class Discover extends Component
 
     componentWillMount() {
         this.props.loadGeolocation();
-        this.props.loadEventsNearby();
     }
 
     componentWillReceiveProps(newProps) {
@@ -36,6 +39,10 @@ class Discover extends Component
 
     render() {
         const { eventsNearby } = this;
+
+        if (!this.props.location.get('latitude') || !this.props.location.get('longitude')) {
+            return null;
+        }
 
         return (
             <MainBackground>

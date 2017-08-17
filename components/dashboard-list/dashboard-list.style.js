@@ -1,76 +1,77 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native';
 import { createStyle } from 'react-native-styler';
+
+const window = Dimensions.get('window');
 
 createStyle({
     dashboard: {
         list: {
-            flexDirection: 'column',
             flex: 1,
-            paddingTop: '8h4s',
-            paddingLeft: '4h4s',
-            paddingRight: '4h4s',
-
-            header: {
-                paddingTop: '40h4s'
-            },
+            position: 'relative'
         },
 
         listItem: {
             flexDirection: 'row',
             backgroundColor: 'theme:sheet',
-            borderRadius: '3h4s',
             overflow: 'hidden',
-            margin: '4h4s',
+            minHeight: '50h4s',
+            borderBottomColor: 'theme:lightBorder',
+            borderBottomWidth: 1,
 
-            header: {
-                position: 'relative',
-                height: '70h4s',
-                width: '100h4s',
+            line: {
+                width: 1,
+                backgroundColor: 'theme:lightBorder',
+                left: '16h4s',
+                top: 0,
+                bottom: 0,
+                position: 'absolute'
+            },
+            dot: {
+                height: '6h4s',
+                width: '6h4s',
+                borderRadius: '3h4s',
+                backgroundColor: 'theme:secondary',
+                position: 'absolute',
+                top: '21h4s',
+                left: '14h4s'
+            },
+            content: {
+                flex: 1,
+                flexDirection: 'row',
+                paddingLeft: '22h4s',
+                paddingRight: '32h4s',
+                paddingTop: '13h4s',
+                paddingBottom: '13h4s',
 
-                image: {
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    height: '100h4s',
-                    width: '100%'
+                day: {
+                    color: 'theme:secondary',
+                    fontWeight: '600',
+                    fontSize: '14h4s'
                 },
-                overlay: {
-                    flex: 1,
-                    alignItems: 'center',
-                    justifyContent: 'center',
-
-                    ok: {
-                        backgroundColor: 'theme:okOpacity'
-                    },
-                    notok: {
-                        backgroundColor: 'theme:notokOpacity'
-                    }
+                hour: {
+                    fontSize: '10h4s',
+                    color: 'theme:subtext',
+                    fontWeight: '300'
                 },
-                score: {
-                    color: 'theme:sheet',
-                    fontSize: '24h4s',
-                    fontWeight: '100'
+                descScore: {
+                    marginLeft: '22h4s',
+                    marginRight: '22h4s'
+                },
+                description: {
+                    fontSize: '10h4s',
+                    color: 'theme:subtext',
+                    fontWeight: '300',
+                    paddingTop: '10h4s',
+                    paddingBottom: '10h4s'
                 }
             },
-            date: {
-                fontSize: 'theme:small',
-                fontWeight: '600',
-                textAlign: 'center',
-                color: 'theme:subtext',
-            },
-            descriptionContainer: {
-                flex: 1,
-                backgroundColor: 'theme:lighten8',
-                paddingLeft: '4w4s',
-                paddingRight: '4w4s',
-                borderRadius: '2h4s',
-                justifyContent: 'space-around'
-            },
-            description: {
-                fontSize: 'theme:small',
-                textAlign: 'center'
+        },
+
+        listItemMedia: {
+            image: {
+                backgroundColor: 'theme:sheet2',
+                borderRadius: '3h4s',
+                height: '100h4s',
             }
         }
     }

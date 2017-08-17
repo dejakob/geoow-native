@@ -54,6 +54,13 @@ function userReducer(state = defaultState, action) {
 
         case ACTIONS.ORDER_BUY_SUCCESS:
             return addScore(state, action);
+
+
+        case ACTIONS.CAMERA_UPLOAD_IMAGE_SUCCESS:
+            return changeAvatar(state, action);
+
+        case ACTIONS.PROFILE_UPDATE:
+            return profileUpdate(state, action);
     }
 
     return state;
@@ -78,11 +85,12 @@ function loadStats(state, action) {
 }
 
 function loadStatsSuccess(state, action) {
+    action.stats.forEach(stat => {
+        state = state.updateIn(['me', 'stats'], stats => stats.unshift(Immutable.fromJS(stat)));
+    });
+
     return state
-        .set('isLoadingStats', false)
-        .updateIn(['me', 'stats'], stats =>
-            stats.mergeDeep(Immutable.fromJS(action.stats))
-        );
+        .set('isLoadingStats', false);
 }
 
 function loadStatsFailed(state, action) {
@@ -106,6 +114,14 @@ function loadMeFailed(state, action) {
 
 function addScore(state, action) {
     return state.updateIn(['me', 'score'], oldScore => oldScore + action.score);
+}
+
+function changeAvatar(state, action) {
+    return state.setIn(['me', 'avatar'], action.savedImagePath);
+}
+
+function profileUpdate(state, action) {
+    return state.update('me', me => me.mergeDeep(Immutable.fromJS(action.data)));
 }
 
 export default userReducer;

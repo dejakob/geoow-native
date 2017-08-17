@@ -1,0 +1,35 @@
+dependencies: \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/RCTMapboxGL/MGLPolyline+RCTAdditions.m \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/RCTMapboxGL/MGLPolyline+RCTAdditions.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Modules/module.modulemap \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/NSValue+MGLAdditions.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLUserLocation.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLTilePyramidOfflineRegion.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLStyle.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLOfflineStorage.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLOfflineRegion.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLOfflinePack.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLMapViewDelegate.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLMapView+MGLCustomStyleLayerAdditions.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLMapView+IBAdditions.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLMapView.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLMapCamera.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLShapeCollection.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLPointAnnotation.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLPolygon.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLGeometry.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLOverlay.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLShape.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLMultiPoint.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLPolyline.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLFeature.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLCoordinateFormatter.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLCompassDirectionFormatter.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLClockDirectionFormatter.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLCalloutView.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLAnnotationImage.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLAnnotation.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLAccountManager.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLTypes.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/MGLAnnotationView.h \
+  /Users/jakobkerkhove/geoow/geoow-native/node_modules/react-native-mapbox-gl/ios/Mapbox.framework/Headers/Mapbox.h
