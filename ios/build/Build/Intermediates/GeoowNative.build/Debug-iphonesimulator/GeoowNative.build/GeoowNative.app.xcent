@@ -3,10 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>M8LHK76447.org.reactjs.native.example.GeoowNative</string>
-	<key>keychain-access-groups</key>
-	<array>
-		<string>M8LHK76447.org.reactjs.native.example.GeoowNative</string>
-	</array>
+	<string>H2X6JLSFER.com.geoownative</string>
+	<key>aps-environment</key>
+	<string>development</string>
 </dict>
 </plist>

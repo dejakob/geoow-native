@@ -3,6 +3,12 @@ import { Image, View } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import './avatar.style';
 
+/**
+ * <Avatar />
+ * @param props
+ * @returns {XML}
+ * @constructor
+ */
 function Avatar(props) {
     return (
         <View
@@ -10,7 +16,8 @@ function Avatar(props) {
         >
             <Image
                 style={[getStyle('avatar'), props.style]}
-                source={require('../../assets/female.png')}
+                source={props.image ? { uri: props.image} : require('../../assets/female.png')}
+                resizeMode='cover'
             />
         </View>
     )

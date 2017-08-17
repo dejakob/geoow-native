@@ -8,7 +8,6 @@ import PublicBackground from '../components/public-background/public-background'
 import DashboardPrimaryAction from '../components/dashboard-primary-action/dashboard-primary-action';
 import DiaryList from '../components/diary-list/diary-list';
 import DiaryAddModal from '../components/diary-add-modal/diary-add-modal';
-import FlatIcon from '../components/flat-icon/flat-icon';
 import '../components/header/header.style.js';
 import '../components/tab-bar/tab-bar.style.js';
 
@@ -27,8 +26,6 @@ class Diary extends Component
             />
         ),
         gesturesEnabled: false,
-
-        tabBarIcon: ({ tintColor }) => <FlatIcon name="notebook" style={[getStyle('tabBar__icon'), { color: tintColor }]} />
     });
 
     componentWillMount() {

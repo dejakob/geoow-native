@@ -7,9 +7,11 @@ createTheme({
         subtext: '#999999',
         primary: '#ffffff',
         secondary: '#5a8197',
+        secondary80: 'rgba(90,129,151,0.8)',
         sheet: '#ffffff',
         sheet2: '#f4fdff',
         border: '#cccccc',
+        lightBorder: '#eeeeee',
         ok: '#2fb536',
         okSoft: '#d7ffd9',
         okOpacity: 'rgba(47,181,54,0.8)',
@@ -23,6 +25,8 @@ createTheme({
         darken3: 'rgba(0,0,0,0.3)',
         active: '#66B8C8',
         inactive: '#999999',
+        placeholder: '#cccccc',
+        icon: '#333333',
         headerBackground: 'rgb(46,65,89)'
     },
     fontSizes: {
@@ -30,7 +34,8 @@ createTheme({
         h2: '24h4s',
         button: '14h4s',
         p: '12h4s',
-        small: '10h4s'
+        small: '10h4s',
+        title: '12h4s'
     }
 });
 

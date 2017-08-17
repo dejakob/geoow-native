@@ -3,6 +3,8 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import { getDescription } from '../../helpers/user-stats-helper';
+import ScoreBadge from '../score-badge/score-badge';
+import DashboardListItemMedia from './dashboard-list-item-media';
 
 /**
  * <DashboardList />
@@ -10,46 +12,54 @@ import { getDescription } from '../../helpers/user-stats-helper';
  */
 function DashboardListItem(props) {
     const { item } = props;
+    let media = null;
 
-    const overlayStyle = item.score > 0 ?
-        getStyle('dashboard__listItem__header__overlay__ok') :
-        getStyle('dashboard__listItem__header__overlay__notok')
+    if (item.data && item.data.feedItem) {
+        media = (
+            <DashboardListItemMedia
+                feedItem={item.data.feedItem}
+            />
+        );
+    }
 
     return (
         <View
             style={getStyle('dashboard__listItem')}
         >
-            <Image
-                style={getStyle('dashboard__listItem__header__image')}
-                source={require('../../assets/beach-pexels.jpeg')}
-                resizeMode='cover'
+            <View
+                style={getStyle('dashboard__listItem__line')}
             />
             <View
-                style={getStyle('dashboard__listItem__header')}
+                style={getStyle('dashboard__listItem__dot')}
+            />
+            <View
+                style={getStyle('dashboard__listItem__content')}
             >
-                <View
-                    style={[getStyle('dashboard__listItem__header__overlay'), overlayStyle]}
-                >
+                <View>
                     <Text
-                        style={getStyle('dashboard__listItem__header__score')}
+                        style={getStyle('dashboard__listItem__content__day')}
                     >
-                        {item.score}
+                        {moment(item.createdAt).format('DD MMM')}
+                    </Text>
+                    <Text
+                        style={getStyle('dashboard__listItem__content__hour')}
+                    >
+                        {moment(item.createdAt).format('HH[h]mm')}
                     </Text>
                 </View>
-            </View>
-            <View
-                style={getStyle('dashboard__listItem__descriptionContainer')}
-            >
-                <Text
-                    style={getStyle('dashboard__listItem__description')}
+                <View
+                    style={getStyle('dashboard__listItem__content__descScore')}
                 >
-                    {getDescription(item.type, item.data)}
-                </Text>
-                <Text
-                    style={getStyle('dashboard__listItem__date')}
-                >
-                    {moment(item.createdAt).format('DD MMM, HH[h]')}
-                </Text>
+                    {media}
+                    <Text
+                        style={getStyle('dashboard__listItem__content__description')}
+                    >
+                        {getDescription(item.type, item.data)}
+                    </Text>
+                    <ScoreBadge
+                        score={item.score}
+                    />
+                </View>
             </View>
         </View>
     );

@@ -8,8 +8,13 @@ createStyle({
 
         title: {
             fontWeight: '300',
-            fontSize: 'theme:h2',
+            fontSize: 'theme:title',
             color: 'theme:primary'
+        },
+
+        icon: {
+            color: 'theme:primary',
+            fontSize: 'theme:h2'
         }
     },
 

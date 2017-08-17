@@ -1,8 +1,7 @@
 import React from 'react';
-import moment from 'moment';
 import { FlatList, StyleSheet, View, ScrollView } from 'react-native';
-import { getDescription } from '../../helpers/user-stats-helper';
 import { getStyle } from 'react-native-styler';
+import { getDescription } from '../../helpers/user-stats-helper';
 import DashboardListItem from './dashboard-list-item';
 import './dashboard-list.style';
 
@@ -22,26 +21,20 @@ function DashboardList(props) {
         }));
 
     return (
-        <ScrollView>
-            <View
-                style={getStyle('dashboard__list')}
-            >
-                {data.filter((item, index) => index % 2 === 0).map(renderListItem)}
-            </View>
-        </ScrollView>
+        <FlatList
+            data={data}
+            style={getStyle('dashboard__list')}
+            renderItem={renderListItem}
+        />
     );
 
-    function renderListItem(item, index) {
+    function renderListItem({ item, index }) {
         return (
             <DashboardListItem
                 key={index}
                 item={item}
             />
         )
-    }
-
-    function renderBadge(item) {
-        return null;
     }
 }
 

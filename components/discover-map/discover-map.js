@@ -34,7 +34,7 @@ class DiscoverMap extends Component
         const lastRouteName = params.navigation.state.routes[params.navigation.state.routes.length - 1].routeName;
 
         this.setState({
-            showMap: lastRouteName === 'Discover'
+            showMap: lastRouteName === 'Tabs'
         });
     }
 

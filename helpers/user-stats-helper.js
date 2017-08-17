@@ -16,6 +16,9 @@ function getDescription(statType, additionalData = {}) {
 
         case USER_STATS.BOUGHT:
             return `You bought an article`;
+
+        case USER_STATS.FEED_PHOTO:
+            return `Awesome! you made some pictures`;
     }
 }
 

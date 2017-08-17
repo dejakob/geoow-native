@@ -1,5 +1,3 @@
-
-// Todo: npm module
 const USER_STATS = {
 
     // Points to receive because of registering
@@ -18,7 +16,9 @@ const USER_STATS = {
     QUEST_DENIED: 'QUEST_DENIED',
 
     // Bought something with the credits
-    BOUGHT: 'BOUGHT'
+    BOUGHT: 'BOUGHT',
+
+    FEED_PHOTO: 'FEED_PHOTO'
 };
 
 export default USER_STATS;

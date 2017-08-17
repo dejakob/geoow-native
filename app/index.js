@@ -10,11 +10,11 @@ import Auth from './auth';
 import Plan from './plan';
 import Preferences from './preferences';
 import Dashboard from './dashboard';
-import Diary from './diary';
-import Profile from './profile';
 import Discover from './discover';
 import EventDetail from './event-detail';
 import Scan from './scan';
+import People from './people';
+import Profile from './profile';
 import * as Router from '../services/router';
 import { MAPBOX_TOKEN } from '../constants';
 import '../themes';
@@ -22,41 +22,62 @@ import '../constants/'
 
 Mapbox.setAccessToken(MAPBOX_TOKEN);
 
-const TabNavigation = TabNavigator({
-    Dashboard: { screen: connect(Dashboard) },
-    Diary: { screen: connect(Diary) },
+
+const DashboardNavigation = StackNavigator({
+    DashboardMain: { screen: connect(Dashboard) },
     Profile: { screen: connect(Profile) },
+},
+{
+    initialRouteName: 'DashboardMain'
+});
+const TabNavigation = TabNavigator({
+    Discover: { screen: connect(Discover) },
+    Dashboard: { screen: DashboardNavigation },
+    // People: { screen: connect(People) }, // V2!
+    Scan: { screen: connect(Scan) },
 }, {
     tabBarPosition: 'bottom',
+    initialRouteName: 'Discover',
+    navigationOptions: {
+        gesturesEnabled: false
+    },
+    swipeEnabled: false,
+    animationEnabled: false,
     tabBarOptions: {
         activeTintColor: getCurrentTheme().colors.active,
         inactiveTintColor: getCurrentTheme().colors.inactive,
-        showLabel: false,
         activeBackgroundColor: getCurrentTheme().colors.sheet,
         inactiveBackgroundColor: getCurrentTheme().colors.sheet,
         showIcon: true,
+        showLabel: false,
         style: {
             backgroundColor: getCurrentTheme().colors.sheet,
+        },
+        tabStyle: {
+            backgroundColor: getCurrentTheme().colors.sheet,
+            opacity: 1,
         },
         indicatorStyle: {
             backgroundColor: getCurrentTheme().colors.active,
         },
-        pressColor: getCurrentTheme().colors.active
+        pressColor: getCurrentTheme().colors.active,
     },
+    lazy: false
 });
 const App = StackNavigator({
     Auth: { screen: connect(Auth) },
     Plan: { screen: connect(Plan) },
     Preferences: { screen: connect(Preferences) },
     Tabs: { screen: TabNavigation },
-    Discover: { screen: connect(Discover) },
-    EventDetail: { screen: connect(EventDetail) },
-    Scan: { screen: connect(Scan) }
+    EventDetail: { screen: connect(EventDetail) }
 }, {
     mode: 'modal',
     onTransitionStart: params => {
         Router.triggerTransitionListeners(params);
     },
+    navigationOptions: {
+        gesturesEnabled: false
+    }
 });
 
 function mapStateToProps (state) {

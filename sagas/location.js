@@ -14,8 +14,6 @@ function* loadGeolocation(action) {
             { timeout: 30000, maximumAge: 100 }
         ));
 
-        console.log('location', location);
-
         yield put(Actions._loadGeolocationSuccess(location.coords.latitude, location.coords.longitude));
     }
     catch (ex) {
