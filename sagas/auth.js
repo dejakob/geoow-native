@@ -65,7 +65,46 @@ function* authAccountKit(action) {
     }
 }
 
+function* authEmail(email) {
+    try {
+        yield call(AuthApi.authEmail, email);
+        yield put(Actions.authEmailSuccess());
+    }
+    catch (ex) {
+        console.log(ex);
+        yield put(Actions.authEmailFailed());
+    }
+}
+
+function* authVerify(action) {
+    try {
+        const geoowTokenData = yield call(AuthApi.authVerify, action.verificationToken);
+        const geoowToken = geoowTokenData.token;
+
+        _token = geoowToken;
+
+        yield AsyncStorage.setItem('token', geoowToken);
+        yield put(Actions.loadMe());
+
+        BackgroundGeolocation.configure({
+            headers: {              // <-- Optional HTTP headers
+                'Content-Type': 'application/json',
+                'authorization': `Bearer ${geoowToken}`
+            },
+            autoSync: true
+        });
+
+        yield put(Actions.authVerifySuccess());
+    }
+    catch (ex) {
+        console.log(ex);
+        yield put(Actions.authVerifyFailed());
+    }
+}
+
 export {
     authAccountKit,
+    authEmail,
+    authVerify,
     getCurrentToken
 };

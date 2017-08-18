@@ -20,6 +20,25 @@ function authAccountKit(accountId : string, token : string, email : string) {
         .then(response => response.json());
 }
 
+function authEmail(email) {
+    return fetch(`${API_URL}/auth`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            email
+        })
+    });
+}
+
+function authVerify(verificationCode) {
+    return fetch(`${API_URL}/auth/verify/${verificationCode}`)
+        .then(response => response.json())
+}
+
 export {
-    authAccountKit
+    authAccountKit,
+    authEmail,
+    authVerify
 };
