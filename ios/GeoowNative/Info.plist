@@ -2,12 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Take pictures for your feed or avatar</string>
-	<key>NSCameraUsageDescription</key>
-	<string>In order to scan, you need camera permission</string>
-	<key>AccountKitClientToken</key>
-	<string>1675181fadd29b8d7e2be77db84d2e1b</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -28,12 +22,6 @@
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
 	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>ak1610970229164585</string>
-			</array>
-		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
@@ -64,12 +52,18 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>In order to scan, you need camera permission</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>To find things nearby and see if you go on a quest</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>We need to know if you actually were at a certain place</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We need location to discover events around you and to know if you actually went there</string>
 	<key>NSMotionUsageDescription</key>
 	<string>We need to know if you actually were at a certain place</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Take pictures for your feed or avatar</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Entypo.ttf</string>
@@ -100,7 +94,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>To find things nearby and see if you go on a quest</string>
 </dict>
 </plist>

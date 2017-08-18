@@ -3378,10 +3378,6 @@ react-native-drawer-layout@1.3.2:
   dependencies:
     react-native-dismiss-keyboard "1.0.0"
 
-react-native-facebook-account-kit@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/react-native-facebook-account-kit/-/react-native-facebook-account-kit-0.7.0.tgz#80899b5f59cc9ea7f1a01babf490e66c5bda15dd"
-
 react-native-gifted-chat@^0.2.5:
   version "0.2.5"
   resolved "https://registry.yarnpkg.com/react-native-gifted-chat/-/react-native-gifted-chat-0.2.5.tgz#611a2229c207a606122a4e530b7e6b23263f442e"

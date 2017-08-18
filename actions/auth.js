@@ -1,25 +1,5 @@
 import { ACTIONS } from '../constants';
 
-function authAccountKit(options = {}) {
-    return {
-        type: ACTIONS.AUTH_ACCOUNT_KIT,
-        options
-    };
-}
-
-function _authAccountKitSuccess(user) {
-    return {
-        type: ACTIONS.AUTH_ACCOUNT_KIT_SUCCESS,
-        user
-    };
-}
-
-function _authAccountKitFailed() {
-    return {
-        type: ACTIONS.AUTH_ACCOUNT_KIT_FAILED
-    };
-}
-
 function authEmail(email) {
     return {
         type: ACTIONS.AUTH_EMAIL,
@@ -59,10 +39,6 @@ function authVerifyFailed() {
 }
 
 export {
-    authAccountKit,
-    _authAccountKitSuccess,
-    _authAccountKitFailed,
-
     authVerify,
     authVerifySuccess,
     authVerifyFailed,

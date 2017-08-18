@@ -16,7 +16,6 @@ function* mainSaga() {
     yield takeEvery(ACTIONS.EVENTS_CATEGORIES_LOAD, eventSaga.loadCategories);
     yield takeEvery(ACTIONS.EVENTS_LOAD_BY_ID, eventSaga.loadEventById);
 
-    yield takeEvery(ACTIONS.AUTH_ACCOUNT_KIT, authSaga.authAccountKit);
     yield takeEvery(ACTIONS.AUTH_EMAIL, authSaga.authEmail);
     yield takeEvery(ACTIONS.AUTH_VERIFY, authSaga.authVerify);
 
