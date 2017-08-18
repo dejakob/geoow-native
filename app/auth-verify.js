@@ -21,6 +21,16 @@ class AuthVerify extends Component
         }
     }
 
+    componentWillReceiveProps(newProps) {
+        try {
+            const { verificationToken } = newProps.navigation.state.params;
+            this.props.authVerify(verificationToken);
+        }
+        catch (ex) {
+            console.log(ex);
+        }
+    }
+
     render() {
         return (
             <AuthBackground>

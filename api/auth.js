@@ -27,7 +27,8 @@ function authEmail(email) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            email
+            email,
+            linkType: 'app'
         })
     });
 }

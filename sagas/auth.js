@@ -65,7 +65,7 @@ function* authAccountKit(action) {
     }
 }
 
-function* authEmail(email) {
+function* authEmail({email}) {
     try {
         yield call(AuthApi.authEmail, email);
         yield put(Actions.authEmailSuccess());
