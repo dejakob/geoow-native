@@ -60,7 +60,7 @@ class Auth extends Component
     }
 
     _signUp() {
-        this.props.authAccountKit();
+        this.props.navigation.navigate('AuthEmail');
     }
 
     render() {

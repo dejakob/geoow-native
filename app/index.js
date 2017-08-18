@@ -8,6 +8,7 @@ import { bindActionCreators } from 'redux';
 import Actions from '../actions';
 import store from '../services/store';
 import Auth from './auth';
+import AuthEmail from './auth-email';
 import AuthVerify from './auth-verify';
 import Plan from './plan';
 import Preferences from './preferences';
@@ -70,14 +71,15 @@ const TabNavigation = TabNavigator({
 });
 const App = StackNavigator({
     Auth: { screen: connect(Auth) },
+    AuthEmail: { screen: connect(AuthEmail) },
+    AuthVerify: {
+        screen: connect(AuthVerify),
+        path: 'auth/:verificationToken',
+    },
     Plan: { screen: connect(Plan) },
     Preferences: { screen: connect(Preferences) },
     Tabs: { screen: TabNavigation },
-    EventDetail: { screen: connect(EventDetail) },
-    Chat: {
-        screen: connect(AuthVerify),
-        path: 'auth/:verificationToken',
-    }
+    EventDetail: { screen: connect(EventDetail) }
 }, {
     mode: 'modal',
     onTransitionStart: params => {
