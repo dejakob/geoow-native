@@ -3,6 +3,7 @@ import { View, Text, TextInput } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import validator from 'validator';
 import AuthBackground from '../components/auth-background/auth-background';
+import Article from '../components/article/article';
 import AuthTitle from '../components/auth/auth-title';
 import AuthInput from '../components/auth/auth-input';
 import Footer from '../components/footer/footer';
@@ -27,7 +28,7 @@ class AuthEmail extends Component
     }
 
     handleSubmit() {
-        const isEmailValid = validator.isEmail(this.email);
+        const isEmailValid = typeof this.email === 'string' && this.email.length && validator.isEmail(this.email);
 
         this.setState({
             isEmailValid
@@ -42,12 +43,14 @@ class AuthEmail extends Component
     render() {
         return (
             <AuthBackground>
-                <AuthTitle>Welcome!</AuthTitle>
-                <AuthInput
-                    placeholder='Please enter your email'
-                    onChangeText={email => this.email = email}
-                    invalid={!this.state.isEmailValid}
-                />
+                <View style={{ flex: 1, justifyContent: 'center' }}>
+                    <AuthTitle>Welcome!</AuthTitle>
+                    <AuthInput
+                        placeholder='Please enter your email'
+                        onChangeText={email => this.email = email}
+                        invalid={!this.state.isEmailValid}
+                    />
+                </View>
                 <Footer>
                     <PrimaryButton
                         onPress={this.handleSubmit}

@@ -7,7 +7,6 @@ createStyle({
             fontSize: 'theme:h1',
             fontWeight: '100',
             textAlign: 'center',
-            marginTop: '30h4s',
             marginBottom: '30h4s'
         }
     }
