@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image, View } from 'react-native';
 import { getStyle } from 'react-native-styler';
+import { loadImageOrPlaceholder } from '../../helpers/image-helper';
 import './avatar.style';
 
 /**
@@ -16,7 +17,7 @@ function Avatar(props) {
         >
             <Image
                 style={[getStyle('avatar'), props.style]}
-                source={props.image ? { uri: props.image} : require('../../assets/female.png')}
+                source={loadImageOrPlaceholder(props.image, require('../../assets/female.png'))}
                 resizeMode='cover'
             />
         </View>
