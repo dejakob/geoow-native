@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Image } from 'react-native';
 import { getStyle } from 'react-native-styler';
+import { loadImageOrPlaceholder } from '../../helpers/image-helper';
 
 /**
  * <DashboardListItemMedia />
@@ -18,7 +19,7 @@ function DashboardListItemMedia(props) {
     return (
         <Image
             resizeMode='contain'
-            source={{ uri: media.path }}
+            source={loadImageOrPlaceholder(media.path, {})}
             style={getStyle('dashboard__listItemMedia__image')}
         />
     );

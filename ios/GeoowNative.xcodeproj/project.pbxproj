@@ -50,7 +50,6 @@
 		671AFDEA8A3C4CC2BD28C18B /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B51797211DCF478882B9EC90 /* Zocial.ttf */; };
 		7AA780094A1B4B3A841FB286 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E53472012E704AD4BBF88506 /* Entypo.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		91172C1DF7D44CFF9CD39D91 /* libRNAccountKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEAB995A364E4DF083355192 /* libRNAccountKit.a */; };
 		AF9B43260A9F40D68F46B54C /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 370B536BA6444EF7914321F8 /* libRNVectorIcons.a */; };
 		B017112DB6414286B5928773 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAF620909DD349629D3A8C72 /* SimpleLineIcons.ttf */; };
 		B33843AD1F39129D00621D9F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B33843AC1F39129D00621D9F /* libz.tbd */; };
@@ -296,13 +295,6 @@
 			remoteGlobalIDString = 5DBEB1501B18CEA900B34395;
 			remoteInfo = RNVectorIcons;
 		};
-		B3AD62A11EC8D1990037346B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5900FAC3F91644DCA7CF96AC /* RNAccountKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2C7C6901CD1552900C9B392;
-			remoteInfo = RNAccountKit;
-		};
 		B3C188621EDC8E7D0045AC9C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FA71A3EF8E754A02876C1268 /* RCTMapboxGL.xcodeproj */;
@@ -457,7 +449,6 @@
 		55C46FA5AA934D5DA912A54F /* RCTCamera.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RCTCamera.xcodeproj"; sourceTree = "<group>"; };
 		582C99593D5C4859BCE44046 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		589049A6CBE24390B566FAFA /* libRCTOneSignal.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTOneSignal.a; sourceTree = "<group>"; };
-		5900FAC3F91644DCA7CF96AC /* RNAccountKit.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNAccountKit.xcodeproj; path = "../node_modules/react-native-facebook-account-kit/ios/RNAccountKit.xcodeproj"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		5F80CC5643714CC2A6BBDDCC /* RNBackgroundFetch.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNBackgroundFetch.xcodeproj; path = "../node_modules/react-native-background-fetch/ios/RNBackgroundFetch.xcodeproj"; sourceTree = "<group>"; };
 		64E30FB730884EB5B49C39E0 /* RCTOneSignal.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTOneSignal.xcodeproj; path = "../node_modules/react-native-onesignal/ios/RCTOneSignal.xcodeproj"; sourceTree = "<group>"; };
@@ -477,7 +468,6 @@
 		B3FB67F21ED61C51002DEDD0 /* RNBackgroundFetch+AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RNBackgroundFetch+AppDelegate.m"; sourceTree = "<group>"; };
 		B51797211DCF478882B9EC90 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		B7F5AF39E1F44412A21F7A60 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
-		DEAB995A364E4DF083355192 /* libRNAccountKit.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNAccountKit.a; sourceTree = "<group>"; };
 		E53472012E704AD4BBF88506 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		E9AC6BB1EBC74E278DBF11E7 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		F296AC012DF64785B93BB8DE /* libRCTMapboxGL.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTMapboxGL.a; sourceTree = "<group>"; };
@@ -513,7 +503,6 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				AF9B43260A9F40D68F46B54C /* libRNVectorIcons.a in Frameworks */,
-				91172C1DF7D44CFF9CD39D91 /* libRNAccountKit.a in Frameworks */,
 				21BC7E4DBE40441E87F2E57D /* libRNBackgroundGeolocation.a in Frameworks */,
 				C818A5F3117F40F0AC6720D0 /* libsqlite3.tbd in Frameworks */,
 				0B008E3F906E453C8B45B457 /* libRNBackgroundFetch.a in Frameworks */,
@@ -725,7 +714,6 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				E9AC6BB1EBC74E278DBF11E7 /* RNVectorIcons.xcodeproj */,
-				5900FAC3F91644DCA7CF96AC /* RNAccountKit.xcodeproj */,
 				B3C188801EDC92D00045AC9C /* RNBackgroundGeolocation.xcodeproj */,
 				5F80CC5643714CC2A6BBDDCC /* RNBackgroundFetch.xcodeproj */,
 				F74BC00BC3C04900AA940CC9 /* Lumberjack.xcodeproj */,
@@ -783,14 +771,6 @@
 			isa = PBXGroup;
 			children = (
 				B3AD62781EC8B3ED0037346B /* libRNVectorIcons.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B3AD62851EC8D1990037346B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B3AD62A21EC8D1990037346B /* libRNAccountKit.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1028,10 +1008,6 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
-				},
-				{
-					ProductGroup = B3AD62851EC8D1990037346B /* Products */;
-					ProjectRef = 5900FAC3F91644DCA7CF96AC /* RNAccountKit.xcodeproj */;
 				},
 				{
 					ProductGroup = B3FB677C1ED61AB2002DEDD0 /* Products */;
@@ -1272,13 +1248,6 @@
 			fileType = archive.ar;
 			path = libRNVectorIcons.a;
 			remoteRef = B3AD62771EC8B3ED0037346B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B3AD62A21EC8D1990037346B /* libRNAccountKit.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNAccountKit.a;
-			remoteRef = B3AD62A11EC8D1990037346B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		B3C188631EDC8E7D0045AC9C /* libRCTMapboxGL.a */ = {
@@ -1555,7 +1524,6 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-facebook-account-kit/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-background-geolocation-android/ios/RNBackgroundGeolocation/**",
 					"$(SRCROOT)/../node_modules/react-native-background-fetch/ios/RNBackgroundFetch/**",
 					"$(SRCROOT)/../node_modules/cocoa-lumberjack/CocoaLumberjack/**",
@@ -1566,10 +1534,7 @@
 				INFOPLIST_FILE = GeoowNativeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1591,7 +1556,6 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-facebook-account-kit/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-background-geolocation-android/ios/RNBackgroundGeolocation/**",
 					"$(SRCROOT)/../node_modules/react-native-background-fetch/ios/RNBackgroundFetch/**",
 					"$(SRCROOT)/../node_modules/cocoa-lumberjack/CocoaLumberjack/**",
@@ -1602,10 +1566,7 @@
 				INFOPLIST_FILE = GeoowNativeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1632,7 +1593,6 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-facebook-account-kit/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-background-geolocation/ios/RNBackgroundGeolocation/**",
 					"$(SRCROOT)/../node_modules/react-native-background-fetch/ios/RNBackgroundFetch/**",
 					"$(SRCROOT)/../node_modules/cocoa-lumberjack/CocoaLumberjack/**",
@@ -1672,7 +1632,6 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-facebook-account-kit/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-background-geolocation/ios/RNBackgroundGeolocation/**",
 					"$(SRCROOT)/../node_modules/react-native-background-fetch/ios/RNBackgroundFetch/**",
 					"$(SRCROOT)/../node_modules/cocoa-lumberjack/CocoaLumberjack/**",
@@ -1714,7 +1673,6 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-facebook-account-kit/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-background-geolocation-android/ios/RNBackgroundGeolocation/**",
 					"$(SRCROOT)/../node_modules/react-native-background-fetch/ios/RNBackgroundFetch/**",
 					"$(SRCROOT)/../node_modules/cocoa-lumberjack/CocoaLumberjack/**",
@@ -1724,10 +1682,7 @@
 				);
 				INFOPLIST_FILE = "GeoowNative-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1759,7 +1714,6 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-facebook-account-kit/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-background-geolocation-android/ios/RNBackgroundGeolocation/**",
 					"$(SRCROOT)/../node_modules/react-native-background-fetch/ios/RNBackgroundFetch/**",
 					"$(SRCROOT)/../node_modules/cocoa-lumberjack/CocoaLumberjack/**",
@@ -1769,10 +1723,7 @@
 				);
 				INFOPLIST_FILE = "GeoowNative-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1798,10 +1749,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "GeoowNative-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.GeoowNative-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -1823,10 +1771,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "GeoowNative-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.GeoowNative-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;

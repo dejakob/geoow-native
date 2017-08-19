@@ -8,7 +8,6 @@ import com.transistorsoft.rnbackgroundgeolocation.RNBackgroundGeolocation;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import com.transistorsoft.rnbackgroundgeolocation.*;
 import com.geektime.rnonesignalandroid.ReactNativeOneSignalPackage;
-import io.underscope.react.fbak.RNAccountKitPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -35,7 +34,6 @@ public class MainApplication extends Application implements ReactApplication {
             new RCTCameraPackage(),
             new RNBackgroundGeolocation(),
             new ReactNativeOneSignalPackage(),
-            new RNAccountKitPackage(),
             new VectorIconsPackage()
       );
     }

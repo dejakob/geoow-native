@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Platform } from 'react-native';
 import { connectStyler, getCurrentTheme } from 'react-native-styler';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 import Mapbox from 'react-native-mapbox-gl';
@@ -7,6 +8,8 @@ import { bindActionCreators } from 'redux';
 import Actions from '../actions';
 import store from '../services/store';
 import Auth from './auth';
+import AuthEmail from './auth-email';
+import AuthVerify from './auth-verify';
 import Plan from './plan';
 import Preferences from './preferences';
 import Dashboard from './dashboard';
@@ -22,6 +25,8 @@ import '../constants/'
 
 Mapbox.setAccessToken(MAPBOX_TOKEN);
 
+// on Android, the URI prefix typically contains a host in addition to scheme
+const prefix = Platform.OS == 'android' ? 'geoow://geoow/' : 'geoow://';
 
 const DashboardNavigation = StackNavigator({
     DashboardMain: { screen: connect(Dashboard) },
@@ -66,6 +71,11 @@ const TabNavigation = TabNavigator({
 });
 const App = StackNavigator({
     Auth: { screen: connect(Auth) },
+    AuthEmail: { screen: connect(AuthEmail) },
+    AuthVerify: {
+        screen: connect(AuthVerify),
+        path: 'auth/:verificationToken',
+    },
     Plan: { screen: connect(Plan) },
     Preferences: { screen: connect(Preferences) },
     Tabs: { screen: TabNavigation },
@@ -101,4 +111,4 @@ function connect (component) {
     return connected;
 }
 
-export default connectStyler(<App ref={router => Router._setRouter(router)} />);
+export default connectStyler(<App ref={router => Router._setRouter(router)} uriPrefix={prefix} />);

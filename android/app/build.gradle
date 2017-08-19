@@ -153,7 +153,6 @@ dependencies {
     compile project(':react-native-camera')
     compile(name: 'tslocationmanager', ext: 'aar')
     compile project(':react-native-onesignal')
-    compile project(':react-native-facebook-account-kit')
     compile project(':react-native-vector-icons')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"

@@ -1,27 +1,49 @@
 import { ACTIONS } from '../constants';
 
-function authAccountKit(options = {}) {
+function authEmail(email) {
     return {
-        type: ACTIONS.AUTH_ACCOUNT_KIT,
-        options
-    };
+        type: ACTIONS.AUTH_EMAIL,
+        email
+    }
 }
 
-function _authAccountKitSuccess(user) {
+function authEmailSuccess() {
     return {
-        type: ACTIONS.AUTH_ACCOUNT_KIT_SUCCESS,
-        user
-    };
+        type: ACTIONS.AUTH_EMAIL_SUCCESS
+    }
 }
 
-function _authAccountKitFailed() {
+function authEmailFailed() {
     return {
-        type: ACTIONS.AUTH_ACCOUNT_KIT_FAILED
-    };
+        type: ACTIONS.AUTH_EMAIL_FAILED
+    }
+}
+
+function authVerify(verificationToken) {
+    return {
+        type: ACTIONS.AUTH_VERIFY,
+        verificationToken
+    }
+}
+
+function authVerifySuccess() {
+    return {
+        type: ACTIONS.AUTH_VERIFY_SUCCESS
+    }
+}
+
+function authVerifyFailed() {
+    return {
+        type: ACTIONS.AUTH_VERIFY_FAILED
+    }
 }
 
 export {
-    authAccountKit,
-    _authAccountKitSuccess,
-    _authAccountKitFailed
+    authVerify,
+    authVerifySuccess,
+    authVerifyFailed,
+
+    authEmail,
+    authEmailSuccess,
+    authEmailFailed
 };

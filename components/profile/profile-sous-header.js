@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, TouchableWithoutFeedback, Image, Text } from 'react-native';
 import { getStyle } from 'react-native-styler';
+import { loadImageOrPlaceholder } from '../../helpers/image-helper';
 import Avatar from '../avatar/avatar';
 
 /**
@@ -18,7 +19,7 @@ function ProfileSousHeader(props) {
                 style={getStyle('profile__sousHeader__backgroundImage')}
             >
                 <Image
-                    source={props.avatar ? { uri: props.avatar } : {}}
+                    source={loadImageOrPlaceholder(props.avatar, {})}
                     blurRadius={16}
                     resizeMode='cover'
                     style={getStyle('profile__sousHeader__backgroundImage__img')}
