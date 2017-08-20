@@ -60,10 +60,10 @@ class DiscoverMap extends Component
             <MapView
                 initialCenterCoordinate={{ latitude: props.latitude, longitude: props.longitude }}
                 style={getStyle('discoverMap')}
-                initialZoomLevel={11}
+                initialZoomLevel={13}
                 styleURL='mapbox://styles/mapbox/dark-v9'
                 annotations={annotations}
-                showsUserLocation={true}
+                showsUserLocation={false}
                 userTrackingMode={Mapbox.userTrackingMode.follow}
                 logoIsHidden={true}
             />
