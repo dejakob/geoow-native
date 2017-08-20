@@ -19,8 +19,6 @@ function messageReducer(state = defaultState, action) {
         case ACTIONS.MESSAGE_LOAD_SUCCESS:
             state = state
                 .update('allMessages', allMessages => allMessages.mergeDeep(Immutable.fromJS(action.messages)));
-            
-            console.log('messages action', action);
 
             const messageIds = Immutable.fromJS(action.messages.map(m => m._id));
 
@@ -40,6 +38,8 @@ function messageReducer(state = defaultState, action) {
                     state = state.setIn(['byVenue', action.userOrVenue], messageIds);
                 }
             }
+
+            console.log('STATE', state.toJS());
 
             return state;
     }

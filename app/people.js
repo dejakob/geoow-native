@@ -71,6 +71,25 @@ class People extends Component
         AppState.removeEventListener('change', this.handleAppStateChange);
     }
 
+    get messages() {
+        if (this.state.selectedPerson && this.props.message.getIn(['byUser', this.state.selectedPerson.get('_id')])) {
+            return this.props.message
+                .getIn(['byUser', this.state.selectedPerson.get('_id')])
+                .map(messageId => this.props.message.get('allMessages').find(msg => msg.get('_id') === messageId))
+                .toJS()
+                .map(msg => ({ ...msg, text: msg.body, user: msg.from }))
+        }
+        else if (this.state.selectedVenue && this.props.message.getIn(['byVenue', this.state.selectedVenue.get('_id')])) {
+            return this.props.message
+                .getIn(['byVenue', this.state.selectedVenue.get('_id')])
+                .map(messageId => this.props.message.get('allMessages').find(msg => msg.get('_id') === messageId))
+                .toJS()
+                .map(msg => ({ ...msg, text: msg.body, user: msg.from }));
+        }
+
+        return [];
+    }
+
     handleAppStateChange(nextAppState) {
         if (nextAppState === 'active') {
             this.interval = setInterval(() => {
@@ -158,10 +177,9 @@ class People extends Component
     }
 
     renderChat() {
-
         return (
             <GiftedChat
-                messages={[]}
+                messages={this.messages}
                 onSend={this.handleMessageSend}
                 user={this.props.user.get('me').toJS()}
             />
