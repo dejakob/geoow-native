@@ -9,6 +9,7 @@ import * as DiaryActions from './diary';
 import * as PeopleActions from './people';
 import * as ProfileActions from './profile';
 import * as CameraActions from './camera';
+import * as MessageActions from './message';
 
 export default {
     ...AuthActions,
@@ -21,5 +22,6 @@ export default {
     ...DiaryActions,
     ...PeopleActions,
     ...ProfileActions,
-    ...CameraActions
+    ...CameraActions,
+    ...MessageActions
 };
