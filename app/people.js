@@ -141,11 +141,16 @@ class People extends Component
     }
 
     renderPeople() {
+        const peopleNearby = this.props.people
+            .get('nearby')
+            .filter(personId => this.props.user.getIn(['me', '_id']) !== personId)
+            .map(nearbyPersonId => this.props.people.getIn(['all', nearbyPersonId]))
+
         return (
             <PeopleNearby
                 selectedVenue={this.state.selectedVenue}
                 selectedPerson={this.state.selectedPerson}
-                peopleNearby={this.props.people.get('nearby').map(nearbyPersonId => this.props.people.getIn(['all', nearbyPersonId]))}
+                peopleNearby={peopleNearby}
                 onBack={() => this.setState({ selectedVenue: null, selectedPerson: null })}
                 onSelectPerson={selectedPerson => this.setState({ selectedPerson, selectedVenue: null })}
             />
