@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { AppState, View, Text } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import { GiftedChat } from 'react-native-gifted-chat';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -9,7 +9,6 @@ import SmallTitle from '../components/small-title/small-title';
 
 /**
  * <People />
- * V2
  */
 class People extends Component
 {
@@ -19,13 +18,36 @@ class People extends Component
         tabBarIcon: ({ tintColor }) => <Icon name="people" style={[getStyle('tabBar__icon'), { color: tintColor }]} />
     };
 
-    componentWillMount() {
+    constructor() {
+        super();
+        this.handleAppStateChange = this.handleAppStateChange.bind(this);
+    }
+
+    componentDidMount() {
+        AppState.addEventListener('change', this.handleAppStateChange);
+
         this.props.loadPeopleNearby();
 
-        setInterval(() => {
+        this.interval = setInterval(() => {
             this.props.loadPeopleNearby();
             this.props.loadMe();
         }, 5000);
+    }
+
+    componentWillUnmount() {
+        AppState.removeEventListener('change', this.handleAppStateChange);
+    }
+
+    handleAppStateChange(nextAppState) {
+        if (nextAppState === 'active') {
+            this.interval = setInterval(() => {
+                this.props.loadPeopleNearby();
+                this.props.loadMe();
+            }, 5000);
+        }
+        else {
+            clearInterval(this.interval);
+        }
     }
 
     componentWillReceiveProps(newProps) {
