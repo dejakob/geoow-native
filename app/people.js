@@ -1,3 +1,4 @@
+import Immutable from 'immutable';
 import React, { Component } from 'react';
 import { AppState, View, Text } from 'react-native';
 import { getStyle } from 'react-native-styler';
@@ -75,7 +76,7 @@ class People extends Component
                 <SmallTitle>People nearby</SmallTitle>
                 {this.renderPeople()}
                 <SmallTitle>Group chat</SmallTitle>
-                {this.renderVenues()}
+                {this.state.selectedVenue ? this.renderChat() : this.renderVenues()}
             </MainBackground>
         )
     }
@@ -97,11 +98,12 @@ class People extends Component
         const venuesDistinct = {};
         venues.forEach(venue => venuesDistinct[venue._id] = venue);
 
-        const venuesDistinctArray = Object.keys(venuesDistinct).map(k => venuesDistinct[k]);
+        const venuesDistinctArray = Immutable.fromJS(Object.keys(venuesDistinct).map(k => venuesDistinct[k]));
 
         return (
             <VenuesList
                 venues={venuesDistinctArray}
+                onSelectVenue={selectedVenue => this.setState({ selectedVenue })}
             />
         );
     }

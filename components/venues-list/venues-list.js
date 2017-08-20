@@ -10,7 +10,7 @@ import './venues-list.style';
 function VenuesList(props) {
     return (
         <FlatList
-            data={props.venues}
+            data={props.venues.toArray()}
             renderItem={renderVenue}
         />
     );
@@ -21,6 +21,7 @@ function VenuesList(props) {
                 key={index}
                 venue={item}
                 index={index}
+                onPress={() => props.onSelectVenue(item)}
             />
         )
     }

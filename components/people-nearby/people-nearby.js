@@ -15,17 +15,33 @@ class PeopleNearby extends Component
     }
 
     render() {
+        const data = this.props.peopleNearby.toArray();
+
+        if (this.props.selectedVenue) {
+            data.unshift(this.props.selectedVenue.set('type', 'venue').set('isSelected', true));
+        }
+
         return (
             <FlatList
                 horizontal
                 style={getStyle('peopleNearby')}
-                data={this.props.peopleNearby.toArray()}
+                data={data}
                 renderItem={this.renderItem}
             />
         );
     }
 
     renderItem({ item, index }) {
+        if (item.get('type') === 'venue') {
+            return (
+                <Avatar
+                    key={index}
+                    style={[getStyle('peopleNearby__avatar'), { opacity: item === item.get('isSelected') ? 1 : 0.5 }]}
+                    image={item.getIn(['cover', 'source'])}
+                />
+            );
+        }
+
         // Opacity 1 for current conversation
         return (
             <Avatar

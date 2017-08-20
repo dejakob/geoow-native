@@ -13,12 +13,14 @@ import Touchable from '../button/touchable';
  */
 function VenuesListItem(props) {
     return (
-        <Touchable>
+        <Touchable
+            onPress={props.onPress}
+        >
             <View
                 style={props.index % 2 === 0 ? getStyle('venuesList__item__odd') : getStyle('venuesList__item__even')}
             >
                 <Avatar
-                    image={props.venue.cover && props.venue.cover.source}
+                    image={props.venue.getIn(['cover', 'source'])}
                     style={getStyle('venuesList__item__avatar')}
                 />
                 <View
@@ -27,12 +29,12 @@ function VenuesListItem(props) {
                     <Text
                         style={getStyle('venuesList__item__title')}
                     >
-                        {props.venue.name}
+                        {props.venue.get('name')}
                     </Text>
                     <Text
                         style={getStyle('venuesList__item__tags')}
                     >
-                        {(props.venue.tags || []).join(' • ')}
+                        {(props.venue.get('tags') || []).join(' • ')}
                     </Text>
                 </View>
             </View>
