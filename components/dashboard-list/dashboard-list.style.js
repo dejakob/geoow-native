@@ -8,16 +8,15 @@ createStyle({
         list: {
             flex: 1,
             position: 'relative',
-            backgroundColor: 'theme:sheet'
+            backgroundColor: 'theme:border'
         },
 
         listItem: {
-            backgroundColor: 'theme:sheet',
             marginBottom: '20h4s',
 
             details: {
                 padding: '10h4s',
-                backgroundColor: 'theme:sheet2'
+                backgroundColor: 'theme:sheet'
             },
             bottom: {
                 flexDirection: 'row',
