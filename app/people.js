@@ -93,7 +93,15 @@ class People extends Component
     }
 
     renderContent() {
-        return this.state.selectedVenue ? this.renderChat() : this.renderVenues();
+        if (this.state.selectedVenue) {
+            return this.renderChat();
+        }
+
+        if (this.state.selectedPerson) {
+            return this.renderChat();
+        }
+
+        return this.renderVenues();
     }
 
     renderPeople() {
