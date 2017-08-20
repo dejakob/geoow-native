@@ -26,11 +26,14 @@ class People extends Component
         this.renderPeople = this.renderPeople.bind(this);
         this.renderVenues = this.renderVenues.bind(this);
         this.renderChat = this.renderChat.bind(this);
+        this.renderContentTitle = this.renderContentTitle.bind(this);
+        this.renderContent = this.renderContent.bind(this);
     }
 
     componentWillMount() {
         this.state = {
-            selectedVenue: null
+            selectedVenue: null,
+            selectedPerson: null
         }
     }
 
@@ -75,10 +78,22 @@ class People extends Component
             <MainBackground>
                 <SmallTitle>People nearby</SmallTitle>
                 {this.renderPeople()}
-                <SmallTitle>Group chat</SmallTitle>
-                {this.state.selectedVenue ? this.renderChat() : this.renderVenues()}
+                <SmallTitle>{this.renderContentTitle()}</SmallTitle>
+                {this.renderContent()}
             </MainBackground>
         )
+    }
+
+    renderContentTitle() {
+        if (this.state.selectedVenue) {
+            return `${this.state.selectedVenue.get('name')} chat`;
+        }
+
+        return 'Groups nearby';
+    }
+
+    renderContent() {
+        return this.state.selectedVenue ? this.renderChat() : this.renderVenues();
     }
 
     renderPeople() {
