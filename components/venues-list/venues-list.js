@@ -1,6 +1,7 @@
 import React from 'react';
 import { FlatList } from 'react-native';
 import VenuesListItem from './venues-list-item';
+import './venues-list.style';
 
 /**
  * <VenuesList />
@@ -19,6 +20,7 @@ function VenuesList(props) {
             <VenuesListItem
                 key={index}
                 venue={item}
+                index={index}
             />
         )
     }

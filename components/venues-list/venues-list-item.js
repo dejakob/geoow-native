@@ -1,6 +1,8 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
+import { getStyle } from 'react-native-styler';
 import Avatar from '../avatar/avatar';
+import Touchable from '../button/touchable';
 
 /**
  * <VenuesListItem />
@@ -11,11 +13,30 @@ import Avatar from '../avatar/avatar';
  */
 function VenuesListItem(props) {
     return (
-        <View>
-            <Avatar
-                image={props.venue.cover && props.venue.cover.source}
-            />
-        </View>
+        <Touchable>
+            <View
+                style={props.index % 2 === 0 ? getStyle('venuesList__item__odd') : getStyle('venuesList__item__even')}
+            >
+                <Avatar
+                    image={props.venue.cover && props.venue.cover.source}
+                    style={getStyle('venuesList__item__avatar')}
+                />
+                <View
+                    style={getStyle('venuesList__item__details')}
+                >
+                    <Text
+                        style={getStyle('venuesList__item__title')}
+                    >
+                        {props.venue.name}
+                    </Text>
+                    <Text
+                        style={getStyle('venuesList__item__tags')}
+                    >
+                        {(props.venue.tags || []).join(' • ')}
+                    </Text>
+                </View>
+            </View>
+        </Touchable>
     );
 }
 
