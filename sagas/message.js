@@ -8,15 +8,18 @@ function* loadMessages(action) {
         const { user, venue } = action;
 
         let result = null;
+        let type = null;
 
         if (user) {
             result = yield call(MessageApi.loadUserMessages, user);
+            type = 'user';
         }
         else {
             result = yield call(MessageApi.loadVenueMessages, venue);
+            type = 'venue';
         }
 
-        yield put(Actions.loadMessagesSuccess(result));
+        yield put(Actions.loadMessagesSuccess(type, user || venue, result));
     }
     catch (ex) {
         yield put(Actions.loadMessagesFailed());

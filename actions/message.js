@@ -8,9 +8,12 @@ function loadMessages(user, venue) {
     }
 }
 
-function loadMessagesSuccess() {
+function loadMessagesSuccess(messageType, userOrVenue, messages) {
     return {
-        type: ACTIONS.MESSAGE_LOAD_SUCCESS
+        type: ACTIONS.MESSAGE_LOAD_SUCCESS,
+        messageType,
+        userOrVenue,
+        messages
     }
 }
 

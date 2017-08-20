@@ -48,6 +48,24 @@ class People extends Component
         }, 5000);
     }
 
+    componentWillReceiveProps(newProps) {
+        if (
+            newProps.location.get('latitude') !== this.props.location.get('latitude') ||
+            newProps.location.get('longitude') !== this.props.location.get('longitude')
+        ) {
+            this.props.loadPeopleNearby();
+        }
+    }
+
+    componentWillUpdate(newProps, newState) {
+        if (this.state.selectedPerson) {
+            this.props.loadMessages(this.state.selectedPerson.get('_id'));
+        }
+        else if (this.state.selectedVenue) {
+            this.props.loadMessages(null, this.state.selectedVenue.get('_id'));
+        }
+    }
+
     componentWillUnmount() {
         AppState.removeEventListener('change', this.handleAppStateChange);
     }
@@ -61,15 +79,6 @@ class People extends Component
         }
         else {
             clearInterval(this.interval);
-        }
-    }
-
-    componentWillReceiveProps(newProps) {
-        if (
-            newProps.location.get('latitude') !== this.props.location.get('latitude') ||
-            newProps.location.get('longitude') !== this.props.location.get('longitude')
-        ) {
-            this.props.loadPeopleNearby();
         }
     }
 
@@ -87,6 +96,10 @@ class People extends Component
     renderContentTitle() {
         if (this.state.selectedVenue) {
             return `${this.state.selectedVenue.get('name')} chat`;
+        }
+
+        if (this.state.selectedPerson) {
+            return `Chat with ${this.state.selectedPerson.get('name')}`;
         }
 
         return 'Groups nearby';
