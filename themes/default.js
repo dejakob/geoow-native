@@ -10,6 +10,7 @@ createTheme({
         secondary80: 'rgba(90,129,151,0.8)',
         sheet: '#ffffff',
         sheet2: '#f4fdff',
+        sheet3: '#333333',
         border: '#cccccc',
         lightBorder: '#eeeeee',
         ok: '#2fb536',

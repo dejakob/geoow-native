@@ -26,35 +26,18 @@ function DashboardListItem(props) {
         <View
             style={getStyle('dashboard__listItem')}
         >
+            {media}
             <View
-                style={getStyle('dashboard__listItem__line')}
-            />
-            <View
-                style={getStyle('dashboard__listItem__dot')}
-            />
-            <View
-                style={getStyle('dashboard__listItem__content')}
+                style={getStyle('dashboard__listItem__details')}
             >
-                <View>
-                    <Text
-                        style={getStyle('dashboard__listItem__content__day')}
-                    >
-                        {moment(item.createdAt).format('DD MMM')}
-                    </Text>
-                    <Text
-                        style={getStyle('dashboard__listItem__content__hour')}
-                    >
-                        {moment(item.createdAt).format('HH[h]mm')}
-                    </Text>
-                </View>
+                <Text>{getDescription(item.type, item.data)}</Text>
                 <View
-                    style={getStyle('dashboard__listItem__content__descScore')}
+                    style={getStyle('dashboard__listItem__bottom')}
                 >
-                    {media}
                     <Text
-                        style={getStyle('dashboard__listItem__content__description')}
+                        style={getStyle('dashboard__listItem__date')}
                     >
-                        {getDescription(item.type, item.data)}
+                        {moment(item.createdAt).format('DD MMM, HH[h]mm')}
                     </Text>
                     <ScoreBadge
                         score={item.score}
