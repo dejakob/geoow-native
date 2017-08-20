@@ -27,6 +27,12 @@ class People extends Component
         this.renderChat = this.renderChat.bind(this);
     }
 
+    componentWillMount() {
+        this.state = {
+            selectedVenue: null
+        }
+    }
+
     componentDidMount() {
         AppState.addEventListener('change', this.handleAppStateChange);
 
@@ -77,6 +83,7 @@ class People extends Component
     renderPeople() {
         return (
             <PeopleNearby
+                selectedVenue={this.state.selectedVenue}
                 peopleNearby={this.props.people.get('nearby').map(nearbyPersonId => this.props.people.getIn(['all', nearbyPersonId]))}
             />
         );
