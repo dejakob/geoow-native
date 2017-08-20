@@ -23,6 +23,7 @@ class People extends Component
     constructor() {
         super();
         this.handleAppStateChange = this.handleAppStateChange.bind(this);
+        this.handleMessageSend = this.handleMessageSend.bind(this);
         this.renderPeople = this.renderPeople.bind(this);
         this.renderVenues = this.renderVenues.bind(this);
         this.renderChat = this.renderChat.bind(this);
@@ -58,11 +59,11 @@ class People extends Component
     }
 
     componentWillUpdate(newProps, newState) {
-        if (this.state.selectedPerson) {
-            this.props.loadMessages(this.state.selectedPerson.get('_id'));
+        if (newState.selectedPerson !== this.state.selectedPerson && newState.selectedPerson) {
+            this.props.loadMessages(newState.selectedPerson.get('_id'));
         }
-        else if (this.state.selectedVenue) {
-            this.props.loadMessages(null, this.state.selectedVenue.get('_id'));
+        else if (newState.selectedVenue !== this.state.selectedVenue && newState.selectedVenue) {
+            this.props.loadMessages(null, newState.selectedVenue.get('_id'));
         }
     }
 
@@ -79,6 +80,17 @@ class People extends Component
         }
         else {
             clearInterval(this.interval);
+        }
+    }
+
+    handleMessageSend(messages = []) {
+        if (messages.length > 0 && messages[0].text) {
+            if (this.state.selectedPerson) {
+                this.props.sendMessage(this.state.selectedPerson, null, messages[0].text)
+            }
+            else if (this.state.selectedVenue) {
+                this.props.sendMessage(null, this.state.selectedVenue, messages[0].text);
+            }
         }
     }
 
@@ -146,24 +158,12 @@ class People extends Component
     }
 
     renderChat() {
-        const messages = [{
-            _id: 1,
-            text: 'Hello developer',
-            createdAt: new Date(),
-            user: {
-                _id: 2,
-                name: 'React Native',
-                avatar: 'https://facebook.github.io/react/img/logo_og.png',
-            },
-        }];
 
         return (
             <GiftedChat
-                messages={messages}
-                onSend={(messages) => this.onSend(messages)}
-                user={{
-                      _id: 1,
-                    }}
+                messages={[]}
+                onSend={this.handleMessageSend}
+                user={this.props.user.get('me').toJS()}
             />
         );
     }

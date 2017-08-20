@@ -7,7 +7,7 @@ function loadVenueMessages(venue) {
     const params = {
         method: 'GET',
         headers: {
-            'Content-Type': 'multipart/form-data',
+            'Content-Type': 'application/json',
             'authorization': `Bearer ${getCurrentToken()}`
         }
     };
@@ -20,7 +20,7 @@ function loadUserMessages(user) {
     const params = {
         method: 'GET',
         headers: {
-            'Content-Type': 'multipart/form-data',
+            'Content-Type': 'application/json',
             'authorization': `Bearer ${getCurrentToken()}`
         }
     };
@@ -33,7 +33,7 @@ function sendMessageToVenue(venue, body) {
     const params = {
         method: 'POST',
         headers: {
-            'Content-Type': 'multipart/form-data',
+            'Content-Type': 'application/json',
             'authorization': `Bearer ${getCurrentToken()}`
         },
         body: JSON.stringify({
@@ -50,7 +50,7 @@ function sendMessageToUser(user, body) {
     const params = {
         method: 'POST',
         headers: {
-            'Content-Type': 'multipart/form-data',
+            'Content-Type': 'application/json',
             'authorization': `Bearer ${getCurrentToken()}`
         },
         body: JSON.stringify({

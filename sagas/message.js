@@ -19,7 +19,7 @@ function* loadMessages(action) {
             type = 'venue';
         }
 
-        yield put(Actions.loadMessagesSuccess(type, user || venue, result));
+        yield put(Actions.loadMessagesSuccess(type, user || venue, result.messages));
     }
     catch (ex) {
         yield put(Actions.loadMessagesFailed());

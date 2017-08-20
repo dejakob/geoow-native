@@ -19,21 +19,25 @@ function messageReducer(state = defaultState, action) {
         case ACTIONS.MESSAGE_LOAD_SUCCESS:
             state = state
                 .update('allMessages', allMessages => allMessages.mergeDeep(Immutable.fromJS(action.messages)));
+            
+            console.log('messages action', action);
+
+            const messageIds = Immutable.fromJS(action.messages.map(m => m._id));
 
             if (action.messageType === 'user') {
                 if (state.getIn(['byUser', action.userOrVenue])) {
-                    state = state.updateIn(['byUser', action.userOrVenue], messageIds => messageIds.push(Immutable.fromJS(action.messages.map(m => m._id))));
+                    state = state.updateIn(['byUser', action.userOrVenue], messageIds => messageIds.push(messageIds));
                 }
                 else {
-                    state = state.setIn(['byUser', action.userOrVenue], Immutable.fromJS(action.messages.map(m => m._id)));
+                    state = state.setIn(['byUser', action.userOrVenue], messageIds);
                 }
             }
             else if (action.messageType === 'venue') {
                 if (state.getIn(['byVenue', action.userOrVenue])) {
-                    state = state.updateIn(['byVenue', action.userOrVenue], messageIds => messageIds.push(Immutable.fromJS(action.messages.map(m => m._id))));
+                    state = state.updateIn(['byVenue', action.userOrVenue], messageIds => messageIds.push(messageIds));
                 }
                 else {
-                    state = state.setIn(['byVenue', action.userOrVenue], Immutable.fromJS(action.messages.map(m => m._id)));
+                    state = state.setIn(['byVenue', action.userOrVenue], messageIds);
                 }
             }
 
