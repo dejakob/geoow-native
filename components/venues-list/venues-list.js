@@ -1,0 +1,27 @@
+import React from 'react';
+import { FlatList } from 'react-native';
+import VenuesListItem from './venues-list-item';
+
+/**
+ * <VenuesList />
+ * @constructor
+ */
+function VenuesList(props) {
+    return (
+        <FlatList
+            data={props.venues}
+            renderItem={renderVenue}
+        />
+    );
+
+    function renderVenue({ item, index }) {
+        return (
+            <VenuesListItem
+                key={index}
+                venue={item}
+            />
+        )
+    }
+}
+
+export default VenuesList;

@@ -5,6 +5,7 @@ import { GiftedChat } from 'react-native-gifted-chat';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import MainBackground from '../components/main-background/main-background';
 import PeopleNearby from '../components/people-nearby/people-nearby';
+import VenuesList from '../components/venues-list/venues-list';
 import SmallTitle from '../components/small-title/small-title';
 
 /**
@@ -21,6 +22,9 @@ class People extends Component
     constructor() {
         super();
         this.handleAppStateChange = this.handleAppStateChange.bind(this);
+        this.renderPeople = this.renderPeople.bind(this);
+        this.renderVenues = this.renderVenues.bind(this);
+        this.renderChat = this.renderChat.bind(this);
     }
 
     componentDidMount() {
@@ -60,6 +64,42 @@ class People extends Component
     }
 
     render() {
+        return (
+            <MainBackground>
+                <SmallTitle>People nearby</SmallTitle>
+                {this.renderPeople()}
+                <SmallTitle>Group chat</SmallTitle>
+                {this.renderVenues()}
+            </MainBackground>
+        )
+    }
+
+    renderPeople() {
+        return (
+            <PeopleNearby
+                peopleNearby={this.props.people.get('nearby').map(nearbyPersonId => this.props.people.getIn(['all', nearbyPersonId]))}
+            />
+        );
+    }
+
+    renderVenues() {
+        const venues = this.props.discover.get('eventsNearby').map(eventId =>
+            this.props.event.getIn(['events', eventId, 'venue'])
+        ).toJS();
+
+        const venuesDistinct = {};
+        venues.forEach(venue => venuesDistinct[venue._id] = venue);
+
+        const venuesDistinctArray = Object.keys(venuesDistinct).map(k => venuesDistinct[k]);
+
+        return (
+            <VenuesList
+                venues={venuesDistinctArray}
+            />
+        );
+    }
+
+    renderChat() {
         const messages = [{
             _id: 1,
             text: 'Hello developer',
@@ -72,21 +112,14 @@ class People extends Component
         }];
 
         return (
-            <MainBackground>
-                <SmallTitle>People nearby</SmallTitle>
-                <PeopleNearby
-                    peopleNearby={this.props.people.get('nearby').map(nearbyPersonId => this.props.people.getIn(['all', nearbyPersonId]))}
-                />
-                <SmallTitle>Area conversation</SmallTitle>
-                <GiftedChat
-                    messages={messages}
-                    onSend={(messages) => this.onSend(messages)}
-                    user={{
+            <GiftedChat
+                messages={messages}
+                onSend={(messages) => this.onSend(messages)}
+                user={{
                       _id: 1,
                     }}
-                />
-            </MainBackground>
-        )
+            />
+        );
     }
 }
 
