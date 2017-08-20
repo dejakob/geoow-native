@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { FlatList, View, Text } from 'react-native';
+import { FlatList, View, Text, StyleSheet } from 'react-native';
 import { getStyle } from 'react-native-styler';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import Touchable from '../button/touchable';
 import Avatar from '../avatar/avatar';
 import './people-nearby.style.js'
 
@@ -21,12 +23,33 @@ class PeopleNearby extends Component
             data.unshift(this.props.selectedVenue.set('type', 'venue').set('isSelected', true));
         }
 
+        let backButton = null;
+
+        if (this.props.selectedVenue || this.props.selectedPerson) {
+            backButton = (
+                <Touchable
+                    onPress={this.props.onBack}
+                >
+                    <View
+                        style={getStyle('peopleNearby__backButton')}
+                    >
+                        <Icon
+                            name="arrow-back"
+                            color={StyleSheet.flatten(getStyle('header__icon')).color}
+                            size={StyleSheet.flatten(getStyle('header__icon')).fontSize}
+                        />
+                    </View>
+                </Touchable>
+            );
+        }
+
         return (
             <FlatList
                 horizontal
                 style={getStyle('peopleNearby')}
                 data={data}
                 renderItem={this.renderItem}
+                ListHeaderComponent={backButton}
             />
         );
     }
@@ -36,7 +59,7 @@ class PeopleNearby extends Component
             return (
                 <Avatar
                     key={index}
-                    style={[getStyle('peopleNearby__avatar'), { opacity: item === item.get('isSelected') ? 1 : 0.5 }]}
+                    style={[getStyle('peopleNearby__avatar'), { opacity: item.get('isSelected') ? 1 : 0.5 }]}
                     image={item.getIn(['cover', 'source'])}
                 />
             );

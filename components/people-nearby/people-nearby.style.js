@@ -7,10 +7,21 @@ createStyle({
         maxHeight: '50h4s',
         paddingLeft: '10h4s',
         paddingRight: '10h4s',
+
         avatar: {
             height: '50h4s',
             width: '50h4s',
-            borderRadius: '25h4s'
+            borderRadius: '25h4s',
+            marginRight: '10h4s'
+        },
+        backButton: {
+            height: '50h4s',
+            width: '50h4s',
+            borderRadius: '25h4s',
+            marginRight: '10h4s',
+            backgroundColor: 'theme:secondary',
+            alignItems: 'center',
+            justifyContent: 'center'
         }
     }
 })

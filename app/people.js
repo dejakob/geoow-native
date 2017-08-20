@@ -86,6 +86,7 @@ class People extends Component
             <PeopleNearby
                 selectedVenue={this.state.selectedVenue}
                 peopleNearby={this.props.people.get('nearby').map(nearbyPersonId => this.props.people.getIn(['all', nearbyPersonId]))}
+                onBack={() => this.setState({ selectedVenue: null })}
             />
         );
     }
