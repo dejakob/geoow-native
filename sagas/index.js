@@ -10,6 +10,7 @@ import * as diarySaga from './diary';
 import * as peopleSaga from './people';
 import * as profileSaga from './profile';
 import * as cameraSaga from './camera';
+import * as messageSaga from './message';
 
 function* mainSaga() {
     yield takeEvery(ACTIONS.DISCOVER_LOAD_EVENTS_NEARBY, eventSaga.loadEventsNearby);
@@ -39,6 +40,9 @@ function* mainSaga() {
     yield takeEvery(ACTIONS.CAMERA_UPLOAD_IMAGE, cameraSaga.uploadImage);
 
     yield takeEvery(ACTIONS.PROFILE_UPDATE, profileSaga.update);
+
+    yield takeEvery(ACTIONS.MESSAGE_LOAD, messageSaga.loadMessages);
+    yield takeEvery(ACTIONS.MESSAGE_SEND, messageSaga.sendMessage);
 }
 
 export default mainSaga;
