@@ -24,7 +24,7 @@ function messageReducer(state = defaultState, action) {
 
             if (action.messageType === 'user') {
                 if (state.getIn(['byUser', action.userOrVenue])) {
-                    state = state.updateIn(['byUser', action.userOrVenue], messageIds => messageIds.push(messageIds));
+                    state = state.updateIn(['byUser', action.userOrVenue], ids => ids.merge(messageIds));
                 }
                 else {
                     state = state.setIn(['byUser', action.userOrVenue], messageIds);
@@ -32,14 +32,12 @@ function messageReducer(state = defaultState, action) {
             }
             else if (action.messageType === 'venue') {
                 if (state.getIn(['byVenue', action.userOrVenue])) {
-                    state = state.updateIn(['byVenue', action.userOrVenue], messageIds => messageIds.push(messageIds));
+                    state = state.updateIn(['byVenue', action.userOrVenue], ids => ids.merge(messageIds));
                 }
                 else {
                     state = state.setIn(['byVenue', action.userOrVenue], messageIds);
                 }
             }
-
-            console.log('STATE', state.toJS());
 
             return state;
     }

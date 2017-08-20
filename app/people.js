@@ -1,6 +1,6 @@
 import Immutable from 'immutable';
 import React, { Component } from 'react';
-import { AppState, View, Text } from 'react-native';
+import { View, Text } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import { GiftedChat } from 'react-native-gifted-chat';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -22,7 +22,6 @@ class People extends Component
 
     constructor() {
         super();
-        this.handleAppStateChange = this.handleAppStateChange.bind(this);
         this.handleMessageSend = this.handleMessageSend.bind(this);
         this.renderPeople = this.renderPeople.bind(this);
         this.renderVenues = this.renderVenues.bind(this);
@@ -39,14 +38,20 @@ class People extends Component
     }
 
     componentDidMount() {
-        AppState.addEventListener('change', this.handleAppStateChange);
-
         this.props.loadPeopleNearby();
 
+        // TODO: sockets!
         this.interval = setInterval(() => {
             this.props.loadPeopleNearby();
             this.props.loadMe();
-        }, 5000);
+
+            if (this.state.selectedPerson) {
+                this.props.loadMessages(this.state.selectedPerson.get('_id'));
+            }
+            else if (this.state.selectedVenue) {
+                this.props.loadMessages(null, this.state.selectedVenue.get('_id'));
+            }
+        }, 2000);
     }
 
     componentWillReceiveProps(newProps) {
@@ -67,16 +72,13 @@ class People extends Component
         }
     }
 
-    componentWillUnmount() {
-        AppState.removeEventListener('change', this.handleAppStateChange);
-    }
-
     get messages() {
         if (this.state.selectedPerson && this.props.message.getIn(['byUser', this.state.selectedPerson.get('_id')])) {
             return this.props.message
                 .getIn(['byUser', this.state.selectedPerson.get('_id')])
                 .map(messageId => this.props.message.get('allMessages').find(msg => msg.get('_id') === messageId))
                 .toJS()
+                .filter(m => !!m)
                 .map(msg => ({ ...msg, text: msg.body, user: msg.from }))
         }
         else if (this.state.selectedVenue && this.props.message.getIn(['byVenue', this.state.selectedVenue.get('_id')])) {
@@ -84,22 +86,11 @@ class People extends Component
                 .getIn(['byVenue', this.state.selectedVenue.get('_id')])
                 .map(messageId => this.props.message.get('allMessages').find(msg => msg.get('_id') === messageId))
                 .toJS()
+                .filter(m => !!m)
                 .map(msg => ({ ...msg, text: msg.body, user: msg.from }));
         }
 
         return [];
-    }
-
-    handleAppStateChange(nextAppState) {
-        if (nextAppState === 'active') {
-            this.interval = setInterval(() => {
-                this.props.loadPeopleNearby();
-                this.props.loadMe();
-            }, 5000);
-        }
-        else {
-            clearInterval(this.interval);
-        }
     }
 
     handleMessageSend(messages = []) {
