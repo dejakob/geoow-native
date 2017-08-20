@@ -38,7 +38,7 @@ const DashboardNavigation = StackNavigator({
 const TabNavigation = TabNavigator({
     Discover: { screen: connect(Discover) },
     Dashboard: { screen: DashboardNavigation },
-    // People: { screen: connect(People) }, // V2!
+    People: { screen: connect(People) },
     Scan: { screen: connect(Scan) },
 }, {
     tabBarPosition: 'bottom',
