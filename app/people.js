@@ -144,8 +144,10 @@ class People extends Component
         return (
             <PeopleNearby
                 selectedVenue={this.state.selectedVenue}
+                selectedPerson={this.state.selectedPerson}
                 peopleNearby={this.props.people.get('nearby').map(nearbyPersonId => this.props.people.getIn(['all', nearbyPersonId]))}
                 onBack={() => this.setState({ selectedVenue: null })}
+                onSelectPerson={selectedPerson => this.setState({ selectedPerson, selectedVenue: null })}
             />
         );
     }
@@ -163,7 +165,7 @@ class People extends Component
         return (
             <VenuesList
                 venues={venuesDistinctArray}
-                onSelectVenue={selectedVenue => this.setState({ selectedVenue })}
+                onSelectVenue={selectedVenue => this.setState({ selectedVenue, selectedPerson: null })}
             />
         );
     }
