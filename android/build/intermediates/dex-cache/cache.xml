@@ -25,8 +25,17 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="2f25dddd10257d19b7d78e4037da635b927a6497">
+        sha1="bad0927d7f441eab12ad287aa5dbb1ff09708505">
         <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_f6eb1863c8164732123fb78f5d429abcec33b19d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/9ad26f93e4f15969ca00fe3109b16b7c11a9e49d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_52042016e5d72a42b4b1120606ee2cf8278d59e0/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -129,6 +138,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/7c3fa0638b70fc8df554ae5364d4f3f640964f4a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5a8c049346497b406141ea88a425290709c33b4b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/jakobkerkhove/.android/build-cache/c5939e63fa4992483626d484d699bb6e6011b64a/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -144,6 +162,15 @@
         revision="25.0.0"
         sha1="9809e90be788acdb479b2b44e2112f3295a03068">
         <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/infer-annotations-4.0_e4ff0fec6fc082fd90d21ffcc50fe9e36be538fb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/753a167d7119b8fde873c5038af75f3953dfd728/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_84fd7767734ddf622794939f2c26a402577b42c8/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -201,12 +228,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/219cfbf7fb79941968fe833e92ca0ca4dcc5a687/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3dc9fbae145f8e407171480f3a200ca8ffcfce26/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/jakobkerkhove/.android/build-cache/2c5420ca19508903a048a6e6443375d209d1e4e9/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="a25b0b5aec89681b95d32780ad7904c1e1e4c679">
         <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4857e37a02828a18d0705ab456169b1452719697/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jakobkerkhove/.android/build-cache/dcf2dbd85d9de0b38476d95e6cb9c518fb42d4bb/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/jakobkerkhove/geoow/geoow-native/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c80d7db9e8cca4784845ca44f0ad42de63dabe91/classes.dex" />
     </item>
     <item
         is-multidex="true"

@@ -30,6 +30,8 @@ function* sendMessage(action) {
     try {
         const { user, venue, body } = action;
 
+        console.log('SEND MSG', action);
+
         if (user) {
             yield call(MessageApi.sendMessageToUser, user, body);
         }

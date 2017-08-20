@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, ActivityIndicator } from 'react-native';
 import AuthTitle from '../components/auth/auth-title';
 import AuthBackground from '../components/auth-background/auth-background';
+import AuthInput from '../components/auth/auth-input';
 import Footer from '../components/footer/footer';
 import PrimaryButton from '../components/button/primary-button';
 
@@ -10,6 +11,11 @@ class AuthVerify extends Component
     static navigationOptions = {
         header: null
     };
+
+    constructor() {
+        super();
+        this.handleLink = this.handleLink.bind(this);
+    }
 
     componentWillMount() {
         try {
@@ -31,6 +37,11 @@ class AuthVerify extends Component
         }
     }
 
+    handleLink(link) {
+        const verificationToken = link.trim().replace('geoow://auth/', '');
+        this.props.authVerify(verificationToken);
+    }
+
     render() {
         return (
             <AuthBackground>
@@ -39,6 +50,10 @@ class AuthVerify extends Component
                     <ActivityIndicator
                         size="large"
                         color="white"
+                    />
+                    <AuthInput
+                        placeholder='Enter geoow link'
+                        onChangeText={this.handleLink}
                     />
                 </View>
                 <Footer>

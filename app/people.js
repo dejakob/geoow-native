@@ -97,10 +97,10 @@ class People extends Component
     handleMessageSend(messages = []) {
         if (messages.length > 0 && messages[0].text) {
             if (this.state.selectedPerson) {
-                this.props.sendMessage(this.state.selectedPerson, null, messages[0].text)
+                this.props.sendMessage(this.state.selectedPerson.get('_id'), null, messages[0].text)
             }
             else if (this.state.selectedVenue) {
-                this.props.sendMessage(null, this.state.selectedVenue, messages[0].text);
+                this.props.sendMessage(null, this.state.selectedVenue.get('_id'), messages[0].text);
             }
         }
     }
@@ -146,7 +146,7 @@ class People extends Component
                 selectedVenue={this.state.selectedVenue}
                 selectedPerson={this.state.selectedPerson}
                 peopleNearby={this.props.people.get('nearby').map(nearbyPersonId => this.props.people.getIn(['all', nearbyPersonId]))}
-                onBack={() => this.setState({ selectedVenue: null })}
+                onBack={() => this.setState({ selectedVenue: null, selectedPerson: null })}
                 onSelectPerson={selectedPerson => this.setState({ selectedPerson, selectedVenue: null })}
             />
         );

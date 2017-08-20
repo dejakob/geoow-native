@@ -26,7 +26,7 @@ import '../constants/'
 Mapbox.setAccessToken(MAPBOX_TOKEN);
 
 // on Android, the URI prefix typically contains a host in addition to scheme
-const prefix = Platform.OS == 'android' ? 'geoow://geoow/' : 'geoow://';
+const prefix = 'geoow://';
 
 const DashboardNavigation = StackNavigator({
     DashboardMain: { screen: connect(Dashboard) },

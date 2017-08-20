@@ -70,11 +70,15 @@ class PeopleNearby extends Component
             <Touchable
                 onPress={() => this.props.onSelectPerson(item)}
             >
-                <Avatar
-                    key={index}
-                    style={[getStyle('peopleNearby__avatar'), { opacity: this.props.selectedPerson && this.props.selectedPerson.get('_id') === item.get('_id') ? 1 : 0.5 }]}
-                    image={item.get('avatar')}
-                />
+                <View
+                    style={getStyle('peopleNearby__avatar')}
+                >
+                    <Avatar
+                        key={index}
+                        style={[getStyle('peopleNearby__avatar'), { opacity: this.props.selectedPerson && this.props.selectedPerson.get('_id') === item.get('_id') ? 1 : 0.5 }]}
+                        image={item.get('avatar')}
+                    />
+                </View>
             </Touchable>
         );
     }
