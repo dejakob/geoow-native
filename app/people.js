@@ -41,17 +41,18 @@ class People extends Component
         this.props.loadPeopleNearby();
 
         // TODO: sockets!
-        this.interval = setInterval(() => {
-            this.props.loadPeopleNearby();
-            this.props.loadMe();
-
+        setInterval(() => {
             if (this.state.selectedPerson) {
                 this.props.loadMessages(this.state.selectedPerson.get('_id'));
             }
             else if (this.state.selectedVenue) {
                 this.props.loadMessages(null, this.state.selectedVenue.get('_id'));
             }
-        }, 2000);
+        }, 1000);
+        setInterval(() => {
+            this.props.loadPeopleNearby();
+            this.props.loadMe();
+        }, 10000);
     }
 
     componentWillReceiveProps(newProps) {

@@ -39,7 +39,7 @@ function* loadMe() {
             yield call(UserApi.addPushNotificationId, getCurrentId());
             pnId = getCurrentId();
         }
-        
+
         yield call(UserApi.addPushNotificationId, getCurrentId());
         yield put(Actions._loadMeSuccess(me));
     }
