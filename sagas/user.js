@@ -4,6 +4,8 @@ import * as UserApi from '../api/user';
 import { call, put } from 'redux-saga/effects';
 import { getCurrentId } from '../services/push-notifications';
 
+let pnId = null;
+
 /**
  * Update the users categories
  */
@@ -32,6 +34,12 @@ function* loadStats(action) {
 function* loadMe() {
     try {
         const me = yield call(UserApi.fetchMe);
+
+        if (getCurrentId() !== pnId) {
+            yield call(UserApi.addPushNotificationId, getCurrentId());
+            pnId = getCurrentId();
+        }
+
         yield call(UserApi.addPushNotificationId, getCurrentId());
         yield put(Actions._loadMeSuccess(me));
     }

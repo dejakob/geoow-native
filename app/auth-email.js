@@ -49,6 +49,7 @@ class AuthEmail extends Component
                         placeholder='Please enter your email'
                         onChangeText={email => this.email = email}
                         invalid={!this.state.isEmailValid}
+                        underlineColorAndroid="transparent"
                     />
                 </View>
                 <Footer>

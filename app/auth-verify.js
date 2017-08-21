@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import { View, ActivityIndicator } from 'react-native';
-import AuthTitle from '../components/auth/auth-title';
-import AuthBackground from '../components/auth-background/auth-background';
-import Footer from '../components/footer/footer';
-import PrimaryButton from '../components/button/primary-button';
+import AuthVerifyComponent from '../components/auth-verify/auth-verify';
 
 class AuthVerify extends Component
 {
@@ -33,22 +29,9 @@ class AuthVerify extends Component
 
     render() {
         return (
-            <AuthBackground>
-                <View style={{ flex: 1, justifyContent: 'center' }}>
-                    <AuthTitle>Open your inbox and find the link</AuthTitle>
-                    <ActivityIndicator
-                        size="large"
-                        color="white"
-                    />
-                </View>
-                <Footer>
-                    <PrimaryButton
-                        onPress={() => this.props.navigation.navigate('AuthEmail')}
-                    >
-                        TRY AGAIN
-                    </PrimaryButton>
-                </Footer>
-            </AuthBackground>
+            <AuthVerifyComponent
+                {...this.props}
+            />
         );
     }
 }

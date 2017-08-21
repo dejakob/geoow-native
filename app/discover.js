@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import { getStyle } from 'react-native-styler';
+import { View, Button } from 'react-native';
+import { getStyle, getCurrentTheme } from 'react-native-styler';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import MainBackground from '../components/main-background/main-background';
 import DiscoverMap from '../components/discover-map/discover-map';
 import DiscoverList from '../components/discover-list/discover-list';
+import LocationWarning from '../components/location-warning/location-warning';
+import InfoText from '../components/info-text/info-text';
 
 /**
  * <Discover />
@@ -16,6 +19,12 @@ class Discover extends Component
         tabBarIcon: ({ tintColor }) => <Icon name="map" style={[getStyle('tabBar__icon'), { color: tintColor }]} />
     };
 
+    constructor() {
+        super();
+        this.handleSpoofLocationToAntwerp = this.handleSpoofLocationToAntwerp.bind(this);
+        this.spoofedLocation = false;
+    }
+
     get eventsNearby() {
         return this.props.discover.get('eventsNearby').map(eventId =>
             this.props.event.getIn(['events', eventId])
@@ -26,6 +35,12 @@ class Discover extends Component
 
     componentWillMount() {
         this.props.loadGeolocation();
+
+        setInterval(() => {
+            if (!this.spoofedLocation) {
+                this.props.loadGeolocation();
+            }
+        }, 5000);
     }
 
     componentWillReceiveProps(newProps) {
@@ -37,11 +52,45 @@ class Discover extends Component
         }
     }
 
+    handleSpoofLocationToAntwerp() {
+        this.spoofedLocation = true;
+        this.props._loadGeolocationSuccess(51.2169159, 4.4101744);
+    }
+
     render() {
         const { eventsNearby } = this;
 
         if (!this.props.location.get('latitude') || !this.props.location.get('longitude')) {
-            return null;
+            return (
+                <LocationWarning
+                    type="discover"
+                />
+            );
+        }
+
+        let content = null;
+
+        if (eventsNearby.count() === 0) {
+            content = (
+                <View>
+                    <InfoText>
+                        There are no events around you right now.
+                    </InfoText>
+                    <Button
+                        title="Show venues in Antwerp, Belgium"
+                        onPress={this.handleSpoofLocationToAntwerp}
+                        color={getCurrentTheme().colors.active}
+                    />
+                </View>
+            );
+        }
+        else {
+            content = (
+                <DiscoverList
+                    events={eventsNearby}
+                    onItemPress={item => this.props.navigation.navigate('EventDetail', { eventId: item.get('_id') })}
+                />
+            );
         }
 
         return (
@@ -51,10 +100,7 @@ class Discover extends Component
                     longitude={this.props.location.get('longitude')}
                     events={eventsNearby}
                 />
-                <DiscoverList
-                    events={eventsNearby}
-                    onItemPress={item => this.props.navigation.navigate('EventDetail', { eventId: item.get('_id') })}
-                />
+                {content}
             </MainBackground>
         );
     }

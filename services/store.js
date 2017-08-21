@@ -15,6 +15,7 @@ import questReducer from '../reducers/quest';
 import orderReducer from '../reducers/order';
 import diaryReducer from '../reducers/diary';
 import peopleReducer from '../reducers/people';
+import messageReducer from '../reducers/message';
 import mainSaga from '../sagas';
 
 const store = createStore();
@@ -38,7 +39,8 @@ function createStore() {
         quest: questReducer,
         order: orderReducer,
         diary: diaryReducer,
-        people: peopleReducer
+        people: peopleReducer,
+        message: messageReducer
     };
 
     const reduxStore = createReduxStore(

@@ -17,7 +17,9 @@ class ProfileBirthdateModal extends Component
     }
 
     componentWillReceiveProps(newProps) {
-        this.state.date = newProps.date ? new Date(newProps.date) : DEFAULT_DATE;
+        if (this.props.visible !== newProps.visible) {
+            this.state.date = newProps.date ? new Date(newProps.date) : DEFAULT_DATE;
+        }
     }
 
     render() {
@@ -31,7 +33,7 @@ class ProfileBirthdateModal extends Component
                     mode='date'
                     date={this.state.date}
                     onDateChange={date => this.setState({ date })}
-                    minimumDate={new Date('1990-00-00T00:00:00')}
+                    minimumDate={new Date('1900-00-00T00:00:00')}
                     maximumDate={moment().subtract(13, 'year').startOf('day').toDate()}
                 />
                 <Button
