@@ -29,7 +29,6 @@ class ProfileBirthdateModal extends Component
             >
                 <DatePickerIOS
                     mode='date'
-                    date={this.state.date}
                     onDateChange={date => this.setState({ date })}
                     minimumDate={new Date('1990-00-00T00:00:00')}
                     maximumDate={moment().subtract(13, 'year').startOf('day').toDate()}
