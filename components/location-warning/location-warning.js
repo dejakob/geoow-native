@@ -5,12 +5,12 @@ import Animation from 'lottie-react-native';
 import InfoText from '../info-text/info-text';
 
 let animationRef = null;
-let isPlaying = false;
+let isPlaying = [];
 
-function LocationWarning() {
-    if (animationRef && !isPlaying) {
+function LocationWarning(props) {
+    if (animationRef && !isPlaying[props.type]) {
         animationRef.play();
-        isPlaying = true;
+        isPlaying[props.type] = true;
     }
 
     return (

@@ -44,7 +44,7 @@ class Discover extends Component
         if (!this.props.location.get('latitude') || !this.props.location.get('longitude')) {
             return (
                 <LocationWarning
-
+                    type="discover"
                 />
             );
         }

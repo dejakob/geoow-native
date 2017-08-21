@@ -8,6 +8,7 @@ import MainBackground from '../components/main-background/main-background';
 import PeopleNearby from '../components/people-nearby/people-nearby';
 import VenuesList from '../components/venues-list/venues-list';
 import SmallTitle from '../components/small-title/small-title';
+import LocationWarning from '../components/location-warning/location-warning';
 
 /**
  * <People />
@@ -106,6 +107,14 @@ class People extends Component
     }
 
     render() {
+        if (!this.props.location.get('latitude') || !this.props.location.get('longitude')) {
+            return (
+                <LocationWarning
+                    type="people"
+                />
+            );
+        }
+
         return (
             <MainBackground>
                 <SmallTitle>People nearby</SmallTitle>
