@@ -10,7 +10,6 @@
     "@mapbox/polyline": "^0.2.0",
     "human-names": "github:dejakob/human-names#master",
     "immutable": "^3.8.1",
-    "lottie-react-native": "^2.2.0",
     "moment": "^2.18.1",
     "react": "16.0.0-alpha.12",
     "react-native": "0.47.1",

@@ -9,7 +9,7 @@ const QUEST_TIMEOUT = 43200000;
 let _isInitialized = false;
 
 function initTracking() {
-    BackgroundGeolocation.configure({
+    BackgroundGeolocation.setConfig({
         // Geolocation Config
         desiredAccuracy: 0,
         stationaryRadius: 25,
@@ -18,7 +18,7 @@ function initTracking() {
         // Application config
         debug: false, // <-- enable this hear sounds for background-geolocation life-cycle.
         logLevel: BackgroundGeolocation.LOG_LEVEL_DEBUG,
-        stopOnTerminate: true,   // <-- Allow the background-service to continue tracking when user closes the app.
+        stopOnTerminate: false,   // <-- Allow the background-service to continue tracking when user closes the app.
         startOnBoot: true,        // <-- Auto start tracking when device is powered-up.
         url: `${API.URL}/locations`,
         headers: {              // <-- Optional HTTP headers

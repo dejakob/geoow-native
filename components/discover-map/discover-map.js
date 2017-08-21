@@ -1,10 +1,20 @@
 import moment from 'moment';
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import Mapbox, { MapView } from 'react-native-mapbox-gl';
 import { getStyle } from 'react-native-styler';
 import * as Router from '../../services/router';
 import './discover-map.style';
+
+let Mapbox = null;
+let MapView = null;
+
+try {
+    Mapbox = require('react-native-mapbox-gl');
+    MapView = Mapbox.MapView;
+}
+catch (ex) {
+    console.log(ex);
+}
 
 /**
  * <DirectionsMap />

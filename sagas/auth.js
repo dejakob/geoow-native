@@ -12,7 +12,7 @@ AsyncStorage
     .getItem('token')
     .then(token => {
         _token = token;
-        BackgroundGeolocation.configure({
+        BackgroundGeolocation.setConfig({
             headers: {              // <-- Optional HTTP headers
                 'Content-Type': 'application/json',
                 'authorization': `Bearer ${token}`
@@ -42,7 +42,7 @@ function* authVerify(action) {
         yield AsyncStorage.setItem('token', geoowToken);
         yield put(Actions.loadMe());
 
-        BackgroundGeolocation.configure({
+        BackgroundGeolocation.setConfig({
             headers: {              // <-- Optional HTTP headers
                 'Content-Type': 'application/json',
                 'authorization': `Bearer ${geoowToken}`
