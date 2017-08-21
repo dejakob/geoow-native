@@ -56,11 +56,17 @@ class Preferences extends Component
     }
 
     render() {
+        const categories = this.props.event.get('categories')
+            .filter(a => a !== null)
+            .map(categoryName => categoryName.toLowerCase());
+        const categoriesArray = categories.toArray();
+        const distinctCategories = categories.filter((catName, index) => categoriesArray.indexOf(catName) === index);
+
         return (
             <AuthBackground>
                 <Article>
                     <CategoryList
-                        categories={this.props.event.get('categories').filter(a => a !== null)}
+                        categories={distinctCategories}
                         onItemSelect={this._selectCategory}
                         onItemDeselect={this._deselectCategory}
                         selectedCategories={this.state.selectedCategories.toArray()}
