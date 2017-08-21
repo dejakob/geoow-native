@@ -27,20 +27,25 @@ function AuthVerify(props) {
                 />
                 <AuthInput
                     placeholder='Enter verification code'
-                    onChangeText={this.handleLink}
+                    onChangeText={handleLink}
                     underlineColorAndroid="transparent"
                     style={getStyle('authVerify__input')}
                 />
             </View>
             <Footer>
                 <PrimaryButton
-                    onPress={() => this.props.navigation.navigate('AuthEmail')}
+                    onPress={() => props.navigation.navigate('AuthEmail')}
                 >
                     TRY AGAIN
                 </PrimaryButton>
             </Footer>
         </AuthBackground>
-    )
+    );
+
+    function handleLink(link) {
+        const verificationToken = link.trim().replace('geoow://auth/', '');
+        props.authVerify(verificationToken);
+    }
 }
 
 export default AuthVerify

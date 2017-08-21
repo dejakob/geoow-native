@@ -7,11 +7,6 @@ class AuthVerify extends Component
         header: null
     };
 
-    constructor() {
-        super();
-        this.handleLink = this.handleLink.bind(this);
-    }
-
     componentWillMount() {
         try {
             const { verificationToken } = this.props.navigation.state.params;
@@ -30,11 +25,6 @@ class AuthVerify extends Component
         catch (ex) {
             console.log(ex);
         }
-    }
-
-    handleLink(link) {
-        const verificationToken = link.trim().replace('geoow://auth/', '');
-        this.props.authVerify(verificationToken);
     }
 
     render() {
