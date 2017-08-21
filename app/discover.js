@@ -27,6 +27,8 @@ class Discover extends Component
 
     componentWillMount() {
         this.props.loadGeolocation();
+
+        setInterval(() => this.props.loadGeolocation(), 5000);
     }
 
     componentWillReceiveProps(newProps) {
