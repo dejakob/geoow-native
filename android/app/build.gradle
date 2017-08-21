@@ -148,6 +148,7 @@ repositories {
 }
 
 dependencies {
+    compile project(':lottie-react-native')
     compile project(':react-native-mapbox-gl')
     compile project(':react-native-background-geolocation-android')
     compile project(':react-native-camera')

@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import MainBackground from '../components/main-background/main-background';
 import DiscoverMap from '../components/discover-map/discover-map';
 import DiscoverList from '../components/discover-list/discover-list';
+import LocationWarning from '../components/location-warning/location-warning';
 
 /**
  * <Discover />
@@ -41,7 +42,11 @@ class Discover extends Component
         const { eventsNearby } = this;
 
         if (!this.props.location.get('latitude') || !this.props.location.get('longitude')) {
-            return null;
+            return (
+                <LocationWarning
+
+                />
+            );
         }
 
         return (
