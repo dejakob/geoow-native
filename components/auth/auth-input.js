@@ -13,7 +13,7 @@ function AuthInput(props) {
     return (
         <TextInput
             {...props}
-            style={props.invalid ? getStyle('auth__input__invalid') : getStyle('auth__input')}
+            style={[props.invalid ? getStyle('auth__input__invalid') : getStyle('auth__input'), props.style]}
         />
     )
 }
