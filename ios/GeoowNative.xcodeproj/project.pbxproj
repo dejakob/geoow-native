@@ -55,6 +55,7 @@
 		AF9B43260A9F40D68F46B54C /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 370B536BA6444EF7914321F8 /* libRNVectorIcons.a */; };
 		B017112DB6414286B5928773 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAF620909DD349629D3A8C72 /* SimpleLineIcons.ttf */; };
 		B33843AD1F39129D00621D9F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B33843AC1F39129D00621D9F /* libz.tbd */; };
+		B394FB351F4B2A8B0009241D /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B394FAFD1F4B105B0009241D /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3AD62A51EC8D5D70037346B /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AD62A41EC8D5D70037346B /* AccountKit.framework */; };
 		B3C1887D1EDC91B00045AC9C /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C1887C1EDC91B00045AC9C /* Mapbox.framework */; };
 		B3C1887E1EDC91B00045AC9C /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3C1887C1EDC91B00045AC9C /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -439,6 +440,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B394FB351F4B2A8B0009241D /* Lottie.framework in Embed Frameworks */,
 				B3C1887E1EDC91B00045AC9C /* Mapbox.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
