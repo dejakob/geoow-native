@@ -1,7 +1,7 @@
 import Immutable from 'immutable';
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-import { getStyle } from 'react-native-styler';
+import { View, Text, Button } from 'react-native';
+import { getStyle, getCurrentTheme } from 'react-native-styler';
 import { GiftedChat } from 'react-native-gifted-chat';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import MainBackground from '../components/main-background/main-background';
@@ -9,6 +9,7 @@ import PeopleNearby from '../components/people-nearby/people-nearby';
 import VenuesList from '../components/venues-list/venues-list';
 import SmallTitle from '../components/small-title/small-title';
 import LocationWarning from '../components/location-warning/location-warning';
+import InfoText from '../components/info-text/info-text';
 
 /**
  * <People />
@@ -113,6 +114,19 @@ class People extends Component
                     type="people"
                 />
             );
+        }
+
+        if (this.props.discover.get('eventsNearby').count() === 0) {
+            return (
+                <MainBackground>
+                    <InfoText>Nobody is nearby right now...</InfoText>
+                    <Button
+                        title="Go to discover"
+                        onPress={() => this.props.navigation.navigate('Discover')}
+                        color={getCurrentTheme().colors.active}
+                    />
+                </MainBackground>
+            )
         }
 
         return (
