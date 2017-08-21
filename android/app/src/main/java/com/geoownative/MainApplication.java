@@ -3,7 +3,6 @@ package com.geoownative;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import com.airbnb.android.react.lottie.LottiePackage;
 import com.mapbox.reactnativemapboxgl.ReactNativeMapboxGLPackage;
 import com.transistorsoft.rnbackgroundgeolocation.RNBackgroundGeolocation;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
@@ -30,7 +29,6 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new LottiePackage(),
             new ReactNativeMapboxGLPackage(),
             new RNBackgroundGeolocation(),
             new RCTCameraPackage(),
