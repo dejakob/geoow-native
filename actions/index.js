@@ -5,7 +5,6 @@ import * as LocationActions from './location';
 import * as DiscoverActions from './discover';
 import * as QuestActions from './quest';
 import * as OrderActions from './order';
-import * as DiaryActions from './diary';
 import * as PeopleActions from './people';
 import * as ProfileActions from './profile';
 import * as CameraActions from './camera';
@@ -19,7 +18,6 @@ export default {
     ...DiscoverActions,
     ...QuestActions,
     ...OrderActions,
-    ...DiaryActions,
     ...PeopleActions,
     ...ProfileActions,
     ...CameraActions,

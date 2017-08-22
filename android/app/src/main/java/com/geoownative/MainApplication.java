@@ -1,10 +1,13 @@
 package com.geoownative;
 
 import android.app.Application;
+import android.content.Context;
+import android.support.multidex.MultiDex;
+import android.support.multidex.MultiDexApplication;
 
 import com.facebook.react.ReactApplication;
-import com.mapbox.reactnativemapboxgl.ReactNativeMapboxGLPackage;
 import com.transistorsoft.rnbackgroundgeolocation.RNBackgroundGeolocation;
+import com.mapbox.reactnativemapboxgl.ReactNativeMapboxGLPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import com.transistorsoft.rnbackgroundgeolocation.*;
 import com.geektime.rnonesignalandroid.ReactNativeOneSignalPackage;
@@ -17,7 +20,7 @@ import com.facebook.soloader.SoLoader;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainApplication extends Application implements ReactApplication {
+public class MainApplication extends MultiDexApplication implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
     @Override
@@ -29,8 +32,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new ReactNativeMapboxGLPackage(),
             new RNBackgroundGeolocation(),
+            new ReactNativeMapboxGLPackage(),
             new RCTCameraPackage(),
             new RNBackgroundGeolocation(),
             new ReactNativeOneSignalPackage(),
@@ -38,6 +41,12 @@ public class MainApplication extends Application implements ReactApplication {
       );
     }
   };
+
+  @Override
+  protected void attachBaseContext(Context base) {
+    super.attachBaseContext(base);
+    MultiDex.install(this);
+  }
 
   @Override
   public ReactNativeHost getReactNativeHost() {

@@ -6,7 +6,6 @@ import * as userSaga from './user';
 import * as locationSaga from './location';
 import * as questSaga from './quest';
 import * as orderSaga from './order';
-import * as diarySaga from './diary';
 import * as peopleSaga from './people';
 import * as profileSaga from './profile';
 import * as cameraSaga from './camera';
@@ -31,9 +30,6 @@ function* mainSaga() {
     yield takeEvery(ACTIONS.QUEST_REJECT_QUEST, questSaga.rejectQuest);
 
     yield takeEvery(ACTIONS.ORDER_BUY, orderSaga.buy);
-
-    yield takeEvery(ACTIONS.DIARY_SAVE_ITEM, diarySaga.saveItem);
-    yield takeEvery(ACTIONS.DIARY_LOAD_ITEMS, diarySaga.getItems);
 
     yield takeEvery(ACTIONS.PEOPLE_LOAD_NEARBY, peopleSaga.loadNearby);
 

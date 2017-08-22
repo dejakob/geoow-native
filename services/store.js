@@ -13,7 +13,6 @@ import locationReducer from '../reducers/location';
 import discoverReducer from '../reducers/discover';
 import questReducer from '../reducers/quest';
 import orderReducer from '../reducers/order';
-import diaryReducer from '../reducers/diary';
 import peopleReducer from '../reducers/people';
 import messageReducer from '../reducers/message';
 import mainSaga from '../sagas';
@@ -38,7 +37,6 @@ function createStore() {
         discover: discoverReducer,
         quest: questReducer,
         order: orderReducer,
-        diary: diaryReducer,
         people: peopleReducer,
         message: messageReducer
     };
