@@ -7,6 +7,11 @@ function getDirections(latitude1, longitude1, latitude2, longitude2) {
         .then(response => response.json());
 }
 
+function getGoogleMapsToken() {
+    return GOOGLE_MAPS_TOKEN;
+}
+
 export {
-    getDirections
+    getDirections,
+    getGoogleMapsToken
 }

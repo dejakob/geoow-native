@@ -1,20 +1,12 @@
-import moment from 'moment';
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Platform, Image } from 'react-native';
 import { getStyle } from 'react-native-styler';
+import DiscoverMapMapbox from './discover-map-mapbox';
+import { getGoogleMapsToken } from '../../services/directions';
 import * as Router from '../../services/router';
 import './discover-map.style';
 
-let Mapbox = null;
-let MapView = null;
-
-try {
-    Mapbox = require('react-native-mapbox-gl');
-    MapView = Mapbox.MapView;
-}
-catch (ex) {
-    console.log(ex);
-}
+const API_VERSION = 21;
 
 /**
  * <DirectionsMap />
@@ -30,6 +22,8 @@ class DiscoverMap extends Component
         };
 
         this._handleRouteChange = this._handleRouteChange.bind(this);
+        this.renderMapbox = this.renderMapbox.bind(this);
+        this.renderStaticMap = this.renderStaticMap.bind(this);
     }
 
     componentWillMount() {
@@ -57,25 +51,34 @@ class DiscoverMap extends Component
             );
         }
 
-        const { props } = this;
-        const annotations = props.events.map(event => ({
-            coordinates: event.getIn(['location', 'geocoords']).toJS().reverse(),
-            type: 'point',
-            title: event.get('name'),
-            subtitle: `${moment(event.get('startTime')).format('ddd')} • ${moment(event.get('endTime')).format('HH:mm')}`,
-            id: event.get('_id')
-        })).toJS();
+        const majorVersionIOS = parseInt(Platform.Version, 10);
+
+        if (Platform.OS === 'android' && majorVersionIOS < API_VERSION) {
+            return this.renderStaticMap();
+        }
+
+        return this.renderMapbox();
+    }
+
+    renderMapbox() {
+        return (
+            <DiscoverMapMapbox
+                {...this.props}
+            />
+        )
+    }
+
+    renderStaticMap() {
+        const latLng = `${this.props.latitude},${this.props.longitude}`;
+        const flattenedStyle = StyleSheet.flatten(getStyle('discoverMap'));
+        const size = `${parseInt(flattenedStyle.width, 10)}x${parseInt(flattenedStyle.height, 10)}`;
+
+        const markers = `markers=color:red%7Clabel:C%7C40.718217,-73.998284`
 
         return (
-            <MapView
-                initialCenterCoordinate={{ latitude: props.latitude, longitude: props.longitude }}
-                style={getStyle('discoverMap')}
-                initialZoomLevel={13}
-                styleURL='mapbox://styles/mapbox/dark-v9'
-                annotations={annotations}
-                showsUserLocation={false}
-                userTrackingMode={Mapbox.userTrackingMode.follow}
-                logoIsHidden={true}
+            <Image
+                style={[getStyle('discoverMap')]}
+                source={{ uri: `https://maps.googleapis.com/maps/api/staticmap?center=${latLng}&zoom=15&size=${size}&style=element:labels|visibility:off&style=element:geometry.stroke|visibility:off&style=feature:landscape|element:geometry|saturation:-100&style=feature:water|saturation:-100|invert_lightness:true&key=${getGoogleMapsToken()}` }}
             />
         );
     }

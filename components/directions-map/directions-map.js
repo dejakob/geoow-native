@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import Mapbox, { MapView } from 'react-native-mapbox-gl';
+import { View, Text, StyleSheet, Platform } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import * as Router from '../../services/router';
 import './directions-map.style';
+
+const API_VERSION = 21;
 
 /**
  * <DirectionsMap />
@@ -45,38 +46,23 @@ class DirectionsMap extends Component {
             );
         }
 
-        const { props } = this;
-        const annotations = [{
-            coordinates: props.directions,
-            type: 'polyline',
-            strokeColor: StyleSheet.flatten(getStyle('directionsMap__polygon')).color,
-            strokeWidth: 4,
-            strokeAlpha: 1,
-            id: 'directions'
-        }, {
-            coordinates: props.destination,
-            type: 'point',
-            id: 'destination'
-        }];
+        const majorVersionIOS = parseInt(Platform.Version, 10);
+
+        if (Platform.OS === 'android' && majorVersionIOS < API_VERSION) {
+            return (
+                <View
+                    style={{ flex: 1 }}
+                >
+                    {this.props.children}
+                </View>
+            );
+        }
 
         return (
-            <View
-                style={getStyle('directionsMap__wrapper')}
-            >
-                <MapView
-                    initialCenterCoordinate={{ latitude: 0, longitude: 0 }}
-                    initialZoomLevel={13}
-                    styleURL='mapbox://styles/mapbox/dark-v9'
-                    showsUserLocation={true}
-                    userTrackingMode={Mapbox.userTrackingMode.follow}
-                    logoIsHidden={true}
-                    annotations={annotations}
-                    style={getStyle('directionsMap')}
-                    ref={mapView => this._mapView = mapView}
-                />
-                {props.children}
-            </View>
-        );
+            <DirectionsMap
+                {...this.props}
+            />
+        )
     }
 
 }
