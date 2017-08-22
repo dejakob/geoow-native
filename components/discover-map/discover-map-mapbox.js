@@ -1,5 +1,6 @@
 import moment from 'moment'
 import React, { Component } from 'react';
+import { getStyle } from 'react-native-styler';
 
 let Mapbox = null;
 let MapView = null;

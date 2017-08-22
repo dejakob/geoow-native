@@ -85,11 +85,8 @@ function loadStats(state, action) {
 }
 
 function loadStatsSuccess(state, action) {
-    action.stats.forEach(stat => {
-        state = state.updateIn(['me', 'stats'], stats => stats.unshift(Immutable.fromJS(stat)));
-    });
-
     return state
+        .setIn(['me', 'stats'], Immutable.fromJS(action.stats))
         .set('isLoadingStats', false);
 }
 
