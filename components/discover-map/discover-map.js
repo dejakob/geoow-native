@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, Platform, Image } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import DiscoverMapMap from './discover-map-map';
 import { getGoogleMapsToken } from '../../services/directions';
-import * as Router from '../../services/router';
 import './discover-map.style';
 
 const API_VERSION = 21;
@@ -17,40 +16,11 @@ class DiscoverMap extends React.PureComponent
     constructor() {
         super();
 
-        this.state = {
-            showMap: true
-        };
-
-        this._handleRouteChange = this._handleRouteChange.bind(this);
         this.renderMap = this.renderMap.bind(this);
         this.renderStaticMap = this.renderStaticMap.bind(this);
     }
 
-    componentWillMount() {
-        Router.addOnTransitionListener(this._handleRouteChange);
-    }
-
-    componentWillUnmount() {
-        Router.removeOnTransitionListener(this._handleRouteChange);
-    }
-
-    _handleRouteChange(params) {
-        const lastRouteName = params.navigation.state.routes[params.navigation.state.routes.length - 1].routeName;
-
-        this.setState({
-            showMap: lastRouteName === 'Tabs'
-        });
-    }
-
     render () {
-        if (!this.state.showMap) {
-            return (
-                <View
-                    style={[getStyle('discoverMap'), { backgroundColor: 'black' }]}
-                />
-            );
-        }
-
         const majorVersionIOS = parseInt(Platform.Version, 10);
 
         if (Platform.OS === 'android' && majorVersionIOS < API_VERSION) {
