@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Platform, Image } from 'react-native';
 import { getStyle } from 'react-native-styler';
-import DiscoverMapMapbox from './discover-map-mapbox';
+import DiscoverMapMap from './discover-map-map';
 import { getGoogleMapsToken } from '../../services/directions';
 import * as Router from '../../services/router';
 import './discover-map.style';
@@ -22,7 +22,7 @@ class DiscoverMap extends React.PureComponent
         };
 
         this._handleRouteChange = this._handleRouteChange.bind(this);
-        this.renderMapbox = this.renderMapbox.bind(this);
+        this.renderMap = this.renderMap.bind(this);
         this.renderStaticMap = this.renderStaticMap.bind(this);
     }
 
@@ -57,12 +57,12 @@ class DiscoverMap extends React.PureComponent
             return this.renderStaticMap();
         }
 
-        return this.renderMapbox();
+        return this.renderMap();
     }
 
-    renderMapbox() {
+    renderMap() {
         return (
-            <DiscoverMapMapbox
+            <DiscoverMapMap
                 {...this.props}
             />
         )

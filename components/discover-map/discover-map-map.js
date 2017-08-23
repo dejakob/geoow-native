@@ -1,27 +1,15 @@
 import moment from 'moment'
 import React, { Component } from 'react';
+import MapView from 'react-native-maps';
 import { getStyle } from 'react-native-styler';
 
-let Mapbox = null;
-let MapView = null;
-
 /**
- * <DiscoverMapMapbox />
+ * <DiscoverMapMap />
  * @param props
  * @returns {XML}
  * @constructor
  */
-function DiscoverMapMapbox(props) {
-    try {
-        if (!Mapbox) {
-            Mapbox = require('react-native-mapbox-gl');
-            MapView = Mapbox.MapView;
-        }
-    }
-    catch (ex) {
-        console.log(ex);
-    }
-
+function DiscoverMapMap(props) {
     const annotations = props.events.map(event => ({
         coordinates: event.getIn(['location', 'geocoords']).toJS().reverse(),
         type: 'point',
@@ -35,13 +23,11 @@ function DiscoverMapMapbox(props) {
             initialCenterCoordinate={{ latitude: props.latitude, longitude: props.longitude }}
             style={getStyle('discoverMap')}
             initialZoomLevel={13}
-            styleURL='mapbox://styles/mapbox/dark-v9'
             annotations={annotations}
             showsUserLocation={false}
-            userTrackingMode={Mapbox.userTrackingMode.follow}
             logoIsHidden={true}
         />
     );
 }
 
-export default DiscoverMapMapbox;
+export default DiscoverMapMap;

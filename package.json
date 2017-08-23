@@ -17,7 +17,6 @@
     "react-native-camera": "git+https://github.com/lwansbrough/react-native-camera.git",
     "react-native-gifted-chat": "^0.2.5",
     "react-native-keyboard-aware-scroll-view": "^0.2.9",
-    "react-native-mapbox-gl": "github:mapbox/react-native-mapbox-gl#master",
     "react-native-maps": "^0.16.2",
     "react-native-modal-walk-through": "dejakob/react-native-modal-walk-through",
     "react-native-onesignal": "^3.0.4",

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, Platform, Image } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import { getGoogleMapsToken } from '../../services/directions';
-import DirectionsMapMapbox from './directions-map-mapbox';
+import DirectionsMapMap from './directions-map-map';
 import * as Router from '../../services/router';
 import './directions-map.style';
 
@@ -70,7 +70,7 @@ class DirectionsMap extends React.PureComponent {
         }
 
         return (
-            <DirectionsMapMapbox
+            <DirectionsMapMap
                 {...this.props}
             />
         )
