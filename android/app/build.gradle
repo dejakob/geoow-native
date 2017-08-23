@@ -149,7 +149,6 @@ repositories {
 
 dependencies {
     compile project(':react-native-background-geolocation-android')
-    compile project(':react-native-mapbox-gl')
     compile project(':react-native-camera')
     compile(name: 'tslocationmanager', ext: 'aar')
     compile project(':react-native-onesignal')

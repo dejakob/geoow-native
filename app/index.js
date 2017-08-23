@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Platform } from 'react-native';
 import { connectStyler, getCurrentTheme } from 'react-native-styler';
 import { StackNavigator, TabNavigator } from 'react-navigation';
-import Mapbox from 'react-native-mapbox-gl';
 import { connect as connectRedux } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Actions from '../actions';
@@ -19,11 +18,8 @@ import Scan from './scan';
 import People from './people';
 import Profile from './profile';
 import * as Router from '../services/router';
-import { MAPBOX_TOKEN } from '../constants';
 import '../themes';
 import '../constants/'
-
-Mapbox.setAccessToken(MAPBOX_TOKEN);
 
 // on Android, the URI prefix typically contains a host in addition to scheme
 const prefix = 'geoow://';

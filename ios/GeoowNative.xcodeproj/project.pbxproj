@@ -46,7 +46,6 @@
 		3BBF047A713E4B7CA9E54486 /* libRCTOneSignal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 589049A6CBE24390B566FAFA /* libRCTOneSignal.a */; };
 		46CCF645E213480BA64C7F77 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CD539855CA145BF980146D0 /* Foundation.ttf */; };
 		5265287371A547D2B244B128 /* libCocoaLumberjack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 333AEA8083564E118F363FCA /* libCocoaLumberjack.a */; };
-		552F32F72DD24603AD1EF859 /* libRCTMapboxGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F296AC012DF64785B93BB8DE /* libRCTMapboxGL.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		671AFDEA8A3C4CC2BD28C18B /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B51797211DCF478882B9EC90 /* Zocial.ttf */; };
 		7AA780094A1B4B3A841FB286 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E53472012E704AD4BBF88506 /* Entypo.ttf */; };
@@ -54,8 +53,6 @@
 		AF9B43260A9F40D68F46B54C /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 370B536BA6444EF7914321F8 /* libRNVectorIcons.a */; };
 		B017112DB6414286B5928773 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAF620909DD349629D3A8C72 /* SimpleLineIcons.ttf */; };
 		B33843AD1F39129D00621D9F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B33843AC1F39129D00621D9F /* libz.tbd */; };
-		B3C1887D1EDC91B00045AC9C /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C1887C1EDC91B00045AC9C /* Mapbox.framework */; };
-		B3C1887E1EDC91B00045AC9C /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3C1887C1EDC91B00045AC9C /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEC500F337F842DEA70031EB /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B81790F6C3473FAF12AE23 /* Octicons.ttf */; };
 		C6FEC1D6E5A14D6D8B9F295B /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B254A6CD2E9D47D19159CF16 /* libRCTCamera.a */; };
 		C818A5F3117F40F0AC6720D0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 334008D573EB443192352566 /* libsqlite3.tbd */; };
@@ -294,20 +291,6 @@
 			remoteGlobalIDString = 5DBEB1501B18CEA900B34395;
 			remoteInfo = RNVectorIcons;
 		};
-		B3C188621EDC8E7D0045AC9C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA71A3EF8E754A02876C1268 /* RCTMapboxGL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C5DBB3401AF2EF2B00E611A9;
-			remoteInfo = RCTMapboxGL;
-		};
-		B3C188641EDC8E7D0045AC9C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA71A3EF8E754A02876C1268 /* RCTMapboxGL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C5DBB34B1AF2EF2B00E611A9;
-			remoteInfo = RCTMapboxGLTests;
-		};
 		B3C188851EDC92D00045AC9C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B3C188801EDC92D00045AC9C /* RNBackgroundGeolocation.xcodeproj */;
@@ -408,7 +391,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B3C1887E1EDC91B00045AC9C /* Mapbox.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,16 +443,13 @@
 		B254A6CD2E9D47D19159CF16 /* libRCTCamera.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTCamera.a; sourceTree = "<group>"; };
 		B2C0A822F01643DCA78C9153 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		B33843AC1F39129D00621D9F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		B3C1887C1EDC91B00045AC9C /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
 		B3C188801EDC92D00045AC9C /* RNBackgroundGeolocation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNBackgroundGeolocation.xcodeproj; path = "../node_modules/react-native-background-geolocation-android/ios/RNBackgroundGeolocation.xcodeproj"; sourceTree = "<group>"; };
 		B3CCA1BF1ED8463800E762EB /* GeoowNative.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = GeoowNative.entitlements; path = GeoowNative/GeoowNative.entitlements; sourceTree = "<group>"; };
 		B51797211DCF478882B9EC90 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		B7F5AF39E1F44412A21F7A60 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		E53472012E704AD4BBF88506 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		E9AC6BB1EBC74E278DBF11E7 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
-		F296AC012DF64785B93BB8DE /* libRCTMapboxGL.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTMapboxGL.a; sourceTree = "<group>"; };
 		F74BC00BC3C04900AA940CC9 /* Lumberjack.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = Lumberjack.xcodeproj; path = "../node_modules/cocoa-lumberjack/CocoaLumberjack/Lumberjack.xcodeproj"; sourceTree = "<group>"; };
-		FA71A3EF8E754A02876C1268 /* RCTMapboxGL.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTMapboxGL.xcodeproj; path = "../node_modules/react-native-mapbox-gl/ios/RCTMapboxGL.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -496,7 +475,6 @@
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
-				B3C1887D1EDC91B00045AC9C /* Mapbox.framework in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				AF9B43260A9F40D68F46B54C /* libRNVectorIcons.a in Frameworks */,
@@ -506,7 +484,6 @@
 				5265287371A547D2B244B128 /* libCocoaLumberjack.a in Frameworks */,
 				3BBF047A713E4B7CA9E54486 /* libRCTOneSignal.a in Frameworks */,
 				C6FEC1D6E5A14D6D8B9F295B /* libRCTCamera.a in Frameworks */,
-				552F32F72DD24603AD1EF859 /* libRCTMapboxGL.a in Frameworks */,
 				1D4A5DA908FA402682B9B6B3 /* TSLocationManager.framework in Frameworks */,
 				3332084783CC4899BC4253C9 /* TSBackgroundFetch.framework in Frameworks */,
 			);
@@ -715,7 +692,6 @@
 				F74BC00BC3C04900AA940CC9 /* Lumberjack.xcodeproj */,
 				64E30FB730884EB5B49C39E0 /* RCTOneSignal.xcodeproj */,
 				55C46FA5AA934D5DA912A54F /* RCTCamera.xcodeproj */,
-				FA71A3EF8E754A02876C1268 /* RCTMapboxGL.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -732,7 +708,6 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				B3C1887C1EDC91B00045AC9C /* Mapbox.framework */,
 				13B07FAE1A68108700A75B9A /* GeoowNative */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* GeoowNativeTests */,
@@ -767,15 +742,6 @@
 			isa = PBXGroup;
 			children = (
 				B3AD62781EC8B3ED0037346B /* libRNVectorIcons.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B3C1884B1EDC8E7D0045AC9C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B3C188631EDC8E7D0045AC9C /* libRCTMapboxGL.a */,
-				B3C188651EDC8E7D0045AC9C /* RCTMapboxGLTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -972,10 +938,6 @@
 				{
 					ProductGroup = 78C398B11ACF4ADC00677621 /* Products */;
 					ProjectRef = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
-				},
-				{
-					ProductGroup = B3C1884B1EDC8E7D0045AC9C /* Products */;
-					ProjectRef = FA71A3EF8E754A02876C1268 /* RCTMapboxGL.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302D41ABCB9D200DB3ED1 /* Products */;
@@ -1244,20 +1206,6 @@
 			fileType = archive.ar;
 			path = libRNVectorIcons.a;
 			remoteRef = B3AD62771EC8B3ED0037346B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B3C188631EDC8E7D0045AC9C /* libRCTMapboxGL.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRCTMapboxGL.a;
-			remoteRef = B3C188621EDC8E7D0045AC9C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B3C188651EDC8E7D0045AC9C /* RCTMapboxGLTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = RCTMapboxGLTests.xctest;
-			remoteRef = B3C188641EDC8E7D0045AC9C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		B3C188861EDC92D00045AC9C /* libRNBackgroundGeolocation.a */ = {

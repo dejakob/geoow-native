@@ -3412,13 +3412,6 @@ react-native-lightbox@oblador/react-native-lightbox#c84a8543d4511fe6a44c3d782074
   dependencies:
     react-timer-mixin "^0.13.3"
 
-"react-native-mapbox-gl@github:hippware/react-native-mapbox-gl#master":
-  version "5.2.0"
-  resolved "https://codeload.github.com/hippware/react-native-mapbox-gl/tar.gz/81329465c665ed2cd0c71149d022f5afc1e77854"
-  dependencies:
-    babel-eslint "^6.1.2"
-    lodash "^4.13.1"
-
 react-native-modal-walk-through@dejakob/react-native-modal-walk-through:
   version "0.1.5"
   resolved "https://codeload.github.com/dejakob/react-native-modal-walk-through/tar.gz/e8ace8299ff66d28973781b030c843c0ebe7777e"

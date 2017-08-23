@@ -1,6 +1,5 @@
 Done
 * only 1 user per email (unique index on email, replace token in case id is the same)
-* Mapbox with polygon
 * Quest reject
 * Some design improvements
 * android preferences select doesn't work
