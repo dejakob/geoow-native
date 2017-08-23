@@ -11,6 +11,8 @@ import { getStyle } from 'react-native-styler';
  * @constructor
  */
 function DirectionsMapMap(props) {
+    console.log('directions map', props);
+
     const annotations = [{
         coordinates: props.directions,
         type: 'polyline',
@@ -47,12 +49,7 @@ function DirectionsMapMap(props) {
                 style={getStyle('directionsMap')}
                 showsUserLocation={true}
                 followsUserLocation={true}
-            >
-                <MapView.Marker
-                    coordinate={destinationCoord}
-                />
-
-            </MapView>
+            />
             {props.children}
         </View>
     );

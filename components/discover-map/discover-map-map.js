@@ -4,6 +4,8 @@ import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 import { getStyle } from 'react-native-styler';
 import { getMapStyling } from '../../services/directions';
 
+let map = null;
+
 /**
  * <DiscoverMapMap />
  * @param props

@@ -11,7 +11,7 @@ const API_VERSION = 21;
  * <DirectionsMap />
  * @constructor
  */
-class DirectionsMap extends React.PureComponent {
+class DirectionsMap extends Component {
     constructor() {
         super();
     }
