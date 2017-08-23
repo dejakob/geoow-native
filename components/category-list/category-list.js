@@ -7,7 +7,7 @@ import './category-list.style';
 /**
  * <CategoryList />
  */
-class CategoryList extends Component
+class CategoryList extends React.PureComponent
 {
     constructor() {
         super();

@@ -12,7 +12,7 @@ import PrimaryButton from '../components/button/primary-button';
 /**
  * <AuthEmail />
  */
-class AuthEmail extends Component
+class AuthEmail extends React.PureComponent
 {
     static navigationOptions = {
         header: null

@@ -12,7 +12,7 @@ const API_VERSION = 21;
  * <DirectionsMap />
  * @constructor
  */
-class DiscoverMap extends Component
+class DiscoverMap extends React.PureComponent
 {
     constructor() {
         super();

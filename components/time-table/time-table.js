@@ -10,7 +10,7 @@ import './time-table.style';
 /**
  * <TimeTable />
  */
-class TimeTable extends Component
+class TimeTable extends React.PureComponent
 {
     constructor() {
         super();

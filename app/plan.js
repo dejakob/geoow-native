@@ -32,7 +32,7 @@ const defaultSlots = [
 /**
  * <Plan />
  */
-class Plan extends Component
+class Plan extends React.PureComponent
 {
     static navigationOptions = {
         header: null

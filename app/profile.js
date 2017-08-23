@@ -10,7 +10,7 @@ import '../components/tab-bar/tab-bar.style.js';
 /**
  * <Profile />
  */
-class Profile extends Component
+class Profile extends React.PureComponent
 {
     static navigationOptions = (props) => ({
         header: null,

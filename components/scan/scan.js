@@ -9,7 +9,7 @@ import './scan.style';
 /**
  * <Scan />
  */
-class Scan extends Component
+class Scan extends React.PureComponent
 {
     constructor() {
         super();

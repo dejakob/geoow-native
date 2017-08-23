@@ -8,7 +8,7 @@ const DEFAULT_DATE = new Date('1992-12-16T10:000:00');
 /**
  * <ProfileBirthdateModal />
  */
-class ProfileBirthdateModal extends Component
+class ProfileBirthdateModal extends React.PureComponent
 {
     componentWillMount() {
         this.state = {

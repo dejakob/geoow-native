@@ -10,7 +10,7 @@ import * as PushNotifications from '../services/push-notifications';
 /**
  * <Auth />
  */
-class Auth extends Component
+class Auth extends React.PureComponent
 {
     static navigationOptions = {
         header: null

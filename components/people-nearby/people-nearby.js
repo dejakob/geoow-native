@@ -9,7 +9,7 @@ import './people-nearby.style.js'
 /**
  * <PeopleNearby />
  */
-class PeopleNearby extends Component
+class PeopleNearby extends React.PureComponent
 {
     constructor() {
         super();
