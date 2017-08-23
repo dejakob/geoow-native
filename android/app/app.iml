@@ -117,7 +117,6 @@
     <orderEntry type="library" exported="" name="play-services-analytics-impl-11.0.4" level="project" />
     <orderEntry type="library" exported="" name="okhttp-urlconnection-3.6.0" level="project" />
     <orderEntry type="library" exported="" name="android-jsc-r174650" level="project" />
-    <orderEntry type="library" exported="" name="play-services-maps-10.2.4" level="project" />
     <orderEntry type="library" exported="" name="support-core-ui-25.2.0" level="project" />
     <orderEntry type="library" exported="" name="staticlayout-proxy-1.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-basement-11.0.4" level="project" />
@@ -129,6 +128,7 @@
     <orderEntry type="library" exported="" name="support-fragment-25.2.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="multidex-instrumentation-1.0.1" level="project" />
     <orderEntry type="library" exported="" name="play-services-location-11.0.4" level="project" />
+    <orderEntry type="library" exported="" name="play-services-maps-11.0.4" level="project" />
     <orderEntry type="library" exported="" name="okio-1.13.0" level="project" />
     <orderEntry type="library" exported="" name="imagepipeline-1.0.1" level="project" />
     <orderEntry type="library" exported="" name="soloader-0.1.0" level="project" />
@@ -171,7 +171,12 @@
     <orderEntry type="library" exported="" name="jackson-core-2.2.3" level="project" />
     <orderEntry type="library" exported="" name="xmpcore-5.1.2" level="project" />
     <orderEntry type="library" exported="" name="metadata-extractor-2.9.1" level="project" />
-    <orderEntry type="library" exported="" name="react-native-maps-unspecified" level="project" />
+    <orderEntry type="library" exported="" name="play-services-base-10.2.4" level="project" />
+    <orderEntry type="library" exported="" name="play-services-tasks-10.2.4" level="project" />
+    <orderEntry type="library" exported="" name="support-annotations-24.0.0" level="project" />
+    <orderEntry type="library" exported="" name="play-services-basement-10.2.4" level="project" />
+    <orderEntry type="library" exported="" name="support-v4-24.0.0" level="project" />
+    <orderEntry type="library" exported="" name="play-services-maps-10.2.4" level="project" />
     <orderEntry type="library" exported="" name="play-services-basement-11.2.0" level="project" />
     <orderEntry type="library" exported="" name="logback-android-core-1.1.1-6" level="project" />
     <orderEntry type="library" exported="" name="slf4j-api-1.7.21" level="project" />

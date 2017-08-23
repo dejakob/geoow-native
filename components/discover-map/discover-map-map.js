@@ -1,7 +1,8 @@
 import moment from 'moment'
 import React, { Component } from 'react';
-import MapView from 'react-native-maps';
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 import { getStyle } from 'react-native-styler';
+import { getMapStyling } from '../../services/directions';
 
 /**
  * <DiscoverMapMap />
@@ -30,8 +31,12 @@ function DiscoverMapMap(props) {
     return (
         <MapView
             initialRegion={initialRegion}
+            provider={PROVIDER_GOOGLE}
             style={getStyle('discoverMap')}
             initialZoomLevel={13}
+            customMapStyle={getMapStyling()}
+            showsUserLocation={true}
+            followsUserLocation={true}
         >
             {annotations.map(annotation =>
                 <MapView.Marker

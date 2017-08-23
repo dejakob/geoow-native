@@ -148,7 +148,12 @@ repositories {
 }
 
 dependencies {
-    compile project(':react-native-maps')
+    compile(project(':react-native-maps')){
+        exclude group: 'com.google.android.gms', module: 'play-services-base'
+        exclude group: 'com.google.android.gms', module: 'play-services-maps'
+    }
+    compile 'com.google.android.gms:play-services-base:11.+'
+    compile 'com.google.android.gms:play-services-maps:11.+'
     compile project(':react-native-background-geolocation-android')
     compile project(':react-native-camera')
     compile(name: 'tslocationmanager', ext: 'aar')

@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import MapView from 'react-native-maps';
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import { getMapStyling } from '../../services/directions';
 import { getStyle } from 'react-native-styler';
 
 /**
@@ -23,6 +24,11 @@ function DirectionsMapMap(props) {
         id: 'destination'
     }];
 
+    const destinationCoord = {
+        latitude: props.destination[1],
+        longitude: props.destination[0],
+    }
+
     const initialRegion = {
         latitude: 0,
         longitude: 0,
@@ -35,13 +41,18 @@ function DirectionsMapMap(props) {
             style={getStyle('directionsMap__wrapper')}
         >
             <MapView
+                provider={PROVIDER_GOOGLE}
                 initialRegion={initialRegion}
-                showsUserLocation={true}
-                logoIsHidden={true}
-                annotations={annotations}
+                customMapStyle={getMapStyling()}
                 style={getStyle('directionsMap')}
-                ref={mapView => this._mapView = mapView}
-            />
+                showsUserLocation={true}
+                followsUserLocation={true}
+            >
+                <MapView.Marker
+                    coordinate={destinationCoord}
+                />
+
+            </MapView>
             {props.children}
         </View>
     );
