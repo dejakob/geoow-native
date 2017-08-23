@@ -1,6 +1,8 @@
 import moment from 'moment'
 import React, { Component } from 'react';
+import { View, Text, Image } from 'react-native';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import * as CategoryImageHelper from '../../helpers/category-image-helper';
 import { getStyle } from 'react-native-styler';
 import { getMapStyling } from '../../services/directions';
 
@@ -13,15 +15,28 @@ let map = null;
  * @constructor
  */
 function DiscoverMapMap(props) {
-    const annotations = props.events.map(event => ({
-        coordinate: {
-            latitude: event.getIn(['location', 'geocoords', 1]),
-            longitude: event.getIn(['location', 'geocoords', 0])
-        },
-        title: event.get('name'),
-        description: `${moment(event.get('startTime')).format('ddd')} • ${moment(event.get('endTime')).format('HH:mm')}`,
-        id: event.get('_id')
-    })).toJS();
+    const annotations = props.events.map(event => {
+        let image = {};
+
+        if (event.getIn([ 'cover', 'source'])) {
+            image.uri = event.getIn([ 'cover', 'source']);
+        }
+        else {
+            const tag = event.get('tags').find(tag => CategoryImageHelper.getImageForCategory(tag) !== null);
+            image = CategoryImageHelper.getImageForCategory(tag);
+        }
+
+        return {
+            coordinate: {
+                latitude: event.getIn(['location', 'geocoords', 1]),
+                    longitude: event.getIn(['location', 'geocoords', 0])
+            },
+            title: event.get('name'),
+                description: `${moment(event.get('startTime')).format('ddd')} • ${moment(event.get('endTime')).format('HH:mm')}`,
+            id: event.get('_id'),
+            image
+        };
+    }).toJS();
 
     const initialRegion = {
         latitude: props.latitude,
@@ -41,9 +56,28 @@ function DiscoverMapMap(props) {
             followsUserLocation={true}
         >
             {annotations.map(annotation =>
-                <MapView.Marker
-                    {...annotation}
-                />
+                <MapView.Callout
+                >
+                    <MapView.Marker
+                        coordinate={annotation.coordinate}
+                    >
+                        <MapView.Callout
+                            onPress={() => props.navigation.navigate('EventDetail', { eventId: annotation.id })}
+                            style={getStyle('discoverMap__callout')}
+                            tooltip={true}
+                        >
+                            <Image
+                                source={annotation.image}
+                                style={getStyle('discoverMap__callout__image')}
+                            />
+                                <Text
+                                    style={getStyle('discoverMap__callout__text')}
+                                >
+                                    {annotation.title}
+                                </Text>
+                        </MapView.Callout>
+                    </MapView.Marker>
+                </MapView.Callout>
             )}
 
         </MapView>
