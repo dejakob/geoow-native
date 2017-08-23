@@ -12,9 +12,6 @@ const API_VERSION = 21;
  * @constructor
  */
 class DirectionsMap extends Component {
-    constructor() {
-        super();
-    }
 
     render() {
         const majorVersionIOS = parseInt(Platform.Version, 10);

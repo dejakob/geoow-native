@@ -6,8 +6,6 @@ import * as CategoryImageHelper from '../../helpers/category-image-helper';
 import { getStyle } from 'react-native-styler';
 import { getMapStyling } from '../../services/directions';
 
-let map = null;
-
 /**
  * <DiscoverMapMap />
  * @param props
@@ -61,7 +59,7 @@ function DiscoverMapMap(props) {
                     pinColor="blue"
                 >
                     <MapView.Callout
-                        onPress={() => props.navigation.navigate('EventDetail', { eventId: annotation.id })}
+                        onPress={() => props.onAnnotationPress(annotation)}
                         style={getStyle('discoverMap__callout')}
                         tooltip={true}
                     >

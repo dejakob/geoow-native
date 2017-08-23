@@ -78,6 +78,9 @@ const App = StackNavigator({
     EventDetail: { screen: connect(EventDetail) }
 }, {
     mode: 'modal',
+    onTransitionStart: (trans) => {
+        Router.triggerTransitionListeners(trans.scene.route.routeName, trans.scene.route.params);
+    },
     navigationOptions: {
         gesturesEnabled: false
     }
