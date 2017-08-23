@@ -43,6 +43,7 @@ function DiscoverMapMap(props) {
                     {...annotation}
                 />
             )}
+
         </MapView>
     );
 }

@@ -30,8 +30,8 @@ function DirectionsMapMap(props) {
     }
 
     const initialRegion = {
-        latitude: 0,
-        longitude: 0,
+        latitude: props.destination[1],
+        longitude: props.destination[0],
         latitudeDelta: 0.00922,
         longitudeDelta: 0.00421,
     };
