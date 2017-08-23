@@ -27,6 +27,9 @@ class DiscoverMap extends Component
             return this.renderStaticMap();
         }
 
+
+        console.log('nav', this.props.navigation);
+
         return this.renderMap();
     }
 

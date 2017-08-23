@@ -56,28 +56,26 @@ function DiscoverMapMap(props) {
             followsUserLocation={true}
         >
             {annotations.map(annotation =>
-                <MapView.Callout
+                <MapView.Marker
+                    coordinate={annotation.coordinate}
+                    pinColor="blue"
                 >
-                    <MapView.Marker
-                        coordinate={annotation.coordinate}
+                    <MapView.Callout
+                        onPress={() => props.navigation.navigate('EventDetail', { eventId: annotation.id })}
+                        style={getStyle('discoverMap__callout')}
+                        tooltip={true}
                     >
-                        <MapView.Callout
-                            onPress={() => props.navigation.navigate('EventDetail', { eventId: annotation.id })}
-                            style={getStyle('discoverMap__callout')}
-                            tooltip={true}
-                        >
-                            <Image
-                                source={annotation.image}
-                                style={getStyle('discoverMap__callout__image')}
-                            />
-                                <Text
-                                    style={getStyle('discoverMap__callout__text')}
-                                >
-                                    {annotation.title}
-                                </Text>
-                        </MapView.Callout>
-                    </MapView.Marker>
-                </MapView.Callout>
+                        <Image
+                            source={annotation.image}
+                            style={getStyle('discoverMap__callout__image')}
+                        />
+                            <Text
+                                style={getStyle('discoverMap__callout__text')}
+                            >
+                                {annotation.title}
+                            </Text>
+                    </MapView.Callout>
+                </MapView.Marker>
             )}
 
         </MapView>
