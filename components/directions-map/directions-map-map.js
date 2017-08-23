@@ -23,13 +23,19 @@ function DirectionsMapMap(props) {
         id: 'destination'
     }];
 
+    const initialRegion = {
+        latitude: 0,
+        longitude: 0,
+        latitudeDelta: 0.00922,
+        longitudeDelta: 0.00421,
+    };
+
     return (
         <View
             style={getStyle('directionsMap__wrapper')}
         >
             <MapView
-                initialCenterCoordinate={{ latitude: 0, longitude: 0 }}
-                initialZoomLevel={13}
+                initialRegion={initialRegion}
                 showsUserLocation={true}
                 logoIsHidden={true}
                 annotations={annotations}

@@ -11,22 +11,34 @@ import { getStyle } from 'react-native-styler';
  */
 function DiscoverMapMap(props) {
     const annotations = props.events.map(event => ({
-        coordinates: event.getIn(['location', 'geocoords']).toJS().reverse(),
-        type: 'point',
+        coordinate: {
+            latitude: event.getIn(['location', 'geocoords', 1]),
+            longitude: event.getIn(['location', 'geocoords', 0])
+        },
         title: event.get('name'),
-        subtitle: `${moment(event.get('startTime')).format('ddd')} • ${moment(event.get('endTime')).format('HH:mm')}`,
+        description: `${moment(event.get('startTime')).format('ddd')} • ${moment(event.get('endTime')).format('HH:mm')}`,
         id: event.get('_id')
     })).toJS();
 
+    const initialRegion = {
+        latitude: props.latitude,
+        longitude: props.longitude,
+        latitudeDelta: 0.00922,
+        longitudeDelta: 0.00421,
+    };
+
     return (
         <MapView
-            initialCenterCoordinate={{ latitude: props.latitude, longitude: props.longitude }}
+            initialRegion={initialRegion}
             style={getStyle('discoverMap')}
             initialZoomLevel={13}
-            annotations={annotations}
-            showsUserLocation={false}
-            logoIsHidden={true}
-        />
+        >
+            {annotations.map(annotation =>
+                <MapView.Marker
+                    {...annotation}
+                />
+            )}
+        </MapView>
     );
 }
 
