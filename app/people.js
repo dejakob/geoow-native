@@ -14,7 +14,7 @@ import InfoText from '../components/info-text/info-text';
 /**
  * <People />
  */
-class People extends Component
+class People extends React.PureComponent
 {
     static navigationOptions = {
         header: null,

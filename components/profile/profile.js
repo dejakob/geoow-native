@@ -37,7 +37,7 @@ const femaleNames = [
 /**
  * <Profile />
  */
-class Profile extends Component
+class Profile extends React.PureComponent
 {
     constructor() {
         super();

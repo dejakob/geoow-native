@@ -8,7 +8,7 @@ import ScanComponent from '../components/scan/scan';
 /**
  * <Scan />
  */
-class Scan extends Component
+class Scan extends React.PureComponent
 {
     static navigationOptions = props => ({
         header: null,

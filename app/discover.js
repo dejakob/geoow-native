@@ -11,7 +11,7 @@ import InfoText from '../components/info-text/info-text';
 /**
  * <Discover />
  */
-class Discover extends Component
+class Discover extends React.PureComponent
 {
     static navigationOptions = {
         header: null,

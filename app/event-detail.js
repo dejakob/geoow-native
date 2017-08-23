@@ -13,7 +13,7 @@ import * as Directions from '../services/directions';
 /**
  * <EventDetail />
  */
-class EventDetail extends Component
+class EventDetail extends React.PureComponent
 {
     static navigationOptions = () => ({
         header: null,

@@ -10,7 +10,7 @@ import { MIN_CATEGORIES } from '../constants';
 /**
  * <Preferences />
  */
-class Preferences extends Component
+class Preferences extends React.PureComponent
 {
     static navigationOptions = {
         header: null,

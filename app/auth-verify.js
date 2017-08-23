@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import AuthVerifyComponent from '../components/auth-verify/auth-verify';
 
-class AuthVerify extends Component
+class AuthVerify extends React.PureComponent
 {
     static navigationOptions = {
         header: null

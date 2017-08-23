@@ -12,7 +12,7 @@ import '../components/tab-bar/tab-bar.style.js';
 /**
  * <Dashboard />
  */
-class Dashboard extends Component
+class Dashboard extends React.PureComponent
 {
     static navigationOptions = (props) => ({
         header: null,

@@ -12,7 +12,7 @@ const GENDERS = {
 /**
  * <ProfileGenderModal />
  */
-class ProfileGenderModal extends Component
+class ProfileGenderModal extends React.PureComponent
 {
     constructor() {
         super();
