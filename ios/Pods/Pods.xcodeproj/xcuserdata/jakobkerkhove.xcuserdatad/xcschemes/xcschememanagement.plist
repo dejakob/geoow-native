@@ -9,30 +9,10 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>React.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Yoga.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>097F9C4E2508726B4B7D1FC399576687</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>338C5670CA77D7E8362A418615D71F51</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6FA3F11C1A75D18F297A1CBCB7723437</key>
+		<key>D76CF554B813E6CA6E4AD97FE3D72C41</key>
 		<dict>
 			<key>primary</key>
 			<true/>

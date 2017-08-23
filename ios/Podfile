@@ -10,21 +10,6 @@ use_frameworks!
 
 # Change 'AirMapsExplorer' to match the target in your Xcode project.
 target 'GeoowNative' do
-  pod 'Yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
-  pod 'React', path: '../node_modules/react-native', :subspecs => [
-    'Core',
-    'RCTActionSheet',
-    'RCTAnimation',
-    'RCTGeolocation',
-    'RCTImage',
-    'RCTLinkingIOS',
-    'RCTNetwork',
-    'RCTSettings',
-    'RCTText',
-    'RCTVibration',
-    'RCTWebSocket',
-    'BatchedBridge'
-  ]
 
 # when not using frameworks  we can do this instead of including the source files in our project (1/4):
 # pod 'react-native-maps', path: '../../'
