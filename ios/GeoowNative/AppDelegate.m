@@ -13,6 +13,7 @@
 #import <React/RCTRootView.h>
 #import <React/RCTLinkingManager.h>
 
+@import GoogleMaps;
 
 @implementation AppDelegate
 @synthesize oneSignal = _oneSignal;
@@ -20,7 +21,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   NSURL *jsCodeLocation;
-
+  [GMSServices provideAPIKey:@"AIzaSyC1uHb7thj_S1WNBQMaWkX-Wasao15-tNQ"];
+  
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation

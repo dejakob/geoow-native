@@ -13,7 +13,7 @@ import * as Directions from '../services/directions';
 /**
  * <EventDetail />
  */
-class EventDetail extends React.PureComponent
+class EventDetail extends Component
 {
     static navigationOptions = () => ({
         header: null,
@@ -38,6 +38,20 @@ class EventDetail extends React.PureComponent
 
     get event() {
         return this.props.event.getIn(['events', this.eventId])
+    }
+
+    shouldComponentUpdate(newProps) {
+        if (this.eventId !== newProps.navigation.state.params.eventId) {
+            return true;
+        }
+
+        if (newProps.location.get('latitude') !== this.props.location.get('latitude') ||
+            newProps.location.get('longitude') !== this.props.location.get('longitude')
+        ) {
+            return true;
+        }
+
+        return false;
     }
 
     componentWillMount() {

@@ -6,8 +6,8 @@ import android.support.multidex.MultiDex;
 import android.support.multidex.MultiDexApplication;
 
 import com.facebook.react.ReactApplication;
+import com.airbnb.android.react.maps.MapsPackage;
 import com.transistorsoft.rnbackgroundgeolocation.RNBackgroundGeolocation;
-import com.mapbox.reactnativemapboxgl.ReactNativeMapboxGLPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import com.transistorsoft.rnbackgroundgeolocation.*;
 import com.geektime.rnonesignalandroid.ReactNativeOneSignalPackage;
@@ -32,8 +32,8 @@ public class MainApplication extends MultiDexApplication implements ReactApplica
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new MapsPackage(),
             new RNBackgroundGeolocation(),
-            new ReactNativeMapboxGLPackage(),
             new RCTCameraPackage(),
             new RNBackgroundGeolocation(),
             new ReactNativeOneSignalPackage(),

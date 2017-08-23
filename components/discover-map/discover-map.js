@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Platform, Image } from 'react-native';
+import { NavigationActions } from 'react-navigation';
 import { getStyle } from 'react-native-styler';
-import DiscoverMapMapbox from './discover-map-mapbox';
+import DiscoverMapMap from './discover-map-map';
 import { getGoogleMapsToken } from '../../services/directions';
-import * as Router from '../../services/router';
 import './discover-map.style';
 
 const API_VERSION = 21;
@@ -12,58 +12,41 @@ const API_VERSION = 21;
  * <DirectionsMap />
  * @constructor
  */
-class DiscoverMap extends React.PureComponent
+class DiscoverMap extends Component
 {
     constructor() {
         super();
 
-        this.state = {
-            showMap: true
-        };
-
-        this._handleRouteChange = this._handleRouteChange.bind(this);
-        this.renderMapbox = this.renderMapbox.bind(this);
+        this.handleAnnotationPress = this.handleAnnotationPress.bind(this);
+        this.renderMap = this.renderMap.bind(this);
         this.renderStaticMap = this.renderStaticMap.bind(this);
     }
 
-    componentWillMount() {
-        Router.addOnTransitionListener(this._handleRouteChange);
-    }
-
-    componentWillUnmount() {
-        Router.removeOnTransitionListener(this._handleRouteChange);
-    }
-
-    _handleRouteChange(params) {
-        const lastRouteName = params.navigation.state.routes[params.navigation.state.routes.length - 1].routeName;
-
-        this.setState({
-            showMap: lastRouteName === 'Tabs'
+    handleAnnotationPress(annotation) {
+        const resetAction = NavigationActions.reset({
+            index: 0,
+            actions: [
+                NavigationActions.navigate({ routeName: 'EventDetail', params: { eventId: annotation.id } })
+            ]
         });
+        this.props.navigation.dispatch(resetAction);
     }
 
     render () {
-        if (!this.state.showMap) {
-            return (
-                <View
-                    style={[getStyle('discoverMap'), { backgroundColor: 'black' }]}
-                />
-            );
-        }
-
         const majorVersionIOS = parseInt(Platform.Version, 10);
 
         if (Platform.OS === 'android' && majorVersionIOS < API_VERSION) {
             return this.renderStaticMap();
         }
 
-        return this.renderMapbox();
+        return this.renderMap();
     }
 
-    renderMapbox() {
+    renderMap() {
         return (
-            <DiscoverMapMapbox
+            <DiscoverMapMap
                 {...this.props}
+                onAnnotationPress={this.handleAnnotationPress}
             />
         )
     }

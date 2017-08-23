@@ -11,7 +11,7 @@ import InfoText from '../components/info-text/info-text';
 /**
  * <Discover />
  */
-class Discover extends React.PureComponent
+class Discover extends Component
 {
     static navigationOptions = {
         header: null,
@@ -23,6 +23,20 @@ class Discover extends React.PureComponent
         super();
         this.handleSpoofLocationToAntwerp = this.handleSpoofLocationToAntwerp.bind(this);
         this.spoofedLocation = false;
+    }
+
+    shouldComponentUpdate(newProps, newState) {
+        if (this.props.discover.get('eventsNearby') !== newProps.discover.get('eventsNearby')) {
+            return true;
+        }
+
+        if (newProps.location.get('latitude') !== this.props.location.get('latitude') ||
+            newProps.location.get('longitude') !== this.props.location.get('longitude')
+        ) {
+            return true;
+        }
+
+        return false;
     }
 
     get eventsNearby() {
@@ -48,7 +62,7 @@ class Discover extends React.PureComponent
 
     componentWillReceiveProps(newProps) {
         if (
-            newProps.location.get('latitude') !== this.props.location.get('latitude') &&
+            newProps.location.get('latitude') !== this.props.location.get('latitude') ||
             newProps.location.get('longitude') !== this.props.location.get('longitude')
         ) {
             this.props.loadEventsNearby();
@@ -102,6 +116,7 @@ class Discover extends React.PureComponent
                     latitude={this.props.location.get('latitude')}
                     longitude={this.props.location.get('longitude')}
                     events={eventsNearby}
+                    navigation={this.props.navigation}
                 />
                 {content}
             </MainBackground>
