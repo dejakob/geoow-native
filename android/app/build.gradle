@@ -148,6 +148,7 @@ repositories {
 }
 
 dependencies {
+    compile project(':react-native-maps')
     compile project(':react-native-background-geolocation-android')
     compile project(':react-native-camera')
     compile(name: 'tslocationmanager', ext: 'aar')
