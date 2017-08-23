@@ -11,6 +11,9 @@ createStyle({
             borderRadius: '2h4s',
             marginBottom: '3h4s',
             backgroundColor: 'theme:sheet',
+            borderWidth: 1,
+            borderColor: 'theme:sheet',
+            borderStyle: 'solid',
 
             image: {
                 height: '30h4s',
