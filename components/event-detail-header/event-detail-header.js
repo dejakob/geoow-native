@@ -57,6 +57,15 @@ function EventDetailHeader(props) {
             );
         }
 
+        if (props.event.getIn(['venue', 'cover', 'source'])) {
+            return (
+                <Image
+                    style={getStyle('eventDetailHeader__logo')}
+                    source={{ uri: props.event.getIn(['venue', 'cover', 'source']) }}
+                />
+            );
+        }
+
         const tag = props.event.get('tags').find(tag => CategoryImageHelper.getImageForCategory(tag) !== null);
         const image = CategoryImageHelper.getImageForCategory(tag);
 

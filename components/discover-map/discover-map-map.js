@@ -52,6 +52,7 @@ function DiscoverMapMap(props) {
             customMapStyle={getMapStyling()}
             showsUserLocation={true}
             followsUserLocation={true}
+            loadingEnabled={true}
         >
             {annotations.map(annotation =>
                 <MapView.Marker

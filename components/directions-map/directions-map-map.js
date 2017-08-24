@@ -33,6 +33,7 @@ function DirectionsMapMap(props) {
                 style={getStyle('directionsMap')}
                 showsUserLocation={true}
                 followsUserLocation={true}
+                loadingEnabled={true}
             >
                 <MapView.Marker
                     coordinate={destinationCoord}
