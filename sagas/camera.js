@@ -22,15 +22,16 @@ function* uploadImage(action) {
         }
         else {
             const location = store.getState().location;
-            const feedResult = yield call(
+            yield call(
                 FeedApi.postImage,
                 imagePath,
                 location.get('latitude'),
                 location.get('longitude')
             );
-            const { userStat } = feedResult;
 
-            yield put(Actions._loadStatsSuccess([userStat]));
+            yield put(Actions.uploadImageSuccess());
+            yield put(Actions.loadMe());
+            yield put(Actions.loadStats());
         }
     }
     catch (ex) {
