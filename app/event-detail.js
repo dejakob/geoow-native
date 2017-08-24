@@ -40,7 +40,11 @@ class EventDetail extends Component
         return this.props.event.getIn(['events', this.eventId])
     }
 
-    shouldComponentUpdate(newProps) {
+    shouldComponentUpdate(newProps, newState) {
+        if (this.state !== newState) {
+            return true;
+        }
+
         if (this.eventId !== newProps.navigation.state.params.eventId) {
             return true;
         }
@@ -69,7 +73,9 @@ class EventDetail extends Component
                 .getDirections(this.props.location.get('latitude'), this.props.location.get('longitude'), latitude, longitude)
                 .then(result => {
                     try {
-                        this._directionsPolygon = Polyline.decode(result.routes[0].overview_polyline.points);
+                        this._directionsPolygon = Polyline
+                            .decode(result.routes[0].overview_polyline.points)
+                            .map(c => ({ latitude: c[0], longitude: c[1] }));
                         this.setState({});
                     }
                     catch (ex) {
@@ -101,7 +107,9 @@ class EventDetail extends Component
                 .getDirections(nextProps.location.get('latitude'), nextProps.location.get('longitude'), latitude, longitude)
                 .then(result => {
                     try {
-                        this._directionsPolygon = Polyline.decode(result.routes[0].overview_polyline.points);
+                        this._directionsPolygon = Polyline
+                            .decode(result.routes[0].overview_polyline.points)
+                            .map(c => ({ latitude: c[0], longitude: c[1] }));
                         this.setState({});
                     }
                     catch (ex) {

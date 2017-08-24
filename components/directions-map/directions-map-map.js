@@ -43,13 +43,20 @@ function DirectionsMapMap(props) {
             style={getStyle('directionsMap__wrapper')}
         >
             <MapView
-                provider={PROVIDER_GOOGLE}
                 initialRegion={initialRegion}
                 customMapStyle={getMapStyling()}
                 style={getStyle('directionsMap')}
                 showsUserLocation={true}
                 followsUserLocation={true}
-            />
+                liteMode={true}
+            >
+                <MapView.Marker
+                    coordinate={destinationCoord}
+                />
+                <MapView.Polyline
+                    coordinates={props.directions}
+                />
+            </MapView>
             {props.children}
         </View>
     );
