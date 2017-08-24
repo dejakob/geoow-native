@@ -63,7 +63,7 @@ const TabNavigation = TabNavigator({
         },
         pressColor: getCurrentTheme().colors.active,
     },
-    lazy: false
+    lazy: true
 });
 const App = StackNavigator({
     Auth: { screen: connect(Auth) },
