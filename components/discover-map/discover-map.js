@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Platform, Image } from 'react-native';
-import { NavigationActions } from 'react-navigation';
 import { getStyle } from 'react-native-styler';
 import DiscoverMapMap from './discover-map-map';
 import { getGoogleMapsToken } from '../../services/directions';
@@ -23,13 +22,7 @@ class DiscoverMap extends Component
     }
 
     handleAnnotationPress(annotation) {
-        const resetAction = NavigationActions.reset({
-            index: 0,
-            actions: [
-                NavigationActions.navigate({ routeName: 'EventDetail', params: { eventId: annotation.id } })
-            ]
-        });
-        this.props.navigation.dispatch(resetAction);
+        this.props.navigation.navigate('EventDetail', { eventId: annotation.id });
     }
 
     render () {
