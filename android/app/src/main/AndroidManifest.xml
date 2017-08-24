@@ -36,9 +36,6 @@
         <meta-data
             android:name="com.transistorsoft.locationmanager.license"
             android:value="dde7a9d84b0a224d62793fb6410a39161bdd2840a874902ca7c4526af09c67ff" />
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyC1uHb7thj_S1WNBQMaWkX-Wasao15-tNQ"/>
 
         <activity
             android:name=".MainActivity"

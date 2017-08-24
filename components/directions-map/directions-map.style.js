@@ -17,6 +17,10 @@ createStyle({
         },
         polygon: {
             color: 'theme:primary'
+        },
+        polyline: {
+            color: 'theme:secondary',
+            width: '3h4s'
         }
     }
 })

@@ -14,7 +14,7 @@ import InfoText from '../components/info-text/info-text';
 /**
  * <People />
  */
-class People extends React.PureComponent
+class People extends Component
 {
     static navigationOptions = {
         header: null,
@@ -30,6 +30,34 @@ class People extends React.PureComponent
         this.renderChat = this.renderChat.bind(this);
         this.renderContentTitle = this.renderContentTitle.bind(this);
         this.renderContent = this.renderContent.bind(this);
+    }
+
+    shouldComponentUpdate(newProps, newState) {
+        if (this.state.selectedVenue !== newState.selectedVenue) {
+            return true;
+        }
+
+        if (this.state.selectedPerson !== newState.selectedPerson) {
+            return true;
+        }
+
+        if (this.props.message.get('byUser').count() !== newProps.message.get('byUser').count()) {
+            return true;
+        }
+
+        if (this.props.message.get('byVenue').count() !== newProps.message.get('byVenue').count()) {
+            return true;
+        }
+
+        if (this.props.discover.get('eventsNearby') !== newProps.discover.get('eventsNearby')) {
+            return true;
+        }
+
+        if (this.props.people.get('nearby') !== newProps.people.get('nearby')) {
+            return true;
+        }
+
+        return false;
     }
 
     componentWillMount() {

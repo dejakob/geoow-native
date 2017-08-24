@@ -55,6 +55,8 @@ function DirectionsMapMap(props) {
                 />
                 <MapView.Polyline
                     coordinates={props.directions}
+                    strokeColor={StyleSheet.flatten(getStyle('directionsMap__polyline')).color}
+                    strokeWidth={StyleSheet.flatten(getStyle('directionsMap__polyline')).width}
                 />
             </MapView>
             {props.children}
