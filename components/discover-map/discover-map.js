@@ -5,7 +5,7 @@ import DiscoverMapMap from './discover-map-map';
 import { getGoogleMapsToken } from '../../services/directions';
 import './discover-map.style';
 
-const API_VERSION = 21;
+const API_VERSION = 18;
 
 /**
  * <DirectionsMap />

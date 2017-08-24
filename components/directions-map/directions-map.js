@@ -5,7 +5,7 @@ import { getGoogleMapsToken } from '../../services/directions';
 import DirectionsMapMap from './directions-map-map';
 import './directions-map.style';
 
-const API_VERSION = 21;
+const API_VERSION = 18;
 
 /**
  * <DirectionsMap />

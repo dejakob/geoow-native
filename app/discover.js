@@ -87,7 +87,7 @@ class Discover extends Component
 
         let content = null;
 
-        if (eventsNearby.count() === 0) {
+        if (!this.props.discover.get('isLoadingEventsNearby') && eventsNearby.count() === 0) {
             content = (
                 <View>
                     <InfoText>
