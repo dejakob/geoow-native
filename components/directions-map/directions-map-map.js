@@ -11,25 +11,10 @@ import { getStyle } from 'react-native-styler';
  * @constructor
  */
 function DirectionsMapMap(props) {
-    console.log('directions map', props);
-
-    const annotations = [{
-        coordinates: props.directions,
-        type: 'polyline',
-        strokeColor: StyleSheet.flatten(getStyle('directionsMap__polygon')).color,
-        strokeWidth: 4,
-        strokeAlpha: 1,
-        id: 'directions'
-    }, {
-        coordinates: props.destination,
-        type: 'point',
-        id: 'destination'
-    }];
-
     const destinationCoord = {
         latitude: props.destination[1],
         longitude: props.destination[0],
-    }
+    };
 
     const initialRegion = {
         latitude: props.destination[1],
@@ -48,7 +33,6 @@ function DirectionsMapMap(props) {
                 style={getStyle('directionsMap')}
                 showsUserLocation={true}
                 followsUserLocation={true}
-                liteMode={true}
             >
                 <MapView.Marker
                     coordinate={destinationCoord}
