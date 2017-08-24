@@ -27,7 +27,8 @@ function discoverReducer(state = defaultState, action) {
 }
 
 function loadEventsNearby(state, action) {
-    return state.set('isLoadingEventsNearby', true);
+    return state
+        .set('isLoadingEventsNearby', true);
 }
 
 function loadEventsNearbySuccess(state, action) {

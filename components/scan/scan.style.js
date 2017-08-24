@@ -3,6 +3,7 @@ import { createStyle } from 'react-native-styler';
 createStyle({
     scan: {
         wrapper: {
+            backgroundColor: '#000000',
             position: 'relative',
             flex: 1
         },

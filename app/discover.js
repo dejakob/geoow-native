@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Button } from 'react-native';
+import { View, Button, AppState } from 'react-native';
 import { getStyle, getCurrentTheme } from 'react-native-styler';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import MainBackground from '../components/main-background/main-background';
@@ -22,11 +22,11 @@ class Discover extends Component
     constructor() {
         super();
         this.handleSpoofLocationToAntwerp = this.handleSpoofLocationToAntwerp.bind(this);
-        this.spoofedLocation = false;
+        this.handleAppStateChange = this.handleAppStateChange.bind(this);
     }
 
     shouldComponentUpdate(newProps, newState) {
-        if (this.props.discover.get('eventsNearby') !== newProps.discover.get('eventsNearby')) {
+        if (this.props.discover.get('isLoadingEventsNearby') !== newProps.discover.get('isLoadingEventsNearby')) {
             return true;
         }
 
@@ -52,12 +52,6 @@ class Discover extends Component
 
     componentWillMount() {
         this.props.loadGeolocation();
-
-        setInterval(() => {
-            if (!this.spoofedLocation) {
-                this.props.loadGeolocation();
-            }
-        }, 5000);
     }
 
     componentWillReceiveProps(newProps) {
@@ -69,8 +63,19 @@ class Discover extends Component
         }
     }
 
+    componentDidMount() {
+        AppState.addEventListener('change', this.handleAppStateChange);
+    }
+
+    componentWillUnmount() {
+        AppState.removeEventListener('change', this.handleAppStateChange);
+    }
+
+    handleAppStateChange() {
+        this.props.loadGeolocation();
+    }
+
     handleSpoofLocationToAntwerp() {
-        this.spoofedLocation = true;
         this.props._loadGeolocationSuccess(51.2169159, 4.4101744);
     }
 
@@ -87,7 +92,16 @@ class Discover extends Component
 
         let content = null;
 
-        if (!this.props.discover.get('isLoadingEventsNearby') && eventsNearby.count() === 0) {
+        if (this.props.discover.get('isLoadingEventsNearby')) {
+            content = (
+                <View>
+                    <InfoText>
+                        Loading events around you :)
+                    </InfoText>
+                </View>
+            );
+        }
+        else if (eventsNearby.count() === 0) {
             content = (
                 <View>
                     <InfoText>

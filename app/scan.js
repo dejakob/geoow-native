@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Alert, StyleSheet, View } from 'react-native';
+import { Alert, StyleSheet, View, PermissionsAndroid, Platform } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import * as ArticleApi from '../api/article';
@@ -26,6 +26,7 @@ class Scan extends React.PureComponent
         super();
         this.handleBarCodeRead = this.handleBarCodeRead.bind(this);
         this.handleCapture = this.handleCapture.bind(this);
+        this.requestCameraPermission = this.requestCameraPermission.bind(this);
     }
 
     get type() {
@@ -45,6 +46,7 @@ class Scan extends React.PureComponent
         this.state = {
             isUploading: false
         };
+        this.requestCameraPermission();
     }
 
     componentWillReceiveProps(nextProps) {
@@ -64,6 +66,28 @@ class Scan extends React.PureComponent
             this.state.isUploading = false;
             this.props.loadMe();
             this.props.navigation.navigate('Dashboard');
+        }
+    }
+
+    async requestCameraPermission() {
+        if (Platform.OS === 'android') {
+            try {
+                const granted = await PermissionsAndroid.request(
+                    PermissionsAndroid.PERMISSIONS.CAMERA,
+                    {
+                        'title': 'Cool Photo App Camera Permission',
+                        'message': 'Cool Photo App needs access to your camera ' +
+                        'so you can take awesome pictures.'
+                    }
+                );
+                if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+                    console.log("You can use the camera")
+                } else {
+                    console.log("Camera permission denied")
+                }
+            } catch (err) {
+                console.warn(err)
+            }
         }
     }
 
