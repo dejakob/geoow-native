@@ -1,9 +1,10 @@
+import { Platform } from 'react-native';
 import { createStyle } from 'react-native-styler';
 
 createStyle({
     eventDetailHeader: {
         flexDirection: 'row',
-        backgroundColor: 'theme:lighten',
+        backgroundColor: Platform.OS === 'ios' ? 'theme:secondary80' : 'theme:lighten',
         alignItems: 'center',
         borderTopLeftRadius: '3h4s',
         borderTopRightRadius: '3h4s',
@@ -24,10 +25,12 @@ createStyle({
         },
         title: {
             fontWeight: '600',
-            fontSize: 'theme:p'
+            fontSize: 'theme:p',
+            color: Platform.OS === 'ios' ? 'theme:primary' : 'theme:text'
         },
         venueTitle: {
-            fontSize: 'theme:small'
+            fontSize: 'theme:small',
+            color: Platform.OS === 'ios' ? 'theme:primary' : 'theme:text'
         },
         bottom: {
             backgroundColor: 'theme:sheet',

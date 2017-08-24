@@ -28,6 +28,7 @@ createTheme({
         inactive: '#999999',
         placeholder: '#cccccc',
         icon: '#333333',
+        text: '#000000',
         headerBackground: 'rgb(46,65,89)'
     },
     fontSizes: {

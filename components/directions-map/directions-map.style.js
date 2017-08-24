@@ -1,3 +1,4 @@
+import { Platform } from 'react-native';
 import { createStyle } from 'react-native-styler';
 
 createStyle({
@@ -19,8 +20,8 @@ createStyle({
             color: 'theme:primary'
         },
         polyline: {
-            color: 'theme:secondary',
+            color: Platform.OS === 'ios' ? 'theme:secondary' : 'theme:primary',
             width: '3h4s'
         }
     }
-})
+});
