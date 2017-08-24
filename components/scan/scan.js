@@ -24,6 +24,7 @@ class Scan extends React.PureComponent
     }
 
     handlePrimaryPress() {
+        this.props.onCaptureStart();
 
         // Video is also possible with this lib! :)
         this.camera
@@ -32,6 +33,10 @@ class Scan extends React.PureComponent
                 const { mediaUrl, path } = result;
 
                 this.props.onCapture(path);
+            })
+            .catch((ex) => {
+            console.log('ex', ex);
+                this.props.onCaptureFail();
             })
     }
 

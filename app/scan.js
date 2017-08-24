@@ -8,7 +8,7 @@ import ScanComponent from '../components/scan/scan';
 /**
  * <Scan />
  */
-class Scan extends React.PureComponent
+class Scan extends Component
 {
     static navigationOptions = props => ({
         header: null,
@@ -77,14 +77,9 @@ class Scan extends React.PureComponent
     async requestCameraPermission() {
         if (Platform.OS === 'android') {
             try {
-                const granted = await PermissionsAndroid.request(
-                    PermissionsAndroid.PERMISSIONS.CAMERA,
-                    {
-                        'title': 'Cool Photo App Camera Permission',
-                        'message': 'Cool Photo App needs access to your camera ' +
-                        'so you can take awesome pictures.'
-                    }
-                );
+                const granted = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.CAMERA);
+                await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE);
+
                 if (granted === PermissionsAndroid.RESULTS.GRANTED) {
                     this.setState({ showCam: true });
                 } else {
@@ -121,7 +116,6 @@ class Scan extends React.PureComponent
     }
 
     handleCapture(path) {
-        this.setState({ isUploading: true });
         this.props.uploadImage(this.type, path);
     }
 
@@ -131,6 +125,8 @@ class Scan extends React.PureComponent
                 goBack={() => this.props.navigation.navigate('Dashboard')}
                 onBarCodeRead={this.handleBarCodeRead}
                 onCapture={this.handleCapture}
+                onCaptureStart={() => this.setState({ isUploading: true })}
+                onCaptureFail={() => { this.setState({ isUploading: false }); alert('Something went wrong 😭') }}
                 isBusy={this.state.isUploading}
                 hideCam={!this.state.showCam}
             />
