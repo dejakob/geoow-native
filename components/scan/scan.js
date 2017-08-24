@@ -36,10 +36,10 @@ class Scan extends React.PureComponent
     }
 
     render() {
-        return (
-            <View
-                style={getStyle('scan__wrapper')}
-            >
+        let camera = null;
+
+        if (!this.props.hideCam) {
+            camera = (
                 <Camera
                     style={getStyle('scan__camera')}
                     barCodeTypes={['qr']}
@@ -48,6 +48,14 @@ class Scan extends React.PureComponent
                     ref={camera => this.camera = camera}
                     type={this.state.type}
                 />
+            );
+        }
+
+        return (
+            <View
+                style={getStyle('scan__wrapper')}
+            >
+                {camera}
 
                 <View
                     style={getStyle('scan__footer')}

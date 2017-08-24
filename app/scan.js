@@ -24,6 +24,11 @@ class Scan extends React.PureComponent
 
     constructor() {
         super();
+
+        this.state = {
+            showCam: false
+        };
+
         this.handleBarCodeRead = this.handleBarCodeRead.bind(this);
         this.handleCapture = this.handleCapture.bind(this);
         this.requestCameraPermission = this.requestCameraPermission.bind(this);
@@ -81,13 +86,16 @@ class Scan extends React.PureComponent
                     }
                 );
                 if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-                    console.log("You can use the camera")
+                    this.setState({ showCam: true });
                 } else {
                     console.log("Camera permission denied")
                 }
             } catch (err) {
                 console.warn(err)
             }
+        }
+        else {
+            this.setState({ showCam: true });
         }
     }
 
@@ -124,6 +132,7 @@ class Scan extends React.PureComponent
                 onBarCodeRead={this.handleBarCodeRead}
                 onCapture={this.handleCapture}
                 isBusy={this.state.isUploading}
+                hideCam={!this.state.showCam}
             />
         )
     }
