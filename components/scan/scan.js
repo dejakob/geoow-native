@@ -13,14 +13,13 @@ class Scan extends React.PureComponent
 {
     constructor() {
         super();
-        this.handlePrimaryPress = this.handlePrimaryPress.bind(this);
-        this.renderLoadingOverlay = this.renderLoadingOverlay.bind(this);
-    }
 
-    componentWillMount() {
         this.state = {
             type: 'front'
-        }
+        };
+
+        this.handlePrimaryPress = this.handlePrimaryPress.bind(this);
+        this.renderLoadingOverlay = this.renderLoadingOverlay.bind(this);
     }
 
     handlePrimaryPress() {
@@ -58,7 +57,7 @@ class Scan extends React.PureComponent
                     captureTarget={Camera.constants.CaptureTarget.disk}
                     captureAudio={false}
                     mirrorImage={false}
-                    fixOrientation={Platform.OS === 'ios' ? true : false}
+                    fixOrientation={Platform.OS === 'ios'}
                     ref={camera => this.camera = camera}
                     type={this.state.type}
                 />

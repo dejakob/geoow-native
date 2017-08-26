@@ -5,6 +5,7 @@ createStyle({
         wrapper: {
             backgroundColor: '#000000',
             position: 'relative',
+            height: '100%',
             flex: 1
         },
         camera: {
