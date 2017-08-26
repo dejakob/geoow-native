@@ -58,6 +58,7 @@ class Scan extends React.PureComponent
                     captureTarget={Camera.constants.CaptureTarget.disk}
                     captureAudio={false}
                     mirrorImage={false}
+                    fixOrientation={Platform.OS === 'ios' ? true : false}
                     ref={camera => this.camera = camera}
                     type={this.state.type}
                 />
