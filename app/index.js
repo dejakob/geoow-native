@@ -15,7 +15,7 @@ import Dashboard from './dashboard';
 import Discover from './discover';
 import EventDetail from './event-detail';
 import Scan from './scan';
-// import People from './people';
+import People from './people';
 import Profile from './profile';
 import * as Router from '../services/router';
 import '../themes';
@@ -34,7 +34,10 @@ const DashboardNavigation = StackNavigator({
 const TabNavigation = TabNavigator({
     Discover: { screen: connect(Discover) },
     Dashboard: { screen: DashboardNavigation },
-    // People: { screen: connect(People) },
+    ...Platform.select({
+        ios: { People: { screen: connect(People) } },
+        android: {}
+    }),
     Scan: { screen: connect(Scan) },
 }, {
     tabBarPosition: 'bottom',

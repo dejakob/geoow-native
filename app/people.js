@@ -159,7 +159,6 @@ class People extends Component
 
         return (
             <MainBackground>
-                <SmallTitle>People nearby</SmallTitle>
                 {this.renderPeople()}
                 <SmallTitle>{this.renderContentTitle()}</SmallTitle>
                 {this.renderContent()}
@@ -195,16 +194,23 @@ class People extends Component
         const peopleNearby = this.props.people
             .get('nearby')
             .filter(personId => this.props.user.getIn(['me', '_id']) !== personId)
-            .map(nearbyPersonId => this.props.people.getIn(['all', nearbyPersonId]))
+            .map(nearbyPersonId => this.props.people.getIn(['all', nearbyPersonId]));
+
+        if (peopleNearby.count() === 0 && !this.state.selectedVenue) {
+            return null;
+        }
 
         return (
-            <PeopleNearby
-                selectedVenue={this.state.selectedVenue}
-                selectedPerson={this.state.selectedPerson}
-                peopleNearby={peopleNearby}
-                onBack={() => this.setState({ selectedVenue: null, selectedPerson: null })}
-                onSelectPerson={selectedPerson => this.setState({ selectedPerson, selectedVenue: null })}
-            />
+            <View>
+                <SmallTitle>People nearby</SmallTitle>
+                <PeopleNearby
+                    selectedVenue={this.state.selectedVenue}
+                    selectedPerson={this.state.selectedPerson}
+                    peopleNearby={peopleNearby}
+                    onBack={() => this.setState({ selectedVenue: null, selectedPerson: null })}
+                    onSelectPerson={selectedPerson => this.setState({ selectedPerson, selectedVenue: null })}
+                />
+            </View>
         );
     }
 
