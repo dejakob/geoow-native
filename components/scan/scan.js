@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ActivityIndicator, View, StyleSheet } from 'react-native';
+import { ActivityIndicator, View, StyleSheet, Platform } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import Camera from 'react-native-camera';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -43,13 +43,21 @@ class Scan extends React.PureComponent
     render() {
         let camera = null;
 
+        const barCodeTypes = Platform.select({
+            ios: ['org.iso.QRCode'],
+            android: ['qr']
+        });
+
         if (!this.props.hideCam) {
             camera = (
                 <Camera
                     style={getStyle('scan__camera')}
-                    barCodeTypes={['qr']}
+                    barCodeTypes={barCodeTypes}
                     onBarCodeRead={this.props.onBarCodeRead}
+                    captureMode={Camera.constants.CaptureMode.still}
                     captureTarget={Camera.constants.CaptureTarget.disk}
+                    captureAudio={false}
+                    mirrorImage={false}
                     ref={camera => this.camera = camera}
                     type={this.state.type}
                 />

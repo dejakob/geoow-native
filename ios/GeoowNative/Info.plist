@@ -57,7 +57,7 @@
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>To find things nearby and see if you go on a quest</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We need to know if you actually were at a certain place</string>
+	<string>To check if you actually went to the event when you accepted a quest</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We need location to discover events around you and to know if you actually went there</string>
 	<key>NSMotionUsageDescription</key>
