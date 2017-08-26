@@ -11,6 +11,21 @@ createStyle({
         camera: {
             flex: 1
         },
+        header: {
+            position: 'absolute',
+            top: '22h4s',
+            alignItems: 'center',
+            justifyContent: 'space-around',
+            flexDirection: 'row',
+            height: '50h4s',
+            left: 0,
+            right: 0,
+
+            flash: {
+                backgroundColor: 'transparent',
+                marginLeft: '72h4s'
+            }
+        },
         footer: {
             position: 'absolute',
             bottom: '22h4s',

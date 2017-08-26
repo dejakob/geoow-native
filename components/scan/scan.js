@@ -15,7 +15,8 @@ class Scan extends React.PureComponent
         super();
 
         this.state = {
-            type: 'front'
+            type: 'front',
+            flash: false
         };
 
         this.handlePrimaryPress = this.handlePrimaryPress.bind(this);
@@ -55,6 +56,8 @@ class Scan extends React.PureComponent
                     onBarCodeRead={this.props.onBarCodeRead}
                     captureMode={Camera.constants.CaptureMode.still}
                     captureTarget={Camera.constants.CaptureTarget.disk}
+                    flashMode={this.state.flash ? Camera.constants.FlashMode.on : Camera.constants.FlashMode.off}
+                    torchMode={this.state.flash ? Camera.constants.TorchMode.on : Camera.constants.TorchMode.off}
                     captureAudio={false}
                     mirrorImage={false}
                     fixOrientation={Platform.OS === 'ios'}
@@ -70,6 +73,22 @@ class Scan extends React.PureComponent
             >
                 {camera}
 
+                <View
+                    style={getStyle('scan__header')}
+                >
+                    <View />
+                    <View />
+                    <Touchable
+                        onPress={() => this.setState({ flash: !this.state.flash })}
+                        style={getStyle('scan__header__flash')}
+                    >
+                        <Icon
+                            name={this.state.flash ? 'flash-off' : 'flash-on'}
+                            color={StyleSheet.flatten(getStyle('header__icon')).color}
+                            size={StyleSheet.flatten(getStyle('header__icon')).fontSize}
+                        />
+                    </Touchable>
+                </View>
                 <View
                     style={getStyle('scan__footer')}
                 >
@@ -88,9 +107,7 @@ class Scan extends React.PureComponent
                     >
                         <View
                             style={getStyle('scan__footer__primary')}
-                        >
-
-                        </View>
+                        />
                     </Touchable>
                     <Touchable
                         onPress={() => this.setState({ type: this.state.type === 'front' ? 'back' : 'front' })}
