@@ -23,7 +23,7 @@ AsyncStorage
 
 function* authEmail({email}) {
     try {
-        yield call(AuthApi.authEmail, email);
+        yield call(AuthApi.authEmail, email.toLowerCase());
         yield put(Actions.authEmailSuccess());
     }
     catch (ex) {

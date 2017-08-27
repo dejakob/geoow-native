@@ -61,6 +61,7 @@ class People extends Component
     }
 
     componentWillMount() {
+        this.props.loadGeolocation();
         this.state = {
             selectedVenue: null,
             selectedPerson: null
@@ -68,8 +69,6 @@ class People extends Component
     }
 
     componentDidMount() {
-        this.props.loadPeopleNearby();
-
         // TODO: sockets!
         setInterval(() => {
             if (this.state.selectedPerson) {
@@ -79,10 +78,6 @@ class People extends Component
                 this.props.loadMessages(null, this.state.selectedVenue.get('_id'));
             }
         }, 1000);
-        setInterval(() => {
-            this.props.loadPeopleNearby();
-            this.props.loadMe();
-        }, 10000);
     }
 
     componentWillReceiveProps(newProps) {
@@ -91,6 +86,7 @@ class People extends Component
             newProps.location.get('longitude') !== this.props.location.get('longitude')
         ) {
             this.props.loadPeopleNearby();
+            this.props.loadEventsNearby();
         }
     }
 
@@ -101,6 +97,13 @@ class People extends Component
         else if (newState.selectedVenue !== this.state.selectedVenue && newState.selectedVenue) {
             this.props.loadMessages(null, newState.selectedVenue.get('_id'));
         }
+    }
+
+    get peopleNearby() {
+        return this.props.people
+            .get('nearby')
+            .filter(personId => this.props.user.getIn(['me', '_id']) !== personId)
+            .map(nearbyPersonId => this.props.people.getIn(['all', nearbyPersonId]));
     }
 
     get messages() {
@@ -144,15 +147,30 @@ class People extends Component
             );
         }
 
-        if (this.props.discover.get('eventsNearby').count() === 0) {
+        if (this.props.people.get('isLoadingPeopleNearby')) {
             return (
                 <MainBackground>
-                    <InfoText>Nobody is nearby right now...</InfoText>
-                    <Button
-                        title="Go to discover"
-                        onPress={() => this.props.navigation.navigate('Discover')}
-                        color={getCurrentTheme().colors.active}
-                    />
+                    <InfoText>We're looking around you 🙂</InfoText>
+                </MainBackground>
+            )
+        }
+
+        if (
+            this.peopleNearby.count() === 0 &&
+            this.props.discover.get('eventsNearby').count() === 0
+        ) {
+            return (
+                <MainBackground>
+                    <View
+                        style={{ justifyContent: 'center', alignItems: 'center', flex: 1 }}
+                    >
+                        <InfoText>Nobody is nearby right now...</InfoText>
+                        <Button
+                            title="Go to discover"
+                            onPress={() => this.props.navigation.navigate('Discover')}
+                            color={getCurrentTheme().colors.active}
+                        />
+                    </View>
                 </MainBackground>
             )
         }
@@ -191,10 +209,7 @@ class People extends Component
     }
 
     renderPeople() {
-        const peopleNearby = this.props.people
-            .get('nearby')
-            .filter(personId => this.props.user.getIn(['me', '_id']) !== personId)
-            .map(nearbyPersonId => this.props.people.getIn(['all', nearbyPersonId]));
+        const { peopleNearby } = this;
 
         if (peopleNearby.count() === 0 && !this.state.selectedVenue) {
             return null;

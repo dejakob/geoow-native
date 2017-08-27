@@ -50,6 +50,7 @@ class AuthEmail extends React.PureComponent
                         onChangeText={email => this.email = email}
                         invalid={!this.state.isEmailValid}
                         underlineColorAndroid="transparent"
+                        autoCapitalize="none"
                     />
                 </View>
                 <Footer>
