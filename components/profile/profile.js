@@ -73,6 +73,9 @@ class Profile extends React.PureComponent
     }
 
     componentWillMount() {
+        this.props.loadMe();
+        this.props.loadStats();
+
         this.state = {
             name: this.props.user.getIn(['me', 'name']) || '',
             genderGuess: null,
