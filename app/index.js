@@ -27,9 +27,6 @@ const prefix = 'geoow://';
 const DashboardNavigation = StackNavigator({
     DashboardMain: { screen: connect(Dashboard) },
     Profile: { screen: connect(Profile) },
-},
-{
-    initialRouteName: 'DashboardMain'
 });
 const TabNavigation = TabNavigator({
     Discover: { screen: connect(Discover) },
@@ -41,7 +38,6 @@ const TabNavigation = TabNavigator({
     Scan: { screen: connect(Scan) },
 }, {
     tabBarPosition: 'bottom',
-    initialRouteName: 'Discover',
     navigationOptions: {
         gesturesEnabled: false
     },
