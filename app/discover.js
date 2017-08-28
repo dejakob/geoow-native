@@ -93,7 +93,9 @@ class Discover extends Component
 
         if (this.props.discover.get('isLoadingEventsNearby')) {
             content = (
-                <View>
+                <View
+                    style={{ flex: 1, justifyContent: 'center' }}
+                >
                     <InfoText>
                         Loading events around you :)
                     </InfoText>
@@ -102,7 +104,9 @@ class Discover extends Component
         }
         else if (eventsNearby.count() === 0) {
             content = (
-                <View>
+                <View
+                    style={{ flex: 1, justifyContent: 'center' }}
+                >
                     <InfoText>
                         There are no events around you right now.
                     </InfoText>

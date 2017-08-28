@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FlatList } from 'react-native';
+import { getStyle } from 'react-native-styler';
 import DiscoverListItem from './discover-list-item';
 import './discover-list.style';
 
@@ -11,14 +12,13 @@ class DiscoverList extends Component
     constructor() {
         super();
 
-        this.selectListItem = this.selectListItem.bind(this);
-        this.startQuest = this.startQuest.bind(this);
-    }
-
-    componentWillMount() {
         this.state = {
             selectedEvent: null
         };
+
+        this.selectListItem = this.selectListItem.bind(this);
+        this.startQuest = this.startQuest.bind(this);
+        this.renderItem = this.renderItem.bind(this);
     }
 
     shouldComponentUpdate(newProps, newState) {
@@ -34,6 +34,8 @@ class DiscoverList extends Component
     }
 
     selectListItem(selectedEvent) {
+        console.log('select list item', selectedEvent);
+
         if (this.state.selectedEvent === selectedEvent) {
             this.startQuest(selectedEvent);
         }
@@ -60,21 +62,23 @@ class DiscoverList extends Component
         return (
             <FlatList
                 data={events}
-                renderItem={renderItem}
+                renderItem={this.renderItem}
                 bounces={false}
                 removeClippedSubviews={false}
+                style={getStyle('discoverList')}
             />
         );
+    }
 
-        function renderItem({ item, index }) {
-            return (
-                <DiscoverListItem
-                    key={index}
-                    event={item}
-                    onPress={() => props.onItemPress(item)}
-                />
-            )
-        }
+    renderItem({ item, index }) {
+        return (
+            <DiscoverListItem
+                key={index}
+                event={item}
+                onPress={() => this.selectListItem(item)}
+                isSelected={this.state.selectedEvent === item}
+            />
+        )
     }
 }
 
