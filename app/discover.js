@@ -3,7 +3,6 @@ import { View, Button, AppState } from 'react-native';
 import { getStyle, getCurrentTheme } from 'react-native-styler';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import MainBackground from '../components/main-background/main-background';
-import DiscoverMap from '../components/discover-map/discover-map';
 import DiscoverList from '../components/discover-list/discover-list';
 import LocationWarning from '../components/location-warning/location-warning';
 import InfoText from '../components/info-text/info-text';
