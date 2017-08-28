@@ -2,27 +2,43 @@ import { createStyle } from 'react-native-styler';
 
 createStyle({
     discoverListItem: {
-        padding: '10h4s',
-        height: '70h4s',
-        flexDirection: 'row',
+        margin: '10h4s',
+        flexDirection: 'column',
 
-        avatar: {
-            height: '50h4s',
-            width: '50h4s'
+        top: {
+            flexDirection: 'row',
+            height: '70h4s',
+            borderTopLeftRadius: '3h4s',
+            borderTopRightRadius: '3h4s'
         },
-        content: {
-            flex: 1,
-            height: '50h4s',
-            paddingLeft: '10h4s',
-            justifyContent: 'space-between'
+        image: {
+            backgroundColor: 'theme:secondary',
+            height: '70h4s',
+            width: '50%',
+            borderTopLeftRadius: '3h4s'
         },
-        title: {
-            fontWeight: '600',
-            fontSize: 'theme:p'
+        staticMap: {
+            backgroundColor: 'theme:secondary',
+            height: '70h4s',
+            width: '50%',
+            borderTopRightRadius: '3h4s'
         },
-        address: {
-            fontSize: 'theme:small',
-            color: 'theme:subtext'
+
+        bottom: {
+            flexDirection: 'row',
+            padding: '10h4s',
+            borderBottomColor: 'theme:border',
+            borderBottomWidth: 1,
+            borderLeftColor: 'theme:border',
+            borderLeftWidth: 1,
+            borderRightColor: 'theme:border',
+            borderRightWidth: 1,
+            borderBottomLeftRadius: '3h4s',
+            borderBottomRightRadius: '3h4s',
+        },
+        name: {
+            fontSize: 'theme:title',
+            fontWeight: '600'
         }
     }
 });

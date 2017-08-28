@@ -125,12 +125,6 @@ class Discover extends Component
 
         return (
             <MainBackground>
-                <DiscoverMap
-                    latitude={this.props.location.get('latitude')}
-                    longitude={this.props.location.get('longitude')}
-                    events={eventsNearby}
-                    navigation={this.props.navigation}
-                />
                 {content}
             </MainBackground>
         );

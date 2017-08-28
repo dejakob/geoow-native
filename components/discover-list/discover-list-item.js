@@ -1,9 +1,8 @@
-import moment from 'moment';
 import React from 'react';
-import { View, Text, Image } from 'react-native';
-import * as CategoryImageHelper from '../../helpers/category-image-helper';
-import Touchable from '../button/touchable';
+import { View, Button, Text, Image, TouchableWithoutFeedback } from 'react-native';
 import { getStyle } from 'react-native-styler';
+import * as CategoryImageHelper from '../../helpers/category-image-helper';
+import DiscoverListItemBasic from './discover-list-item-basic';
 
 /**
  * <DiscoverListItem />
@@ -23,32 +22,16 @@ function DiscoverListItem(props) {
     }
 
     return (
-        <Touchable
+        <TouchableWithoutFeedback
             onPress={props.onPress}
         >
-            <View
-                style={getStyle('discoverListItem')}
-            >
-                <Image
-                    source={image}
-                    style={getStyle('discoverListItem__avatar')}
-                />
-                <View
-                    style={getStyle('discoverListItem__content')}
-                >
-                    <Text
-                        style={getStyle('discoverListItem__title')}
-                    >
-                        {event.get('name')}
-                    </Text>
-                    <Text
-                        style={getStyle('discoverListItem__address')}
-                    >
-                        {`${event.getIn(['location', 'street'])} • ${moment(event.get('startTime')).format('ddd')} • ${moment(event.get('startTime')).format('HH:mm')}`}
-                    </Text>
-                </View>
-            </View>
-        </Touchable>
+            <DiscoverListItemBasic
+                image={image}
+                name={event.get('name')}
+                startTime={event.get('startTime')}
+                endTime={event.get('endTime')}
+            />
+        </TouchableWithoutFeedback>
     );
 }
 
