@@ -30,6 +30,8 @@ function DiscoverListItem(props) {
                 name={event.get('name')}
                 startTime={event.get('startTime')}
                 endTime={event.get('endTime')}
+                latitude={event.getIn(['location', 'geocoords', 1])}
+                longitude={event.getIn(['location', 'geocoords', 0])}
             />
         </TouchableWithoutFeedback>
     );

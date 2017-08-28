@@ -54,7 +54,7 @@ class Auth extends React.PureComponent
                 this.props.navigation.navigate('Preferences');
             }
             else {
-                this.props.navigation.navigate('Dashboard');
+                this.props.navigation.navigate('Discover');
             }
         }
     }

@@ -52,7 +52,7 @@ class Preferences extends React.PureComponent
 
     _continue() {
         this.props.updateCategories(this.state.selectedCategories.toJS());
-        this.props.navigation.navigate('Dashboard');
+        this.props.navigation.navigate('Discover');
     }
 
     render() {
