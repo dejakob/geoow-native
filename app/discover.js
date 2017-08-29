@@ -122,7 +122,7 @@ class Discover extends Component
             content = (
                 <DiscoverList
                     events={eventsNearby}
-                    onItemPress={item => this.props.navigation.navigate('EventDetail', { eventId: item.get('_id') })}
+                    onItemPress={item => this.props.navigation.navigate('EventDetail', { eventId: item.get('_id'), autoStart: true })}
                 />
             );
         }

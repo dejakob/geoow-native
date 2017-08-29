@@ -69,6 +69,10 @@ class EventDetail extends Component
 
             this._loadedEvent = true;
 
+            if (this.props.navigation.state.params.autoStart) {
+                this._acceptQuest();
+            }
+
             Directions
                 .getDirections(this.props.location.get('latitude'), this.props.location.get('longitude'), latitude, longitude)
                 .then(result => {

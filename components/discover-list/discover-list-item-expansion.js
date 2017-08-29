@@ -8,7 +8,7 @@ import { getStyle } from 'react-native-styler';
  * @returns {XML}
  * @constructor
  */
-function DiscoverListItemExpansion(props) {
+function  DiscoverListItemExpansion(props) {
     return (
         <View
             style={getStyle('discoverListItem__expansion')}

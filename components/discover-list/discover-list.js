@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FlatList } from 'react-native';
 import { getStyle } from 'react-native-styler';
+import SwipeCards from 'react-native-swipe-cards';
 import DiscoverListItem from './discover-list-item';
 import './discover-list.style';
 
@@ -59,6 +60,15 @@ class DiscoverList extends Component
             )
             .toArray();
 
+        console.log('events', events);
+
+        return (
+            <SwipeCards
+                cards={events}
+                renderCard={this.renderItem}
+            />
+        )
+
         return (
             <FlatList
                 data={events}
@@ -70,10 +80,10 @@ class DiscoverList extends Component
         );
     }
 
-    renderItem({ item, index }) {
+    renderItem(item) {
         return (
             <DiscoverListItem
-                key={index}
+                key={item.get('_id')}
                 event={item}
                 onPress={() => this.selectListItem(item)}
                 isSelected={this.state.selectedEvent === item}
