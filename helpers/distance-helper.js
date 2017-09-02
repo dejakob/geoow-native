@@ -19,4 +19,25 @@ function getDistanceInMeter(lat1, lon1, lat2, lon2) {
     return dist
 }
 
-export { getDistanceInMeter };
+function humanizeDistance(distanceInMeter) {
+    console.log('human', distanceInMeter / 10000 * 10);
+
+    if (distanceInMeter > 10000) {
+        return `${Math.round(distanceInMeter / 1000)}km`;
+    }
+
+    if (distanceInMeter > 1000) {
+        return `${Math.round(distanceInMeter / 100) / 10}km`;
+    }
+
+    if (distanceInMeter > 200) {
+        return `${Math.round(distanceInMeter / 100) * 100}m`;
+    }
+
+    return `${Math.round(distanceInMeter / 10) * 10}m`;
+}
+
+export {
+    getDistanceInMeter,
+    humanizeDistance
+};

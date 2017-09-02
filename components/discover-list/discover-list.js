@@ -58,7 +58,7 @@ class DiscoverList extends Component
                 )
             )
             .sort((eventA, eventB) => eventA.get('distance') - eventB.get('distance'))
-            .sort((eventA, eventB) => eventA.get('name').indexOf('Visit ') === 0 ? -1 : 0)
+            .sort((eventA, eventB) => eventA.get('name').indexOf('Visit ') === 0 ? +1 : 0)
             .toArray();
 
         console.log('events', events.map(e => e.toJS()));

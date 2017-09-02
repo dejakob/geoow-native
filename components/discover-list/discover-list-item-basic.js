@@ -3,6 +3,7 @@ import React from 'react';
 import { View, Image, Text, StyleSheet } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import { getGoogleMapsToken } from '../../services/directions';
+import { humanizeDistance } from '../../helpers/distance-helper';
 
 /**
  * <DiscoverListItemBasic />
@@ -46,7 +47,7 @@ function DiscoverListItemBasic(props) {
                     >
                         {moment(props.startTime).format('HH[h]mm')} - {moment(props.endTime).format('HH[h]mm')}
                     </Text>
-                    <Text>{props.distance}</Text>
+                    <Text>{humanizeDistance(props.distance)}</Text>
                 </View>
             </View>
             <Image
