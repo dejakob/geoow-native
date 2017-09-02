@@ -146,7 +146,7 @@ class EventDetail extends Component
                 'Mission complete',
                 'Congratulations, you completed the quest successfully 💪',
                 [
-                    { text: 'OK', onPress: () => this.props.navigation.navigate('Dashboard')},
+                    { text: 'OK', onPress: () => this.props.navigation.goBack()},
                 ],
                 { cancelable: false }
             );
@@ -159,7 +159,7 @@ class EventDetail extends Component
             !nextProps.quest.get('isRejectingQuest')
             && this.props.quest.get('isRejectingQuest')
         ) {
-            this.props.navigation.navigate('Dashboard');
+            this.props.navigation.goBack();
             this.props.loadStats();
             this.props.loadMe();
         }

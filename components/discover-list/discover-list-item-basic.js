@@ -46,8 +46,13 @@ function DiscoverListItemBasic(props) {
                     >
                         {moment(props.startTime).format('HH[h]mm')} - {moment(props.endTime).format('HH[h]mm')}
                     </Text>
+                    <Text>{props.distance}</Text>
                 </View>
             </View>
+            <Image
+                source={props.image}
+                style={getStyle('discoverListItem__avatar')}
+            />
         </View>
     );
 }

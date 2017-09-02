@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { FlatList } from 'react-native';
+import { Text } from 'react-native';
 import { getStyle } from 'react-native-styler';
 import SwipeCards from 'react-native-swipe-cards';
 import DiscoverListItem from './discover-list-item';
+import { getDistanceInMeter } from '../../helpers/distance-helper';
 import './discover-list.style';
 
 /**
@@ -35,14 +36,7 @@ class DiscoverList extends Component
     }
 
     selectListItem(selectedEvent) {
-        console.log('select list item', selectedEvent);
-
-        if (this.state.selectedEvent === selectedEvent) {
-            this.startQuest(selectedEvent);
-        }
-        else {
-            this.setState({ selectedEvent });
-        }
+        this.startQuest(selectedEvent);
     }
 
     startQuest(event) {
@@ -58,24 +52,22 @@ class DiscoverList extends Component
                     .toArray()
                     .indexOf(event.get('name')) === index
             )
+            .map(event =>
+                event.set('distance',
+                    getDistanceInMeter(event.getIn(['location', 'geocoords', 1]), event.getIn(['location', 'geocoords', 0]), this.props.location.get('latitude'), this.props.location.get('longitude'))
+                )
+            )
+            .sort((eventA, eventB) => eventA.get('distance') - eventB.get('distance'))
+            .sort((eventA, eventB) => eventA.get('name').indexOf('Visit ') === 0 ? -1 : 0)
             .toArray();
 
-        console.log('events', events);
+        console.log('events', events.map(e => e.toJS()));
 
         return (
             <SwipeCards
                 cards={events}
                 renderCard={this.renderItem}
-            />
-        )
-
-        return (
-            <FlatList
-                data={events}
-                renderItem={this.renderItem}
-                bounces={false}
-                removeClippedSubviews={false}
-                style={getStyle('discoverList')}
+                handleYup={item => this.selectListItem(item)}
             />
         );
     }
@@ -85,8 +77,6 @@ class DiscoverList extends Component
             <DiscoverListItem
                 key={item.get('_id')}
                 event={item}
-                onPress={() => this.selectListItem(item)}
-                isSelected={this.state.selectedEvent === item}
             />
         )
     }

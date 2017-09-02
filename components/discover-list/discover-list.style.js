@@ -10,6 +10,7 @@ createStyle({
         height: '280w4s',
         flexDirection: 'column',
         borderRadius: '3h4s',
+        position: 'relative',
 
         top: {
             flex: 1,
@@ -27,7 +28,10 @@ createStyle({
 
         bottom: {
             flexDirection: 'row',
-            padding: '10h4s',
+            paddingRight: '10h4s',
+            paddingTop: '10h4s',
+            paddingBottom: '10h4s',
+            paddingLeft: '80h4s',
             backgroundColor: 'theme:sheet',
             borderBottomColor: 'theme:border',
             borderBottomWidth: 1,
@@ -38,30 +42,13 @@ createStyle({
             fontSize: 'theme:title',
             fontWeight: '600'
         },
-
-        expansion: {
-            marginLeft: '10h4s',
-            marginRight: '10h4s',
-            marginBottom: '10h4s',
-            backgroundColor: 'theme:secondary',
-            padding: 1,
-            borderRadius: '3h4s',
-
-            header: {
-                marginBottom: '2h4s',
-                paddingLeft: '6h4s',
-                paddingRight: '6h4s',
-                paddingBottom: '6h4s',
-                paddingTop: '10h4s',
-            },
-            headerText: {
-                color: 'theme:primary',
-                fontWeight: '300',
-                fontSize: 'theme:title'
-            },
-            footer: {
-                alignItems: 'flex-end'
-            }
-        }
+        avatar: {
+            height: '66h4s',
+            width: '66h4s',
+            borderRadius: '33h4s',
+            position: 'absolute',
+            bottom: '16h4s',
+            left: '10h4s'
+        },
     }
 });
