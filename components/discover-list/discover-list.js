@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Text } from 'react-native';
-import { getStyle } from 'react-native-styler';
 import SwipeCards from 'react-native-swipe-cards';
 import DiscoverListItem from './discover-list-item';
 import { getDistanceInMeter } from '../../helpers/distance-helper';
@@ -21,6 +20,49 @@ class DiscoverList extends Component
         this.selectListItem = this.selectListItem.bind(this);
         this.startQuest = this.startQuest.bind(this);
         this.renderItem = this.renderItem.bind(this);
+        this.updateEvents = this.updateEvents.bind(this);
+    }
+
+    componentWillMount() {
+        this.updateEvents(this.props)
+    }
+
+    componentWillReceiveProps(newProps) {
+        this.updateEvents(newProps);
+    }
+
+    updateEvents(props) {
+        const myLatitude = props.location.getIn(['location', 'geocoords', 1]);
+        const myLongitude = props.location.getIn(['location', 'geocoords', 0]);
+
+        this.events = props.events
+
+            // Filter out duplicates
+            .filter((event, index) =>
+                props.events
+                    .map(event => event.get('name'))
+                    .toArray()
+                    .indexOf(event.get('name')) === index
+            )
+
+            // Add the distance in m
+            .map(event =>
+                event.set('distance',
+                    getDistanceInMeter(
+                        myLatitude,
+                        myLongitude,
+                        event.getIn(['location', 'geocoords', 1]),
+                        event.getIn(['location', 'geocoords', 0])
+                    )
+                )
+            )
+
+            // Sort by distance, nearby => far away
+            .sort((eventA, eventB) => eventA.get('distance') - eventB.get('distance'))
+
+            // Sort by name, put everything starting with 'Visit ' at the end
+            .sort((eventA, eventB) => eventA.get('name').indexOf('Visit ') === 0 ? +1 : 0)
+            .toArray();
     }
 
     shouldComponentUpdate(newProps, newState) {
@@ -44,24 +86,7 @@ class DiscoverList extends Component
     }
 
     render () {
-        const { props } = this;
-        const events = props.events
-            .filter((event, index) =>
-                props.events
-                    .map(event => event.get('name'))
-                    .toArray()
-                    .indexOf(event.get('name')) === index
-            )
-            .map(event =>
-                event.set('distance',
-                    getDistanceInMeter(event.getIn(['location', 'geocoords', 1]), event.getIn(['location', 'geocoords', 0]), this.props.location.get('latitude'), this.props.location.get('longitude'))
-                )
-            )
-            .sort((eventA, eventB) => eventA.get('distance') - eventB.get('distance'))
-            .sort((eventA, eventB) => eventA.get('name').indexOf('Visit ') === 0 ? +1 : 0)
-            .toArray();
-
-        console.log('events', events.map(e => e.toJS()));
+        const { events } = this;
 
         return (
             <SwipeCards
