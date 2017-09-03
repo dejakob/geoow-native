@@ -8,11 +8,13 @@ createStyle({
         list: {
             flex: 1,
             position: 'relative',
-            backgroundColor: 'theme:border'
+            backgroundColor: 'theme:sheet2'
         },
 
         listItem: {
             marginBottom: '20h4s',
+            borderBottomColor: 'theme:border',
+            borderBottomWidth: 1,
 
             details: {
                 padding: '10h4s',

@@ -12,6 +12,16 @@ const API_VERSION = 18;
  * @constructor
  */
 class DirectionsMap extends Component {
+    shouldComponentUpdate(newProps) {
+        if (
+            this.props.destination[1] !== newProps.destination[1] ||
+            this.props.destination[0] !== newProps.destination[0]
+        ) {
+            return true;
+        }
+
+        return false;
+    }
 
     render() {
         const majorVersionIOS = parseInt(Platform.Version, 10);
