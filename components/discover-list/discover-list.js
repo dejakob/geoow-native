@@ -32,8 +32,8 @@ class DiscoverList extends Component
     }
 
     updateEvents(props) {
-        const myLatitude = props.location.getIn(['location', 'geocoords', 1]);
-        const myLongitude = props.location.getIn(['location', 'geocoords', 0]);
+        const myLatitude = props.location.get('latitude');
+        const myLongitude = props.location.get('longitude');
 
         this.events = props.events
 

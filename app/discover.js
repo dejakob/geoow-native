@@ -43,10 +43,7 @@ class Discover extends Component
             .map(eventId =>
                 this.props.event.getIn(['events', eventId])
             )
-            .filter(e => !!e)
-            .sort((eventA, eventB) =>
-                new Date(eventA.get('startTime')).getTime() - new Date(eventB.get('endTime')).getTime()
-            );
+            .filter(e => !!e);
     }
 
     componentWillMount() {
