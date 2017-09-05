@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Button, Text, Image, TouchableWithoutFeedback } from 'react-native';
-import { getStyle } from 'react-native-styler';
 import * as CategoryImageHelper from '../../helpers/category-image-helper';
 import DiscoverListItemBasic from './discover-list-item-basic';
 
@@ -32,9 +31,15 @@ function DiscoverListItem(props) {
     };
 
     return (
-        <DiscoverListItemBasic
-            {...basicDetails}
-        />
+        <TouchableWithoutFeedback
+            onPress={props.onPress}
+        >
+            <View>
+                <DiscoverListItemBasic
+                    {...basicDetails}
+                />
+            </View>
+        </TouchableWithoutFeedback>
     );
 }
 

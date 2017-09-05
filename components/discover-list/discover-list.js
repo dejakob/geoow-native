@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+import { Text, Linking } from 'react-native';
 import SwipeCards from 'react-native-swipe-cards';
 import DiscoverListItem from './discover-list-item';
 import { getDistanceInMeter } from '../../helpers/distance-helper';
@@ -21,6 +21,7 @@ class DiscoverList extends Component
         this.startQuest = this.startQuest.bind(this);
         this.renderItem = this.renderItem.bind(this);
         this.updateEvents = this.updateEvents.bind(this);
+        this.loadDetails = this.loadDetails.bind(this);
     }
 
     componentWillMount() {
@@ -85,6 +86,18 @@ class DiscoverList extends Component
         this.props.onItemPress(event);
     }
 
+    loadDetails(event) {
+        if (
+            event.getIn(['venue', 'fbid']) &&
+            event.getIn(['originalEventData', 'id'])
+        ) {
+            Linking.openURL(`http://facebook.com/${event.getIn(['originalEventData', 'id'])}`);
+        }
+        else if (!event.get('originalEventData')) {
+            Linking.openURL(`https://foursquare.com/v/${event.getIn(['venue', 'originalVenue', 'id'])}`);
+        }
+    }
+
     render () {
         const { events } = this;
 
@@ -93,6 +106,7 @@ class DiscoverList extends Component
                 cards={events}
                 renderCard={this.renderItem}
                 handleYup={item => this.selectListItem(item)}
+                loop
             />
         );
     }
@@ -102,6 +116,7 @@ class DiscoverList extends Component
             <DiscoverListItem
                 key={item.get('_id')}
                 event={item}
+                onPress={() => this.loadDetails(item)}
             />
         )
     }
