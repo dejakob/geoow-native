@@ -15,6 +15,7 @@ createTheme({
         lightBorder: '#eeeeee',
         ok: '#2fb536',
         okSoft: '#d7ffd9',
+        okDark: '#175c1c',
         okOpacity: 'rgba(47,181,54,0.8)',
         notok: '#9a2300',
         notokOpacity: 'rgba(154,35,0,0.8)',

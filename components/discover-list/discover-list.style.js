@@ -7,10 +7,24 @@ createStyle({
     },
     discoverListItem: {
         width: '280w4s',
-        height: '320w4s',
+        height: '340w4s',
         flexDirection: 'column',
         borderRadius: '3h4s',
         position: 'relative',
+
+        creditsWell: {
+            backgroundColor: 'theme:okSoft',
+            marginBottom: '10h4s',
+            padding: '4h4s',
+            borderRadius: '2h4s',
+            color: 'theme:primary',
+
+            text: {
+                textAlign: 'center',
+                fontWeight: '600',
+                color: 'theme:okDark'
+            }
+        },
 
         top: {
             flex: 1,
@@ -69,6 +83,7 @@ createStyle({
         name: {
             fontSize: 'theme:title',
             fontWeight: '600',
+            height: '28h4s',
             maxHeight: '28h4s',
             paddingLeft: '80h4s',
         },

@@ -28,6 +28,15 @@ function DiscoverListItemBasic(props) {
             style={getStyle('discoverListItem')}
         >
             <View
+                style={getStyle('discoverListItem__creditsWell')}
+            >
+                <Text
+                    style={getStyle('discoverListItem__creditsWell__text')}
+                >
+                    Complete quest and earn 100 credits!
+                </Text>
+            </View>
+            <View
                 style={getStyle('discoverListItem__top')}
             >
                 <Image
