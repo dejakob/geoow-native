@@ -7,7 +7,7 @@ createStyle({
     },
     discoverListItem: {
         width: '280w4s',
-        height: '280w4s',
+        height: '320w4s',
         flexDirection: 'column',
         borderRadius: '3h4s',
         position: 'relative',
@@ -27,27 +27,57 @@ createStyle({
         },
 
         bottom: {
-            flexDirection: 'row',
+            height: '70h4s',
+            flexDirection: 'column',
             paddingRight: '10h4s',
             paddingTop: '10h4s',
             paddingBottom: '10h4s',
-            paddingLeft: '80h4s',
             backgroundColor: 'theme:sheet',
             borderBottomColor: 'theme:border',
             borderBottomWidth: 1,
             borderBottomLeftRadius: '3h4s',
             borderBottomRightRadius: '3h4s',
         },
+        details: {
+            flexDirection: 'row',
+            alignItems: 'center',
+            marginTop: '8h4s'
+        },
+        distance: {
+            color: 'theme:subtext',
+            fontSize: '11h4s',
+
+            wrapper: {
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '78h4s',
+            }
+        },
+        time: {
+            color: 'theme:subtext',
+            fontSize: '11h4s',
+            paddingLeft: '4h4s',
+
+            wrapper: {
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'flex-end',
+                flex: 1
+            }
+        },
         name: {
             fontSize: 'theme:title',
-            fontWeight: '600'
+            fontWeight: '600',
+            maxHeight: '28h4s',
+            paddingLeft: '80h4s',
         },
         avatar: {
-            height: '66h4s',
-            width: '66h4s',
-            borderRadius: '33h4s',
+            height: '56h4s',
+            width: '56h4s',
+            borderRadius: '28h4s',
             position: 'absolute',
-            bottom: '16h4s',
+            bottom: '36h4s',
             left: '10h4s'
         },
     }
