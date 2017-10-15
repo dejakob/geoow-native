@@ -11,9 +11,9 @@ let _isInitialized = false;
 function initTracking() {
     BackgroundGeolocation.setConfig({
         // Geolocation Config
-        desiredAccuracy: 0,
+        desiredAccuracy: 200,
         stationaryRadius: 25,
-        distanceFilter: 10,
+        distanceFilter: 0,
         // Activity Recognition
         // Application config
         debug: false, // <-- enable this hear sounds for background-geolocation life-cycle.

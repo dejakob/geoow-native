@@ -791,6 +791,7 @@
 				8151BAC4F0054C35B28A6151 /* Resources */,
 				7205977D69A14B8596DA4821 /* Frameworks */,
 				EB1150719974F91EF53184BE /* Pods */,
+				B37D3C211F938D4400C241C9 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -867,6 +868,20 @@
 				B35F01601F4DCDBB00A5B6D9 /* libAirMaps.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B37D3C211F938D4400C241C9 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				370B536BA6444EF7914321F8 /* libRNVectorIcons.a */,
+				9C5A2C00D6A741A39074D788 /* libRNBackgroundGeolocation.a */,
+				42B445EEBCED4C949993FFD6 /* libRNBackgroundFetch.a */,
+				333AEA8083564E118F363FCA /* libCocoaLumberjack.a */,
+				589049A6CBE24390B566FAFA /* libRCTOneSignal.a */,
+				B254A6CD2E9D47D19159CF16 /* libRCTCamera.a */,
+				EE1B154439884D008860E0FB /* libAirMaps.a */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		B3AD625B1EC8B3EC0037346B /* Products */ = {

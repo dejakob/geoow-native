@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/jakobkerkhove/geoow/geoow-native/ios/build/Build/Products/Debug-iphonesimulator/Pods_GeoowNative.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-GeoowNative-umbrella.h",
+          'external-contents': "/Users/jakobkerkhove/geoow/geoow-native/ios/Pods/Target Support Files/Pods-GeoowNative/Pods-GeoowNative-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods_GeoowNative-Swift.h",
+          'external-contents': "/Users/jakobkerkhove/geoow/geoow-native/ios/build/Build/Products/Debug-iphonesimulator/Pods_GeoowNative.framework/Headers/Pods_GeoowNative-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/jakobkerkhove/geoow/geoow-native/ios/build/Build/Products/Debug-iphonesimulator/Pods_GeoowNative.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/jakobkerkhove/geoow/geoow-native/ios/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Pods-GeoowNative.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}
