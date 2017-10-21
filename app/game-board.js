@@ -8,6 +8,10 @@ class GameBoard extends Component
     static navigationOptions = {
         header: null
     };
+
+    componentWillMount() {
+        this.props.loadCategories();
+    }
     
     render() {
         return null;

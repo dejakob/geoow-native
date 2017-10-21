@@ -2,20 +2,20 @@ import { ACTIONS } from '../constants';
 
 function loadCategories() {
     return {
-        type: ACTIONS.LOCATION_LOAD_GEOLOCATION
+        type: ACTIONS.LOAD_CATEGORIES
     }
 }
 
 function _loadCategoriesSuccess(categories) {
     return {
-        type: ACTIONS.LOCATION_LOAD_GEOLOCATION_SUCCESS,
+        type: ACTIONS.LOAD_CATEGORIES_SUCCESS,
         categories
     }
 }
 
 function _loadCategoriesFailed() {
     return {
-        type: ACTIONS.LOCATION_LOAD_GEOLOCATION_FAILED
+        type: ACTIONS.LOAD_CATEGORIES_FAILED
     }
 }
 
