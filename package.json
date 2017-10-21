@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@mapbox/polyline": "^0.2.0",
+    "color-js": "1.0.4",
     "human-names": "github:dejakob/human-names#master",
     "immutable": "^3.8.1",
     "moment": "^2.18.1",

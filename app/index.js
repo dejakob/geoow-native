@@ -9,6 +9,7 @@ import store from '../services/store';
 import Auth from './auth';
 import AuthEmail from './auth-email';
 import AuthVerify from './auth-verify';
+import GameBoard from './game-board';
 import * as Router from '../services/router';
 import '../themes';
 import '../constants/'
@@ -23,6 +24,7 @@ const App = StackNavigator({
         screen: connect(AuthVerify),
         path: 'auth/:verificationToken',
     },
+    GameBoard: { screen: connect(GameBoard) }
 }, {
     mode: 'modal',
     onTransitionStart: (trans) => {

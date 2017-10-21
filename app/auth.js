@@ -47,15 +47,9 @@ class Auth extends React.PureComponent
     componentWillReceiveProps(nextProps) {
         if (
             !this.props.user.getIn(['me', 'email']) &&
-            nextProps.user.getIn(['me', 'email']) &&
-            this.props.event.get('events').count() === 0
+            nextProps.user.getIn(['me', 'email'])
         ) {
-            if (nextProps.user.getIn(['me', 'categories']).count() === 0) {
-                this.props.navigation.navigate('Preferences');
-            }
-            else {
-                this.props.navigation.navigate('Discover');
-            }
+            this.props.navigation.navigate('GameBoard');
         }
     }
 
