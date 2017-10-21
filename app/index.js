@@ -9,14 +9,6 @@ import store from '../services/store';
 import Auth from './auth';
 import AuthEmail from './auth-email';
 import AuthVerify from './auth-verify';
-import Plan from './plan';
-import Preferences from './preferences';
-import Dashboard from './dashboard';
-import Discover from './discover';
-import EventDetail from './event-detail';
-import Scan from './scan';
-import People from './people';
-import Profile from './profile';
 import * as Router from '../services/router';
 import '../themes';
 import '../constants/'
@@ -24,46 +16,6 @@ import '../constants/'
 // on Android, the URI prefix typically contains a host in addition to scheme
 const prefix = 'geoow://';
 
-const DashboardNavigation = StackNavigator({
-    DashboardMain: { screen: connect(Dashboard) },
-    Profile: { screen: connect(Profile) },
-});
-const TabNavigation = TabNavigator({
-    Discover: { screen: connect(Discover) },
-    Dashboard: { screen: DashboardNavigation },
-    ...Platform.select({
-        ios: { People: { screen: connect(People) } },
-        android: {}
-    }),
-    Scan: { screen: connect(Scan) },
-}, {
-    tabBarPosition: 'bottom',
-    navigationOptions: {
-        gesturesEnabled: false
-    },
-    swipeEnabled: false,
-    animationEnabled: false,
-    tabBarOptions: {
-        activeTintColor: getCurrentTheme().colors.active,
-        inactiveTintColor: getCurrentTheme().colors.inactive,
-        activeBackgroundColor: getCurrentTheme().colors.sheet,
-        inactiveBackgroundColor: getCurrentTheme().colors.sheet,
-        showIcon: true,
-        showLabel: false,
-        style: {
-            backgroundColor: getCurrentTheme().colors.sheet,
-        },
-        tabStyle: {
-            backgroundColor: getCurrentTheme().colors.sheet,
-            opacity: 1,
-        },
-        indicatorStyle: {
-            backgroundColor: getCurrentTheme().colors.active,
-        },
-        pressColor: getCurrentTheme().colors.active,
-    },
-    lazy: true
-});
 const App = StackNavigator({
     Auth: { screen: connect(Auth) },
     AuthEmail: { screen: connect(AuthEmail) },
@@ -71,10 +23,6 @@ const App = StackNavigator({
         screen: connect(AuthVerify),
         path: 'auth/:verificationToken',
     },
-    Plan: { screen: connect(Plan) },
-    Preferences: { screen: connect(Preferences) },
-    Tabs: { screen: TabNavigation },
-    EventDetail: { screen: connect(EventDetail) }
 }, {
     mode: 'modal',
     onTransitionStart: (trans) => {
