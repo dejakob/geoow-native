@@ -22,7 +22,8 @@ class ColorizedCarousel extends Component
         if (this.props.scenes && this.props.scenes.length > 0) {
             this.state = {
                 previousColor: this.props.scenes[0].color,
-                currentColor: this.props.scenes[0].color
+                currentColor: this.props.scenes[0].color,
+                currentSlide: 0
             };
             this.updateColors();
         }
@@ -32,7 +33,8 @@ class ColorizedCarousel extends Component
         if ((!this.state || !this.state.previousColor) && newProps.scenes && newProps.scenes.length) {
             this.state = {
                 previousColor: newProps.scenes[0].color,
-                currentColor: newProps.scenes[0].color
+                currentColor: newProps.scenes[0].color,
+                currentSlide: 0
             };
             this.updateColors();
         }
@@ -46,7 +48,8 @@ class ColorizedCarousel extends Component
         if (currentSlide === Math.round(currentSlide) && this.props.scenes[currentSlide]) {
             this.setState({
                 previousColor: this.state.currentColor,
-                currentColor: this.props.scenes[currentSlide].color
+                currentColor: this.props.scenes[currentSlide].color,
+                currentSlide
             });
             this.updateColors();
         }
@@ -86,6 +89,13 @@ class ColorizedCarousel extends Component
                     onScroll={this.handleScroll}
                     showsHorizontalScrollIndicator={false}
                 />
+                <View
+                    style={getStyle('colorizedCarousel__dots')}
+                >
+                    {this.props.scenes.map((scene, index) =>
+                        <View style={getStyle(this.state.currentSlide === index ? 'colorizedCarousel__activeDot' : 'colorizedCarousel__dot')} />
+                    )}
+                </View>
             </Animated.View>
         )
     }

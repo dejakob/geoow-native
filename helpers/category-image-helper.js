@@ -20,6 +20,7 @@ function getImageForCategory(category : string) {
             return require('../assets/categories/market.jpg');
 
         case 'chill':
+        case 'social':
             return require('../assets/categories/chill.jpg');
 
         case 'open air':
@@ -66,6 +67,9 @@ function getImageForCategory(category : string) {
 
         case 'concert':
             return require('../assets/categories/concert.jpg');
+
+        case 'museums':
+            return require('../assets/categories/museums.jpg');
     }
 
     return null;
