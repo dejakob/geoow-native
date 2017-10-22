@@ -12,7 +12,16 @@ class GameBoard extends Component
     };
 
     get categories() {
-        return this.props.gameBoard.get('categories');
+        return this.props.gameBoard.get('categories')
+            .update(categories => 
+                categories.map(category =>
+                    category.set('levels',
+                        category.get('levels').map(levelId =>
+                            this.props.gameBoard.getIn(['levels', levelId])
+                        )
+                    )
+                )
+            );
     }
 
     componentWillMount() {

@@ -34,7 +34,7 @@ createTheme({
         h1: '#ffffff'
     },
     fontSizes: {
-        h1: '14h4s',
+        h1: '12h4s',
         h2: '24h4s',
         button: '14h4s',
         p: '12h4s',

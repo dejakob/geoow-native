@@ -6,6 +6,7 @@ createStyle({
     typo: {
         h1: {
             fontSize: 'theme:h1',
+            fontWeight: '600',
             color: 'theme:h1',
             width: '100%',
             textAlign: 'center',
