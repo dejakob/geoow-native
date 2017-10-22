@@ -68,7 +68,7 @@ class ColorizedCarousel extends Component
         let backgroundColor;
         
         if (this.state && this.state.previousColor && this.state.currentColor) {
-            backgroundColor= this._colorAnim.interpolate({
+            backgroundColor = this._colorAnim.interpolate({
                 inputRange: [0, 1],
                 outputRange: [this.state.previousColor, this.state.currentColor]
             });

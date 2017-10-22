@@ -2,11 +2,11 @@ import { createTheme } from 'react-native-styler';
 
 createTheme({
     colors: {
-        background: 'rgb(37,57,82)',
+        background: '#48659F',
         backgroundTransparent: 'rgba(37,57,82,0.9)',
         subtext: '#999999',
         primary: '#ffffff',
-        secondary: '#5a8197',
+        secondary: '#48659F',
         secondary80: 'rgba(90,129,151,0.8)',
         sheet: '#ffffff',
         sheet2: '#f4fdff',
@@ -30,10 +30,11 @@ createTheme({
         placeholder: '#cccccc',
         icon: '#333333',
         text: '#000000',
-        headerBackground: 'rgb(46,65,89)'
+        headerBackground: 'rgb(46,65,89)',
+        h1: '#ffffff'
     },
     fontSizes: {
-        h1: '28h4s',
+        h1: '14h4s',
         h2: '24h4s',
         button: '14h4s',
         p: '12h4s',
