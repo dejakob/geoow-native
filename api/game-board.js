@@ -15,9 +15,6 @@ function fetchCategories() {
             'authorization': `Bearer ${getCurrentToken()}`
         }
     };
-    
-    console.log('params', params);
-    console.log('url', `${API_URL}/game/categories`);
 
     return fetch(`${API_URL}/game/categories`, params)
         .then(response => response.json());

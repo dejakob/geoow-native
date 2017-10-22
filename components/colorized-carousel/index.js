@@ -1,6 +1,9 @@
-import React, { Component } from 'react-native';
-import { Animated, FlatList } from 'react-native';
+import React, { Component } from 'react';
+import { Animated, FlatList, View } from 'react-native';
+import { getStyle } from 'react-native-styler';
 import Color from 'color-js';
+
+import './style.js';
 
 /**
  * <ColorizedCarousel />
@@ -13,38 +16,67 @@ class ColorizedCarousel extends Component
         this.updateColors = this.updateColors.bind(this);
     }
 
-    componentDidMount() {
-        if (this.props.scenes && this.props.scenes.length) {
+    componentWillMount() {
+        this._colorAnim = new Animated.Value(0);
+
+        if (this.props.scenes && this.props.scenes.length > 0) {
             this.state = {
                 previousColor: this.props.scenes[0].color,
-                currentColor: this.props.scenes[0].color,
-                colorAnim: new Animated.Value(0)
+                currentColor: this.props.scenes[0].color
             };
+            this.updateColors();
         }
     }
 
-    handleScroll() {
+    componentWillReceiveProps(newProps) {
+        if ((!this.state || !this.state.previousColor) && newProps.scenes && newProps.scenes.length) {
+            this.state = {
+                previousColor: newProps.scenes[0].color,
+                currentColor: newProps.scenes[0].color
+            };
+            this.updateColors();
+        }
+    }
 
+    handleScroll(eventData) {
+        const { layoutMeasurement, contentOffset } = eventData.nativeEvent;
+        const currentSlide = contentOffset.x / layoutMeasurement.width;
+
+        // Done sliding, not anywhere in between
+        if (currentSlide === Math.round(currentSlide) && this.props.scenes[currentSlide]) {
+            this.setState({
+                previousColor: this.state.currentColor,
+                currentColor: this.props.scenes[currentSlide].color
+            });
+            this.updateColors();
+        }
     }
 
     updateColors() {
+        this._colorAnim.setValue(0);
+
         Animated.timing(       
-            this.state.colorAnim,
+            this._colorAnim,
             {
-              toValue: 1,      
+              toValue: 1,
+              duration: 400
             }
           ).start();
     }
 
     render() {
-        const backgroundColor = this.state.colorAnim.interpolate({
-            inputRange: [0, 1],
-            outputRange: [Color(this.props.color).toRGB(), Color(this.props.color).toRGB()]
-        });
+        let backgroundColor;
+        
+        if (this.state && this.state.previousColor && this.state.currentColor) {
+            backgroundColor= this._colorAnim.interpolate({
+                inputRange: [0, 1],
+                outputRange: [this.state.previousColor, this.state.currentColor]
+            });
+        }
 
         return (
             <Animated.View
-                style={{ height: '100%', width: '100%', backgroundColor: this.props.color }}
+                style={{ flex: 1, backgroundColor }}
             >
                 <FlatList
                     data={this.props.scenes}
@@ -52,6 +84,7 @@ class ColorizedCarousel extends Component
                     horizontal={true}
                     pagingEnabled={true}
                     onScroll={this.handleScroll}
+                    showsHorizontalScrollIndicator={false}
                 />
             </Animated.View>
         )
@@ -66,7 +99,7 @@ class ColorizedCarouselScene extends Component
     render() {
         return (
             <View
-                style={{ height: '100%', width: '100%' }}
+                style={getStyle('colorizedCarousel__scene')}
             >
                 {this.props.component}
             </View>

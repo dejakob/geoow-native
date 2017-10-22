@@ -9,6 +9,7 @@ import createSagaMiddleware from 'redux-saga';
 
 import userReducer from '../reducers/user';
 import locationReducer from '../reducers/location';
+import gameBoardReducer from '../reducers/game-board';
 import mainSaga from '../sagas';
 
 const store = createStore();
@@ -27,6 +28,7 @@ function createStore() {
     const reducers = {
         user: userReducer,
         location: locationReducer,
+        gameBoard: gameBoardReducer
     };
 
     const reduxStore = createReduxStore(
