@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
-import { FlatList } from 'react-native';
+import { View } from 'react-native';
+import { createStyle, getStyle } from 'react-native-styler';
+import GameBoardLevel from './game-board-level'
+
+createStyle({
+    gameBoardLevels: {
+        marginTop: '24h4s'
+    }
+})
 
 /**
  * <GameBoardLevelsCategory />
@@ -7,7 +15,17 @@ import { FlatList } from 'react-native';
 class GameBoardLevelsCategory extends Component
 {
     render() {
-        return null;
+        return (
+            <View
+                style={getStyle('gameBoardLevels')}
+            >
+                {this.props.levels.map(level =>
+                    <GameBoardLevel level={level} color={this.props.color} />
+                )}
+            </View>
+        )
+        
+            
     }
 }
 

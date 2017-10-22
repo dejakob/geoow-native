@@ -7,8 +7,6 @@ createStyle({
         main: {
             flex: 1,
             paddingTop: '24h4s',
-            paddingLeft: '12w4s',
-            paddingRight: '12w4s',
             paddingBottom: '12h4s'
         },
         center: {

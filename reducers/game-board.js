@@ -3,7 +3,7 @@ import Immutable from 'immutable';
 
 const defaultState = Immutable.fromJS({
     categories: [],
-    levels: [],
+    levels: {},
     isLoadingCategories: false
 });
 
@@ -30,9 +30,16 @@ function loadCategories(state, action) {
 }
 
 function _loadCategoriesSuccess(state, action) {
+    action.categories
+        .map(c => c.levels)
+        .forEach(levels => 
+            levels.forEach(level => {
+                state = state.setIn(['levels', level._id], Immutable.fromJS(level));
+            })
+        )
+
     return state
         .set('isLoadingCategories', false)
-        .update('levels', levels => levels.mergeDeep(action.categories.map(c => c.levels)))
         .update('categories', categories =>
             categories.mergeDeep(action.categories.map(category => ({
                 ...category,
