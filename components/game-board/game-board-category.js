@@ -50,7 +50,9 @@ class GameBoardCategory extends Component
 {
     render() {
         return (
-            <ScrollView>
+            <ScrollView
+                bounces={false}
+            >
                 <Image
                     source={getImageForCategory(this.props.category.get('label'))}
                     style={getStyle('gameBoardCategory__bgImage')}

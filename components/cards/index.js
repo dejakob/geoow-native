@@ -13,6 +13,9 @@ createStyle({
 
             title: {
                 fontWeight: '600'
+            },
+            content: {
+                fontSize: 'theme:p'
             }
         }
     }
@@ -27,6 +30,11 @@ function Card(props) {
                 style={[getStyle('cards__listItemCard__title')]}
             >
                 {props.title}
+            </Text>
+            <Text
+                style={getStyle('cards__listItemCard__content')}
+            >
+                {props.content}
             </Text>
         </View>
     );

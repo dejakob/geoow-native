@@ -88,6 +88,7 @@ class ColorizedCarousel extends Component
                     pagingEnabled={true}
                     onScroll={this.handleScroll}
                     showsHorizontalScrollIndicator={false}
+                    bounces={false}
                 />
                 <View
                     style={getStyle('colorizedCarousel__dots')}
