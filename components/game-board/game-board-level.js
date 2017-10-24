@@ -1,34 +1,31 @@
 import React from 'react';
+import { View } from 'react-native';
 import { ListItemCard } from '../cards';
+import GameBoardGoal from './game-board-goal';
 
 /**
  * <GameBoardLevel />
  * @param {Object} props 
  */
 function GameBoardLevel(props) {
+    console.log('props.level.get(goals)', props.level.get('goals').toJS());
 
-    const goalsDescription = 'Goals:\n' + props.level.get('goals').map(goal => {
-        switch (goal.get('goal_type')) {
-            case 'VISIT':
-                return '* Visit a place';
-
-            case 'WALK':
-                return '* Walk';
-
-            case 'MEET':
-                return '* Meet someone';    
-
-            default:
-                return '';
-        }
-    }).join('\n')
-
-    
+    const content = (
+        <View style={{ flexDirection: 'row' }}>
+            {props.level.get('goals').map((goal, index) =>
+                <GameBoardGoal
+                    goal={goal}
+                    key={index}
+                    tintColor={props.color}
+                />
+            )}
+        </View>
+    );
 
     return (
         <ListItemCard
             title={props.level.get('title')}
-            content={goalsDescription}
+            content={content}
             tintColor={props.color}
         />
     )
