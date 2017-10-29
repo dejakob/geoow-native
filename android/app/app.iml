@@ -22,7 +22,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
     <output url="file://$MODULE_DIR$/build/intermediates/classes/debug" />
     <output-test url="file://$MODULE_DIR$/build/intermediates/classes/test/debug" />
     <exclude-output />
@@ -105,52 +105,62 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 26 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="support-core-ui-26.0.1" level="project" />
-    <orderEntry type="library" exported="" name="play-services-analytics-11.2.0" level="project" />
-    <orderEntry type="library" exported="" name="imagepipeline-base-1.0.1" level="project" />
-    <orderEntry type="library" exported="" name="play-services-basement-11.2.0" level="project" />
-    <orderEntry type="library" exported="" name="support-media-compat-26.0.1" level="project" />
-    <orderEntry type="library" exported="" name="textlayoutbuilder-1.0.0" level="project" />
-    <orderEntry type="library" exported="" name="play-services-tagmanager-v4-impl-11.2.0" level="project" />
-    <orderEntry type="library" exported="" name="jsr305-3.0.0" level="project" />
-    <orderEntry type="library" exported="" name="support-vector-drawable-26.0.1" level="project" />
-    <orderEntry type="library" exported="" name="support-core-utils-26.0.1" level="project" />
-    <orderEntry type="library" exported="" name="bolts-tasks-1.4.0" level="project" />
-    <orderEntry type="library" exported="" name="drawee-1.0.1" level="project" />
-    <orderEntry type="library" exported="" name="fbcore-1.0.1" level="project" />
-    <orderEntry type="library" exported="" name="OneSignal-3.6.1" level="project" />
-    <orderEntry type="library" exported="" name="okhttp-urlconnection-3.6.0" level="project" />
-    <orderEntry type="library" exported="" name="android-jsc-r174650" level="project" />
-    <orderEntry type="library" exported="" name="staticlayout-proxy-1.0" level="project" />
-    <orderEntry type="library" exported="" name="imagepipeline-okhttp3-1.0.1" level="project" />
-    <orderEntry type="library" exported="" name="fresco-1.0.1" level="project" />
-    <orderEntry type="library" exported="" name="play-services-analytics-impl-11.2.0" level="project" />
-    <orderEntry type="library" exported="" name="play-services-base-11.2.0" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="multidex-instrumentation-1.0.1" level="project" />
-    <orderEntry type="library" exported="" name="play-services-location-11.2.0" level="project" />
-    <orderEntry type="library" exported="" name="support-compat-26.0.1" level="project" />
-    <orderEntry type="library" exported="" name="okio-1.13.0" level="project" />
-    <orderEntry type="library" exported="" name="imagepipeline-1.0.1" level="project" />
-    <orderEntry type="library" exported="" name="soloader-0.1.0" level="project" />
-    <orderEntry type="library" exported="" name="javax.inject-1" level="project" />
-    <orderEntry type="library" exported="" name="support-annotations-26.0.1" level="project" />
-    <orderEntry type="library" exported="" name="support-v4-26.0.1" level="project" />
-    <orderEntry type="library" exported="" name="play-services-maps-11.2.0" level="project" />
-    <orderEntry type="library" exported="" name="support-fragment-26.0.1" level="project" />
-    <orderEntry type="library" exported="" name="animated-vector-drawable-26.0.1" level="project" />
-    <orderEntry type="library" exported="" name="play-services-gcm-11.2.0" level="project" />
-    <orderEntry type="library" exported="" name="react-native-0.47.1" level="project" />
-    <orderEntry type="library" exported="" name="tslocationmanager-" level="project" />
-    <orderEntry type="library" exported="" name="okhttp-3.6.0" level="project" />
-    <orderEntry type="library" exported="" name="multidex-1.0.1" level="project" />
-    <orderEntry type="library" exported="" name="appcompat-v7-26.0.1" level="project" />
-    <orderEntry type="library" exported="" name="volley-1.0.0" level="project" />
-    <orderEntry type="library" exported="" name="play-services-tasks-11.2.0" level="project" />
-    <orderEntry type="library" exported="" name="play-services-iid-11.2.0" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:multidex-1.0.1" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-gcm-license-11.4.2" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-tagmanager-v4-impl-11.4.2" level="project" />
+    <orderEntry type="library" exported="" name="com.facebook.fresco:imagepipeline-base-1.0.1" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-base-license-11.4.2" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-fragment-26.0.1" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-annotations:26.0.1@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-vector-drawable-26.0.1" level="project" />
+    <orderEntry type="library" exported="" name="com.parse.bolts:bolts-tasks:1.4.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-basement-license-11.4.2" level="project" />
+    <orderEntry type="library" exported="" name="com.squareup.okhttp3:okhttp-urlconnection:3.6.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-iid-11.4.2" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-core-utils-26.0.1" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-iid-license-11.4.2" level="project" />
+    <orderEntry type="library" exported="" name="com.facebook.fresco:imagepipeline-1.0.1" level="project" />
+    <orderEntry type="library" exported="" name="com.facebook.fresco:fbcore-1.0.1" level="project" />
+    <orderEntry type="library" exported="" name="com.facebook.fresco:drawee-1.0.1" level="project" />
+    <orderEntry type="library" exported="" name="tslocationmanager:@aar" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-tasks-11.4.2" level="project" />
+    <orderEntry type="library" exported="" name="com.facebook.fbui.textlayoutbuilder:staticlayout-proxy:1.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-v4-26.0.1" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-location-license-11.4.2" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-analytics-impl-11.4.2" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:animated-vector-drawable-26.0.1" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-base-11.4.2" level="project" />
+    <orderEntry type="library" exported="" name="com.onesignal:OneSignal-3.6.4" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-tasks-license-11.4.2" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-media-compat-26.0.1" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-tagmanager-v4-impl-license-11.4.2" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-analytics-11.4.2" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="com.android.support:multidex-instrumentation-1.0.1" level="project" />
+    <orderEntry type="library" exported="" name="javax.inject:javax.inject:1@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:appcompat-v7-26.0.1" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-maps-license-11.4.2" level="project" />
+    <orderEntry type="library" exported="" name="com.facebook.react:react-native-0.47.1" level="project" />
+    <orderEntry type="library" exported="" name="com.android.volley:volley-1.0.0" level="project" />
+    <orderEntry type="library" exported="" name="com.google.code.findbugs:jsr305:3.0.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-basement-11.4.2" level="project" />
+    <orderEntry type="library" exported="" name="com.facebook.soloader:soloader-0.1.0" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-core-ui-26.0.1" level="project" />
+    <orderEntry type="library" exported="" name="com.squareup.okio:okio:1.13.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-analytics-impl-license-11.4.2" level="project" />
+    <orderEntry type="library" exported="" name="com.facebook.fresco:fresco-1.0.1" level="project" />
+    <orderEntry type="library" exported="" name="com.facebook.fresco:imagepipeline-okhttp3-1.0.1" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-compat-26.0.1" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-analytics-license-11.4.2" level="project" />
+    <orderEntry type="library" exported="" name="com.squareup.okhttp3:okhttp:3.6.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-maps-11.4.2" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-location-11.4.2" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-gcm-11.4.2" level="project" />
+    <orderEntry type="library" exported="" name="com.facebook.fbui.textlayoutbuilder:textlayoutbuilder-1.0.0" level="project" />
+    <orderEntry type="library" exported="" name="org.webkit:android-jsc-r174650" level="project" />
     <orderEntry type="module" module-name="react-native-camera" exported="" />
     <orderEntry type="module" module-name="react-native-maps" exported="" />
-    <orderEntry type="module" module-name="react-native-background-geolocation-android" exported="" />
     <orderEntry type="module" module-name="react-native-onesignal" exported="" />
+    <orderEntry type="module" module-name="react-native-background-geolocation-android" exported="" />
     <orderEntry type="module" module-name="react-native-vector-icons" exported="" />
   </component>
 </module>

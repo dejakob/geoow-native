@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { View } from 'react-native';
 import ColorizedCarousel from '../components/colorized-carousel';
 import GameBoardCategory from '../components/game-board/game-board-category';
+import { ModalizedListModalStack } from '../components/modalized-list';
 
 /**
  * <GameBoard />
@@ -12,9 +14,6 @@ class GameBoard extends Component
     };
 
     get categories() {
-        console.log('categories levels', this.props.gameBoard.get('categories').map(c => c.get('levels')).toJS());
-        console.log('levels', this.props.gameBoard.get('levels').toJS());
-
         return this.props.gameBoard.get('categories')
             .update(categories => 
                 categories.map(category =>
@@ -38,9 +37,14 @@ class GameBoard extends Component
         }))
 
         return (
-            <ColorizedCarousel
-                scenes={scenes}
-            />
+            <View
+                style={{ flex: 1, position: 'relative' }}
+            >
+                <ColorizedCarousel
+                    scenes={scenes}
+                />
+                <ModalizedListModalStack />
+            </View>
         );
     }
 }

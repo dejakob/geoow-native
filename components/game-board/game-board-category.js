@@ -36,6 +36,7 @@ createStyle({
         },
         title: {
             backgroundColor: 'transparent',
+            marginBottom: '32h4s'
         },
         list: {
             marginTop: '16h4s'
@@ -49,6 +50,28 @@ createStyle({
 class GameBoardCategory extends Component
 {
     render() {
+        const header = (
+            <View>
+                <Center>
+                    <View
+                        style={getStyle('gameBoardCategory__icon')}
+                    >
+                        <GameBoardCategoryIcon
+                            type={this.props.category.get('label')}
+                            color={StyleSheet.flatten(getStyle('gameBoardCategory__icon__font')).color}
+                            size={StyleSheet.flatten(getStyle('gameBoardCategory__icon__font')).fontSize}
+                            style={getStyle('gameBoardCategory__icon__font')}
+                        />
+                    </View>
+                </Center>
+                <H1
+                    style={getStyle('gameBoardCategory__title')}
+                >
+                    {this.props.category.get('label')}
+                </H1>
+            </View>
+        );
+
         return (
             <ScrollView
                 bounces={false}
@@ -59,27 +82,11 @@ class GameBoardCategory extends Component
                     resizeMode='cover'
                 />
                 <Main>
-                    <Center>
-                        <View
-                            style={getStyle('gameBoardCategory__icon')}
-                        >
-                            <GameBoardCategoryIcon
-                                type={this.props.category.get('label')}
-                                color={StyleSheet.flatten(getStyle('gameBoardCategory__icon__font')).color}
-                                size={StyleSheet.flatten(getStyle('gameBoardCategory__icon__font')).fontSize}
-                                style={getStyle('gameBoardCategory__icon__font')}
-                            />
-                        </View>
-                    </Center>
-                    <H1
-                        style={getStyle('gameBoardCategory__title')}
-                    >
-                        {this.props.category.get('label')}
-                    </H1>
                     <GameBoardLevelsList
                         color={this.props.color}
                         levels={this.props.category.get('levels')}
-                        style={getStyle('gameBoardCategory__list')}
+                        header={header}
+                        style={getStyle('gameBoardCategory__list')}                        
                     />
                 </Main>
             </ScrollView>

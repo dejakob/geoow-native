@@ -6,8 +6,7 @@ createStyle({
     wrapper: {
         main: {
             flex: 1,
-            paddingTop: '24h4s',
-            paddingBottom: '12h4s'
+            position: 'relative'
         },
         center: {
             justifyContent: 'center',

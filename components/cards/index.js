@@ -21,7 +21,7 @@ createStyle({
 function Card(props) {
     return (
         <View
-            style={[getStyle('cards__listItemCard'), { borderBottomColor: Color(props.tintColor).darken(0.2) }]}
+            style={[getStyle('cards__listItemCard'), { borderBottomColor: Color(props.tintColor).darken(0.2) }, props.style]}
         >
             <Text
                 style={[getStyle('cards__listItemCard__title')]}
