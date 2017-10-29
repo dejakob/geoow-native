@@ -65,9 +65,48 @@ class ModalizedListItem extends Component {
                     </Animated.View>
                 );
 
-                ModalizedListModalStack.pushToStack(modalComponent);
+                ModalizedListModalStack.pushToStack({
+                    component: modalComponent,
+                    goBack: this.goBack.bind(this, py, height)
+                });
             });
         }
+    }
+
+    goBack(top, height) {
+        const screenHeight = Dimensions.get('window').height;
+        
+        this.state = {
+            height: new Animated.Value(screenHeight),
+            top: new Animated.Value(0),
+            absolute: true
+        };
+
+        Animated.parallel([
+            Animated.spring(this.state.height, { toValue: height }),
+            Animated.spring(this.state.top, { toValue: top }),
+        ]).start(() => {
+            ModalizedListModalStack.popFromStack();
+        });
+
+        const style = {};
+
+        style.position = 'absolute';
+        style.height = this.state.height;
+        style.top = this.state.top;
+        style.width = Dimensions.get('window').width;
+        
+        const modalComponent = (
+            <Animated.View
+                style={style}
+            >
+                {this.props.item.active}
+            </Animated.View>
+        );
+
+        ModalizedListModalStack.replaceLast({
+            component: modalComponent,
+        });
     }
 
     render() {
@@ -92,19 +131,36 @@ class ModalizedListModalStack extends Component
     static stack = [];
     static _self = null;
     
-    static pushToStack(component) {
+    static pushToStack(item) {
         try {
-            ModalizedListModalStack.stack.push(component);
+            ModalizedListModalStack.stack.push(item);
             ModalizedListModalStack._self.setState({});
         }
         catch (ex) {
-            console.log('ex', ex);
             console.error('Could not update ModalizedListModalStack');
         }
     }
 
-    static removeFromStack() {
-        throw new Error('To Be Implemented');
+    static replaceLast(item) {
+        try {
+            ModalizedListModalStack.stack[ModalizedListModalStack.stack.length - 1] = item;
+            ModalizedListModalStack._self.setState({});
+        }
+        catch (ex) {
+            console.error('Could not update ModalizedListModalStack');
+        }
+    }
+
+    static popFromStack() {
+        if (ModalizedListModalStack.stack.length) {
+            try {
+                ModalizedListModalStack.stack.splice(ModalizedListModalStack.stack.length - 1, 1);
+                ModalizedListModalStack._self.setState({});
+            }
+            catch (ex) {
+                console.error('Could not update ModalizedListModalStack');
+            }
+        }
     }
 
     componentWillMount() {
@@ -118,13 +174,20 @@ class ModalizedListModalStack extends Component
 
         return (
             <View style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>
-                {ModalizedListModalStack.stack}
+                {ModalizedListModalStack.stack.map(s => s.component)}
             </View>
         )
     }
 }
 
+function goBack() {
+    if (typeof ModalizedListModalStack.stack[ModalizedListModalStack.stack.length - 1].goBack === 'function') {
+        ModalizedListModalStack.stack[ModalizedListModalStack.stack.length - 1].goBack();
+    }
+}
+
 export default ModalizedList;
 export {
-    ModalizedListModalStack
+    ModalizedListModalStack,
+    goBack
 };

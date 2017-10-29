@@ -2,6 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { createStyle, getStyle } from 'react-native-styler';
 import ParallaxKeyboardAwareScrollView from 'react-native-keyboard-aware-parallax-scroll-view'; 
+import { goBack } from '../modalized-list';
 import { Main } from '../wrappers';
 import { Title } from '../typography';
 
@@ -29,7 +30,7 @@ function Level(props) {
             <ParallaxKeyboardAwareScrollView
                 backgroundImage={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Amsterdam_%28NL%29%2C_Anne-Frank-Huis_--_2015_--_7185.jpg/1920px-Amsterdam_%28NL%29%2C_Anne-Frank-Huis_--_2015_--_7185.jpg' }}
                 imageHeight={160}
-                onScroll={props.onScroll}
+                onScroll={handleScroll}
             >
                 <View
                     style={getStyle('level__section')}
@@ -41,6 +42,12 @@ function Level(props) {
             </ParallaxKeyboardAwareScrollView>
         </Main>
     );
+
+    function handleScroll(eventData) {
+        if (eventData.nativeEvent.contentOffset.y < -100) {
+            goBack();
+        }
+    }
 }
 
 export default Level;
