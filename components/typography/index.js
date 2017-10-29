@@ -4,6 +4,11 @@ import { createStyle, getStyle } from 'react-native-styler';
 
 createStyle({
     typo: {
+        title: {
+            fontSize: '28h4s',
+            fontWeight: '300',
+            color: 'theme:subtext'
+        },
         h1: {
             fontSize: 'theme:h1',
             fontWeight: '600',
@@ -31,12 +36,14 @@ function TypoComponent(props) {
     return <Text {...props} style={[getStyle(props.__styleName), props.style]}></Text>;
 }
 
+const Title = props => <TypoComponent {...props} __styleName={'typo__title'} />;
 const H1 = props => <TypoComponent {...props} __styleName={'typo__h1'} children={props.children.toUpperCase()} />;
 const H2 = props => <TypoComponent {...props} __styleName={'typo__h2'} />;
 const P = props => <TypoComponent {...props} __styleName={'typo__p'} />;
 const EM = props => <TypoComponent {...props} __styleName={'typo__em'} />;
 
 export {
+    Title,
     H1,
     H2,
     P,

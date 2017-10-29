@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 import { createStyle, getStyle } from 'react-native-styler';
 import GameBoardLevel from './game-board-level';
+import Level from '../level';
 import ModalizedList from '../modalized-list';
 
 createStyle({
@@ -16,9 +17,10 @@ createStyle({
 class GameBoardLevelsCategory extends Component
 {
     render() {
-        const items = this.props.levels.map(level =>
-            <GameBoardLevel level={level} color={this.props.color} />
-        );
+        const items = this.props.levels.map(level => ({
+            preview: <GameBoardLevel level={level} color={this.props.color} />,
+            active: <Level level={level} color={this.props.color} />
+        }));
 
         return (
             <ModalizedList

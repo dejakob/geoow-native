@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Animated, FlatList, View } from 'react-native';
 import { getStyle } from 'react-native-styler';
-import Color from 'color-js';
 
 import './style.js';
 

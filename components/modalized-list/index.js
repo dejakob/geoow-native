@@ -55,14 +55,13 @@ class ModalizedListItem extends Component {
                 style.position = 'absolute';
                 style.height = this.state.height;
                 style.top = this.state.top;
-                style.backgroundColor = 'white';
                 style.width = Dimensions.get('window').width;
 
                 const modalComponent = (
                     <Animated.View
                         style={style}
                     >
-                        {this.props.item}
+                        {this.props.item.active}
                     </Animated.View>
                 );
 
@@ -81,7 +80,7 @@ class ModalizedListItem extends Component {
                 <View
                     ref="el"
                 >
-                    {item}
+                    {item.preview}
                 </View>
             </TouchableWithoutFeedback>
         );
