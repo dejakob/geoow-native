@@ -100,7 +100,7 @@ class ModalizedListItem extends Component {
             <Animated.View
                 style={style}
             >
-                {this.props.item.active}
+                {this.props.item.preview}
             </Animated.View>
         );
 

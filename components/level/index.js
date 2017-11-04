@@ -74,31 +74,18 @@ createStyle({
 function Level(props) {
     console.log('Level', props);
 
+    const parallaxProps = {
+        imageHeight: 160,
+        onScroll: handleScroll
+    };
+
     const image = props.level.getIn(['info', 'pictures', 0]);
 
-    if (!image) {
-        return (
-            <Main
-                style={getStyle('level')}
-            >
-                <LevelContent
-                    level={props.level}
-                    color={props.color}
-                />
-                
-                <Footer
-                    style={getStyle('level__primaryButton')}
-                >
-                    <PrimaryButton
-                        onPress={() => { console.log('START') }}
-                        containerStyle={{ backgroundColor: Color(props.color).darken(0.3) }}
-                        textStyle={getStyle('level__primaryButton__text')}
-                    >
-                        Do it!
-                    </PrimaryButton>
-                </Footer>
-            </Main>
-        )
+    if (image) {
+        parallaxProps.backgroundImage = { uri: image.indexOf('http') === 0 ? image : `${API.URL}/${image}` };
+    }
+    else {
+        parallaxProps.background = () => <View style={{ flex: 1, backgroundColor: props.color }}></View>;
     }
 
     return (
@@ -106,9 +93,7 @@ function Level(props) {
             style={getStyle('level')}
         >
             <ParallaxKeyboardAwareScrollView
-                backgroundImage={{ uri: image.indexOf('http') === 0 ? image : `${API.URL}/${image}` }}
-                imageHeight={160}
-                onScroll={handleScroll}
+                {...parallaxProps}
             >
                 <LevelContent
                     level={props.level}
