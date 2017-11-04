@@ -3,11 +3,11 @@ import { createTheme } from 'react-native-styler';
 createTheme({
     colors: {
         background: '#48659F',
-        backgroundTransparent: 'rgba(37,57,82,0.9)',
+        backgroundTransparent: 'rgba(72,101,159,0.9)',
         subtext: '#999999',
         primary: '#ffffff',
         secondary: '#48659F',
-        secondary80: 'rgba(90,129,151,0.8)',
+        secondary80: 'rgba(72,101,159,0.8)',
         sheet: '#ffffff',
         sheet2: '#f4fdff',
         sheet3: '#333333',

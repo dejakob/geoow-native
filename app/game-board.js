@@ -36,6 +36,8 @@ class GameBoard extends Component
             component: <GameBoardCategory category={category} color={category.get('color')} />
         }))
 
+        console.log('scenes', scenes);
+
         return (
             <View
                 style={{ flex: 1, position: 'relative' }}
