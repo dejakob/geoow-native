@@ -248,8 +248,20 @@ function getMapStyling() {
 
 }
 
+function getStaticMapUrl(latitude, longitude, height = 100, width = 100) {
+    const path = 'https://maps.googleapis.com/maps/api/staticmap';
+    const latLng = `${latitude},${longitude}`;
+    const size = `${width}x${height}`;
+    const styles = [
+        'element:labels|visibility:off'
+    ].map(s => `style=${s}`).join('&');
+
+    return `${path}?center=${latLng}&zoom=15&size=${size}&${styles}&key=${getGoogleMapsToken()}`;
+}
+
 export {
     getDirections,
     getGoogleMapsToken,
-    getMapStyling
+    getMapStyling,
+    getStaticMapUrl
 }

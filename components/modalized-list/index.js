@@ -137,6 +137,7 @@ class ModalizedListModalStack extends Component
             ModalizedListModalStack._self.setState({});
         }
         catch (ex) {
+            console.log('ex', ex);
             console.error('Could not update ModalizedListModalStack');
         }
     }

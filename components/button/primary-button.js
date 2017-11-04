@@ -11,9 +11,9 @@ function PrimaryButton(props) {
         <Button
             onPress={props.onPress}
             disabled={props.disabled}
-            containerStyle={getStyle('button__primary__container')}
-            textStyle={getStyle('button__primary__text')}
-            touchStyle={getStyle('button__primary__touch')}
+            containerStyle={[getStyle('button__primary__container'), props.containerStyle]}
+            textStyle={[getStyle('button__primary__text'), props.textStyle]}
+            touchStyle={[getStyle('button__primary__touch'), props.touchStyle]}
         >
             {props.children}
         </Button>

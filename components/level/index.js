@@ -1,8 +1,11 @@
 import React from 'react';
 import Color from 'color';
-import { View } from 'react-native';
+import { View, FlatList, Image, StyleSheet, Text, TouchableOpacity, Linking } from 'react-native';
 import { createStyle, getStyle } from 'react-native-styler';
 import ParallaxKeyboardAwareScrollView from 'react-native-keyboard-aware-parallax-scroll-view'; 
+import Footer from '../footer/footer';
+import PrimaryButton from '../button/primary-button';
+import { getStaticMapUrl } from '../../services/directions';
 import { goBack } from '../modalized-list';
 import { Main } from '../wrappers';
 import { Title, P, H2 } from '../typography';
@@ -16,13 +19,51 @@ createStyle({
             backgroundColor: 'theme:sheet',
             paddingTop: '12w4s',
             paddingLeft: '12w4s',
-            paddingRight: '12w4s'
+            paddingRight: '12w4s',
+            paddingBottom: '60h4s'
         },
         h2: {
-            paddingTop: '10h4s'
+            paddingTop: '20h4s'
         },
         p: {
             color: 'theme:subtext'
+        },
+        link: {
+            fontSize: '12h4s',
+            textAlign: 'right',
+            padding: '6h4s'
+        },
+        goal: {
+            flexDirection: 'row',
+            justifyContent: 'center',
+
+            map: {
+                height: '70h4s',
+                width: '70h4s',
+                borderRadius: '35h4s'
+            },
+            description: {
+                flex: 1,
+                justifyContent: 'center',
+                alignItems: 'center',
+
+                text: {
+                    fontSize: '18h4s',
+                    color: 'theme:subtext',
+                    textAlign: 'center',
+                    fontWeight: '300'
+                }
+            }
+        },
+        primaryButton: {
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            
+            text: {
+                color: 'theme:primary'
+            }
         }
     }
 });
@@ -44,6 +85,18 @@ function Level(props) {
                     level={props.level}
                     color={props.color}
                 />
+                
+                <Footer
+                    style={getStyle('level__primaryButton')}
+                >
+                    <PrimaryButton
+                        onPress={() => { console.log('START') }}
+                        containerStyle={{ backgroundColor: Color(props.color).darken(0.3) }}
+                        textStyle={getStyle('level__primaryButton__text')}
+                    >
+                        Do it!
+                    </PrimaryButton>
+                </Footer>
             </Main>
         )
     }
@@ -62,6 +115,18 @@ function Level(props) {
                     color={props.color}
                 />
             </ParallaxKeyboardAwareScrollView>
+            
+            <Footer
+                style={getStyle('level__primaryButton')}
+            >
+                <PrimaryButton
+                    onPress={() => { console.log('START') }}
+                    containerStyle={{ backgroundColor: Color(props.color).darken(0.3) }}
+                    textStyle={getStyle('level__primaryButton__text')}
+                >
+                    Do it!
+                </PrimaryButton>
+            </Footer>
         </Main>
     );
 
@@ -104,8 +169,47 @@ function LevelDescription(props) {
             >
                 The challenge
             </H2>
+            {props.level.get('goals').map(LevelGoal)}
         </View>
     );
+}
+
+function LevelGoal(goal) {
+    const goalType = goal.get('goal_type');
+
+    switch (goalType) {
+        case 'VISIT':
+            const latitude = goal.getIn(['checkpoint', 'latitude']);
+            const longitude = goal.getIn(['checkpoint', 'longitude']);
+            const imageUri = getStaticMapUrl(
+                latitude,
+                longitude,
+                StyleSheet.flatten(getStyle('level__goal__map')).height,
+                StyleSheet.flatten(getStyle('level__goal__map')).width
+            );
+
+            return (
+                <View
+                    style={getStyle('level__goal')}
+                >
+                    <Image
+                        style={getStyle('level__goal__map')}
+                        source={{ uri: imageUri }}
+                    />
+                    <View
+                        style={getStyle('level__goal__description')}
+                    >
+                        <Text
+                            style={getStyle('level__goal__description__text')}
+                        >
+                            Discover a new spot in the city
+                        </Text>
+                    </View>
+                </View>
+            )
+    }
+
+    return null;
 }
 
 function LevelWiki(props) {
@@ -118,7 +222,7 @@ function LevelWiki(props) {
     const intro = wiki.get('intro')
         .replace(/ {2,}/gi, '')
         .replace(/\n/gi, '')
-        .substr(0, 300) + '...';
+        .substr(0, 500) + '...';
 
     return (
         <View>
@@ -132,6 +236,15 @@ function LevelWiki(props) {
             >
                 {intro}
             </P>
+            <TouchableOpacity
+                onPress={() => Linking.openURL(wiki.get('source'))}
+            >
+                <Text
+                    style={[getStyle('level__link'), { color: Color(props.color).darken(0.5) }]}
+                >
+                    Read more...
+                </Text>
+            </TouchableOpacity>
         </View>
     )
 }
