@@ -74,6 +74,7 @@ class StatedLevel extends React.Component {
         super();
 
         this.setActiveGoal = this.setActiveGoal.bind(this);
+        this.handleClose = this.handleClose.bind(this);
     }
         
     componentWillMount() {
@@ -88,6 +89,7 @@ class StatedLevel extends React.Component {
                 <Goal
                     level={this.props.level}
                     goal={this.state.activeGoal}
+                    onClose={this.handleClose}
                     color={this.props.color}
                 />
             );
@@ -99,6 +101,10 @@ class StatedLevel extends React.Component {
                 setActiveGoal={this.setActiveGoal}
             />
         );
+    }
+
+    handleClose() {
+        this.setState({ activeGoal: null });
     }
 
     setActiveGoal(goalIndex) {

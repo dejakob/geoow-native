@@ -1,8 +1,9 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { createStyle, getStyle } from 'react-native-styler';
 import MapView from 'react-native-maps';
 import Color from 'color';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { Main } from '../wrappers';
 
 createStyle({
@@ -12,15 +13,39 @@ createStyle({
             top: 0,
             left: 0,
             right: 0,
-            paddingTop: '12h4s',
-            color: 'theme:primary'
+            paddingTop: '24h4s',
+            paddingLeft: '12w4s',
+            paddingRight: '12w4s',
+            paddingBottom: '10h4s',
+
+            title: {
+                fontSize: '14h4s',
+                fontWeight: '300',
+                color: 'theme:primary',
+            },
+            description: {
+                color: 'theme:primary',
+                fontSize: '10h4s',
+                fontWeight: '600'
+            },
+            closeButton: {
+                position: 'absolute',
+                top: '24h4s',
+                right: '12w4s'
+            }
+        },
+        primaryButton: {
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            right: 0
         },
         map: {
             height: '100vh',
             width: '100vw'
         }
     }
-})
+});
 
 /**
  * Goal component
@@ -30,10 +55,12 @@ function Goal(props) {
     const goalType = goal.get('goal_type');
 
     let content = null;
+    let description = '';
     
     switch (goalType) {
         case 'VISIT':
 
+            description = 'Visit the place on the map';
             content = (
                 <GoalMap
                     goal={goal}
@@ -43,11 +70,13 @@ function Goal(props) {
 
     return (
         <Main>
+            {content}
             <GoalHeader
                 level={level}
                 color={props.color}
+                description={description}
+                onClose={props.onClose}
             />
-            {content}
         </Main>
     );
 }
@@ -55,36 +84,97 @@ function Goal(props) {
 function GoalHeader(props) {
     return (
         <View
-            style={[getStyle('goal__header'), { backgroundColor: Color(props.color).darken(0.3) }]}
+            style={[getStyle('goal__header'), { backgroundColor: Color(props.color).darken(0.5) }]}
         >
-            <Text>{props.level.get('title')}</Text>
+            <Text
+                style={getStyle('goal__header__title')}
+            >
+                {props.level.get('title')}
+            </Text>
+            <Text
+                style={getStyle('goal__header__description')}
+            >
+                {props.description}
+            </Text>
+            <View
+                style={getStyle('goal__header__closeButton')}
+            >
+                <TouchableOpacity
+                    onPress={props.onClose}
+                >
+                    <MaterialCommunityIcons
+                        name="close" 
+                        color={StyleSheet.flatten(getStyle('goal__header__title')).color}
+                        size={StyleSheet.flatten(getStyle('goal__header__title')).fontSize * 2}
+                    />
+                </TouchableOpacity>
+            </View>
         </View>
     );
 }
 
-function GoalMap(props) {
-    const { goal } = props;
-    const latitude = goal.getIn(['checkpoint', 'latitude']);
-    const longitude = goal.getIn(['checkpoint', 'longitude']);
+class GoalMap extends React.Component {
+    constructor() {
+        super();
 
-    return (
-        <MapView
-            style={getStyle('goal__map')}
-            provider="google"
-            initialRegion={{
-                latitude,
-                longitude,
-                latitudeDelta: 0.0222,
-                longitudeDelta: 0.0121,
-            }}
-        >
-            <MapView.Marker
-                coordinate={{ latitude, longitude }}
-                title="Where you need to go"
-                description="Description"
-            />
-        </MapView>
-    );
+        this.handleLayout = this.handleLayout.bind(this);
+    }
+
+    componentDidMount() {
+        try {
+            this.handleLayout();
+        }
+        catch (ex) {
+
+        }
+    }
+
+    handleLayout() {
+        const { props } = this;
+
+        const { goal } = props;
+        const latitude = goal.getIn(['checkpoint', 'latitude']);
+        const longitude = goal.getIn(['checkpoint', 'longitude']);
+
+        this.refs.map.animateToRegion({
+            latitude,
+            longitude,
+            latitudeDelta: 0.0222,
+            longitudeDelta: 0.0121,
+        })
+    }
+
+    render() {
+        const { props } = this;
+
+        const { goal } = props;
+        const latitude = goal.getIn(['checkpoint', 'latitude']);
+        const longitude = goal.getIn(['checkpoint', 'longitude']);
+        
+        return (
+            <MapView
+                style={getStyle('goal__map')}
+                provider="google"
+                ref="map"
+                onLayout={(e) => console.log('layout', this.refs.map)}
+                showsUserLocation={true}
+                showsMyLocationButton={true}
+                initialRegion={{
+                    latitude,
+                    longitude,
+                    latitudeDelta: 0.0222,
+                    longitudeDelta: 0.0121,
+                }}
+            >
+                <MapView.Marker
+                    coordinate={{ latitude, longitude }}
+                    title="Where you need to go"
+                    description="Description"
+                />
+            </MapView>
+        );
+    }
+    
 }
 
 export default Goal;
