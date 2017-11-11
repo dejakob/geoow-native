@@ -5,6 +5,7 @@ import { createStyle, getStyle } from 'react-native-styler';
 import ParallaxKeyboardAwareScrollView from 'react-native-keyboard-aware-parallax-scroll-view'; 
 import Footer from '../footer/footer';
 import PrimaryButton from '../button/primary-button';
+import Goal from '../goal';
 import { getStaticMapUrl } from '../../services/directions';
 import { goBack } from '../modalized-list';
 import { Main } from '../wrappers';
@@ -68,12 +69,47 @@ createStyle({
     }
 });
 
+class StatedLevel extends React.Component {
+    constructor() {
+        super();
+
+        this.setActiveGoal = this.setActiveGoal.bind(this);
+    }
+        
+    componentWillMount() {
+        this.state = {
+            activeGoal: null
+        };
+    }
+
+    render() {
+        if (this.state.activeGoal) {
+            return (
+                <Goal
+                    level={this.props.level}
+                    goal={this.state.activeGoal}
+                    color={this.props.color}
+                />
+            );
+        }
+
+        return (
+            <Level
+                {...this.props}
+                setActiveGoal={this.setActiveGoal}
+            />
+        );
+    }
+
+    setActiveGoal(goalIndex) {
+        this.setState({ activeGoal: this.props.level.getIn(['goals', goalIndex]) })
+    }
+}
+
 /**
  * <Level />
  */
 function Level(props) {
-    console.log('Level', props);
-
     const parallaxProps = {
         imageHeight: 160,
         onScroll: handleScroll
@@ -105,7 +141,7 @@ function Level(props) {
                 style={getStyle('level__primaryButton')}
             >
                 <PrimaryButton
-                    onPress={() => { console.log('START') }}
+                    onPress={() => props.setActiveGoal(0)}
                     containerStyle={{ backgroundColor: Color(props.color).darken(0.3) }}
                     textStyle={getStyle('level__primaryButton__text')}
                 >
@@ -234,4 +270,4 @@ function LevelWiki(props) {
     )
 }
 
-export default Level;
+export default StatedLevel;

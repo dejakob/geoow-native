@@ -22,7 +22,7 @@ AsyncStorage
     });
 
 function* authEmail({email}) {
-    try {
+    try {        
         yield call(AuthApi.authEmail, email.toLowerCase());
         yield put(Actions.authEmailSuccess());
     }

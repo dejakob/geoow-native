@@ -36,7 +36,7 @@ class AuthEmail extends React.PureComponent
 
         if (isEmailValid) {
             this.props.authEmail(this.email);
-            this.props.navigation.navigate('AuthVerify');
+            this.props.navigation.navigate('AuthVerify', {});
         }
     }
 
