@@ -3,6 +3,7 @@ import Color from 'color';
 import { View, FlatList, Image, StyleSheet, Text, TouchableOpacity, Linking } from 'react-native';
 import { createStyle, getStyle } from 'react-native-styler';
 import ParallaxKeyboardAwareScrollView from 'react-native-keyboard-aware-parallax-scroll-view'; 
+import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Footer from '../footer/footer';
 import PrimaryButton from '../button/primary-button';
 import Goal from '../goal';
@@ -36,22 +37,35 @@ createStyle({
         },
         goal: {
             flexDirection: 'row',
-            justifyContent: 'center',
+            justifyContent: 'center',   
+            paddingTop: '6h4s',
+            paddingBottom: '6h4s',
 
             map: {
-                height: '70h4s',
-                width: '70h4s',
-                borderRadius: '35h4s'
+                height: '50h4s',
+                width: '50h4s',
+                borderRadius: '25h4s'
+            },
+            iconBg: {
+                height: '50h4s',
+                width: '50h4s',
+                borderRadius: '25h4s',
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderWidth: 1
+            },
+            icon: {
+                fontSize: '16h4s'
             },
             description: {
                 flex: 1,
                 justifyContent: 'center',
-                alignItems: 'center',
+                paddingLeft: '6w4s',
 
                 text: {
-                    fontSize: '18h4s',
+                    fontSize: '14h4s',
                     color: 'theme:subtext',
-                    textAlign: 'center',
+                    textAlign: 'left',
                     fontWeight: '300'
                 }
             }
@@ -196,12 +210,13 @@ function LevelDescription(props) {
             >
                 The challenge
             </H2>
-            {props.level.get('goals').map(LevelGoal)}
+            {props.level.get('goals').map(goal => <LevelGoal goal={goal} color={props.color} />)}
         </View>
     );
 }
 
-function LevelGoal(goal) {
+function LevelGoal(props) {
+    const { goal } = props;
     const goalType = goal.get('goal_type');
 
     switch (goalType) {
@@ -233,7 +248,33 @@ function LevelGoal(goal) {
                         </Text>
                     </View>
                 </View>
-            )
+            );
+
+        case 'CAMERA_PICTURE':
+            return (
+                <View
+                    style={getStyle('level__goal')}
+                >
+                    <View
+                        style={[getStyle('level__goal__iconBg'), { borderColor: props.color }]}
+                    >
+                        <MaterialCommunityIcon
+                            name="camera"
+                            size={StyleSheet.flatten(getStyle('level__goal__icon')).fontSize}
+                            color={props.color}
+                        />
+                    </View>
+                    <View
+                        style={getStyle('level__goal__description')}
+                    >
+                        <Text
+                            style={getStyle('level__goal__description__text')}
+                        >
+                            Take a picture to memorize
+                        </Text>
+                    </View>
+                </View>
+            );    
     }
 
     return null;

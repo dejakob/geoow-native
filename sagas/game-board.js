@@ -1,11 +1,11 @@
 import Actions from '../actions';
-import * as CategoriesApi from '../api/game-board';
+import * as GameboardApi from '../api/game-board';
 import { call, put } from 'redux-saga/effects';
 
 
 function* loadCategories(action) {
     try {
-        const categories = yield call(CategoriesApi.fetchCategories);
+        const categories = yield call(GameboardApi.fetchCategories);
         yield put(Actions._loadCategoriesSuccess(categories));
     }
     catch (ex) {
@@ -14,6 +14,16 @@ function* loadCategories(action) {
     }
 }
 
+function* finishGoal(action) {
+    try {
+        yield call(GameboardApi.finishGoal, action.levelId, action.goalId);
+    }
+    catch (ex) {
+        console.log('ex', ex);
+    }
+}
+
 export {
-    loadCategories
+    loadCategories,
+    finishGoal
 }

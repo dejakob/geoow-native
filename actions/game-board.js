@@ -19,9 +19,32 @@ function _loadCategoriesFailed() {
     }
 }
 
+function finishGoal(levelId, goalId) {
+    return {
+        type: ACTIONS.FINISH_GOAL,
+        levelId,
+        goalId
+    }
+}
+
+function _finishGoalSuccess() {
+    return {
+        type: ACTIONS.FINISH_GOAL_SUCCESS
+    }
+}
+
+function _finishGoalFailed() {
+    return {
+        type: ACTIONS.FINISH_GOAL_FAILED
+    }
+}
 
 export {
     loadCategories,
     _loadCategoriesSuccess,
-    _loadCategoriesFailed
+    _loadCategoriesFailed,
+
+    finishGoal,
+    _finishGoalSuccess,
+    _finishGoalFailed
 };

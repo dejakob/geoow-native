@@ -5,6 +5,7 @@ import MapView from 'react-native-maps';
 import Color from 'color';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { Main } from '../wrappers';
+import * as BackgroundLocation from '../../services/background-location';
 
 createStyle({
     goal: {
@@ -64,6 +65,7 @@ function Goal(props) {
             content = (
                 <GoalMap
                     goal={goal}
+                    finishGoal={props.finishGoal}
                 />
             );
     }
@@ -118,11 +120,39 @@ class GoalMap extends React.Component {
         super();
 
         this.handleLayout = this.handleLayout.bind(this);
+        this.play = this.play.bind(this);
+    }
+
+    get latitude() {
+        const { props } = this;
+        const { goal } = props;
+
+        return goal.getIn(['checkpoint', 'latitude']);
+    }
+
+    get longitude() {
+        const { props } = this;
+        const { goal } = props;
+
+        return goal.getIn(['checkpoint', 'longitude']);
     }
 
     componentDidMount() {
+        this.play();
+
         try {
             this.handleLayout();
+        }
+        catch (ex) {
+
+        }
+
+    }
+
+    async play() {
+        try {
+            await BackgroundLocation.questTillLocation(this.latitude, this.longitude);
+            this.props.finishGoal();
         }
         catch (ex) {
 
@@ -130,27 +160,15 @@ class GoalMap extends React.Component {
     }
 
     handleLayout() {
-        const { props } = this;
-
-        const { goal } = props;
-        const latitude = goal.getIn(['checkpoint', 'latitude']);
-        const longitude = goal.getIn(['checkpoint', 'longitude']);
-
         this.refs.map.animateToRegion({
-            latitude,
-            longitude,
+            latitude: this.latitude,
+            longitude: this.longitude,
             latitudeDelta: 0.0222,
             longitudeDelta: 0.0121,
         })
     }
 
-    render() {
-        const { props } = this;
-
-        const { goal } = props;
-        const latitude = goal.getIn(['checkpoint', 'latitude']);
-        const longitude = goal.getIn(['checkpoint', 'longitude']);
-        
+    render() {        
         return (
             <MapView
                 style={getStyle('goal__map')}
@@ -160,14 +178,14 @@ class GoalMap extends React.Component {
                 showsUserLocation={true}
                 showsMyLocationButton={true}
                 initialRegion={{
-                    latitude,
-                    longitude,
+                    latitude: this.latitude,
+                    longitude: this.longitude,
                     latitudeDelta: 0.0222,
                     longitudeDelta: 0.0121,
                 }}
             >
                 <MapView.Marker
-                    coordinate={{ latitude, longitude }}
+                    coordinate={{ latitude: this.latitude, longitude: this.longitude }}
                     title="Where you need to go"
                     description="Description"
                 />

@@ -20,6 +20,23 @@ function fetchCategories() {
         .then(response => response.json());
 }
 
+function finishGoal(levelId, goalId) {
+    const params = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'authorization': `Bearer ${getCurrentToken()}`
+        },
+        body: JSON.stringify({
+            levelId,
+            goalId
+        })
+    };
+
+    return fetch(`${API_URL}/game/goal/finish`, params)
+}
+
 export {
-    fetchCategories
+    fetchCategories,
+    finishGoal
 }

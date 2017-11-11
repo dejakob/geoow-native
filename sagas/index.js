@@ -16,6 +16,7 @@ function* mainSaga() {
     yield takeEvery(ACTIONS.LOCATION_LOAD_GEOLOCATION, locationSaga.loadGeolocation);
 
     yield takeEvery(ACTIONS.LOAD_CATEGORIES, gameBoardSaga.loadCategories);
+    yield takeEvery(ACTIONS.FINISH_GOAL, gameBoardSaga.finishGoal);
 }
 
 export default mainSaga;
