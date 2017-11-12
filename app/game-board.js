@@ -33,7 +33,7 @@ class GameBoard extends Component
     render() {
         const scenes = this.categories.toArray().map(category => ({
             color: category.get('color'),
-            component: <GameBoardCategory category={category} color={category.get('color')} />
+            component: <GameBoardCategory category={category} color={category.get('color')} {...this.props} />
         }))
 
         console.log('scenes', scenes);

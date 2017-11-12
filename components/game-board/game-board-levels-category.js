@@ -19,7 +19,7 @@ class GameBoardLevelsCategory extends Component
     render() {
         const items = this.props.levels.map(level => ({
             preview: <GameBoardLevel level={level} color={this.props.color} />,
-            active: <Level level={level} color={this.props.color} />
+            active: <Level level={level} color={this.props.color} {...this.props} />
         }));
 
         return (

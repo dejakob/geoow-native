@@ -86,7 +86,8 @@ class GameBoardCategory extends Component
                         color={this.props.color}
                         levels={this.props.category.get('levels')}
                         header={header}
-                        style={getStyle('gameBoardCategory__list')}                        
+                        style={getStyle('gameBoardCategory__list')}  
+                        {...this.props}                      
                     />
                 </Main>
             </ScrollView>

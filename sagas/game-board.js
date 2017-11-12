@@ -16,6 +16,7 @@ function* loadCategories(action) {
 
 function* finishGoal(action) {
     try {
+        console.log('finish goal', action);
         yield call(GameboardApi.finishGoal, action.levelId, action.goalId);
     }
     catch (ex) {

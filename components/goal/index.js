@@ -52,7 +52,7 @@ createStyle({
  * Goal component
  */
 function Goal(props) {
-    const { goal, level } = props;
+    const { goal, goalIndex, level } = props;
     const goalType = goal.get('goal_type');
 
     let content = null;
@@ -64,7 +64,9 @@ function Goal(props) {
             description = 'Visit the place on the map';
             content = (
                 <GoalMap
+                    level={level}
                     goal={goal}
+                    goalIndex={goalIndex}
                     finishGoal={props.finishGoal}
                 />
             );
@@ -152,10 +154,12 @@ class GoalMap extends React.Component {
     async play() {
         try {
             await BackgroundLocation.questTillLocation(this.latitude, this.longitude);
-            this.props.finishGoal();
+            alert('hooray');
+            console.log('level', this.props.level)
+            this.props.finishGoal(this.props.level.get('_id'), this.props.goalIndex);
         }
         catch (ex) {
-
+            console.log('ex', ex);
         }
     }
 
