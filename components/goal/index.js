@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity, Platform } from 'react-native';
 import { createStyle, getStyle } from 'react-native-styler';
 import MapView from 'react-native-maps';
 import Camera from 'react-native-camera';
@@ -260,6 +260,13 @@ class GoalCameraPicture extends React.Component {
                 <Camera
                     style={getStyle('goal__camera')}
                     ref="camera"
+                    captureMode={Camera.constants.CaptureMode.still}
+                    captureTarget={Camera.constants.CaptureTarget.disk}
+                    flashMode={Camera.constants.FlashMode.off}
+                    torchMode={Camera.constants.TorchMode.off}
+                    captureAudio={false}
+                    mirrorImage={false}
+                    fixOrientation={Platform.OS === 'ios'}
                 />
                 <View
                     style={getStyle('goal__camera__bottomCenter')}
