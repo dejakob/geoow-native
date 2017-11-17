@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { createStyle, getStyle } from 'react-native-styler';
 import MapView from 'react-native-maps';
+import Camera from 'react-native-camera';
 import Color from 'color';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { Main } from '../wrappers';
@@ -44,6 +45,28 @@ createStyle({
         map: {
             height: '100vh',
             width: '100vw'
+        },
+        camera: {
+            flex: 1,
+
+            wrapper: {
+                flex: 1,
+                position: 'relative'
+            },
+
+            bottomCenter: {
+                width: '100vw',
+                position: 'absolute',
+                bottom: '30h4s',
+                alignItems: 'center',
+            },
+            primaryAction: {
+                height: '50h4s',
+                width: '50h4s',
+                borderRadius: '25h4s',
+                borderWidth: 1,
+                borderColor: 'theme:primary'
+            }
         }
     }
 });
@@ -55,6 +78,8 @@ function Goal(props) {
     const { goal, goalIndex, level } = props;
     const goalType = goal.get('goal_type');
 
+    console.log('goal type', goalType);
+
     let content = null;
     let description = '';
     
@@ -64,6 +89,18 @@ function Goal(props) {
             description = 'Visit the place on the map';
             content = (
                 <GoalMap
+                    level={level}
+                    goal={goal}
+                    goalIndex={goalIndex}
+                    finishGoal={props.finishGoal}
+                />
+            );
+
+        case 'CAMERA_PICTURE':
+        
+            description = 'Selfie this!';
+            content = (
+                <GoalCameraPicture
                     level={level}
                     goal={goal}
                     goalIndex={goalIndex}
@@ -195,8 +232,46 @@ class GoalMap extends React.Component {
                 />
             </MapView>
         );
+    }   
+}
+
+class GoalCameraPicture extends React.Component {
+    constructor() {
+        super();
+
+        this.takePicture = this.takePicture.bind(this);
     }
-    
+
+    async takePicture() {
+        try {
+            const data = await this.refs.camera.capture();
+            console.log('data', data);
+        }
+        catch (ex) {
+            console.log('ex', ex);
+        }
+    }
+
+    render() {
+        return (
+            <View
+                style={getStyle('goal__camera__wrapper')}
+            >
+                <Camera
+                    style={getStyle('goal__camera')}
+                    ref="camera"
+                />
+                <View
+                    style={getStyle('goal__camera__bottomCenter')}
+                >
+                    <TouchableOpacity
+                        style={getStyle('goal__camera__primaryAction')}
+                        onPress={this.takePicture}
+                    ></TouchableOpacity>
+                </View>    
+            </View>
+        );
+    }
 }
 
 export default Goal;

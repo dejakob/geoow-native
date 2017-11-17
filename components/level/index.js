@@ -125,9 +125,14 @@ class StatedLevel extends React.Component {
     }
 
     setActiveGoal(goalIndex) {
+        const goalIndexes = this.props.level.get('goals').map((nothing, index) => index).toJS();
+        const levelProgress = this.props.user.getIn(['me', 'levelsProgress', this.props.level.get('_id')]);
+        const goalsProgress = levelProgress.get('goals').toJS();
+        const firstGoalIndexToAccomplish = goalIndexes.find(goalIndex => goalsProgress.indexOf(goalIndex) === -1);
+
         this.setState({
-            activeGoal: this.props.level.getIn(['goals', goalIndex]),
-            activeGoalIndex: goalIndex
+            activeGoal: firstGoalIndexToAccomplish ? this.props.level.getIn(['goals', firstGoalIndexToAccomplish]) : null,
+            activeGoalIndex: firstGoalIndexToAccomplish
         });
     }
 }
@@ -150,6 +155,8 @@ function Level(props) {
         parallaxProps.background = () => <View style={{ flex: 1, backgroundColor: props.color }}></View>;
     }
 
+    const levelProgress = props.user.getIn(['me', 'levelsProgress', props.level.get('_id')]);
+
     return (
         <Main
             style={getStyle('level')}
@@ -160,6 +167,7 @@ function Level(props) {
                 <LevelContent
                     level={props.level}
                     color={props.color}
+                    levelProgress={levelProgress}
                 />
             </ParallaxKeyboardAwareScrollView>
             
@@ -198,6 +206,7 @@ function LevelContent(props) {
             <LevelDescription
                 level={props.level}
                 color={props.color}
+                levelProgress={props.levelProgress}
             />
 
             <LevelWiki
@@ -216,7 +225,7 @@ function LevelDescription(props) {
             >
                 The challenge
             </H2>
-            {props.level.get('goals').map(goal => <LevelGoal goal={goal} color={props.color} />)}
+            {props.level.get('goals').map((goal, index) => <LevelGoal goal={goal} goalIndex={index} color={props.color} levelProgress={props.levelProgress} />)}
         </View>
     );
 }
@@ -224,6 +233,8 @@ function LevelDescription(props) {
 function LevelGoal(props) {
     const { goal } = props;
     const goalType = goal.get('goal_type');
+    const goalsProgress = props.levelProgress ? props.levelProgress.get('goals').toJS() : [];
+    const opacity = goalsProgress.indexOf(props.goalIndex) > -1 ? 0.2 : 1;
 
     switch (goalType) {
         case 'VISIT':
@@ -238,7 +249,7 @@ function LevelGoal(props) {
 
             return (
                 <View
-                    style={getStyle('level__goal')}
+                    style={[getStyle('level__goal'), { opacity }]}
                 >
                     <Image
                         style={getStyle('level__goal__map')}
@@ -259,7 +270,7 @@ function LevelGoal(props) {
         case 'CAMERA_PICTURE':
             return (
                 <View
-                    style={getStyle('level__goal')}
+                    style={[getStyle('level__goal'), { opacity }]}
                 >
                     <View
                         style={[getStyle('level__goal__iconBg'), { borderColor: props.color }]}

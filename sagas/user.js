@@ -35,6 +35,8 @@ function* loadMe() {
     try {
         const me = yield call(UserApi.fetchMe);
 
+        console.log('me', me);
+
         if (getCurrentId() !== pnId) {
             yield call(UserApi.addPushNotificationId, getCurrentId());
             pnId = getCurrentId();
