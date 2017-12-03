@@ -245,11 +245,17 @@ class GoalCameraPicture extends React.Component {
     async takePicture() {
         try {
             const data = await this.refs.camera.capture();
+            await uploadPicture(data);
+            this.props.finishGoal();
             console.log('data', data);
         }
         catch (ex) {
             console.log('ex', ex);
         }
+    }
+
+    async uploadPicture(imageData) {
+        // Upload picture
     }
 
     render() {

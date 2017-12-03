@@ -7,9 +7,11 @@ createStyle({
     cards: {
         listItemCard: {
             backgroundColor: 'theme:sheet',
-            width: '100%',
-            padding: '12w4s',
+            marginRight: '12w4s',
+            marginBottom: '6h4s',
+            marginLeft: '12w4s',
             borderBottomWidth: '2h4s',
+            borderRadius: '2h4s',
 
             title: {
                 fontWeight: '600'
@@ -23,11 +25,6 @@ function Card(props) {
         <View
             style={[getStyle('cards__listItemCard'), { borderBottomColor: Color(props.tintColor).darken(0.2) }, props.style]}
         >
-            <Text
-                style={[getStyle('cards__listItemCard__title')]}
-            >
-                {props.title}
-            </Text>
             {props.content}
         </View>
     );

@@ -24,7 +24,7 @@ function GameBoardGoal(props) {
 
     return (
         <View
-            style={[getStyle('gameBoardGoal'), { backgroundColor: Color(props.tintColor).fade(0.7) }]}
+            style={[getStyle('gameBoardGoal'), { backgroundColor: Color(props.tintColor).fade(0.7) }, props.style]}
         >
             <Text
                 style={getStyle('gameBoardGoal__label')}

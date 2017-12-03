@@ -16,7 +16,6 @@
 		07FF48B1DE634467B4F0E78A /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7F5AF39E1F44412A21F7A60 /* Ionicons.ttf */; };
 		0B008E3F906E453C8B45B457 /* libRNBackgroundFetch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B445EEBCED4C949993FFD6 /* libRNBackgroundFetch.a */; };
 		0EC11C2E06244D9F9C79BF38 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2810535D7CB7453F9969BF5E /* MaterialCommunityIcons.ttf */; };
-		0F601503892BAEBD0FFF7AA0 /* Pods_GeoowNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D790BAB14D63785A8F809FC /* Pods_GeoowNative.framework */; };
 		0FFD152DED9A47ADBB736402 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97BD73072E82454E93FB7CE6 /* FontAwesome.ttf */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
@@ -558,7 +557,6 @@
 				1D4A5DA908FA402682B9B6B3 /* TSLocationManager.framework in Frameworks */,
 				3332084783CC4899BC4253C9 /* TSBackgroundFetch.framework in Frameworks */,
 				741A67DAEC4248E5904A8839 /* libAirMaps.a in Frameworks */,
-				0F601503892BAEBD0FFF7AA0 /* Pods_GeoowNative.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
