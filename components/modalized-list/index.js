@@ -33,6 +33,10 @@ class ModalizedListItem extends Component {
     }
 
     handleItemPress(eventData) {
+        if (this.props.item.locked) {
+            return false;
+        }
+
         const target = this.refs.el;
 
         if (target) {

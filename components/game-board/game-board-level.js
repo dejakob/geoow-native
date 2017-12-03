@@ -1,7 +1,8 @@
 import Color from 'color';
 import React, { Component } from 'react';
-import { TouchableOpacity, Text, View } from 'react-native';
+import { TouchableOpacity, Text, View, StyleSheet } from 'react-native';
 import { createStyle, getStyle } from 'react-native-styler';
+import SimpleLineIcon from 'react-native-vector-icons/SimpleLineIcons'
 import { ListItemCard } from '../cards';
 import GameBoardGoal from './game-board-goal';
 
@@ -22,6 +23,7 @@ createStyle({
         },
         content: {
             padding: '12w4s',
+            color: 'theme:text'
         },
         goal: {
             marginRight: '3w4s'
@@ -38,14 +40,32 @@ class GameBoardLevel extends Component {
     render() {
         const { props } = this;
 
+        let badge = (
+            <Text
+                style={getStyle('gameBoardLevel__badgeText')}
+            >
+                {props.index}
+            </Text>
+        );
+
+        if (props.level.get('locked')) {
+            badge = (
+                <SimpleLineIcon
+                    name="lock"
+                    color={StyleSheet.flatten(getStyle('gameBoardLevel__badgeText')).color}
+                    size={StyleSheet.flatten(getStyle('gameBoardLevel__badgeText')).fontSize}    
+                />
+            );
+        }
+
         const content = (
-            <View style={getStyle('gameBoardLevel')}>
+            <View style={[getStyle('gameBoardLevel'), props.level.get('locked') ? { opacity: 0.3 } : undefined]}>
                 <View style={[getStyle('gameBoardLevel__badge'), { backgroundColor: Color(props.color).darken(0.5) }]}>
-                    <Text style={getStyle('gameBoardLevel__badgeText')}>{props.index}</Text>
+                    {badge}
                 </View>
                 <View style={getStyle('gameBoardLevel__content')}>
                     <Text
-                        style={[getStyle('cards__listItemCard__title')]}
+                        style={[getStyle('cards__listItemCard__title'), props.level.get('locked') ? { backgroundColor: StyleSheet.flatten(getStyle('gameBoardLevel__content')).color } : undefined]}
                     >
                         {props.level.get('title')}
                     </Text>

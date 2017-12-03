@@ -19,7 +19,8 @@ class GameBoardLevelsCategory extends Component
     render() {
         const items = this.props.levels.map((level, index) => ({
             preview: <GameBoardLevel level={level} color={this.props.color} index={index} />,
-            active: <Level level={level} color={this.props.color} {...this.props} />
+            active: <Level level={level} color={this.props.color} {...this.props} />,
+            locked: level.get('locked')
         }));
 
         return (
